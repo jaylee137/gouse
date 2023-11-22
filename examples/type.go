@@ -19,6 +19,7 @@ func checkType() {
 	fmt.Println(types.IsFunc(func() {}))
 	fmt.Println(types.IsNil(nil))
 	fmt.Println(types.IsEmpty(""))
+	fmt.Println(types.IsUndefined(1))
 }
 
 func TypeExample() {

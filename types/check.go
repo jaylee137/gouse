@@ -90,3 +90,7 @@ func IsEmpty(v interface{}) bool {
 		return false
 	}
 }
+
+func IsUndefined(v interface{}) bool {
+	return v == nil || IsEmpty(v)
+}
