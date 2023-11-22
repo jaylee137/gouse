@@ -1,6 +1,6 @@
 package array
 
-func minmax[T any](arr []T, less func(T, T) bool) T {
+func minmax[T comparable](arr []T, less func(T, T) bool) T {
 	if len(arr) == 0 {
 		panic("Empty array")
 	}
@@ -14,13 +14,13 @@ func minmax[T any](arr []T, less func(T, T) bool) T {
 	return max
 }
 
-func Min[T int | int8 | int16 | int32 | int64 | float32 | float64](arr []T) T {
+func Min[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](arr []T) T {
 	return minmax[T](arr, func(a, b T) bool {
 		return a > b
 	})
 }
 
-func Max[T int | int8 | int16 | int32 | int64 | float32 | float64](arr []T) T {
+func Max[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](arr []T) T {
 	return minmax[T](arr, func(a, b T) bool {
 		return a < b
 	})

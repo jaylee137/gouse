@@ -1,9 +1,12 @@
 package main
 
 import (
-	"github.com/thuongtruong1009/gouse/examples/array"
+	"github.com/thuongtruong1009/gouse/examples"
 )
 
 func main() {
-	array.Example()
+	examples.ArrayExample()
+	// examples.DateExample()
+	// examples.UtilExample()
+	// examples.TypeExample()
 }
