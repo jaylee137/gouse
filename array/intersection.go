@@ -4,7 +4,7 @@ func intersectSlice[T comparable](a, b []T) []T {
 	var intersect []T
 
 	for _, v := range a {
-		if Include(b, v) {
+		if Includes(b, v) {
 			intersect = append(intersect, v)
 		}
 	}

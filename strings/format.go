@@ -18,10 +18,6 @@ func Split(s string, separator string) []string {
 	return result
 }
 
-func IsLetter(char byte) bool {
-	return (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')
-}
-
 func Reverse(s string) string {
 	var result string
 
@@ -32,7 +28,7 @@ func Reverse(s string) string {
 	return result
 }
 
-func LowerS(s string) string {
+func Lowers(s string) string {
 	var result string
 
 	for _, v := range s {
@@ -46,14 +42,22 @@ func LowerS(s string) string {
 	return result
 }
 
-func LowerB(char byte) byte {
+func Lower[T byte | rune](char T) T {
 	if char >= 'A' && char <= 'Z' {
 		return char - 'A' + 'a'
 	}
 	return char
 }
 
-func UpperS(s string) string {
+func LowerFirst(s string) string {
+	if len(s) == 0 {
+		return s
+	}
+
+	return string(Lower(s[0])) + s[1:]
+}
+
+func Uppers(s string) string {
 	var result string
 
 	for _, v := range s {
@@ -67,11 +71,19 @@ func UpperS(s string) string {
 	return result
 }
 
-func UpperB(char byte) byte {
+func Upper[T byte | rune](char T) T {
 	if char >= 'a' && char <= 'z' {
 		return char - 'a' + 'A'
 	}
 	return char
+}
+
+func UpperFirst(s string) string {
+	if len(s) == 0 {
+		return s
+	}
+
+	return string(Upper(s[0])) + s[1:]
 }
 
 func Repeat(s string, count int) string {
@@ -82,6 +94,7 @@ func Repeat(s string, count int) string {
 	}
 
 	return result
+
 }
 
 func Truncate(s string, length int, omission ...string) string {
@@ -100,151 +113,85 @@ func Truncate(s string, length int, omission ...string) string {
 	return s[:length] + omission[0]
 }
 
-func Count(s string, substr ...string) int {
-	if len(substr) == 0 {
-		return len(s)
-	}
-
-	var count int
-
-	for i := 0; i < len(s); i++ {
-		if s[i] == substr[0][0] && len(s)-i >= len(substr[0]) {
-			if s[i:i+len(substr[0])] == substr[0] {
-				count++
-				i += len(substr[0]) - 1
-			}
-		}
-	}
-
-	return count
-}
-
-func Lines(s string) int {
-	var result []string
-	var temp string
-
-	for _, v := range s {
-		if v == '\n' {
-			result = append(result, temp)
-			temp = ""
-		} else {
-			temp += string(v)
-		}
-	}
-
-	result = append(result, temp)
-
-	return len(result)
-}
-
-func Replace(s string, old string, new string, count ...int) string {
-	if len(count) == 0 {
-		count = append(count, -1)
-	}
-
+func Replace(s string, old string, new string) string {
 	var result string
-	var temp string
 
-	for _, v := range s {
-		if string(v) == old {
-			temp += string(v)
+	for i := 0; i < len(s); {
+		// Check if the remaining part of the input matches the old
+		if len(s)-i >= len(old) && s[i:i+len(old)] == old {
+			// If there's a match, append the newSubstr to the result and move the index past the old
+			result += new
+			i += len(old)
 		} else {
-			if len(temp) == len(old) {
-				result += new
-				temp = ""
-			}
-			result += temp + string(v)
-			temp = ""
+			// If no match, append the current character to the result and move to the next character
+			result += string(s[i])
+			i++
 		}
-	}
-
-	if len(temp) == len(old) {
-		result += new
-		temp = ""
 	}
 
 	return result
 }
 
-
-// Below are testing functions
-
-func PadStart(s string, length int, pad string) string {
-	if len(s) >= length {
-		return s
-	}
-
-	return Repeat(pad, length-len(s)) + s
-}
-
-func PadEnd(s string, length int, pad string) string {
-	if len(s) >= length {
-		return s
-	}
-
-	return s + Repeat(pad, length-len(s))
-}
-
-func StartCase(s string) string {
+func Trim(s string) string {
 	var result string
 	var flag bool
 
 	for _, v := range s {
-		if v >= 'A' && v <= 'Z' {
+		if v != ' ' {
 			flag = true
 			result += string(v)
-		} else if v >= 'a' && v <= 'z' {
-			if flag {
-				result += string(v)
-				flag = false
-			} else {
-				result += string(v - 32)
-			}
-		} else {
-			flag = true
-			result += " "
+		} else if flag {
+			result += string(v)
 		}
 	}
 
 	return result
 }
 
-func Index(s string, substr string) int {
-	for i := 0; i < len(s); i++ {
-		if s[i] == substr[0] && len(s)-i >= len(substr) {
-			if s[i:i+len(substr)] == substr {
-				return i
-			}
+func LTrim(s string) string {
+	var result string
+	var flag bool
+
+	for _, v := range s {
+		if v != ' ' {
+			flag = true
+			result += string(v)
+		} else if flag {
+			result += string(v)
 		}
 	}
 
-	return -1
+	return result
 }
 
-func LastIndex(s string, substr string) int {
+func RTrim(s string) string {
+	var result string
+	var flag bool
+
 	for i := len(s) - 1; i >= 0; i-- {
-		if s[i] == substr[0] && len(s)-i >= len(substr) {
-			if s[i:i+len(substr)] == substr {
-				return i
-			}
+		if s[i] != ' ' {
+			flag = true
+			result = string(s[i]) + result
+		} else if flag {
+			result = string(s[i]) + result
 		}
 	}
 
-	return -1
+	return result
 }
 
-func Includes(s string, substr string) bool {
-	return Index(s, substr) != -1
-}
+func Join(s []string, separator string) string {
+	var result string
 
-func StartsWith(s string, substr string) bool {
-	return Index(s, substr) == 0
-}
+	for i, v := range s {
+		result += v
+		if i != len(s)-1 {
+			result += separator
+		}
+	}
 
-func EndsWith(s string, substr string) bool {
-	return LastIndex(s, substr) == len(s)-len(substr)
+	return result
 }
-
 
 func Slice(s string, start int, end int) string {
 	if start < 0 {
@@ -266,15 +213,58 @@ func Slice(s string, start int, end int) string {
 	return s[start:end]
 }
 
-func Trim(s string) string {
+func Splice(s string, start int, deleteCount int, items ...string) string {
+	if start < 0 {
+		start = len(s) + start
+	}
+
+	if deleteCount < 0 {
+		deleteCount = 0
+	}
+
+	if start > len(s) {
+		start = len(s)
+	}
+
+	if deleteCount > len(s)-start {
+		deleteCount = len(s) - start
+	}
+
+	return s[:start] + Join(items, "") + s[start+deleteCount:]
+}
+
+func Escape(s string) string {
 	var result string
-	var flag bool
 
 	for _, v := range s {
-		if v != ' ' {
-			flag = true
-			result += string(v)
-		} else if flag {
+		if v == '\\' || v == '/' || v == '[' || v == ']' || v == '{' || v == '}' || v == '(' || v == ')' || v == '*' || v == '+' || v == '?' || v == '.' || v == '^' || v == '$' || v == '|' {
+			result += "\\" + string(v)
+		}
+
+		switch v {
+		case '&':
+			result += "&amp;"
+		case '<':
+			result += "&lt;"
+		case '>':
+			result += "&gt;"
+		case '"':
+			result += "&quot;"
+		case '\'':
+			result += "&#39;"
+		case '\u2013': // En dash
+			result += "&ndash;"
+		case '\u2014': // Em dash
+			result += "&mdash;"
+		case '\u2018', '\u2019': // Left and right single quotation mark
+			result += "&lsquo;"
+		case '\u201C', '\u201D': // Left and right double quotation mark
+			result += "&ldquo;"
+		case '\u00A9': // Copyright symbol
+			result += "&copy;"
+		case '\u00AE': // Registered trademark symbol
+			result += "&reg;"
+		default:
 			result += string(v)
 		}
 	}
@@ -282,42 +272,35 @@ func Trim(s string) string {
 	return result
 }
 
-func TrimPrefix(s string, prefix string) string {
-	if len(s) < len(prefix) {
+// func Pad(s string, length int, pad ...string) string {
+// 	if len(s) >= length {
+// 		return s
+// 	}
+
+// 	if len(pad) == 0 {
+// 		pad = append(pad, " ")
+// 	}
+
+// 	return Repeat(pad, (length-len(s))/2) + s + Repeat(pad, (length-len(s)+1)/2)
+// }
+
+func pad(s string, length int, padChar byte) string {
+	if len(s) >= length {
 		return s
 	}
 
-	if s[:len(prefix)] == prefix {
-		return s[len(prefix):]
+	padding := make([]byte, length-len(s))
+	for i := range padding {
+		padding[i] = padChar
 	}
 
-	return s
+	return string(padding)
 }
 
-func TrimSuffix(s string, suffix string) string {
-	if len(s) < len(suffix) {
-		return s
-	}
-
-	if s[len(s)-len(suffix):] == suffix {
-		return s[:len(s)-len(suffix)]
-	}
-
-	return s
+func PadStart(s string, length int, padChar byte) string {
+	return pad(s, length, padChar) + s
 }
 
-func TrimSpace(s string) string {
-	var result string
-	var flag bool
-
-	for _, v := range s {
-		if v != ' ' && v != '\n' && v != '\t' {
-			flag = true
-			result += string(v)
-		} else if flag {
-			result += string(v)
-		}
-	}
-
-	return result
+func PadEnd(s string, length int, padChar byte) string {
+	return s + pad(s, length, padChar)
 }

@@ -5,50 +5,63 @@ func Capitalize(sentence string) string {
 
 	for i := 0; i < len(sentenceBytes); i++ {
 		if (i == 0 || sentenceBytes[i-1] == ' ') && IsLetter(sentenceBytes[i]) {
-			sentenceBytes[i] = UpperB(sentenceBytes[i])
+			sentenceBytes[i] = Upper(sentenceBytes[i])
 		}
 	}
 
 	return string(sentenceBytes)
 }
 
-// func CamelCase(s string) string {
-// 	s = regexp.MustCompile("[^a-zA-Z0-9_ ]+").ReplaceAllString(s, "")
-
-//     // Replace all underscores with spaces
-//     s = strings.ReplaceAll(s, "_", " ")
-
-//     // Title case s
-//     s = cases.Title(language.AmericanEnglish, cases.NoLower).String(s)
-
-//     // Remove all spaces
-//     s = strings.ReplaceAll(s, " ", "")
-
-//     // Lowercase the first letter
-//     if len(s) > 0 {
-//         s = strings.ToLower(s[:1]) + s[1:]
-//     }
-
-//     return s
-// }
-
-func SnakeCase(s string) string {
+func CamelCase(s string) string {
 	var result string
+	upperNext := false
 
-	// newStr := s.SplitCase(" ", s)
-	return result[1:]
-}
-
-func KebabCase(s string) string {
-	var result string
-
-	for _, v := range s {
-		if v >= 'A' && v <= 'Z' {
-			result += "-" + string(v+32)
+	for _, char := range s {
+		if IsLetter(char) || IsDigit(char) {
+			if upperNext {
+				result += string(Upper(char))
+				upperNext = false
+			} else {
+				result += string(Lower(char))
+			}
 		} else {
-			result += string(v)
+			// If the character is not a letter or digit, set the flag to capitalize the next valid character.
+			upperNext = true
 		}
 	}
 
 	return result
+}
+
+func concatCase(s string, sep string) string {
+	spliStr := Split(s, " ")
+	var result string
+
+	if len(spliStr) == 1 {
+		for i, char := range s {
+			if i > 0 && (IsUpper(char) || IsDigit(char)) {
+				result += sep
+			}
+			result += string(Lower(char))
+		}
+
+		return result
+	} else {
+		for i, str := range spliStr {
+			if i > 0 {
+				result += sep
+			}
+			result += str
+		}
+
+		return result
+	}
+}
+
+func SnakeCase(s string) string {
+	return concatCase(s, "_")
+}
+
+func KebabCase(s string) string {
+	return concatCase(s, "-")
 }

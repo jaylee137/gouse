@@ -17,16 +17,16 @@ func arrEqual() {
 	fmt.Println("[struct]: ", array.Equal(struct{a int}{1}, struct{a int}{1}))
 }
 
-func arrInclude(){
+func arrIncludes(){
 	fmt.Println("--- Check element is exist in array ---")
-	fmt.Println("[int]: ", array.Include([]int{1, -2, 3}, 1))
-	fmt.Println("[uint]: ", array.Include([]uint{1, 2, 3}, 1))
-	fmt.Println("[float]: ", array.Include([]float64{1.2, 2.3, 3.4}, 1.2))
-	fmt.Println("[string]: ", array.Include([]string{"1", "2", "3"}, "0"))
-	fmt.Println("[rune]: ", array.Include([]rune{'a', 'b', 'c'}, 'a'))
-	fmt.Println("[complex]: ", array.Include([]complex128{1 + 2i, 2 + 3i}, 1 + 2i))
-	fmt.Println("[struct]: ", array.Include([]struct{a int}{struct{a int}{1}, struct{a int}{2}}, struct{a int}{3}))
-	fmt.Println("[interface]: ", array.Include([]interface{}{1, "2", true}, 1))
+	fmt.Println("[int]: ", array.Includes([]int{1, -2, 3}, 1))
+	fmt.Println("[uint]: ", array.Includes([]uint{1, 2, 3}, 1))
+	fmt.Println("[float]: ", array.Includes([]float64{1.2, 2.3, 3.4}, 1.2))
+	fmt.Println("[string]: ", array.Includes([]string{"1", "2", "3"}, "0"))
+	fmt.Println("[rune]: ", array.Includes([]rune{'a', 'b', 'c'}, 'a'))
+	fmt.Println("[complex]: ", array.Includes([]complex128{1 + 2i, 2 + 3i}, 1 + 2i))
+	fmt.Println("[struct]: ", array.Includes([]struct{a int}{struct{a int}{1}, struct{a int}{2}}, struct{a int}{3}))
+	fmt.Println("[interface]: ", array.Includes([]interface{}{1, "2", true}, 1))
 }
 
 func arrMost() {
@@ -361,7 +361,7 @@ func arrCbMap() {
 
 func ArrayExample() {
 	arrEqual()
-	arrInclude()
+	arrIncludes()
 	arrMost()
 	arrSum()
 	arrChunk()

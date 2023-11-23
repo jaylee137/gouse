@@ -1,6 +1,6 @@
 package array
 
-func Include[T comparable](array []T, value T) bool {
+func Includes[T comparable](array []T, value T) bool {
 	for _, v := range array {
 		if v == value {
 			return true
@@ -48,7 +48,7 @@ func Chunk[T comparable](array []T, size int) [][]T {
 func Diff[T comparable](a, b []T) []T {
 	var diff []T
 	for _, v := range a {
-		if !Include(b, v) {
+		if !Includes(b, v) {
 			diff = append(diff, v)
 		}
 	}
