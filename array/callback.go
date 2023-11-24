@@ -1,6 +1,6 @@
 package array
 
-func CbIndex[T comparable](arr []T, f func(T) bool) int {
+func IndexBy[T comparable](arr []T, f func(T) bool) int {
 	for i, v := range arr {
 		if f(v) {
 			return i
@@ -9,11 +9,11 @@ func CbIndex[T comparable](arr []T, f func(T) bool) int {
 	return -1
 }
 
-func CbKey[T comparable](arr []T, f func(T) bool) int {
-	return CbIndex(arr, f)
+func KeyBy[T comparable](arr []T, f func(T) bool) int {
+	return IndexBy(arr, f)
 }
 
-func CbFilter[T comparable](arr []T, f func(T) bool) []T {
+func FilterBy[T comparable](arr []T, f func(T) bool) []T {
 	var res []T
 	for _, v := range arr {
 		if f(v) {
@@ -23,7 +23,7 @@ func CbFilter[T comparable](arr []T, f func(T) bool) []T {
 	return res
 }
 
-func CbFind[T comparable](arr []T, f func(T) bool) T {
+func FindBy[T comparable](arr []T, f func(T) bool) T {
 	for _, v := range arr {
 		if f(v) {
 			return v
@@ -32,13 +32,13 @@ func CbFind[T comparable](arr []T, f func(T) bool) T {
 	return arr[0]
 }
 
-func CbFor[T comparable](arr []T, f func(T)) {
+func ForBy[T comparable](arr []T, f func(T)) {
 	for _, v := range arr {
 		f(v)
 	}
 }
 
-func CbMap[T comparable, R comparable](arr []T, f func(T) R) []R {
+func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {
 	var res []R
 	for _, v := range arr {
 		res = append(res, f(v))

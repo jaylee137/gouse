@@ -1,25 +1,22 @@
 package examples
 
-import (
-	"fmt"
-	"github.com/thuongtruong1009/gouse/utils"
-)
+import "github.com/thuongtruong1009/gouse/utils"
 
 func utilDelay() {
-	fmt.Println("Delay start:")
+	println("Delay start:")
 
 	result := utils.DelayF(func() string {
 		return "Delayed return after 2s"
 	}, 2)
 
 	if result.HasReturn{
-		fmt.Println(result.Value)
+		println(result.Value)
 	} else {
-		fmt.Println("No result")
+		println("No result")
 	}
 
 	utils.Delay(func() {
-		fmt.Println("Delayed not return")
+		println("Delayed not return")
 	}, 3)
 }
 
