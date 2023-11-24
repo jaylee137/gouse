@@ -3,8 +3,7 @@
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
     <!-- <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a> -->
     <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse?tab=doc"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a> -->
-    <!-- <img src="https://github.com/thuongtruong1009/gouse/workflows/CI/badge.svg"> -->
-    <!-- <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/tests.yaml/badge.svg?branch=main" alt="tests"> -->
+    <!-- <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status"> -->
     <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse" rel="nofollow"><img src="https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse" style="max-width: 100%;"></a> -->
 </div>
 
@@ -12,12 +11,12 @@
 
 ## 📝 Why Gouse?
 
-- Gouse is a modern [Golang](https://golang.org/) utility package delivering consistency, modularity, performance, & extras.
+- Gouse is a modern essential [Golang](https://golang.org/) utility package delivering consistency, modularity, performance, & extras.
 - Preset functions inspired by [Lodash.js](https://lodash.com/).
 - Gouse provides a wide variety of methods, taking the hassle out of working with arrays, numbers, objects, strings, etc.
 - Each method has a different set of features, so you can pick the ones that fit your project best.
 - Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
-- Utility functions are available to handle complex logic. Operations such as database connection, build APIs, error handling, log management... can all be set up quickly and easily
+- Utility functions are available to handle complex logic usecases such as database connection, build APIs, error handling, log management... can all be set up quickly and easily
 
 ## ✨ Motivation
 
@@ -48,7 +47,7 @@ go get github.com/thuongtruong1009/gouse
 
 - [API Reference](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
-## 📜 Usage
+## 🦄 Usage
 
 ```go
 package main
@@ -86,6 +85,18 @@ func main() {
 
 - [CHANGELOG](CHANGELOG.md) for project history.
 
-## ❤️ Sponsor
+## 🌸 Sponsor
 
 - If you like this project, you can sponsor me on [Github](https://sponsor.com/thuongtruong1009) or [Paypal](https://paypal.me/thuongtruong1009)
+
+## 📮 Contact
+
+- Email: [thuongtruongofficial@gmail.com](mailto:thuongtruongofficial@gmail.com)
+- Github: [thuongtruong1009](https://github.com/thuongtruong1009)
+
+## 📚 References
+
+- [Lodash.js](https://lodash.com/)
+- [Golang](https://golang.org/)
+- [Golang Docs](https://pkg.go.dev/)
+- [Lodash collection](https://www.geeksforgeeks.org/lodash/?ref=header_search)

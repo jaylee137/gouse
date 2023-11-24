@@ -1,5 +1,7 @@
 package strings
 
+import "html"
+
 func Split(s string, separator string) []string {
 	var result []string
 	var temp string
@@ -14,6 +16,20 @@ func Split(s string, separator string) []string {
 	}
 
 	result = append(result, temp)
+
+	return result
+}
+
+func Words(s string) []string {
+	var result []string
+
+	for _, v := range s {
+		if v == ' ' || v == '\n' || v == '\t' {
+			continue
+		} else {
+			result = append(result, string(v))
+		}
+	}
 
 	return result
 }
@@ -270,6 +286,20 @@ func Escape(s string) string {
 	}
 
 	return result
+}
+
+func Unescape(s string) string {
+	s = html.UnescapeString(s)
+
+	for i := 0; i < len(s); i++ {
+		if s[i] == '\\' {
+			if i+1 < len(s) {
+				i++
+			}
+		}
+	}
+
+	return s
 }
 
 // func Pad(s string, length int, pad ...string) string {

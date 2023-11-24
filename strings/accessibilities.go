@@ -1,5 +1,10 @@
 package strings
 
+import (
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/number"
+)
+
 func Count(s string, substr ...string) int {
 	if len(substr) == 0 {
 		return len(s)
@@ -59,4 +64,14 @@ func LIndex(s string, substr string) int {
 	}
 
 	return -1
+}
+
+func Random(n int) string {
+	var result string
+
+	for i := 0; i < n; i++ {
+		result += string(constants.KeyStr[number.Random(0, len(constants.KeyStr)-1)])
+	}
+
+	return result
 }

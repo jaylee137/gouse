@@ -53,7 +53,13 @@ func strIsUpper() {
 
 func strSplit() {
 	var str = "hello world"
-	fmt.Println("Split string by separator: ", strings.Split(str, " "))
+	fmt.Println("Split string by separator: ", strings.Split(str, "l"))
+}
+
+func strWords() {
+	var str = "hello world"
+	fmt.Println("Split string to array of words: ", strings.Words(str))
+
 }
 
 func strReverse() {
@@ -86,26 +92,9 @@ func strTruncate() {
 	fmt.Println("Truncate string (custom): ", strings.Truncate(str, 5, "***"))
 }
 
-func strCount() {
-	var str = "hello world wo wo"
-	fmt.Println("Count words/substr in string (default): ", strings.Count(str))
-	fmt.Println("Count words/substr in string (with char): ", strings.Count(str, "wo"))
-}
-
-func strLines() {
-	var str = "hello world\nwo wo"
-	fmt.Println("Count lines of string: ", strings.Lines(str))
-}
-
 func strReplace() {
 	var str = "hello world, this is world"
 	fmt.Println("Replace string: ", strings.Replace(str, "world", "golang"))
-}
-
-func strIndexOf() {
-	var str = "hello world, this is world"
-	fmt.Println("First index of substring start at: ", strings.FIndex(str, "world"))
-	fmt.Println("Last Index of substring end at: ", strings.LIndex(str, "world"))
 }
 
 func strTrim() {
@@ -146,42 +135,71 @@ func strEscape() {
 	fmt.Println("Escape string: ", strings.Escape(str))
 }
 
+func strUnescape() {
+	var str = "This is a &lt;b&gt;bold&lt;/b&gt; statement &amp; &quot;quote&quot; – © ®"
+	fmt.Println("Unescape string: ", strings.Unescape(str))
+}
+
 func strPad() {
 	var str = "hello world"
-	// fmt.Println("Pad string (default): ", strings.Pad(str, 20))
-	// fmt.Println("Pad string (custom): ", strings.Pad(str, 20, "pad"))
+	// fmt.Println("Pad string: ", strings.Pad(str, 20, '*'))
 	fmt.Println("Pad-left string: ", strings.PadStart(str, 20, '$'))
 	fmt.Println("Pad-right string: ", strings.PadEnd(str, 20, '@'))
 }
 
-func StringExample() {
-	// strCapitalize()
-	// strCamelCase()
-	// strSnakeCase()
-	// strKebabCase()
-	
-	// strIsLetter()
-	// strIsDigit()
-	// strIncludes()
-	// strIsLower()
-	// strIsUpper()
+func strCount() {
+	var str = "hello world wo wo"
+	fmt.Println("Count words/substr in string (default): ", strings.Count(str))
+	fmt.Println("Count words/substr in string (with char): ", strings.Count(str, "wo"))
+}
 
-	// strSplit()
-	// strReverse()
-	// strLower()
-	// strUpper()
-	// strRepeat()
-	// strTruncate()
-	// strCount()
-	// strLines()
-	// strReplace()
-	// strIndexOf()
-	// strTrim()
-	// strJoin()
-	// strSlice()
-	// strSplice()
-	// strStartsWith()
-	// strEndsWith()
-	// strEscape()
+func strLines() {
+	var str = "hello world\nwo wo"
+	fmt.Println("Count lines of string: ", strings.Lines(str))
+}
+
+func strIndex() {
+	var str = "hello world, this is world"
+	fmt.Println("First index of substring start at: ", strings.FIndex(str, "world"))
+	fmt.Println("Last Index of substring end at: ", strings.LIndex(str, "world"))
+}
+
+func strRandom() {
+	fmt.Println("Random string: ", strings.Random(10))
+}
+
+func StringExample() {
+	strCapitalize()
+	strCamelCase()
+	strSnakeCase()
+	strKebabCase()
+	
+	strIsLetter()
+	strIsDigit()
+	strIncludes()
+	strIsLower()
+	strIsUpper()
+
+	strSplit()
+	strWords()
+	strReverse()
+	strLower()
+	strUpper()
+	strRepeat()
+	strTruncate()
+	strReplace()
+	strTrim()
+	strJoin()
+	strSlice()
+	strSplice()
+	strStartsWith()
+	strEndsWith()
+	strEscape()
+	strUnescape()
 	strPad()
+	
+	strCount()
+	strLines()
+	strIndex()
+	strRandom()
 }

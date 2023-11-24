@@ -18,7 +18,7 @@ func utilDelay() {
 		fmt.Println("No result")
 	}
 
-	utils.DelayV(func() {
+	utils.Delay(func() {
 		fmt.Println("Delayed not return")
 	}, 3)
 }

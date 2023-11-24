@@ -31,7 +31,7 @@ func DelayF[T any](f func() T, timeout int) DelayedResult[T] {
 	return delay(f, timeout, true)
 }
 
-func DelayV(f func(), timeout int) DelayedResult[struct{}] {
+func Delay(f func(), timeout int) DelayedResult[struct{}] {
 	return delay(func() struct{} {
 		f()
 		return struct{}{}

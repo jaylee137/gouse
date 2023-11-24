@@ -14,5 +14,7 @@ func main() {
 	// examples.DateExample()
 	// examples.UtilExample()
 	// examples.TypeExample()
-	examples.StringExample()
+	// examples.StringExample()
+	// examples.NumberExample()
+	examples.MathExample()
 }
