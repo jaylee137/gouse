@@ -1,7 +1,9 @@
 <div align="center">
-    <!-- <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
+    <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
-    <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a> -->
+    <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
+    <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
+    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
     <!-- <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a> -->
     <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse?tab=doc"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a> -->
@@ -25,18 +27,24 @@
 
 - To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
 
-<!-- ## 📝 Features
+## 🚀 Features
 
 - [x] Array
-- [x] Collection
+- [ ] Collection
 - [x] Date
-- [x] Function
-- [x] Lang
+- [ ] Function
+- [ ] Lang
 - [x] Math
 - [x] Number
-- [x] Object
+- [ ] Object
 - [x] String
-- [x] Util -->
+- [x] Util
+
+## 📋 Requirements
+
+> Note: Compatibility with Go >= 1.18
+
+> This project is still in development, so not all features are available.
 
 ## 📦 Installation
 
@@ -53,13 +61,10 @@ go get github.com/thuongtruong1009/gouse
 ```go
 package main
 
-import (
-    "fmt"
-    "github.com/thuongtruong1009/gouse"
-)
+import "github.com/thuongtruong1009/gouse"
 
 func main() {
-    fmt.Println(gouse.Stater())
+    println(gouse.Stater())
 }
 ```
 

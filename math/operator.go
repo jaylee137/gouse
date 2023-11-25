@@ -67,7 +67,19 @@ func Sum(nums ...int) int {
 	return sum
 }
 
+func SumF(nums ...float64) float64 {
+	var sum float64
+	for _, v := range nums {
+		sum += v
+	}
+	return sum
+}
+
 func Add(num1, num2 int) int {
+	return num1 + num2
+}
+
+func AddF(num1, num2 float64) float64 {
 	return num1 + num2
 }
 
@@ -83,7 +95,19 @@ func Multi(nums ...int) int {
 	return product
 }
 
+func MultiF(nums ...float64) float64 {
+	product := 1.0
+	for _, v := range nums {
+		product *= v
+	}
+	return product
+}
+
 func Divide(num1, num2 int) int {
+	return num1 / num2
+}
+
+func DivideF(num1, num2 float64) float64 {
 	return num1 / num2
 }
 
@@ -103,8 +127,16 @@ func Pow(base, exp int) int {
 	return result
 }
 
-func PowF(base, exp float64) int {
-	return int(math.Pow(base, exp))
+func Pow2(base int) int {
+	return Multi(base, base)
+}
+
+func PowF(base, exp float64) float64 {
+	result := 1.0
+	for i := 0; i < int(exp); i++ {
+		result *= base
+	}
+	return result
 }
 
 func Factorial(num int) int {
@@ -136,28 +168,4 @@ func Cbrt(number int) int {
 
 func CbrtF(number float64) float64 {
 	return RootF(number, 3)
-}
-
-func Log(number, base int) int {
-	return int(math.Log(float64(number)) / math.Log(float64(base)))
-}
-
-func LogF(number, base float64) float64 {
-	return math.Log(number) / math.Log(base)
-}
-
-func Log2(number int) int {
-	return Log(number, 2)
-}
-
-func Log2F(number float64) float64 {
-	return LogF(number, 2)
-}
-
-func Log10(number int) int {
-	return Log(number, 10)
-}
-
-func Log10F(number float64) float64 {
-	return LogF(number, 10)
 }

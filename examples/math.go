@@ -70,7 +70,9 @@ func mathOperators() {
 }
 
 func mathPower() {
-	println("Power of numbers: ", math.Pow(2, 3))
+	println("Power square of number: ", math.Pow2(2))
+	println("Power of integer numbers: ", math.Pow(2, 3))
+	println("Power of float numbers: ", math.PowF(2.0, 3.0))
 }
 
 func mathFactorial() {
@@ -100,20 +102,104 @@ func mathLog() {
 	println("Logarithm of float number (base 10): ", fmt.Sprintf("%f", math.Log10F(20.0)))
 }
 
-func MathExample() {
-	mathIsPrime()
-	mathIsEven()
-	mathIsOdd()
-	mathIsPerfectSquare()
+func mathPytago() {
+	println("Pytago of number (integer): ", fmt.Sprintf("%f", math.Pytago(3, 4)))
+	println("Pytago of number (float): ", fmt.Sprintf("%f", math.PytagoF(3.0, 4.0)))
+}
 
-	mathAbs()
-	mathFloor()
-	mathCeil()
-	mathRound()
-	mathMinMax()
-	mathOperators()
-	mathPower()
-	mathFactorial()
-	mathRoot()
-	mathLog()
+// func mathTrigonometry() {
+// 	println("Sine of integer number: ", math.Sin(90))
+// 	println("Sine of float number: ", fmt.Sprintf("%f", math.SinF(90.0)))
+	
+// 	println("Cosine of integer number: ", math.Cos(90))
+// 	println("Cosine of float number: ", fmt.Sprintf("%f", math.CosF(90.0)))
+
+// 	println("Tangent of integer number: ", math.Tan(90))
+// 	println("Tangent of float number: ", fmt.Sprintf("%f", math.TanF(90.0)))
+// }
+
+func mathRect() {
+	println("Area of rectangle: ", math.AreaRect(10, 20))
+	println("Perimeter of rectangle (integer): ", math.PeriRect(10, 20))
+	println("Perimeter of rectangle (float): ", fmt.Sprintf("%f", math.PeriRectF(10.0, 20.0)))
+	println("Diagonal of rectangle (integer): ", fmt.Sprintf("%f", math.DiagRect(10, 20)))
+	println("Diagonal of rectangle (float): ", fmt.Sprintf("%f", math.DiagRectF(10.0, 20.0)))
+}
+
+func mathCircle() {
+	println("Area of circle (integer): ", fmt.Sprintf("%f", math.AreaCircle(10)))
+	println("Area of circle (float): ", fmt.Sprintf("%f", math.AreaCircleF(10.0)))
+	println("Perimeter of circle (integer): ", fmt.Sprintf("%f", math.PeriCircle(10)))
+	println("Perimeter of circle (float): ", fmt.Sprintf("%f", math.PeriCircleF(10.0)))
+}
+
+func mathTriangle() {
+	println("Area of triangle (integer): ", math.AreaTriangle(10, 20))
+	println("Area of triangle (float): ", fmt.Sprintf("%f", math.AreaTriangleF(10.0, 20.0)))
+	println("Perimeter of triangle (integer): ", math.PeriTriangle(10, 20, 30))
+	println("Perimeter of triangle (float): ", fmt.Sprintf("%f", math.PeriTriangleF(10.0, 20.0, 30.0)))
+}
+
+func mathSquare() {
+	println("Area of square (integer): ", math.AreaSquare(10))
+	println("Area of square (float): ", fmt.Sprintf("%f", math.AreaSquareF(10.0)))
+	println("Perimeter of square (integer): ", math.PeriSquare(10))
+	println("Perimeter of square (float): ", fmt.Sprintf("%f", math.PeriSquareF(10.0)))
+}
+
+func mathCube() {
+	println("Area of cube (integer): ", math.AreaCube(10))
+	println("Area of cube (float): ", fmt.Sprintf("%f", math.AreaCubeF(10.0)))
+	println("Perimeter of cube (integer): ", math.PeriCube(10))
+	println("Perimeter of cube (float): ", fmt.Sprintf("%f", math.PeriCubeF(10.0)))
+}
+
+func mathSphere() {
+	println("Area of sphere (integer): ", fmt.Sprintf("%f", math.AreaSphere(10)))
+	println("Area of sphere (float): ", fmt.Sprintf("%f", math.AreaSphereF(10.0)))
+	println("Volume of sphere (integer): ", fmt.Sprintf("%f", math.VolSphere(10)))
+	println("Volume of sphere (float): ", fmt.Sprintf("%f", math.VolSphereF(10.0)))
+}
+
+func mathCylinder() {
+	println("Area of cylinder (integer): ", fmt.Sprintf("%f", math.AreaCylinder(10, 20)))
+	println("Area of cylinder (float): ", fmt.Sprintf("%f", math.AreaCylinderF(10.0, 20.0)))
+	println("Volume of cylinder (integer): ", fmt.Sprintf("%f", math.VolCylinder(10, 20)))
+	println("Volume of cylinder (float): ", fmt.Sprintf("%f", math.VolCylinderF(10.0, 20.0)))
+}
+
+// func mathCone() {
+// 	println("Area of cone (integer): ", fmt.Sprintf("%f", math.AreaCone(10, 20)))
+// 	println("Area of cone (float): ", fmt.Sprintf("%f", math.AreaConeF(10.0, 20.0)))
+// 	println("Volume of cone (integer): ", fmt.Sprintf("%f", math.VolCone(10, 20)))
+// 	println("Volume of cone (float): ", fmt.Sprintf("%f", math.VolConeF(10.0, 20.0)))
+// }
+
+func MathExample() {
+	// mathIsPrime()
+	// mathIsEven()
+	// mathIsOdd()
+	// mathIsPerfectSquare()
+
+	// mathAbs()
+	// mathFloor()
+	// mathCeil()
+	// mathRound()
+	// mathMinMax()
+	// mathOperators()
+	// mathPower()
+	// mathFactorial()
+	// mathRoot()
+
+	// mathLog()
+	// mathPytago()
+
+	// mathRect()
+	// mathCircle()
+	// mathTriangle()
+	// mathSquare()
+	// mathCube()
+	// mathSphere()
+	// mathCylinder()
+	// mathCone()
 }

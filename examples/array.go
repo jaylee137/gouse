@@ -26,7 +26,6 @@ func arrIncludes(){
 	println("[rune]: ", array.Includes([]rune{'a', 'b', 'c'}, 'a'))
 	println("[complex]: ", array.Includes([]complex128{1 + 2i, 2 + 3i}, 1 + 2i))
 	println("[struct]: ", array.Includes([]struct{a int}{struct{a int}{1}, struct{a int}{2}}, struct{a int}{3}))
-	println("[interface]: ", array.Includes([]interface{}{1, "2", true}, 1))
 }
 
 func arrMost() {
@@ -38,7 +37,6 @@ func arrMost() {
 	println("[rune]: ", string(array.Most([]rune{'a', 'b', 'c', 'b', 'b', 'a', 'b', 'c'})))
 	println("[complex]: ", array.Most([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 2 + 3i, 2 + 3i, 1 + 2i, 2 + 3i, 3 + 4i}))
 	fmt.Println("[struct]: ", array.Most([]struct{a int}{struct{a int}{1}, struct{a int}{2}, struct{a int}{3}, struct{a int}{2}, struct{a int}{2}, struct{a int}{1}, struct{a int}{2}, struct{a int}{3}}))
-	println("[interface]: ", array.Most([]interface{}{1, "2", true, "2", "2", 1, "2", true}))
 }
 
 func arrSum() {
@@ -59,7 +57,6 @@ func arrChunk() {
 	println("[rune]: ", array.Chunk([]rune{'a', 'b', 'c', 'd', 'e', 'f'}, 3))
 	println("[complex]: ", array.Chunk([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 4 + 5i, 5 + 6i, 6 + 7i}, 3))
 	println("[struct]: ", array.Chunk([]struct{a int}{struct{a int}{1}, struct{a int}{2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, 3))
-	println("[interface]: ", array.Chunk([]interface{}{1, "2", true, "4", "5", 6}, 3))
 }
 
 func arrDiff() {
@@ -71,7 +68,6 @@ func arrDiff() {
 	println("[rune]: ", array.Diff([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
 	println("[complex]: ", array.Diff([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
 	println("[struct]: ", array.Diff([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, []struct{a int}{struct{a int}{1}, struct{a int}{2}}))
-	println("[interface]: ", array.Diff([]interface{}{1, "2", false}, []interface{}{3, "3", true}))
 }
 
 func arrDrop() {
@@ -84,7 +80,6 @@ func arrDrop() {
 	println("[rune]: ", array.Drop([]rune{'a', 'b', 'd', 'e', 'f'}, 2))
 	println("[complex]: ", array.Drop([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, 2))
 	println("[struct]: ", array.Drop([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, 2))
-	println("[interface]: ", array.Drop([]interface{}{1, "2", false}, 2))
 }
 
 func arrIndex() {
@@ -96,7 +91,6 @@ func arrIndex() {
 	println("[rune]: ", array.Index([]rune{'a', 'b', 'd', 'e', 'f'}, 'e'))
 	println("[complex]: ", array.Index([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, 5 + 6i))
 	println("[struct]: ", array.Index([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, struct{a int}{3}))
-	println("[interface]: ", array.Index([]interface{}{1, "2", false}, false))
 }
 
 func arrMerge() {
@@ -108,7 +102,6 @@ func arrMerge() {
 	println("[rune]: ", array.Merge([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
 	println("[complex]: ", array.Merge([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
 	println("[struct]: ", array.Merge([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, []struct{a int}{struct{a int}{1}, struct{a int}{2}}))
-	println("[interface]: ", array.Merge([]interface{}{1, "2", false}, []interface{}{3, "3", true}))
 }
 
 func arrMin() {
@@ -138,7 +131,6 @@ func arrIntersect() {
 	println("[rune]: ", array.Intersect([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
 	println("[complex]: ", array.Intersect([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
 	println("[struct]: ", array.Intersect([]struct{a int}{struct{a int}{1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, []struct{a int}{struct{a int}{1}, struct{a int}{2}}))
-	println("[interface]: ", array.Intersect([]interface{}{1, "2", true}, []interface{}{3, "3", true}))
 }
 
 func arrKeyBy() {
@@ -169,10 +161,6 @@ func arrKeyBy() {
 
 	println("[struct]: ", array.KeyBy([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, func (v struct{a int}) bool {
 		return v.a == 3
-	}))
-
-	println("[interface]: ", array.KeyBy([]interface{}{1, "2", false}, func (v interface{}) bool {
-		return v == false
 	}))
 }
 
@@ -205,10 +193,6 @@ func arrIndexBy() {
 	println("[struct]: ", array.IndexBy([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, func (v struct{a int}) bool {
 		return v.a == 3
 	}))
-
-	println("[interface]: ", array.IndexBy([]interface{}{1, "2", false}, func (v interface{}) bool {
-		return v == false
-	}))
 }
 
 func arrFilterBy() {
@@ -240,10 +224,6 @@ func arrFilterBy() {
 	println("[struct]: ", array.FilterBy([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, func (v struct{a int}) bool {
 		return v.a > 0
 	}))
-
-	println("[interface]: ", array.FilterBy([]interface{}{1, "2", false}, func (v interface{}) bool {
-		return v == false
-	}))
 }
 
 func arrFindBy() {
@@ -274,10 +254,6 @@ func arrFindBy() {
 
 	fmt.Println("[struct]: ", array.FindBy([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, func (v struct{a int}) bool {
 		return v.a == 3
-	}))
-
-	println("[interface]: ", array.FindBy([]interface{}{1, "2", false}, func (v interface{}) bool {
-		return v == false
 	}))
 }
 
@@ -317,11 +293,6 @@ func arrForBy() {
 	array.ForBy([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, func (v struct{a int}) {
 		fmt.Println(v)
 	})
-
-	print("[interface]: ")
-	array.ForBy([]interface{}{1, "2", false}, func (v interface{}) {
-		println(v)
-	})
 }
 
 func arrMapBy() {
@@ -352,10 +323,6 @@ func arrMapBy() {
 
 	println("[struct]: ", array.MapBy([]struct{a int}{struct{a int}{-1}, struct{a int}{-2}, struct{a int}{3}, struct{a int}{4}, struct{a int}{5}, struct{a int}{6}}, func (v struct{a int}) struct{a int} {
 		return struct{a int}{v.a * 2}
-	}))
-
-	println("[interface]: ", array.MapBy([]interface{}{1, "2", false}, func (v interface{}) interface{} {
-		return v
 	}))
 }
 

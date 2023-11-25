@@ -10,11 +10,12 @@ func Starter() string {
 }
 
 func main() {	
-	// examples.ArrayExample()
-	// examples.DateExample()
-	// examples.UtilExample()
-	// examples.TypeExample()
-	// examples.StringExample()
-	// examples.NumberExample()
+	println(Starter())
+	examples.ArrayExample()
+	examples.DateExample()
+	examples.UtilExample()
+	examples.TypeExample()
+	examples.StringExample()
+	examples.NumberExample()
 	examples.MathExample()
 }
