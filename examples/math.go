@@ -53,19 +53,12 @@ func mathMinMax() {
 
 func mathOperators() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
-
 	println("Sum of numbers: ", math.Sum(num1, num2, num3, num4))
-
 	println("Add numbers: ", math.Add(num1, num2))
-
 	println("Subtract of numbers: ", math.Sub(num1, num2))
-
 	println("Multiply of numbers: ", math.Multi(num1, num2, num3, num4))
-
 	println("Quotient of numbers: ", math.Divide(num1, num2))
-
 	println("Remainder of numbers: ", math.Remainder(num1, num2))
-
 	println("Average/Mean of numbers: ", math.Mean(num1, num2, num3, num4))
 }
 
@@ -107,16 +100,14 @@ func mathPytago() {
 	println("Pytago of number (float): ", fmt.Sprintf("%f", math.PytagoF(3.0, 4.0)))
 }
 
-// func mathTrigonometry() {
-// 	println("Sine of integer number: ", math.Sin(90))
-// 	println("Sine of float number: ", fmt.Sprintf("%f", math.SinF(90.0)))
-	
-// 	println("Cosine of integer number: ", math.Cos(90))
-// 	println("Cosine of float number: ", fmt.Sprintf("%f", math.CosF(90.0)))
-
-// 	println("Tangent of integer number: ", math.Tan(90))
-// 	println("Tangent of float number: ", fmt.Sprintf("%f", math.TanF(90.0)))
-// }
+func mathTrigonometry() {
+	println("Sine of integer number: ", math.Sin(90))
+	println("Sine of float number: ", fmt.Sprintf("%f", math.SinF(90.0)))
+	println("Cosine of integer number: ", math.Cos(90))
+	println("Cosine of float number: ", fmt.Sprintf("%f", math.CosF(90.0)))
+	println("Tangent of integer number: ", math.Tan(90))
+	println("Tangent of float number: ", fmt.Sprintf("%f", math.TanF(90.0)))
+}
 
 func mathRect() {
 	println("Area of rectangle: ", math.AreaRect(10, 20))
@@ -124,6 +115,8 @@ func mathRect() {
 	println("Perimeter of rectangle (float): ", fmt.Sprintf("%f", math.PeriRectF(10.0, 20.0)))
 	println("Diagonal of rectangle (integer): ", fmt.Sprintf("%f", math.DiagRect(10, 20)))
 	println("Diagonal of rectangle (float): ", fmt.Sprintf("%f", math.DiagRectF(10.0, 20.0)))
+	println("Volume of rectangular (integer): ", math.VolRect(10, 20, 30))
+	println("Volume of rectangular (float): ", fmt.Sprintf("%f", math.VolRectF(10.0, 20.0, 30.0)))
 }
 
 func mathCircle() {
@@ -152,6 +145,8 @@ func mathCube() {
 	println("Area of cube (float): ", fmt.Sprintf("%f", math.AreaCubeF(10.0)))
 	println("Perimeter of cube (integer): ", math.PeriCube(10))
 	println("Perimeter of cube (float): ", fmt.Sprintf("%f", math.PeriCubeF(10.0)))
+	println("Volume of cube (integer): ", math.VolCube(10))
+	println("Volume of cube (float): ", fmt.Sprintf("%f", math.VolCubeF(10.0)))
 }
 
 func mathSphere() {
@@ -168,38 +163,76 @@ func mathCylinder() {
 	println("Volume of cylinder (float): ", fmt.Sprintf("%f", math.VolCylinderF(10.0, 20.0)))
 }
 
-// func mathCone() {
-// 	println("Area of cone (integer): ", fmt.Sprintf("%f", math.AreaCone(10, 20)))
-// 	println("Area of cone (float): ", fmt.Sprintf("%f", math.AreaConeF(10.0, 20.0)))
-// 	println("Volume of cone (integer): ", fmt.Sprintf("%f", math.VolCone(10, 20)))
-// 	println("Volume of cone (float): ", fmt.Sprintf("%f", math.VolConeF(10.0, 20.0)))
-// }
+func mathCone() {
+	println("Area of cone (integer): ", fmt.Sprintf("%f", math.AreaCone(10, 20)))
+	println("Area of cone (float): ", fmt.Sprintf("%f", math.AreaConeF(10.0, 20.0)))
+	println("Volume of cone (integer): ", fmt.Sprintf("%f", math.VolCone(10, 20)))
+	println("Volume of cone (float): ", fmt.Sprintf("%f", math.VolConeF(10.0, 20.0)))
+}
+
+func mathTrapezoid() {
+	println("Area of trapezoid (integer): ", fmt.Sprintf("%f", math.AreaTrapezoid(10, 20, 30)))
+	println("Area of trapezoid (float): ", fmt.Sprintf("%f", math.AreaTrapezoidF(10.0, 20.0, 30.0)))
+}
+
+func mathParallelogram() {
+	println("Area of parallelogram (integer): ", math.AreaParallelogram(10, 20))
+	println("Area of parallelogram (float): ", fmt.Sprintf("%f", math.AreaParallelogramF(10.0, 20.0)))
+}
+
+func mathRhombus() {
+	println("Area of rhombus (integer): ", math.AreaRhombus(10, 20))
+	println("Area of rhombus (float): ", fmt.Sprintf("%f", math.AreaRhombusF(10.0, 20.0)))
+}
+
+func mathEllipse() {
+	println("Area of ellipse (integer): ", fmt.Sprintf("%f", math.AreaEllipse(10, 20)))
+	println("Area of ellipse (float): ", fmt.Sprintf("%f", math.AreaEllipseF(10.0, 20.0)))
+}
+
+func mathPolygon() {
+	println("Area of pentagol by number of sides (integer): ", fmt.Sprintf("%f", math.AreaPolygon(10, 6)))
+}
+
+func mathTransition() {
+	var distance, speed, time float64 = 100, 10, 10
+	println("Speed: ", fmt.Sprintf("%f", math.Speed(distance, time)))
+	println("Distance: ", fmt.Sprintf("%f", math.Distance(speed, time)))
+	println("Time: ", fmt.Sprintf("%f", math.Time(distance, speed)))
+}
 
 func MathExample() {
-	// mathIsPrime()
-	// mathIsEven()
-	// mathIsOdd()
-	// mathIsPerfectSquare()
+	mathIsPrime()
+	mathIsEven()
+	mathIsOdd()
+	mathIsPerfectSquare()
 
-	// mathAbs()
-	// mathFloor()
-	// mathCeil()
-	// mathRound()
-	// mathMinMax()
-	// mathOperators()
-	// mathPower()
-	// mathFactorial()
-	// mathRoot()
+	mathAbs()
+	mathFloor()
+	mathCeil()
+	mathRound()
+	mathMinMax()
+	mathOperators()
+	mathPower()
+	mathFactorial()
+	mathRoot()
 
-	// mathLog()
-	// mathPytago()
+	mathLog()
+	mathPytago()
+	mathTrigonometry()
+	mathTransition()
 
-	// mathRect()
-	// mathCircle()
-	// mathTriangle()
-	// mathSquare()
-	// mathCube()
-	// mathSphere()
-	// mathCylinder()
-	// mathCone()
+	mathRect()
+	mathCircle()
+	mathTriangle()
+	mathSquare()
+	mathCube()
+	mathSphere()
+	mathCylinder()
+	mathCone()
+	mathTrapezoid()
+	mathParallelogram()
+	mathRhombus()
+	mathEllipse()
+	mathPolygon()
 }

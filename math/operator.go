@@ -9,6 +9,13 @@ func Abs(num int) int {
 	return num
 }
 
+func AbsF(num float64) float64 {
+	if num < 0 {
+		return -num
+	}
+	return num
+}
+
 // down to the nearest integer
 func Floor(num float64) int {
 	return int(num)
@@ -48,7 +55,28 @@ func Max(nums ...int) int {
 	return max
 }
 
+func MaxF(nums ...float64) float64 {
+	var max float64
+	for _, v := range nums {
+		if v > max {
+			max = v
+		}
+	}
+	return max
+}
+
 func Min(nums ...int) int {
+	min := nums[0]
+
+	for _, v := range nums {
+		if v < min {
+			min = v
+		}
+	}
+	return min
+}
+
+func MinF(nums ...float64) float64 {
 	min := nums[0]
 
 	for _, v := range nums {
@@ -87,6 +115,10 @@ func Sub(num1, num2 int) int {
 	return num1 - num2
 }
 
+func SubF(num1, num2 float64) float64 {
+	return num1 - num2
+}
+
 func Multi(nums ...int) int {
 	product := 1
 	for _, v := range nums {
@@ -119,9 +151,21 @@ func Mean(nums ...int) int {
 	return Sum(nums...) / len(nums)
 }
 
+func MeanF(nums ...float64) float64 {
+	return SumF(nums...) / float64(len(nums))
+}
+
 func Pow(base, exp int) int {
 	result := 1
 	for i := 0; i < exp; i++ {
+		result *= base
+	}
+	return result
+}
+
+func PowF(base, exp float64) float64 {
+	result := 1.0
+	for i := 0; i < int(exp); i++ {
 		result *= base
 	}
 	return result
@@ -131,12 +175,16 @@ func Pow2(base int) int {
 	return Multi(base, base)
 }
 
-func PowF(base, exp float64) float64 {
-	result := 1.0
-	for i := 0; i < int(exp); i++ {
-		result *= base
-	}
-	return result
+func Pow2F(base float64) float64 {
+	return MultiF(base, base)
+}
+
+func Pow3(base int) int {
+	return Multi(base, base, base)
+}
+
+func Pow3F(base float64) float64 {
+	return MultiF(base, base, base)
 }
 
 func Factorial(num int) int {

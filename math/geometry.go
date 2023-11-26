@@ -26,6 +26,14 @@ func DiagRectF(length, width float64) float64 {
 	return PytagoF(length, width)
 }
 
+func VolRect(length, width, height int) int {
+	return Multi(length, width, height)
+}
+
+func VolRectF(length, width, height float64) float64 {
+	return MultiF(length, width, height)
+}
+
 func AreaCircle(radius int) float64 {
 	return math.Pi * float64(Pow2(radius))
 }
@@ -90,6 +98,14 @@ func PeriCubeF(side float64) float64 {
 	return MultiF(side, 12)
 }
 
+func VolCube(side int) int {
+	return Pow3(side)
+}
+
+func VolCubeF(side float64) float64 {
+	return PowF(side, 3)
+}
+
 func AreaSphere(radius int) float64 {
 	return 4 * math.Pi * float64(Pow2(radius))
 }
@@ -122,34 +138,54 @@ func VolCylinderF(radius, height float64) float64 {
 	return math.Pi * PowF(radius, 2) * height
 }
 
-// func AreaCone(radius, height int) float64 {
-// 	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64(Pow2(height) + Pow2(radius))))
-// }
+func AreaCone(radius, height int) float64 {
+	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64(Pow2(height) + Pow2(radius))))
+}
 
-// func AreaConeF(radius, height float64) float64 {
-// 	return math.Pi * radius * (radius + math.Sqrt(PowF(height, 2) + PowF(radius, 2)))
-// }
+func AreaConeF(radius, height float64) float64 {
+	return math.Pi * radius * (radius + math.Sqrt(PowF(height, 2) + PowF(radius, 2)))
+}
 
-// func VolCone(radius, height int) float64 {
-// 	return (1 / 3) * math.Pi * float64(Pow2(radius)) * float64(height)
-// }
+func VolCone(radius, height int) float64 {
+	return DivideF(1, 3) * math.Pi * float64(Pow2(radius)) * float64(height)
+}
 
-// func VolConeF(radius, height float64) float64 {
-// 	return (1 / 3) * math.Pi * PowF(radius, 2) * height
-// }
+func VolConeF(radius, height float64) float64 {
+	return DivideF(1, 3) * math.Pi * PowF(radius, 2) * height
+}
 
 func AreaTrapezoid(base1, base2, height int) float64 {
 	return 0.5 * float64(Add(base1, base2)) * float64(height)
 }
 
-// func AreaParallelogram(base, height int) int {
-// 	return Multi(base, height)
-// }
+func AreaTrapezoidF(base1, base2, height float64) float64 {
+	return 0.5 * (base1 + base2) * height
+}
 
-// func AreaRhomus(diag1, diag2 int) int {
-// 	return Divide(Multi(diag1, diag2), 2)
-// }
+func AreaParallelogram(base, height int) int {
+	return Multi(base, height)
+}
 
-// func AreaEllipse(major, minor int) float64 {
-// 	return math.Pi * float64(major) * float64(minor)
-// }
+func AreaParallelogramF(base, height float64) float64 {
+	return MultiF(base, height)
+}
+
+func AreaRhombus(diag1, diag2 int) int {
+	return Divide(Multi(diag1, diag2), 2)
+}
+
+func AreaRhombusF(diag1, diag2 float64) float64 {
+	return DivideF(MultiF(diag1, diag2), 2)
+}
+
+func AreaEllipse(major, minor int) float64 {
+	return math.Pi * float64(major) * float64(minor)
+}
+
+func AreaEllipseF(major, minor float64) float64 {
+	return math.Pi * major * minor
+}
+
+func AreaPolygon(lenSide float64, numSide int) float64 {
+	return DivideF(MultiF(0.25, float64(numSide), Pow2F(lenSide)), AbsF(TanF(DivideF(180, float64(numSide)))))
+}
