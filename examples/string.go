@@ -106,6 +106,10 @@ func strJoin() {
 	println("Join string: ", strings.Join(str, "-"))
 }
 
+func strConcat() {
+	println("Concat string: ", strings.Concat("hello", "world"))
+}
+
 func strSlice() {
 	var str = "hello world, this is world"
 	println("Slice string: ", strings.Slice(str, 0, 5))
@@ -187,6 +191,7 @@ func StringExample() {
 	strReplace()
 	strTrim()
 	strJoin()
+	strConcat()
 	strSlice()
 	strSplice()
 	strStartsWith()

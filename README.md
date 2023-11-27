@@ -37,9 +37,9 @@
 - [ ] Lang
 - [x] Math
 - [x] Number
-- [ ] Object
+- [ ] Struct
 - [x] String
-- [x] Util
+- [x] Type
 
 ## 📋 Requirements
 
@@ -85,7 +85,7 @@ func main() {
 
 - For support in using Gouse, please reach out in the following venues:
 
-- [Raise Issues](https://github.com/thuongtruong1009/gouse/issues) - For generally applicable issues and feedback.
+- [Raise Issues](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
 - [Join Discussions](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
 
 ## 📜 Changelog

@@ -6,16 +6,15 @@ import (
 )
 
 func Starter() string {
-	return strings.Capitalize("hello world!")
+	return strings.Capitalize("hello world from Gouse!")
 }
 
-func main() {	
-	// println(Starter())
+func main() {
 	// examples.ArrayExample()
 	// examples.DateExample()
-	// examples.UtilExample()
+	examples.FunctionExample()
 	// examples.TypeExample()
 	// examples.StringExample()
 	// examples.NumberExample()
-	examples.MathExample()
+	// examples.MathExample()
 }

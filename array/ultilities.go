@@ -1,5 +1,7 @@
 package array
 
+import "github.com/thuongtruong1009/gouse/types"
+
 func Includes[T comparable](array []T, value T) bool {
 	for _, v := range array {
 		if v == value {
@@ -78,4 +80,14 @@ func Merge[T comparable](arr ...[]T) []T {
 		merged = append(merged, v...)
 	}
 	return merged
+}
+
+func Compact[T interface{}](arr []T) []T {
+	var compact []T
+	for _, v := range arr {
+		if !types.IsZero(v) && !types.IsNil(v) && !types.IsEmpty(v) && !types.IsUndefined(v) && !types.IsBool(v) {
+			compact = append(compact, v)
+		}
+	}
+	return compact
 }

@@ -94,3 +94,8 @@ func IsEmpty(v interface{}) bool {
 func IsUndefined(v interface{}) bool {
 	return v == nil || IsEmpty(v)
 }
+
+func IsZero(v interface{}) bool {
+	return v == nil || IsEmpty(v)
+}
+

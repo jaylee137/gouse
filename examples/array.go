@@ -326,6 +326,11 @@ func arrMapBy() {
 	}))
 }
 
+func arrCompact() {
+	result := array.Compact([]interface{}{1, -2, 3, -4, 5, 6, 0, 0.0, "", false, nil})
+	fmt.Println("Compact remove all falsy values: ", result)
+}
+
 func ArrayExample() {
 	arrEqual()
 	arrIncludes()
@@ -336,6 +341,7 @@ func ArrayExample() {
 	arrDrop()
 	arrIndex()
 	arrMerge()
+	arrCompact()
 
 	arrIntersect()
 	arrMin()

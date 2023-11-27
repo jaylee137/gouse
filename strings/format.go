@@ -209,6 +209,16 @@ func Join(s []string, separator string) string {
 	return result
 }
 
+func Concat(s ...string) string {
+	var result string
+
+	for _, v := range s {
+		result += v
+	}
+
+	return result
+}
+
 func Slice(s string, start int, end int) string {
 	if start < 0 {
 		start = len(s) + start
