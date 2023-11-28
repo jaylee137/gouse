@@ -83,10 +83,10 @@ func main() {
 
 ## 📌 Support
 
+- The tool has been tested on a variety of inputs, but it's not perfect.
 - For support in using Gouse, please reach out in the following venues:
-
-- [Raise Issues](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
-- [Join Discussions](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
+  - [Raise Issues](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
+  - [Join Discussions](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
 
 ## 📜 Changelog
 

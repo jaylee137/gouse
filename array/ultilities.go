@@ -28,7 +28,7 @@ func Most[T comparable](arr []T) T {
 	max := arr[0]
 	for _, v := range arr {
 		most[v] = most[v] + 1
-		if(most[max] < most[v]) {
+		if most[max] < most[v] {
 			max = v
 		}
 	}
@@ -61,7 +61,7 @@ func Drop[T comparable](arr []T, n ...int) []T {
 	if len(n) == 0 {
 		n = append(n, 1)
 	}
-	
+
 	return arr[n[0]:]
 }
 

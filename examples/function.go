@@ -9,7 +9,7 @@ func funcDelay() {
 		return "Delayed return after 2s"
 	}, 2)
 
-	if result.HasReturn{
+	if result.HasReturn {
 		println(result.Value)
 	} else {
 		println("No result")

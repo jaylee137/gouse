@@ -22,8 +22,33 @@ func dateTime() {
 	fmt.Println("UnixNanoToTime:", date.UnixNanoToTime(1000000000))
 }
 
+func dateISO() {
+	println(date.ISO())
+}
+
+func dateShort() {
+	println(date.Short())
+}
+
+func dateShortInverse() {
+	println(date.ShortInverse())
+}
+
+func dateLong() {
+	println(date.Long())
+}
+
+// func dateCustom() {
+// 	println(date.Custom("2006-01-02", "02/01/2006"))
+// }
+
 func DateExample() {
 	date.Ok()
 
 	dateTime()
+	dateISO()
+	dateShort()
+	dateShortInverse()
+	dateLong()
+	// dateCustom()
 }

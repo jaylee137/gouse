@@ -76,7 +76,7 @@ func mathFactorial() {
 func mathRoot() {
 	println("Square-Root of integer number: ", math.Sqrt(16))
 	println("Square-Root of float number: ", fmt.Sprintf("%f", math.SqrtF(20.0)))
-	
+
 	println("Cube-Root of integer number: ", math.Cbrt(27))
 	println("Cube-Root of float number: ", fmt.Sprintf("%f", math.CbrtF(20.0)))
 
@@ -87,7 +87,7 @@ func mathRoot() {
 func mathLog() {
 	println("Logarithm of integer number: ", math.Log(16, 2))
 	println("Logarithm of float number: ", fmt.Sprintf("%f", math.LogF(20.0, 2.0)))
-	
+
 	println("Logarithm of integer number (base 2): ", math.Log2(16))
 	println("Logarithm of float number (base 2): ", fmt.Sprintf("%f", math.Log2F(20.0)))
 

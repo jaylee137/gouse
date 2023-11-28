@@ -11,8 +11,8 @@ func Starter() string {
 
 func main() {
 	// examples.ArrayExample()
-	// examples.DateExample()
-	examples.FunctionExample()
+	examples.DateExample()
+	// examples.FunctionExample()
 	// examples.TypeExample()
 	// examples.StringExample()
 	// examples.NumberExample()

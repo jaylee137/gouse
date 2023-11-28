@@ -50,7 +50,7 @@ func PeriCircleF(radius float64) float64 {
 	return 2 * math.Pi * radius
 }
 
-func AreaTriangle(base, height int)  int {
+func AreaTriangle(base, height int) int {
 	return Divide(Multi(base, height), 2)
 }
 
@@ -139,11 +139,11 @@ func VolCylinderF(radius, height float64) float64 {
 }
 
 func AreaCone(radius, height int) float64 {
-	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64(Pow2(height) + Pow2(radius))))
+	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64(Pow2(height)+Pow2(radius))))
 }
 
 func AreaConeF(radius, height float64) float64 {
-	return math.Pi * radius * (radius + math.Sqrt(PowF(height, 2) + PowF(radius, 2)))
+	return math.Pi * radius * (radius + math.Sqrt(PowF(height, 2)+PowF(radius, 2)))
 }
 
 func VolCone(radius, height int) float64 {

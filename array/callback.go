@@ -23,6 +23,16 @@ func FilterBy[T comparable](arr []T, f func(T) bool) []T {
 	return res
 }
 
+func RejectBy[T comparable](arr []T, f func(T) bool) []T {
+	var res []T
+	for _, v := range arr {
+		if !f(v) {
+			res = append(res, v)
+		}
+	}
+	return res
+}
+
 func FindBy[T comparable](arr []T, f func(T) bool) T {
 	for _, v := range arr {
 		if f(v) {

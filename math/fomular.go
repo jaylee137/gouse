@@ -69,6 +69,7 @@ func Distance(speed, time float64) float64 {
 func Time(distance, speed float64) float64 {
 	return DivideF(distance, speed)
 }
+
 // func Density(mass, volume int) int {
 // 	return Divide(mass, volume)
 // }

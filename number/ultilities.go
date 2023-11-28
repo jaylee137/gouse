@@ -1,8 +1,8 @@
 package number
 
 import (
-	"time"
 	"math/rand"
+	"time"
 )
 
 func Random(min int, max int) int {

@@ -5,7 +5,7 @@ import (
 )
 
 type DelayedResult[T any] struct {
-	Value T
+	Value     T
 	HasReturn bool
 }
 

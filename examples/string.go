@@ -174,7 +174,7 @@ func StringExample() {
 	strCamelCase()
 	strSnakeCase()
 	strKebabCase()
-	
+
 	strIsLetter()
 	strIsDigit()
 	strIncludes()
@@ -199,7 +199,7 @@ func StringExample() {
 	strEscape()
 	strUnescape()
 	strPad()
-	
+
 	strCount()
 	strLines()
 	strIndex()

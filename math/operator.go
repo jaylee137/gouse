@@ -38,7 +38,7 @@ func Round(num float64) int {
 		return int(num)
 	}
 
-	if num - float64(int(num)) < 0.5 {
+	if num-float64(int(num)) < 0.5 {
 		return int(num)
 	}
 
@@ -191,7 +191,7 @@ func Factorial(num int) int {
 	if num == 0 {
 		return 1
 	}
-	return num * Factorial(num - 1)
+	return num * Factorial(num-1)
 }
 
 func Root(number, n int) int {
