@@ -28,3 +28,48 @@ func StructToString(data interface{}) string {
 
 	return fmt.Sprintf("%s{%s}", t.Name(), result)
 }
+
+func StructToMap(data interface{}) map[string]interface{} {
+	v := reflect.ValueOf(data)
+	t := v.Type()
+
+	result := make(map[string]interface{})
+
+	for i := 0; i < v.NumField(); i++ {
+		fieldName := t.Field(i).Name
+		fieldValue := v.Field(i).Interface()
+		result[fieldName] = fieldValue
+	}
+
+	return result
+}
+
+func StringToInt(data string) int {
+	var result int
+	fmt.Sscanf(data, "%d", &result)
+	return result
+}
+
+func StringToFloat(data string) float64 {
+	var result float64
+	fmt.Sscanf(data, "%f", &result)
+	return result
+}
+
+func StringToBool(data string) bool {
+	var result bool
+	fmt.Sscanf(data, "%t", &result)
+	return result
+}
+
+func IntToString(data int) string {
+	return fmt.Sprintf("%d", data)
+}
+
+func FloatToString(data float64) string {
+	return fmt.Sprintf("%f", data)
+}
+
+func BoolToString(data bool) string {
+	return fmt.Sprintf("%t", data)
+}

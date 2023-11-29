@@ -23,32 +23,64 @@ func dateTime() {
 }
 
 func dateISO() {
-	println(date.ISO())
+	println("ISO:", date.ISO())
 }
 
 func dateShort() {
-	println(date.Short())
-}
-
-func dateShortInverse() {
-	println(date.ShortInverse())
+	println("Short:", date.Short())
+	println("ShortNormal:", date.ShortNormal())
+	println("ShortReverse:", date.ShortReverse())
+	println("ShortDash:", date.ShortDash())
+	println("ShortDot:", date.ShortDot())
+	println("ShortUnderscore:", date.ShortUnderscore())
+	println("ShortSpace:", date.ShortSpace())
+	println("ShortMonth:", date.ShortMonth())
 }
 
 func dateLong() {
-	println(date.Long())
+	println("Long:", date.Long())
 }
 
-// func dateCustom() {
-// 	println(date.Custom("2006-01-02", "02/01/2006"))
-// }
+func dateUTC() {
+	println("UTC:", date.UTC())
+}
+
+func dateToSecond() {
+	println("ToSecond:", date.ToSecond(1))
+}
+
+func dateToMinute() {
+	println("ToMinute:", date.ToMinute(1))
+}
+
+func dateToHour() {
+	println("ToHour:", date.ToHour(1))
+}
+
+func dateSleepSecond() {
+	date.SleepSecond(1)
+}
+
+func dateSleepMinute() {
+	date.SleepMinute(1)
+}
+
+func dateSleepHour() {
+	date.SleepHour(1)
+}
 
 func DateExample() {
-	date.Ok()
-
 	dateTime()
+
 	dateISO()
 	dateShort()
-	dateShortInverse()
 	dateLong()
-	// dateCustom()
+	dateUTC()
+
+	dateToSecond()
+	dateToMinute()
+	dateToHour()
+	dateSleepSecond()
+	dateSleepMinute()
+	dateSleepHour()
 }

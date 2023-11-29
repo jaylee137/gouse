@@ -1,28 +1,6 @@
 package date
 
-import (
-	"fmt"
-	"time"
-)
-
-func FormatDateOrString(input interface{}, format string) (string, error) {
-	var t time.Time
-
-	switch v := input.(type) {
-	case time.Time:
-		t = v
-	case string:
-		var err error
-		t, err = time.Parse(time.RFC3339, v)
-		if err != nil {
-			return "", err
-		}
-	default:
-		return "", fmt.Errorf("unsupported type: %T", input)
-	}
-
-	return t.Format(format), nil
-}
+import "time"
 
 func format(input interface{}, format string) string {
 	var t time.Time
@@ -59,11 +37,59 @@ func Short(date ...interface{}) string {
 	}
 }
 
-func ShortInverse(date ...interface{}) string {
+func ShortNormal(date ...interface{}) string {
 	if len(date) == 0 {
 		return format(time.Now(), "01/02/2006")
 	} else {
 		return format(date[0].(time.Time), "01/02/2006")
+	}
+}
+
+func ShortReverse(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "2006/01/02")
+	} else {
+		return format(date[0].(time.Time), "2006/01/02")
+	}
+}
+
+func ShortDash(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "2006-01-02")
+	} else {
+		return format(date[0].(time.Time), "2006-01-02")
+	}
+}
+
+func ShortDot(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "2006.01.02")
+	} else {
+		return format(date[0].(time.Time), "2006.01.02")
+	}
+}
+
+func ShortUnderscore(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "2006_01_02")
+	} else {
+		return format(date[0].(time.Time), "2006_01_02")
+	}
+}
+
+func ShortSpace(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "2006 01 02")
+	} else {
+		return format(date[0].(time.Time), "2006 01 02")
+	}
+}
+
+func ShortMonth(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "01/2006")
+	} else {
+		return format(date[0].(time.Time), "01/2006")
 	}
 }
 
@@ -75,32 +101,11 @@ func Long(date ...interface{}) string {
 	}
 }
 
-// func Custom(date interface{}, format string) string {
-// 	return format(date, format)
-// }
-
-func Ok() {
-	date := time.Now()
-
-	formattedDate, err := FormatDateOrString(date, "2006-01-02")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
+func UTC(date ...interface{}) string {
+	if len(date) == 0 {
+		return format(time.Now(), "Jan 2, 2006 at 3:04pm (MST)")
+	} else {
+		return format(date[0].(time.Time), "Jan 2, 2006 at 3:04pm (MST)")
 	}
-	fmt.Println("Formatted Date:", formattedDate)
 
-	formattedStringDate1, err := FormatDateOrString(date, "Jan 2, 2006 at 3:04pm (MST)")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-	fmt.Println("Formatted String Date:", formattedStringDate1)
-
-	stringDate := "2023-11-22T15:04:05Z"
-	formattedStringDate2, err := FormatDateOrString(stringDate, "Jan 2, 2006 at 3:04pm (MST)")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-	fmt.Println("Formatted String Date:", formattedStringDate2)
 }

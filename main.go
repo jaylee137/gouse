@@ -11,9 +11,9 @@ func Starter() string {
 
 func main() {
 	// examples.ArrayExample()
-	examples.DateExample()
+	// examples.DateExample()
 	// examples.FunctionExample()
-	// examples.TypeExample()
+	examples.TypeExample()
 	// examples.StringExample()
 	// examples.NumberExample()
 	// examples.MathExample()

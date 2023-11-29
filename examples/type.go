@@ -1,9 +1,11 @@
 package examples
 
-import "github.com/thuongtruong1009/gouse/types"
+import (
+	"fmt"
+	"github.com/thuongtruong1009/gouse/types"
+)
 
 func typeCheck() {
-	println("Check type start:")
 	println("Check is int: ", types.IsInt(1))
 	println("Check is float: ", types.IsFloat(1.1))
 	println("Check is string: ", types.IsString("1"))
@@ -34,10 +36,26 @@ func typeStructToString() {
 		Contact: "+91 9876543210",
 	}
 
-	println(types.StructToString(companyInfo))
+	println("Struct to string: ", types.StructToString(companyInfo))
+	fmt.Println("Struct to map: ", types.StructToMap(companyInfo))
+}
+
+func typeStringConvert() {
+	println("String to int: ", types.StringToInt("1"))
+	fmt.Println("String to float: ", types.StringToFloat("1.1"))
+	println("String to bool: ", types.StringToBool("true"))
+}
+
+func typeCastToString() {
+	println("Cast int to string: ", types.IntToString(1))
+	fmt.Println("Cast float to string: ", types.FloatToString(1.1))
+	println("Cast bool to string: ", types.BoolToString(true))
 }
 
 func TypeExample() {
 	typeCheck()
+
 	typeStructToString()
+	typeStringConvert()
+	typeCastToString()
 }
