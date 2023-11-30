@@ -1,6 +1,9 @@
 package examples
 
-import "github.com/thuongtruong1009/gouse/function"
+import (
+	"fmt"
+	"github.com/thuongtruong1009/gouse/function"
+)
 
 func funcDelay() {
 	println("Delay start:")
@@ -39,9 +42,32 @@ func funcInterval() {
 	}, 1)
 }
 
+func funcLock() {
+	tmpOneOne := function.LockOneInOneOut(func(i interface{}) interface{} {
+		return i
+	})
+	fmt.Println(tmpOneOne(1))
+
+	tmpOneTwo := function.LockOneInTwoOut(func(i interface{}) (interface{}, interface{}) {
+		return i, i
+	})
+	fmt.Println(tmpOneTwo(1))
+
+	tmpTwoOne := function.LockTwoInOneOut(func(i1, i2 interface{}) interface{} {
+		return i1
+	})
+	fmt.Println(tmpTwoOne(1, 2))
+
+	tmpTwoTwo := function.LockTwoInTwoOut(func(i1, i2 interface{}) (interface{}, interface{}) {
+		return i1, i2
+	})
+	fmt.Println(tmpTwoTwo(1, 2))
+}
+
 func FunctionExample() {
-	funcDelay()
-	funcRetry()
-	funcTimes()
-	funcInterval()
+	// funcDelay()
+	// funcRetry()
+	// funcTimes()
+	// funcInterval()
+	funcLock()
 }

@@ -48,11 +48,11 @@ jobs:
           path: coverage.out
 
       - name: Upload coverage to Codacy
-        uses: codacy/codacy-coverage-reporter-action@v1
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.out --force-language go
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: coverage.out
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.out --force-language go -t ${{ secrets.CODACY_PROJECT_TOKEN }}
+        # uses: codacy/codacy-coverage-reporter-action@v1
+        # with:
+        #   project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        #   coverage-reports: coverage.out
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master

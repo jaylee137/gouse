@@ -16,44 +16,76 @@ func (mw *MutexWrapper) unLock() {
 	mw.mutex.Unlock()
 }
 
-func LockFuncOneInOneOut[i, o any](f func(i) o) func(i) o {
+type OneInOneOut func(i interface{}) interface{}
+func LockOneInOneOut(callback OneInOneOut) OneInOneOut {
 	m := MutexWrapper{}
-	return func(iVal i) o {
-		m.lock()
-		defer m.unLock()
-		return f(iVal)
-	}
+	m.lock()
+	defer m.unLock()
+	return callback
 }
 
-func LockFuncOneInTwoOut[i, o1, o2 any](f func(i) (o1, o2)) func(i) (o1, o2) {
+type OneInTwoOut func(i interface{}) (interface{}, interface{})
+func LockOneInTwoOut(callback OneInTwoOut) OneInTwoOut {
 	m := MutexWrapper{}
-	return func(iVal i) (o1, o2) {
-		m.lock()
-		defer m.unLock()
-		return f(iVal)
-	}
+	m.lock()
+	defer m.unLock()
+	return callback
 }
 
-func LockFuncTwoInTwoOut[i1, i2, o1, o2 any](f func(i1, i2) (o1, o2)) func(i1, i2) (o1, o2) {
+type TwoInOneOut func(i1, i2 interface{}) interface{}
+func LockTwoInOneOut(callback TwoInOneOut) TwoInOneOut {
 	m := MutexWrapper{}
-
-	return func(i1Val i1, i2Val i2) (o1, o2) {
-		m.lock()
-		defer m.unLock()
-		return f(i1Val, i2Val)
-	}
+	m.lock()
+	defer m.unLock()
+	return callback
 }
 
-// RWLock
-
-type RWMutexWrapper struct {
-	rwMutex sync.RWMutex
+type TwoInTwoOut func(i1, i2 interface{}) (interface{}, interface{})
+func LockTwoInTwoOut(callback TwoInTwoOut) TwoInTwoOut {
+	m := MutexWrapper{}
+	m.lock()
+	defer m.unLock()
+	return callback
 }
 
-func (mw *RWMutexWrapper) rLock() {
-	mw.rwMutex.RLock()
-}
+// func LockFuncOneInOneOut[i, o any](f func(i) o) func(i) o {
+// 	m := MutexWrapper{}
+// 	return func(iVal i) o {
+// 		m.lock()
+// 		defer m.unLock()
+// 		return f(iVal)
+// 	}
+// }
 
-func (mw *RWMutexWrapper) rUnLock() {
-	mw.rwMutex.RUnlock()
-}
+// func LockFuncOneInTwoOut[i, o1, o2 any](f func(i) (o1, o2)) func(i) (o1, o2) {
+// 	m := MutexWrapper{}
+// 	return func(iVal i) (o1, o2) {
+// 		m.lock()
+// 		defer m.unLock()
+// 		return f(iVal)
+// 	}
+// }
+
+// func LockFuncTwoInTwoOut[i1, i2, o1, o2 any](f func(i1, i2) (o1, o2)) func(i1, i2) (o1, o2) {
+// 	m := MutexWrapper{}
+
+// 	return func(i1Val i1, i2Val i2) (o1, o2) {
+// 		m.lock()
+// 		defer m.unLock()
+// 		return f(i1Val, i2Val)
+// 	}
+// }
+
+// // RWLock
+
+// type RWMutexWrapper struct {
+// 	rwMutex sync.RWMutex
+// }
+
+// func (mw *RWMutexWrapper) rLock() {
+// 	mw.rwMutex.RLock()
+// }
+
+// func (mw *RWMutexWrapper) rUnLock() {
+// 	mw.rwMutex.RUnlock()
+// }
