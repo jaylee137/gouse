@@ -3,6 +3,8 @@ package types
 import (
 	"fmt"
 	"strings"
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
 )
 
 func IsInt(v interface{}) bool {
@@ -97,4 +99,17 @@ func IsUndefined(v interface{}) bool {
 
 func IsZero(v interface{}) bool {
 	return v == nil || IsEmpty(v)
+}
+
+func IsUUID(input string) (bool, error) {
+	if input == "" {
+		return false, constants.ErrRequiredUUID
+	}
+
+	_, err := uuid.Parse(input)
+	if err != nil {
+		return false, constants.ErrInvalidUUID
+	}
+
+	return true, nil
 }

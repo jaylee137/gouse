@@ -22,6 +22,14 @@ func typeCheck() {
 	println("Check is zero: ", types.IsZero(0))
 }
 
+func typeCheckUUID() {
+	isValid, err := types.IsUUID("123e4567-e89b-12d3-a456-426614174000")
+	if err != nil {
+		println(err.Error())
+	}
+	println("Check is valid uuid: ", isValid)
+}
+
 func typeStructToString() {
 	println("Struct to string start:")
 	type CompanyInfo struct {
@@ -50,10 +58,12 @@ func typeCastToString() {
 	println("Cast int to string: ", types.IntToString(1))
 	fmt.Println("Cast float to string: ", types.FloatToString(1.1))
 	println("Cast bool to string: ", types.BoolToString(true))
+	println("Cast interface to string: ", types.InterfaceToString([]int{1, 2, 3}))
 }
 
 func TypeExample() {
 	typeCheck()
+	typeCheckUUID()
 
 	typeStructToString()
 	typeStringConvert()

@@ -33,13 +33,18 @@
 - [x] Array
 - [ ] Collection
 - [x] Date
-- [ ] Function
+- [x] Function
 - [ ] Lang
 - [x] Math
 - [x] Number
 - [ ] Struct
 - [x] String
 - [x] Type
+- [ ] Connection
+- [ ] Helper
+- [ ] Error
+- [ ] Log
+- [ ] API
 
 ## 📋 Requirements
 
