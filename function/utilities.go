@@ -1,6 +1,9 @@
 package function
 
-import "github.com/thuongtruong1009/gouse/date"
+import (
+	"time"
+	"github.com/thuongtruong1009/gouse/date"
+)
 
 func Retry(fn func() error, attempts int, sleep int) (err error) {
 	retry := func() {
@@ -33,4 +36,10 @@ func Interval(fn func(), timeout int) {
 		fn()
 		date.SleepSecond(timeout)
 	}
+}
+
+func RunTime(startTime time.Time, task func()) time.Duration {
+	task()
+	elapsedTime := float64(time.Since(startTime).Seconds() * 1000)
+	return time.Duration(elapsedTime)
 }

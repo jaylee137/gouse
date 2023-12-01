@@ -12,9 +12,10 @@ func Starter() string {
 func main() {
 	// examples.ArrayExample()
 	// examples.DateExample()
-	examples.FunctionExample()
+	// examples.FunctionExample()
 	// examples.TypeExample()
 	// examples.StringExample()
 	// examples.NumberExample()
 	// examples.MathExample()
+	examples.HelperExample()
 }

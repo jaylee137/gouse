@@ -2,6 +2,7 @@ package examples
 
 import (
 	"fmt"
+	"time"
 	"github.com/thuongtruong1009/gouse/function"
 )
 
@@ -58,10 +59,22 @@ func funcLock() {
 	}).(func())()
 }
 
+func funcRunTime() {
+	exampleFunc := func() {
+		// do something
+		time.Sleep(2 * time.Second)
+		fmt.Println("Task completed.")
+	}
+
+	duration := function.RunTime(time.Now(), exampleFunc)
+	fmt.Printf("Function run in: %v\n", duration)
+}
+
 func FunctionExample() {
 	funcDelay()
 	funcRetry()
 	funcTimes()
 	funcInterval()
 	funcLock()
+	funcRunTime()
 }

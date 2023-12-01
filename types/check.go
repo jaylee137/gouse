@@ -51,6 +51,19 @@ func IsNil(v interface{}) bool {
 	return v == nil
 }
 
+// func IsNil(value interface{}) bool {
+// 	if value == nil {
+// 		return true
+// 	}
+
+// 	v := reflect.ValueOf(value)
+// 	if v.Kind() == reflect.Ptr || v.Kind() == reflect.Interface {
+// 		return v.IsNil()
+// 	}
+
+// 	return false
+// }
+
 func IsEmpty(v interface{}) bool {
 	if v == nil {
 		return true
