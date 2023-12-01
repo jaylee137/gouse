@@ -43,31 +43,25 @@ func funcInterval() {
 }
 
 func funcLock() {
-	tmpOneOne := function.LockOneInOneOut(func(i interface{}) interface{} {
+	oneInOneOutFuc := function.LockFunc(func(i interface{}) interface{} {
 		return i
-	})
-	fmt.Println(tmpOneOne(1))
+	}).(func(interface{}) interface{})("one input - one output")
+	fmt.Println(oneInOneOutFuc)
 
-	tmpOneTwo := function.LockOneInTwoOut(func(i interface{}) (interface{}, interface{}) {
-		return i, i
-	})
-	fmt.Println(tmpOneTwo(1))
-
-	tmpTwoOne := function.LockTwoInOneOut(func(i1, i2 interface{}) interface{} {
-		return i1
-	})
-	fmt.Println(tmpTwoOne(1, 2))
-
-	tmpTwoTwo := function.LockTwoInTwoOut(func(i1, i2 interface{}) (interface{}, interface{}) {
+	twoInTwoOutFunc1, twoInTwoOutFunc2 := function.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
 		return i1, i2
-	})
-	fmt.Println(tmpTwoTwo(1, 2))
+	}).(func(interface{}, interface{}) (interface{}, interface{}))("two input - two output (a)", "two input - two output (b)")
+	fmt.Println(twoInTwoOutFunc1, twoInTwoOutFunc2)
+
+	function.LockFunc(func() {
+		println("no input - no output")
+	}).(func())()
 }
 
 func FunctionExample() {
-	// funcDelay()
-	// funcRetry()
-	// funcTimes()
-	// funcInterval()
+	funcDelay()
+	funcRetry()
+	funcTimes()
+	funcInterval()
 	funcLock()
 }
