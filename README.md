@@ -41,7 +41,7 @@
 - [x] String
 - [x] Type
 - [ ] Connection
-- [ ] Helper
+- [x] Helper
 - [ ] Error
 - [ ] Log
 - [ ] API

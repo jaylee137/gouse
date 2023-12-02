@@ -1,4 +1,4 @@
-package constants
+package shared
 
 const (
 	DEFAULT string = "\033[0m"

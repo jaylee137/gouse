@@ -61,7 +61,6 @@ func funcLock() {
 
 func funcRunTime() {
 	exampleFunc := func() {
-		// do something
 		time.Sleep(2 * time.Second)
 		fmt.Println("Task completed.")
 	}
