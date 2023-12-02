@@ -1,8 +1,8 @@
 package constants
 
 import (
-	"testing"
 	"reflect"
+	"testing"
 )
 
 func TestConst(t *testing.T) {

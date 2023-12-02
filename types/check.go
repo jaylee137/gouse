@@ -3,6 +3,7 @@ package types
 import (
 	"fmt"
 	"strings"
+
 	"github.com/google/uuid"
 	"github.com/thuongtruong1009/gouse/constants"
 )

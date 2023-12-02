@@ -1,8 +1,14 @@
 package io
 
 import (
-	"os"
 	"bufio"
+	"encoding/json"
+	"io"
+	"io/ioutil"
+	"os"
+
+	"github.com/thuongtruong1009/gouse/date"
+	"github.com/thuongtruong1009/gouse/strings"
 )
 
 func IsExistFile(path string) (bool, error) {
@@ -38,12 +44,32 @@ func RemoveFile(path string) error {
 	return nil
 }
 
+func WriteFile(path string, data []string) error {
+	ioutil.WriteFile(path, []byte(strings.Join(data, " ")), 0644)
+	return nil
+}
+
+func AppendFile(path string, data []string) error {
+	file, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return nil
+	}
+	defer file.Close()
+
+	for _, v := range data {
+		if _, err := file.WriteString(v + "\n"); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
 func ReadFileByLine(path string) ([]string, error) {
 	_, err := IsExistFile(path)
 	if err != nil {
 		return nil, err
 	}
-
 
 	file, err := os.Open(path)
 	if err != nil {
@@ -51,7 +77,7 @@ func ReadFileByLine(path string) ([]string, error) {
 	}
 
 	defer file.Close()
-	
+
 	var lines []string
 
 	scanner := bufio.NewScanner(file)
@@ -62,7 +88,17 @@ func ReadFileByLine(path string) ([]string, error) {
 	return lines, nil
 }
 
-func FileInfo(path string) (os.FileInfo, error) {
+type FileInfoStruct struct {
+	Name    string
+	Size    int64
+	Mode    os.FileMode
+	ModTime string
+	IsDir   bool
+	Sys     interface{}
+	All     os.FileInfo
+}
+
+func FileInfo(path string) (*FileInfoStruct, error) {
 	_, err := IsExistFile(path)
 	if err != nil {
 		return nil, err
@@ -73,7 +109,15 @@ func FileInfo(path string) (os.FileInfo, error) {
 		return nil, err
 	}
 
-	return fileInfo, nil
+	return &FileInfoStruct{
+		Name:    fileInfo.Name(),
+		Size:    fileInfo.Size(),
+		Mode:    fileInfo.Mode(),
+		ModTime: date.ISO(fileInfo.ModTime()),
+		IsDir:   fileInfo.IsDir(),
+		Sys:     fileInfo.Sys(),
+		All:     fileInfo,
+	}, nil
 }
 
 func RenameFile(oldPath, newPath string) error {
@@ -87,5 +131,95 @@ func RenameFile(oldPath, newPath string) error {
 		return err
 	}
 
+	return nil
+}
+
+func CopyFile(oldPath, newPath string) error {
+	_, err := IsExistFile(oldPath)
+	if err != nil {
+		return err
+	}
+
+	source, err := os.Open(oldPath)
+	if err != nil {
+		return err
+	}
+	defer source.Close()
+
+	target, targetError := os.OpenFile(newPath, os.O_RDWR|os.O_CREATE, 0666)
+	if targetError != nil {
+		return targetError
+	}
+	defer target.Close()
+	_, copyError := io.Copy(target, source)
+	if copyError != nil {
+		return copyError
+	}
+
+	return nil
+}
+
+func TruncateFile(path string, size int64) error {
+	_, err := IsExistFile(path)
+	if err != nil {
+		return err
+	}
+
+	err = os.Truncate(path, size)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func CleanFile(path string) error {
+	TruncateFile(path, 0)
+	return nil
+}
+
+func ReadFileObj[T any](path string) ([]T, error) {
+	_, err := IsExistFile(path)
+	if err != nil {
+		return nil, err
+	}
+
+	content, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+
+	if len(content) == 0 {
+		return nil, nil
+	}
+
+	var data []T
+
+	err = json.Unmarshal(content, &data)
+	if err != nil {
+		return nil, err
+	}
+
+	return data, nil
+}
+
+func WriteFileObj[T any](path string, data T) error {
+	_, err := IsExistFile(path)
+	if err != nil {
+		err2 := CreateDir(path)
+		if err2 != nil {
+			return err2
+		}
+	}
+
+	content, err := json.Marshal(data)
+	if err != nil {
+		return nil
+	}
+
+	err = ioutil.WriteFile(path, content, 0644)
+	if err != nil {
+		return nil
+	}
 	return nil
 }

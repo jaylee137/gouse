@@ -3,8 +3,6 @@ export GO111MODULE=on
 install:
 	go get -v ./...
 	go mod download
-	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-	go install golang.org/x/vuln/cmd/govulncheck@latest
 	go install golang.org/x/tools/cmd/goimports@latest
 
 run:
@@ -15,7 +13,7 @@ build:
 
 test:
 	@echo "Running tests..."
-    # go clean -testcache && go vet -v ./... && govulncheck ./...
+	go clean -testcache && go vet -v ./...
     # go test -timeout 30s ./pkg/helpers -run ^TestParallelize$ -v
 	go test -v -count=1 -cover -coverprofile=coverage.out ./array/... ./constants/... ./shared/...
 	go tool cover -func=coverage.out

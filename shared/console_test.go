@@ -1,8 +1,8 @@
 package shared
 
 import (
-	"testing"
 	"reflect"
+	"testing"
 )
 
 func TestConsole(t *testing.T) {

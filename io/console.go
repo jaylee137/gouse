@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"runtime"
 	// "reflect"
-    // "github.com/jedib0t/go-pretty/v6/table"
+	// "github.com/jedib0t/go-pretty/v6/table"
 )
 
 func ClearConsole() {

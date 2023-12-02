@@ -2,8 +2,9 @@ package examples
 
 import (
 	"fmt"
-	"github.com/thuongtruong1009/gouse/shared"
+
 	"github.com/thuongtruong1009/gouse/io"
+	"github.com/thuongtruong1009/gouse/shared"
 )
 
 func ioCheckDir() {
@@ -68,90 +69,6 @@ func ioCurrentDir() {
 	println(data)
 }
 
-func ioFile() {
-	type User struct {
-		Name string
-		Age  int
-	}
-
-	exampleData := []User{
-		{
-			Name: "name 1",
-			Age:  1,
-		},
-		{
-			Name: "name 2",
-			Age:  2,
-		},
-	}
-
-	exampleFile := "data.json"
-
-	// is exist file
-	_, err4 := io.IsExistFile(exampleFile)
-	if err4 != nil {
-		println(err4.Error())
-		return
-	}
-	println("file exist")
-
-	// read file
-	data, err := io.ReadFileObj[*User](exampleFile)
-	if err != nil {
-		println(err.Error())
-		return
-	}
-	fmt.Printf("data: %+v\n", data)
-
-	// write file
-	err2 := io.WriteFileObj(exampleFile, exampleData)
-	if err2 != nil {
-		println(err2.Error())
-		return
-	}
-	println("data written")
-	
-	// remove file
-	err6 := io.RemoveFile(exampleFile)
-	if err6 != nil {
-		println(err6.Error())
-		return
-	}
-	println("file removed")
-
-	// is exist dir
-	// err5 := helper.IsExistDir("data")
-	// if err5 != nil {
-	// 	println(err5.Error())
-	// 	return
-	// }
-	// println("dir exist")
-
-	// create dir
-	// err3 := helper.CreateDir("data")
-	// if err3 != nil {
-	// 	println(err3.Error())
-	// 	return
-	// }
-	// println("dir created")
-}
-
-func ioClearConsole() {
-	io.ClearConsole()
-	println("console cleared")
-}
-
-func ioOutputColor() {
-	io.OutputColor(shared.DEFAULT, "this is default")
-	io.OutputColor(shared.WHITE, "this is white")
-	io.OutputColor(shared.RED, "this is red")
-	io.OutputColor(shared.GREEN, "this is green")
-	io.OutputColor(shared.YELLOW, "this is yellow")
-	io.OutputColor(shared.BLUE, "this is blue")
-	io.OutputColor(shared.MAGENTA, "this is magenta")
-	io.OutputColor(shared.CYAN, "this is cyan")
-}
-
 func ioCheckFile() {
 	isExist, err := io.IsExistFile("data.json")
 	if err != nil {
@@ -195,12 +112,13 @@ func ioFileInfo() {
 	if err != nil {
 		println(err.Error())
 	}
-	fmt.Println("Name of the File:", data.Name())
-    fmt.Println("Size of File:", data.Size())
-    fmt.Println("Permissions File:", data.Mode())
-    fmt.Println("Last Modified of File:", data.ModTime())
-    fmt.Println("Directory check: ", data.IsDir())
-    fmt.Printf("System Process info: %+v\n\n", data.Sys())
+	fmt.Printf("File info: %+v\n", data.All)
+	fmt.Println("File info (with name):", data.Name)
+	fmt.Printf("File info (with size): %d bytes\n", data.Size)
+	fmt.Println("File info (with permissions):", data.Mode)
+	fmt.Println("File info (with last modified):", data.ModTime)
+	fmt.Println("File info (with directory check): ", data.IsDir)
+	fmt.Printf("File info (with system process): %+v\n", data.Sys)
 }
 
 func ioRenameFile() {
@@ -211,22 +129,118 @@ func ioRenameFile() {
 	println("file renamed")
 }
 
-func IOExample() {	
-	// ioCheckDir()
-	// ioCreateDir()
-	// ioRemoveDir()
-	// ioLsDir()
-	// ioHierarchyDir()
-	// ioCurrentDir()
-	
-	// ioFile()
-	// ioCheckFile()
-	// ioCreateFile()
-	// ioRemoveFile()
-	// ioReadFileByLine()
-	// ioFileInfo()
-	// ioRenameFile()
+func ioCopyFile() {
+	err := io.CopyFile("data.json", "data2.json")
+	if err != nil {
+		println(err.Error())
+	}
+	println("file copied")
+}
 
-	// ioClearConsole()
-	// ioOutputColor()
+func ioTruncateFile() {
+	err := io.TruncateFile("data.json", 10)
+	if err != nil {
+		println(err.Error())
+	}
+	println("file truncated to 10 bytes")
+}
+
+func ioCleanFile() {
+	err := io.CleanFile("data.json")
+	if err != nil {
+		println(err.Error())
+	}
+
+	// or using truncate with 0 bytes
+	// err := helper.TruncateFile("data.json", 0)
+	// if err != nil {
+	// 	println(err.Error())
+	// }
+
+	println("file cleaned")
+}
+
+func ioWriteToFile() {
+	err := io.WriteFile("data.json", []string{"this is data 1", "this is data 2"})
+	if err != nil {
+		println(err.Error())
+	}
+	println("file written")
+}
+
+func ioAppendToFile() {
+	err := io.AppendFile("data.json", []string{"this is data 3", "this is data 4"})
+	if err != nil {
+		println(err.Error())
+	}
+	println("file appended")
+}
+
+func ioFileObj() {
+	type User struct {
+		Name string
+		Age  int
+	}
+
+	exampleFile := "data.json"
+
+	// read file
+	data, err := io.ReadFileObj[User](exampleFile)
+	if err != nil {
+		println(err.Error())
+	}
+	fmt.Printf("data: %+v\n", data)
+
+	// write file
+	updateData := append(data, User{
+		Name: fmt.Sprintf("name %d", len(data)+1),
+		Age:  len(data) + 1,
+	})
+
+	err2 := io.WriteFileObj(exampleFile, updateData)
+	if err2 != nil {
+		println(err2.Error())
+	}
+	println("data written")
+}
+
+func ioClearConsole() {
+	io.ClearConsole()
+	println("console cleared")
+}
+
+func ioOutputColor() {
+	io.OutputColor(shared.DEFAULT, "this is default")
+	io.OutputColor(shared.WHITE, "this is white")
+	io.OutputColor(shared.RED, "this is red")
+	io.OutputColor(shared.GREEN, "this is green")
+	io.OutputColor(shared.YELLOW, "this is yellow")
+	io.OutputColor(shared.BLUE, "this is blue")
+	io.OutputColor(shared.MAGENTA, "this is magenta")
+	io.OutputColor(shared.CYAN, "this is cyan")
+}
+
+func IOExample() {
+	ioCheckDir()
+	ioCreateDir()
+	ioRemoveDir()
+	ioLsDir()
+	ioHierarchyDir()
+	ioCurrentDir()
+
+	ioCheckFile()
+	ioCreateFile()
+	ioRemoveFile()
+	ioReadFileByLine()
+	ioFileInfo()
+	ioRenameFile()
+	ioCopyFile()
+	ioTruncateFile()
+	ioCleanFile()
+	ioWriteToFile()
+	ioAppendToFile()
+	ioFileObj()
+
+	ioClearConsole()
+	ioOutputColor()
 }

@@ -3,6 +3,7 @@ package examples
 import (
 	"fmt"
 	"time"
+
 	"github.com/thuongtruong1009/gouse/function"
 )
 
