@@ -1,6 +1,7 @@
 <div align="center">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
+    <a  href="https://github.com/thuongtruong1009/gouse/workflows/qa.yml"><img src="https://github.com/thuongtruong1009/gouse/actions/workflows/qa.yml/badge.svg" alt="qa"></a>
     <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
     <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
     <!-- <img alt="Codecov" src="https://img.shields.io/codecov/c/github/thuongtruong1009/gouse"> -->
@@ -55,7 +56,7 @@
 ## 📦 Installation
 
 ```bash
-go get github.com/thuongtruong1009/gouse
+$ go get github.com/thuongtruong1009/gouse
 ```
 
 ## 📖 Documentation
@@ -108,7 +109,9 @@ func main() {
 
 ## 📚 References
 
-- [Lodash.js](https://lodash.com/)
 - [Golang](https://golang.org/)
 - [Golang Docs](https://pkg.go.dev/)
+- [Lodash.js](https://lodash.com/)
 - [Lodash collection](https://www.geeksforgeeks.org/lodash/?ref=header_search)
+- [File handling in Golang](https://www.cloudhadoop.com/2018/11/learn-golang-tutorials-file-directory.html)
+- [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)

@@ -1,20 +1,19 @@
 package io
 
 import (
-	"encoding/json"
-	"io/ioutil"
 	"os"
+	"bufio"
 )
 
-func IsExistFile(path string) error {
+func IsExistFile(path string) (bool, error) {
 	_, err := os.Stat(path)
 	if os.IsNotExist(err) {
 		_, err := os.Create(path)
 		if err != nil {
-			return err
+			return false, err
 		}
 	}
-	return nil
+	return true, nil
 }
 
 func CreateFile(path string) error {
@@ -26,7 +25,7 @@ func CreateFile(path string) error {
 }
 
 func RemoveFile(path string) error {
-	err := IsExistFile(path)
+	_, err := IsExistFile(path)
 	if err != nil {
 		return err
 	}
@@ -39,73 +38,51 @@ func RemoveFile(path string) error {
 	return nil
 }
 
-func ReadFile[T any](path string) ([]T, error) {
-	err := IsExistFile(path)
-    if err != nil {
-        return nil, err
-    }
-
-	content, err := ioutil.ReadFile(path)
+func ReadFileByLine(path string) ([]string, error) {
+	_, err := IsExistFile(path)
 	if err != nil {
 		return nil, err
 	}
 
-	if len(content) == 0 {
-		return nil, nil
-	}
 
-	var data []T
-
-	err = json.Unmarshal(content, &data)
+	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
 	}
 
-	return data, nil
+	defer file.Close()
+	
+	var lines []string
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		lines = append(lines, scanner.Text())
+	}
+
+	return lines, nil
 }
 
-func WriteFile[T any](path string, data T) error {
-	err := IsExistFile(path)
+func FileInfo(path string) (os.FileInfo, error) {
+	_, err := IsExistFile(path)
 	if err != nil {
-		err2 := CreateDir(path)
-		if err2 != nil {
-			return err2
-		}
+		return nil, err
 	}
 
-	content, err := json.Marshal(data)
+	fileInfo, err := os.Stat(path)
 	if err != nil {
-		return nil
+		return nil, err
 	}
 
-	err = ioutil.WriteFile(path, content, 0644)
-	if err != nil {
-		return nil
-	}
-	return nil
+	return fileInfo, nil
 }
 
-func CreateDir(path string) error {
-	err := IsExistFile(path)
+func RenameFile(oldPath, newPath string) error {
+	_, err := IsExistFile(oldPath)
 	if err != nil {
 		return err
 	}
 
-	err = os.MkdirAll(path, 0755)
-	if err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func DeleteDir(path string) error {
-	err := IsExistFile(path)
-	if err != nil {
-		return err
-	}
-
-	err = os.RemoveAll(path)
+	err = os.Rename(oldPath, newPath)
 	if err != nil {
 		return err
 	}

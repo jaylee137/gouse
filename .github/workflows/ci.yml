@@ -5,10 +5,14 @@ on:
     branches:
       - main
     paths-ignore:
-      - "*.md"
+      - "!**/*.go"
+      - "!go.*"
+      - "!*.go"
   pull_request:
     paths-ignore:
-      - "*.md"
+      - "!**/*.go"
+      - "!go.*"
+      - "!*.go"
 
 jobs:
   test:
