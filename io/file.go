@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"encoding/json"
 	"io"
-	"io/ioutil"
 	"os"
 
 	"github.com/thuongtruong1009/gouse/date"
@@ -45,16 +44,21 @@ func RemoveFile(path string) error {
 }
 
 func WriteFile(path string, data []string) error {
-	ioutil.WriteFile(path, []byte(strings.Join(data, " ")), 0644)
+	os.WriteFile(path, []byte(strings.Join(data, " ")), 0600)
 	return nil
 }
 
 func AppendFile(path string, data []string) error {
-	file, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	file, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0600)
 	if err != nil {
 		return nil
 	}
-	defer file.Close()
+
+	defer func() {
+		if err := file.Close(); err != nil {
+			panic(err)
+		}
+	}()
 
 	for _, v := range data {
 		if _, err := file.WriteString(v + "\n"); err != nil {
@@ -76,7 +80,11 @@ func ReadFileByLine(path string) ([]string, error) {
 		return nil, err
 	}
 
-	defer file.Close()
+	defer func() {
+		if err := file.Close(); err != nil {
+			panic(err)
+		}
+	}()
 
 	var lines []string
 
@@ -144,13 +152,24 @@ func CopyFile(oldPath, newPath string) error {
 	if err != nil {
 		return err
 	}
-	defer source.Close()
+
+	defer func() {
+		if err := source.Close(); err != nil {
+			panic(err)
+		}
+	}()
 
 	target, targetError := os.OpenFile(newPath, os.O_RDWR|os.O_CREATE, 0666)
 	if targetError != nil {
 		return targetError
 	}
-	defer target.Close()
+
+	defer func() {
+		if err := target.Close(); err != nil {
+			panic(err)
+		}
+	}()
+
 	_, copyError := io.Copy(target, source)
 	if copyError != nil {
 		return copyError
@@ -184,7 +203,7 @@ func ReadFileObj[T any](path string) ([]T, error) {
 		return nil, err
 	}
 
-	content, err := ioutil.ReadFile(path)
+	content, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
@@ -217,7 +236,7 @@ func WriteFileObj[T any](path string, data T) error {
 		return nil
 	}
 
-	err = ioutil.WriteFile(path, content, 0644)
+	err = os.WriteFile(path, content, 0644)
 	if err != nil {
 		return nil
 	}

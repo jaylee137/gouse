@@ -210,14 +210,14 @@ func ioClearConsole() {
 }
 
 func ioOutputColor() {
-	io.OutputColor(shared.DEFAULT, "this is default")
-	io.OutputColor(shared.WHITE, "this is white")
-	io.OutputColor(shared.RED, "this is red")
-	io.OutputColor(shared.GREEN, "this is green")
-	io.OutputColor(shared.YELLOW, "this is yellow")
-	io.OutputColor(shared.BLUE, "this is blue")
-	io.OutputColor(shared.MAGENTA, "this is magenta")
-	io.OutputColor(shared.CYAN, "this is cyan")
+	io.OutputColor(shared.DEFAULT_FG, "this is default")
+	io.OutputColor(shared.WHITE_FG, "this is white")
+	io.OutputColor(shared.RED_FG, "this is red")
+	io.OutputColor(shared.GREEN_FG, "this is green")
+	io.OutputColor(shared.YELLOW_FG, "this is yellow")
+	io.OutputColor(shared.BLUE_FG, "this is blue")
+	io.OutputColor(shared.MAGENTA_FG, "this is magenta")
+	io.OutputColor(shared.CYAN_FG, "this is cyan")
 }
 
 func IOExample() {

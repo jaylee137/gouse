@@ -1,15 +1,16 @@
 package shared
 
+// These maybe not supported by all terminals
 const (
-	DEFAULT string = "\033[0m"
-	RED     string = "\033[31m"
-	GREEN   string = "\033[32m"
-	YELLOW  string = "\033[33m"
-	PURPLE  string = "\033[34m"
-	PINK    string = "\033[35m"
-	CYAN    string = "\033[36m"
-	WHITE   string = "\033[97m"
-	ORANGE  string = "\033[38;5;208m"
-	BLUE    string = "\033[38;5;27m"
-	MAGENTA string = "\033[38;5;13m"
+	DEFAULT_FG string = "\033[0m"
+	RED_FG     string = "\033[31m"
+	GREEN_FG   string = "\033[32m"
+	YELLOW_FG  string = "\033[33m"
+	PURPLE_FG  string = "\033[34m"
+	PINK_FG    string = "\033[35m"
+	CYAN_FG    string = "\033[36m"
+	WHITE_FG   string = "\033[97m"
+	ORANGE_FG  string = "\033[38;5;208m"
+	BLUE_FG    string = "\033[38;5;27m"
+	MAGENTA_FG string = "\033[38;5;13m"
 )

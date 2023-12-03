@@ -7,6 +7,16 @@ func helperRandomID() {
 	println("randomID: ", randomID)
 }
 
+func helperSelect() {
+	options := []string{"a", "b", "c"}
+	selected, err := helper.Select("Select an option:", options)
+	if err != nil {
+		panic(err)
+	}
+	println("selected: ", selected)
+}
+
 func HelperExample() {
-	helperRandomID()
+	// helperRandomID()
+	helperSelect()
 }

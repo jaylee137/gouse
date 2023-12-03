@@ -6,7 +6,7 @@ import (
 )
 
 func TestConsole(t *testing.T) {
-	colors := []string{DEFAULT, RED, GREEN, YELLOW, PURPLE, PINK, CYAN, WHITE, ORANGE, BLUE, MAGENTA}
+	colors := []string{DEFAULT_FG, RED_FG, GREEN_FG, YELLOW_FG, BLUE_FG, MAGENTA_FG, CYAN_FG, WHITE_FG, ORANGE_FG, PURPLE_FG, PINK_FG}
 
 	for _, color := range colors {
 		if reflect.TypeOf(color).Kind() != reflect.String {
