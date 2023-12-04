@@ -1,4 +1,4 @@
-package helper
+package console
 
 import (
 	"github.com/AlecAivazis/survey/v2"
@@ -12,4 +12,13 @@ func Select(label string, options []string) (string, error) {
 	}
 	err := survey.AskOne(prompt, &selected)
 	return selected, err
+}
+
+func Confirm(label string) (bool, error) {
+	var confirm bool
+	prompt := &survey.Confirm{
+		Message: label,
+	}
+	err := survey.AskOne(prompt, &confirm)
+	return confirm, err
 }

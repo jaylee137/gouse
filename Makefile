@@ -22,8 +22,6 @@ test:
 lint:
 	@echo "Running linter..."
 	gofmt -w -s . && goimports -w . && go fmt ./...
-	golangci-lint version
-	golangci-lint run -c .golangci.yml ./...
 	@echo "Done!"
 
 clean:

@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/shared"
 )
 
 func ioCheckDir() {
@@ -204,22 +203,6 @@ func ioFileObj() {
 	println("data written")
 }
 
-func ioClearConsole() {
-	io.ClearConsole()
-	println("console cleared")
-}
-
-func ioOutputColor() {
-	io.OutputColor(shared.DEFAULT_FG, "this is default")
-	io.OutputColor(shared.WHITE_FG, "this is white")
-	io.OutputColor(shared.RED_FG, "this is red")
-	io.OutputColor(shared.GREEN_FG, "this is green")
-	io.OutputColor(shared.YELLOW_FG, "this is yellow")
-	io.OutputColor(shared.BLUE_FG, "this is blue")
-	io.OutputColor(shared.MAGENTA_FG, "this is magenta")
-	io.OutputColor(shared.CYAN_FG, "this is cyan")
-}
-
 func IOExample() {
 	ioCheckDir()
 	ioCreateDir()
@@ -240,7 +223,4 @@ func IOExample() {
 	ioWriteToFile()
 	ioAppendToFile()
 	ioFileObj()
-
-	ioClearConsole()
-	ioOutputColor()
 }

@@ -6,10 +6,11 @@ import (
 )
 
 func Starter() string {
-	return strings.Capitalize("hello world from Gouse!")
+	return strings.Capitalize("hello world from Gouse!\n")
 }
 
 func main() {
+	// println(Starter())
 	// examples.ArrayExample()
 	// examples.DateExample()
 	// examples.FunctionExample()
@@ -18,5 +19,6 @@ func main() {
 	// examples.NumberExample()
 	// examples.MathExample()
 	// examples.IOExample()
-	examples.HelperExample()
+	examples.ConsoleExample()
+	// examples.HelperExample()
 }

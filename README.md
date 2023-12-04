@@ -18,8 +18,7 @@
 
 ## 📝 Why Gouse?
 
-- Gouse is a modern essential [Golang](https://golang.org/) utility package delivering consistency, modularity, performance, & extras.
-- Preset functions inspired by [Lodash.js](https://lodash.com/).
+- Gouse is a modern essential [Golang](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [Lodash](https://lodash.com/).
 - Gouse provides a wide variety of methods, taking the hassle out of working with arrays, numbers, objects, strings, etc.
 - Each method has a different set of features, so you can pick the ones that fit your project best.
 - Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
@@ -33,27 +32,29 @@
 
 ## 🚀 Features
 
-- [x] Array
-- [ ] Collection
-- [x] Date
-- [x] Function
-- [ ] Lang
-- [x] Math
-- [x] Number
-- [ ] Struct
-- [x] String
-- [x] Type
-- [ ] Connection
-- [x] Helper
-- [ ] Error
-- [ ] Log
+> Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
+
 - [ ] API
+- [x] [Array](examples/array.go)
+- [x] [Console](examples/console.go)
+- [ ] Collection
+- [ ] Connection
+- [x] [Date](examples/date.go)
+- [ ] Error
+- [x] [Function](examples/function.go)
+- [x] [Helper](examples/helper.go)
+- [x] [I/O](examples/io.go)
+- [ ] Lang
+- [ ] Log
+- [x] [Math](examples/math.go)
+- [x] [Number](examples/number.go)
+- [ ] Struct
+- [x] [String](examples/string.go)
+- [x] [Type](examples/type.go)
 
 ## 📋 Requirements
 
-> Note: Compatibility with Go >= 1.18
-
-> This project is still in development, so not all features are available.
+> Compatibility with Go >= 1.18
 
 ## 📦 Installation
 
