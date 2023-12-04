@@ -1,6 +1,8 @@
 package examples
 
 import (
+	// "fmt"
+
 	"github.com/thuongtruong1009/gouse/console"
 	"github.com/thuongtruong1009/gouse/console/choice"
 	"github.com/thuongtruong1009/gouse/console/countdown"
@@ -46,7 +48,37 @@ func consoleWithColor() {
 }
 
 func consoleHelp() {
-	console.Help()
+	name := "myprogram"
+	options := []*console.HelpOptions{
+		&console.HelpOptions{
+			Opt:  "name",
+			Desc: "Enter your name",
+			Val:  "Example name",
+			Action: func(name string) {
+				println("Your name is: ", name)
+			},
+		},
+		&console.HelpOptions{
+			Opt:  "age",
+			Desc: "Enter your age",
+			Val:  18,
+			Action: func(age int) {
+				println("this is age: ", age)
+			},
+		},
+		&console.HelpOptions{
+			Opt:  "learning",
+			Desc: "Enter your confirm",
+			Val:  true,
+			Action: func(confirm bool) {
+				println("this is your confirm", confirm)
+			},
+		},
+	}
+	console.Help(name, options)
+	// for _, option := range options {
+	// 	fmt.Printf("Option %s: %v\n", option.Opt, option.Val)
+	// }
 }
 
 func consoleSelect() {
