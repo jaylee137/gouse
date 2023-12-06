@@ -1,4 +1,4 @@
-package examples
+package sample
 
 import "github.com/thuongtruong1009/gouse/strings"
 

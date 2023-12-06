@@ -19,6 +19,14 @@ type model struct {
 	quitting  bool
 }
 
+type Mode struct {
+	AltscreenMode string
+	InlineMode    string
+	Key           string
+}
+
+var viewMode = &Mode{}
+
 func (m model) Init() tea.Cmd {
 	return nil
 }
@@ -30,7 +38,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "q", "ctrl+c", "esc":
 			m.quitting = true
 			return m, tea.Quit
-		case " ":
+		case viewMode.Key:
 			var cmd tea.Cmd
 			if m.altscreen {
 				cmd = tea.ExitAltScreen
@@ -49,23 +57,20 @@ func (m model) View() string {
 		return "Bye!\n"
 	}
 
-	const (
-		altscreenMode = " altscreen mode "
-		inlineMode    = " inline mode "
-	)
-
 	var mode string
 	if m.altscreen {
-		mode = altscreenMode
+		mode = viewMode.AltscreenMode
 	} else {
-		mode = inlineMode
+		mode = viewMode.InlineMode
 	}
 
 	return fmt.Sprintf("\n\n  You're in %s\n\n\n", keyword(mode)) +
 		help("  space: switch modes • q: exit\n")
 }
 
-func Run() {
+func Run(vm *Mode) {
+	viewMode = vm
+
 	if _, err := tea.NewProgram(model{}).Run(); err != nil {
 		fmt.Println("Error running program:", err)
 		os.Exit(1)

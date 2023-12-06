@@ -10,53 +10,13 @@ import (
 	"github.com/charmbracelet/lipgloss"
 )
 
-const content = `
-# Today’s Menu
-
-## Appetizers
-
-| Name        | Price | Notes                           |
-| ---         | ---   | ---                             |
-| Tsukemono   | $2    | Just an appetizer               |
-| Tomato Soup | $4    | Made with San Marzano tomatoes  |
-| Okonomiyaki | $4    | Takes a few minutes to make     |
-| Curry       | $3    | We can add squash if you’d like |
-
-## Seasonal Dishes
-
-| Name                 | Price | Notes              |
-| ---                  | ---   | ---                |
-| Steamed bitter melon | $2    | Not so bitter      |
-| Takoyaki             | $3    | Fun to eat         |
-| Winter squash        | $3    | Today it's pumpkin |
-
-## Desserts
-
-| Name         | Price | Notes                 |
-| ---          | ---   | ---                   |
-| Dorayaki     | $4    | Looks good on rabbits |
-| Banana Split | $5    | A classic             |
-| Cream Puff   | $3    | Pretty creamy!        |
-
-All our dishes are made in-house by Karen, our chef. Most of our ingredients
-are from our garden or the fish market down the street.
-
-Some famous people that have eaten here lately:
-
-* [x] René Redzepi
-* [x] David Chang
-* [ ] Jiro Ono (maybe some day)
-
-Bon appétit!
-`
-
 var helpStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("241")).Render
 
 type example struct {
 	viewport viewport.Model
 }
 
-func newExample() (*example, error) {
+func newExample(content string) (*example, error) {
 	const width = 78
 
 	vp := viewport.New(width, 20)
@@ -113,10 +73,10 @@ func (e example) helpView() string {
 	return helpStyle("\n  ↑/↓: Navigate • q: Quit\n")
 }
 
-func Run() {
-	model, err := newExample()
+func Run(content string) {
+	model, err := newExample(content)
 	if err != nil {
-		fmt.Println("Could not initialize Bubble Tea model:", err)
+		fmt.Println("Could not initialize glamour model:", err)
 		os.Exit(1)
 	}
 

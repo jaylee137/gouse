@@ -8,18 +8,19 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
-var choices = []string{"Taro", "Coffee", "Lychee"}
+// var choices = []string{"Taro", "Coffee", "Lychee"}
+var choices []string
 
-type model struct {
+type Model struct {
 	cursor int
-	choice string
+	Choice string
 }
 
-func (m model) Init() tea.Cmd {
+func (m Model) Init() tea.Cmd {
 	return nil
 }
 
-func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
 		switch msg.String() {
@@ -28,7 +29,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		case "enter":
 			// Send the choice on the channel and exit.
-			m.choice = choices[m.cursor]
+			m.Choice = choices[m.cursor]
 			return m, tea.Quit
 
 		case "down", "j":
@@ -48,9 +49,11 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
-func (m model) View() string {
+var question string
+
+func (m Model) View() string {
 	s := strings.Builder{}
-	s.WriteString("What kind of Bubble Tea would you like to order?\n\n")
+	s.WriteString(question + "\n\n")
 
 	for i := 0; i < len(choices); i++ {
 		if m.cursor == i {
@@ -66,8 +69,10 @@ func (m model) View() string {
 	return s.String()
 }
 
-func Run() {
-	p := tea.NewProgram(model{})
+func Run(title string, options []string, updated *Model) {
+	question = title
+	choices = options
+	p := tea.NewProgram(Model{})
 
 	// Run returns the model as a tea.Model.
 	m, err := p.Run()
@@ -77,7 +82,7 @@ func Run() {
 	}
 
 	// Assert the final tea.Model to our local model and print the choice.
-	if m, ok := m.(model); ok && m.choice != "" {
-		fmt.Printf("\n---\nYou chose %s!\n", m.choice)
+	if m, ok := m.(Model); ok && m.Choice != "" {
+		updated.Choice = m.Choice
 	}
 }

@@ -28,6 +28,8 @@ func (m model) Init() tea.Cmd {
 	return tickCmd()
 }
 
+var IncrPercent = 0.25
+
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
@@ -47,7 +49,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		// Note that you can also use progress.Model.SetPercent to set the
 		// percentage value explicitly, too.
-		cmd := m.progress.IncrPercent(0.25)
+		cmd := m.progress.IncrPercent(IncrPercent)
 		return m, tea.Batch(tickCmd(), cmd)
 
 	// FrameMsg is sent when the progress bar wants to animate itself
@@ -74,13 +76,19 @@ func tickCmd() tea.Cmd {
 	})
 }
 
-func Run() {
+func Run(failMsg, doneMsg string, incrPer ...float64) {
+	if len(incrPer) > 0 {
+		IncrPercent = incrPer[0]
+	}
+
 	m := model{
 		progress: progress.New(progress.WithDefaultGradient()),
 	}
 
 	if _, err := tea.NewProgram(m).Run(); err != nil {
-		fmt.Println("Oh no!", err)
+		fmt.Println(failMsg, err)
 		os.Exit(1)
 	}
+
+	println(doneMsg)
 }

@@ -1,7 +1,7 @@
-package examples
+package sample
 
 import (
-	// "fmt"
+	"fmt"
 
 	"github.com/thuongtruong1009/gouse/console"
 	"github.com/thuongtruong1009/gouse/console/choice"
@@ -127,7 +127,10 @@ func consolePaper() {
 }
 
 func consoleProgress() {
-	progress.Run()
+	// first param is fail message
+	// second param is done message
+	// third param is increment percent (default 0.25)
+	progress.Run("^_^ Oh no, something went wrong", "✔️ Done!", 0.5)
 }
 
 func consoleRealtime() {
@@ -135,7 +138,13 @@ func consoleRealtime() {
 }
 
 func consoleChoice() {
-	choice.Run()
+	question := "What's your favorite flavor?"
+	options := []string{"Taro", "Coffee", "Lychee"}
+
+	update := &choice.Model{}
+	choice.Run(question, options, update)
+
+	fmt.Printf("\n---\nYou chose %s!\n", update.Choice)
 }
 
 func consoleSpinner() {
@@ -155,7 +164,14 @@ func consoleTable() {
 }
 
 func consoleTab() {
-	tab.Run()
+	// tabContent items must be same length with tabs items
+	// and according to similar order in tabs
+	tabs := []string{"Lip Gloss", "Blush", "Eye Shadow", "Mascara", "Foundation"}
+	tabContent := []string{"Lip Gloss Tab", "Blush Tab", "Eye Shadow Tab", "Mascara Tab", "Foundation Tab"}
+
+	println("Use arrow keys to switch tabs. Press q to quit.")
+
+	tab.Run(tabs, tabContent)
 }
 
 func consoleCountdown() {
@@ -167,7 +183,12 @@ func consoleSequence() {
 }
 
 func consoleInline() {
-	inline.Run()
+	customMode := &inline.Mode{
+		AltscreenMode: " altscreen mode ", // string will be displayed when switch to altscreen mode
+		InlineMode:    " inline mode ",    // string will be displayed when switch to inline mode
+		Key:           " ",                // space key to switch mode
+	}
+	inline.Run(customMode)
 }
 
 func consoleParallel() {
@@ -179,7 +200,46 @@ func consoleDir() {
 }
 
 func consoleGlamour() {
-	glamour.Run()
+	const content = `
+# Today’s Menu
+
+## Appetizers
+
+| Name        | Price | Notes                           |
+| ---         | ---   | ---                             |
+| Tsukemono   | $2    | Just an appetizer               |
+| Tomato Soup | $4    | Made with San Marzano tomatoes  |
+| Okonomiyaki | $4    | Takes a few minutes to make     |
+| Curry       | $3    | We can add squash if you’d like |
+
+## Seasonal Dishes
+
+| Name                 | Price | Notes              |
+| ---                  | ---   | ---                |
+| Steamed bitter melon | $2    | Not so bitter      |
+| Takoyaki             | $3    | Fun to eat         |
+| Winter squash        | $3    | Today it's pumpkin |
+
+## Desserts
+
+| Name         | Price | Notes                 |
+| ---          | ---   | ---                   |
+| Dorayaki     | $4    | Looks good on rabbits |
+| Banana Split | $5    | A classic             |
+| Cream Puff   | $3    | Pretty creamy!        |
+
+All our dishes are made in-house by Karen, our chef. Most of our ingredients
+are from our garden or the fish market down the street.
+
+Some famous people that have eaten here lately:
+
+* [x] René Redzepi
+* [x] David Chang
+* [ ] Jiro Ono (maybe some day)
+
+Bon appétit!
+`
+	glamour.Run(content)
 }
 
 func ConsoleExample() {
@@ -187,7 +247,7 @@ func ConsoleExample() {
 	// consoleClear()
 	// consoleWithColor()
 	// consoleSelect()
-	consoleHelp()
+	// consoleHelp()
 
 	// consoleList()
 	// consolePaper()
@@ -201,7 +261,7 @@ func ConsoleExample() {
 	// consoleTab()
 	// consoleCountdown()
 	// consoleSequence()
-	// consoleInline()
+	consoleInline()
 	// consoleParallel()
 	// consoleDir()
 	// consoleGlamour()
