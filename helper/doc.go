@@ -12,31 +12,48 @@ import (
 )
 
 type Function struct {
-	Name string
-	Body string
+	Import string
+	Name   string
+	Body   string
 }
 
-func (f Function) String() string {
+func (f Function) HighlightImport() string {
+	return fmt.Sprintf("```go\nimport (%s)\n```\n", f.Import)
+}
+
+func (f Function) HighlightBody() string {
 	return fmt.Sprintf("\n```go\n%s```\n", f.Body)
 }
 
-func detectContent(content []byte) []byte {
-	var result []string
-	functions := extractFunctions(content)
-	for _, function := range functions {
-		tmpFunc := &Function{
-			Name: function.Name,
-			Body: function.Body,
-		}
-		result = append(result, fmt.Sprintf("%s", tmpFunc.String()))
-	}
-
-	return types.StringsToBytes(result)
+func (f Function) HighlightName() string {
+	return fmt.Sprintf("\n### %s\n", f.Name)
 }
 
-func extractFunctions(code []byte) []Function {
+func extractImports(content []byte) string {
 	fset := token.NewFileSet()
-	file, err := parser.ParseFile(fset, "example.go", string(code), parser.ParseComments)
+	node, err := parser.ParseFile(fset, "string", string(content), parser.ParseComments)
+	if err != nil {
+		fmt.Println("Error parsing file:", err)
+		return ""
+	}
+
+	var result []byte
+	for _, decl := range node.Decls {
+		if genDecl, ok := decl.(*ast.GenDecl); ok && genDecl.Tok == token.IMPORT {
+			for _, spec := range genDecl.Specs {
+				if importSpec, ok := spec.(*ast.ImportSpec); ok {
+					result = append(result, fmt.Sprintf("\n\t%s", string(content[importSpec.Pos()-1:importSpec.End()]))...)
+				}
+			}
+		}
+	}
+
+	return string(result)
+}
+
+func ExtractFunctions(code []byte) []Function {
+	fset := token.NewFileSet()
+	file, err := parser.ParseFile(fset, "string", string(code), parser.ParseComments)
 	if err != nil {
 		fmt.Println("Error parsing file:", err)
 		return nil
@@ -50,13 +67,31 @@ func extractFunctions(code []byte) []Function {
 			funcBody := string(code[fn.Pos()-1 : fn.End()])
 
 			functions = append(functions, Function{
-				Name: funcName,
-				Body: funcBody,
+				Import: extractImports(code),
+				Name:   funcName,
+				Body:   funcBody,
 			})
 		}
 	}
 
 	return functions
+}
+
+func detectContent(content []byte) []byte {
+	var result []string
+	functions := ExtractFunctions(content)
+	result = append(result, fmt.Sprintf("%s", functions[0].HighlightImport()))
+	for _, function := range functions {
+		tmpFunc := &Function{
+			Import: function.Import,
+			Name:   function.Name,
+			Body:   function.Body,
+		}
+		result = append(result, fmt.Sprintf("%s", tmpFunc.HighlightName()))
+		result = append(result, fmt.Sprintf("%s", tmpFunc.HighlightBody()))
+	}
+
+	return types.StringsToBytes(result)
 }
 
 func AutoMdDoc(inputFilePath string, outputFilePath string) {

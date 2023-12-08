@@ -11,6 +11,11 @@ run:
 build:
 	go build ./...
 
+doc:
+	@echo "Generating docs..."
+	go run tools/doc.go array console date function helper io math number shared strings types
+	@echo "Done!"
+
 test:
 	@echo "Running tests..."
 	go clean -testcache && go vet -v ./...

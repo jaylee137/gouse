@@ -10,8 +10,8 @@ func helperRandomID() {
 }
 
 func helperAutoMdDoc() {
-	inputFilePath := "helper/doc.go"
-	outputFilePath := "helper/doc.md"
+	inputFilePath := "main.go"
+	outputFilePath := "main.md"
 	helper.AutoMdDoc(inputFilePath, outputFilePath)
 }
 
