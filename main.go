@@ -19,6 +19,6 @@ func main() {
 	// sample.NumberExample()
 	// sample.MathExample()
 	// sample.IOExample()
-	sample.ConsoleExample()
-	// sample.HelperExample()
+	// sample.ConsoleExample()
+	sample.HelperExample()
 }

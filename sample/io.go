@@ -203,6 +203,39 @@ func ioFileObj() {
 	println("data written")
 }
 
+func ioCreatePath() {
+	relativePath := "tmp/example.txt"
+
+	if err := io.CreatePath(relativePath); err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
+	println("File created successfully.")
+}
+
+func ioReadPath() {
+	relativePath := "tmp/example.txt"
+
+	content, err := io.ReadPath(relativePath)
+	if err != nil {
+		fmt.Println("Error reading file:", err)
+		return
+	}
+	fmt.Println("File content:", string(content))
+}
+
+func ioWritePath() {
+	relativePath := "tmp/example.txt"
+
+	newContent := []byte("This is a new content")
+
+	if err := io.WritePath(relativePath, newContent); err != nil {
+		fmt.Println("Error writing to file:", err)
+		return
+	}
+	println("File updated successfully.")
+}
+
 func IOExample() {
 	ioCheckDir()
 	ioCreateDir()
@@ -223,4 +256,8 @@ func IOExample() {
 	ioWriteToFile()
 	ioAppendToFile()
 	ioFileObj()
+
+	ioCreatePath()
+	ioReadPath()
+	ioWritePath()
 }

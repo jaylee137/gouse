@@ -1,6 +1,8 @@
 package strings
 
-import "html"
+import (
+	"html"
+)
 
 func Split(s string, separator string) []string {
 	var result []string
@@ -190,6 +192,23 @@ func RTrim(s string) string {
 			result = string(s[i]) + result
 		} else if flag {
 			result = string(s[i]) + result
+		}
+	}
+
+	return result
+}
+
+// this func not yet in example
+func TrimBlank(s string) string {
+	var result string
+	var flag bool
+
+	for _, v := range s {
+		if v != ' ' && v != '\n' && v != '\t' {
+			flag = true
+			result += string(v)
+		} else if flag {
+			result += string(v)
 		}
 	}
 

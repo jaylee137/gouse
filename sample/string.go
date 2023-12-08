@@ -1,6 +1,10 @@
 package sample
 
-import "github.com/thuongtruong1009/gouse/strings"
+import (
+	"fmt"
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 
 func strCapitalize() {
 	var str = "hello world"
@@ -50,7 +54,7 @@ func strIsUpper() {
 
 func strSplit() {
 	var str = "hello world"
-	println("Split string by separator: ", strings.Split(str, "l"))
+	fmt.Println("Split string by separator: ", strings.Split(str, "l"))
 }
 
 func strWords() {

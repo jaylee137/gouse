@@ -77,3 +77,20 @@ func BoolToString(data bool) string {
 func InterfaceToString(data interface{}) string {
 	return fmt.Sprintf("%v", data)
 }
+
+// this three func not have example code
+func BytesToString(data []byte) string {
+	return string(data)
+}
+
+func StringToBytes(data string) []byte {
+	return []byte(data)
+}
+
+func StringsToBytes(data []string) []byte {
+	var result []byte
+	for _, v := range data {
+		result = append(result, StringToBytes(v)...)
+	}
+	return result
+}
