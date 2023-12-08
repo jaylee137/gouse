@@ -1,3 +1,5 @@
+# Ultilities
+
 
 ### IndexBy
 ```go
@@ -188,29 +190,6 @@ func Max[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 
 	return minmax[T](arr, func(a, b T) bool {
 		return a < b
 	})
-}
-```
-
-### TestMin
-```go
-import (
-	"testing"
-)
-```
-
-```go
-func TestMin(t *testing.T) {
-	arr := []int{1, 2, 3, 4, 5}
-
-	minExpected := 1
-	if Min(arr) != minExpected {
-		t.Errorf("Expected %d, got %d", minExpected, Min(arr))
-	}
-
-	maxExpected := 5
-	if Max(arr) != maxExpected {
-		t.Errorf("Expected %d, got %d", maxExpected, Max(arr))
-	}
 }
 ```
 

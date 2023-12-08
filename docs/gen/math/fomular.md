@@ -1,3 +1,5 @@
+# Fomular
+
 
 ### IsPrime
 ```go

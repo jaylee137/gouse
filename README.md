@@ -3,13 +3,13 @@
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
     <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong1009_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong1009_gouse&metric=alert_status" alt="sonar"></a>
     <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
-    <a href="https://app.deepsource.com/gh/thuongtruong1009/gouse"><img src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=true&token=VqBk6AsowWePd3khy3AUkvXJ" alt="deepsource"></a>
+    <a href="https://app.deepsource.com/gh/thuongtruong1009/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
     <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
+    <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
     <!-- <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <img alt="Codecov" src="https://img.shields.io/codecov/c/github/thuongtruong1009/gouse"> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
-    <!-- <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a> -->
     <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse?tab=doc"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a> -->
     <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse" rel="nofollow"><img src="https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse" style="max-width: 100%;"></a> -->
 </div>
@@ -35,22 +35,22 @@
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
 - [ ] API
-- [x] [Array](examples/array.go)
-- [x] [Console](examples/console.go)
+- [x] [Array](docs/gen/array)
+- [x] [Console](docs/gen/console)
 - [ ] Collection
 - [ ] Connection
-- [x] [Date](examples/date.go)
+- [x] [Date](docs/gen/date)
 - [ ] Error
-- [x] [Function](examples/function.go)
-- [x] [Helper](examples/helper.go)
-- [x] [I/O](examples/io.go)
+- [x] [Function](docs/gen/function)
+- [x] [Helper](docs/gen/helper)
+- [x] [I/O](docs/gen/io)
 - [ ] Lang
 - [ ] Log
-- [x] [Math](examples/math.go)
-- [x] [Number](examples/number.go)
+- [x] [Math](docs/gen/math)
+- [x] [Number](docs/gen/number)
 - [ ] Struct
-- [x] [String](examples/string.go)
-- [x] [Type](examples/type.go)
+- [x] [String](docs/gen/string)
+- [x] [Type](docs/gen/type)
 
 ## 📋 Requirements
 
@@ -118,3 +118,4 @@ func main() {
 - [Lodash collection](https://www.geeksforgeeks.org/lodash/?ref=header_search)
 - [File handling in Golang](https://www.cloudhadoop.com/2018/11/learn-golang-tutorials-file-directory.html)
 - [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)
+- [Dynamic HTML](https://css-tricks.com/dynamic-page-replacing-content)

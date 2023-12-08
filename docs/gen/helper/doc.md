@@ -1,3 +1,5 @@
+# Doc
+
 
 ### HighlightImport
 ```go
@@ -134,15 +136,15 @@ import (
 func detectContent(content []byte) []byte {
 	var result []string
 	functions := ExtractFunctions(content)
-	result = append(result, fmt.Sprintf("%s", functions[0].HighlightImport()))
+	result = append(result, functions[0].HighlightImport())
 	for _, function := range functions {
 		tmpFunc := &Function{
 			Import: function.Import,
 			Name:   function.Name,
 			Body:   function.Body,
 		}
-		result = append(result, fmt.Sprintf("%s", tmpFunc.HighlightName()))
-		result = append(result, fmt.Sprintf("%s", tmpFunc.HighlightBody()))
+		result = append(result, tmpFunc.HighlightName())
+		result = append(result, tmpFunc.HighlightBody())
 	}
 
 	return types.StringsToBytes(result)

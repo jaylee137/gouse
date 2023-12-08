@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -19,6 +18,13 @@ func main() {
 		return
 	}
 
+	//clear output path
+	err := os.RemoveAll(outputPath)
+	if err != nil {
+		fmt.Println("Error removing output path:", err)
+		return
+	}
+
 	for i := 1; i < len(os.Args); i++ {
 		path := os.Args[i]
 		_, err := io.IsExistDir(path)
@@ -27,7 +33,7 @@ func main() {
 			return
 		}
 
-		files, err := ioutil.ReadDir(path)
+		files, err := os.ReadDir(path)
 		if err != nil {
 			fmt.Println("Error reading directory:", err)
 			return
@@ -35,11 +41,13 @@ func main() {
 
 		var functions []helper.Function
 		for _, file := range files {
-			if !strings.HasSuffix(file.Name(), ".go") {
+			if !strings.HasSuffix(file.Name(), ".go") || strings.HasSuffix(file.Name(), "_test.go") {
 				continue
 			}
 
-			content, err := ioutil.ReadFile(filepath.Join(path, file.Name()))
+			fmt.Println("Processing file:", file.Name())
+
+			content, err := os.ReadFile(filepath.Join(path, file.Name()))
 			if err != nil {
 				fmt.Println("Error reading file:", err)
 				return
@@ -48,6 +56,9 @@ func main() {
 			functions = append(functions, helper.ExtractFunctions(content)...)
 
 			var result []byte
+
+			result = append(result, []byte("# "+strings.Title(strings.TrimSuffix(file.Name(), ".go"))+"\n\n")...)
+
 			for _, function := range functions {
 				result = append(result, function.HighlightName()...)
 				result = append(result, function.HighlightImport()...)
@@ -64,7 +75,7 @@ func main() {
 				return
 			}
 
-			err = ioutil.WriteFile(filepath.Join(subPath, fileName), result, 0644)
+			err = os.WriteFile(filepath.Join(subPath, fileName), result, 0644)
 			if err != nil {
 				fmt.Println("Error writing file:", err)
 				return
