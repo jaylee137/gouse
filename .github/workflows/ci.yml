@@ -72,7 +72,7 @@ jobs:
 
       - name: Generate Badge
         id: generate-badge
-        run: echo "[![Function Count](https://img.shields.io/badge/functions-$(( $(echo ${{ steps.count-functions.outputs.function_count }}) ))-blue)](https://your-repository-url)"
+        run: echo "[![Function Count](https://img.shields.io/badge/functions-${{ steps.count-functions.outputs.function_count }}-blue)](https://github.com/${{ github.repository }})"
 
       - name: Save Badge URL
         run: echo "::set-output name=badge_url::https://img.shields.io/badge/functions-$(( $(echo ${{ steps.count-functions.outputs.function_count }}) ))-blue"
@@ -82,4 +82,4 @@ jobs:
     needs: count-functions
     steps:
       - name: Use badge URL
-        run: echo "Badge URL: ${{ needs.count-functions.outputs.badge_url }}"
+        run: echo "${{ needs.count-functions.outputs.badge_url }}"
