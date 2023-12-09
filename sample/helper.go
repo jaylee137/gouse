@@ -5,8 +5,7 @@ import (
 )
 
 func helperRandomID() {
-	randomID := helper.RandomID()
-	println("randomID: ", randomID)
+	println("randomID: ", helper.RandomID())
 }
 
 func helperAutoMdDoc() {
@@ -16,6 +15,6 @@ func helperAutoMdDoc() {
 }
 
 func HelperExample() {
-	// helperRandomID()
+	helperRandomID()
 	helperAutoMdDoc()
 }

@@ -8,16 +8,21 @@ func Split(s string, separator string) []string {
 	var result []string
 	var temp string
 
-	for _, v := range s {
-		if string(v) == separator {
-			result = append(result, temp)
-			temp = ""
-		} else {
-			temp += string(v)
+	if len(separator) == 0 {
+		for _, v := range s {
+			result = append(result, string(v))
 		}
+	} else {
+		for _, v := range s {
+			if string(v) == separator {
+				result = append(result, temp)
+				temp = ""
+			} else {
+				temp += string(v)
+			}
+		}
+		result = append(result, temp)
 	}
-
-	result = append(result, temp)
 
 	return result
 }
@@ -101,6 +106,7 @@ func UpperFirst(s string) string {
 		return s
 	}
 
+	// it is capital case
 	return string(Upper(s[0])) + s[1:]
 }
 
@@ -132,6 +138,10 @@ func Truncate(s string, length int, omission ...string) string {
 }
 
 func Replace(s string, old string, new string) string {
+	if len(old) == 0 {
+		return s
+	}
+
 	var result string
 
 	for i := 0; i < len(s); {
@@ -144,22 +154,6 @@ func Replace(s string, old string, new string) string {
 			// If no match, append the current character to the result and move to the next character
 			result += string(s[i])
 			i++
-		}
-	}
-
-	return result
-}
-
-func Trim(s string) string {
-	var result string
-	var flag bool
-
-	for _, v := range s {
-		if v != ' ' {
-			flag = true
-			result += string(v)
-		} else if flag {
-			result += string(v)
 		}
 	}
 
@@ -198,6 +192,11 @@ func RTrim(s string) string {
 	return result
 }
 
+func Trim(s string) string {
+	tmp := LTrim(s)
+	return RTrim(tmp)
+}
+
 // this func not yet in example
 func TrimBlank(s string) string {
 	var result string
@@ -213,6 +212,32 @@ func TrimBlank(s string) string {
 	}
 
 	return result
+}
+
+// this func not yet in example
+func TrimPrefix(s string, prefix string) string {
+	if len(s) < len(prefix) {
+		return s
+	}
+
+	if s[:len(prefix)] == prefix {
+		return s[len(prefix):]
+	}
+
+	return s
+}
+
+// this func not yet in example
+func TrimSuffix(s string, suffix string) string {
+	if len(s) < len(suffix) {
+		return s
+	}
+
+	if s[len(s)-len(suffix):] == suffix {
+		return s[:len(s)-len(suffix)]
+	}
+
+	return s
 }
 
 func Join(s []string, separator string) string {

@@ -1,15 +1,18 @@
 package number
 
 import (
-	"math/rand"
-	"time"
+	"crypto/rand"
+	"math/big"
 )
 
-func Random(min int, max int) int {
-	rand.Seed(time.Now().UnixNano())
-	time.Sleep(1 * time.Nanosecond)
+func Random(min, max int) int {
+	// [min, max)
+	randomInt, err := rand.Int(rand.Reader, big.NewInt(int64(max-min)))
+	if err != nil {
+		return 0
+	}
 
-	return min + rand.Intn(max-min)
+	return int(randomInt.Int64()) + min
 }
 
 func Clamp(value int, min int, max int) int {

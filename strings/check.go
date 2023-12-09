@@ -17,6 +17,9 @@ func StartsWith(s string, substr string) bool {
 }
 
 func EndsWith(s string, substr string) bool {
+	if len(s) < len(substr) {
+		return false
+	}
 	return LIndex(s, substr) == len(s)-len(substr)
 }
 

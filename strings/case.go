@@ -39,8 +39,11 @@ func concatCase(s string, sep string) string {
 
 	if len(spliStr) == 1 {
 		for i, char := range s {
-			if i > 0 && (IsUpper(char) || IsDigit(char)) {
+			if i > 0 && (IsUpper(char) || IsDigit(char)) && !IsDigit(s[i-1]) {
 				result += sep
+			} else if i > 0 && !IsLetter(char) && !IsDigit(char) && string(char) != sep {
+				result += sep
+				continue
 			}
 			result += string(Lower(char))
 		}

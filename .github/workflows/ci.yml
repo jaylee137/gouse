@@ -62,3 +62,24 @@ jobs:
 
       # - name: Run Codacy Analysis CLI
       #   uses: codacy/codacy-analysis-cli-action@master
+
+      - name: Count Functions
+        id: count-functions
+        run: |
+          # Count functions in Golang code
+          function_count=$(grep -c 'func ' $(find . -name '*.go' ! -path './vendor/*'))
+          echo "::set-output name=function_count::$function_count"
+
+      - name: Generate Badge
+        id: generate-badge
+        run: echo "[![Function Count](https://img.shields.io/badge/functions-$(( $(echo ${{ steps.count-functions.outputs.function_count }}) ))-blue)](https://your-repository-url)"
+
+      - name: Save Badge URL
+        run: echo "::set-output name=badge_url::https://img.shields.io/badge/functions-$(( $(echo ${{ steps.count-functions.outputs.function_count }}) ))-blue"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: count-functions
+    steps:
+      - name: Use badge URL
+        run: echo "Badge URL: ${{ needs.count-functions.outputs.badge_url }}"

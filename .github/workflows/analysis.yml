@@ -5,7 +5,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - "*.md"
+      - "!**/*.go"
+      - "!go.*"
+      - "!*.go"
 
 jobs:
   analyze:
@@ -28,7 +30,7 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Autobuild
+      - name: Auto build
         uses: github/codeql-action/autobuild@v2
 
       - name: Perform CodeQL Analysis

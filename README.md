@@ -54,17 +54,13 @@
 
 ## 📋 Requirements
 
-> Compatibility with Go >= 1.18
+> Compatibility with Go >= `1.18`
 
 ## 📦 Installation
 
-```bash
+```go
 $ go get github.com/thuongtruong1009/gouse
 ```
-
-## 📖 Documentation
-
-- [API Reference](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
 ## 🦄 Usage
 
@@ -77,6 +73,10 @@ func main() {
     println(gouse.Stater())
 }
 ```
+
+## 📖 Documentation
+
+- [API Reference](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
 ## 📝 Contributing
 

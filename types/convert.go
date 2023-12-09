@@ -78,7 +78,7 @@ func InterfaceToString(data interface{}) string {
 	return fmt.Sprintf("%v", data)
 }
 
-// this three func not have example code
+// this four func not have example code
 func BytesToString(data []byte) string {
 	return string(data)
 }
@@ -93,4 +93,8 @@ func StringsToBytes(data []string) []byte {
 		result = append(result, StringToBytes(v)...)
 	}
 	return result
+}
+
+func RuneToString(data rune) string {
+	return string(data)
 }

@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"strings"
+
+	"github.com/thuongtruong1009/gouse/strings"
 
 	"github.com/thuongtruong1009/gouse/helper"
 	"github.com/thuongtruong1009/gouse/io"
@@ -14,11 +15,11 @@ func main() {
 	var outputPath = "docs/gen"
 
 	if len(os.Args) < 2 {
-		fmt.Println("Please provide at least one path to a file or directory")
+		println("Please provide at least one path to a file or directory")
 		return
 	}
 
-	//clear output path
+	// clear output path
 	err := os.RemoveAll(outputPath)
 	if err != nil {
 		fmt.Println("Error removing output path:", err)
@@ -29,7 +30,7 @@ func main() {
 		path := os.Args[i]
 		_, err := io.IsExistDir(path)
 		if err != nil {
-			fmt.Println("Please provide a path to a directory")
+			println("Please provide a path to a directory")
 			return
 		}
 
@@ -41,7 +42,7 @@ func main() {
 
 		var functions []helper.Function
 		for _, file := range files {
-			if !strings.HasSuffix(file.Name(), ".go") || strings.HasSuffix(file.Name(), "_test.go") {
+			if !strings.EndsWith(file.Name(), ".go") || strings.EndsWith(file.Name(), "_test.go") {
 				continue
 			}
 
@@ -57,7 +58,7 @@ func main() {
 
 			var result []byte
 
-			result = append(result, []byte("# "+strings.Title(strings.TrimSuffix(file.Name(), ".go"))+"\n\n")...)
+			result = append(result, []byte("# "+strings.Capitalize(strings.TrimSuffix(file.Name(), ".go"))+"\n\n")...)
 
 			for _, function := range functions {
 				result = append(result, function.HighlightName()...)
@@ -65,7 +66,7 @@ func main() {
 				result = append(result, function.HighlightBody()...)
 			}
 
-			fileName := strings.TrimSuffix(file.Name(), ".go") + ".md"
+			fileName := strings.Replace(file.Name(), ".go", ".md")
 			subPath := filepath.Join(outputPath, path, filepath.Dir(file.Name()))
 
 			// create file path if not exist

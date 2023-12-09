@@ -3,7 +3,8 @@ package sample
 import "github.com/thuongtruong1009/gouse/number"
 
 func numRandom() {
-	println("Random number: ", number.Random(1, 10))
+	random := number.Random(1, 10)
+	println("Random number [1, 10): ", random)
 }
 
 func numClamp() {
