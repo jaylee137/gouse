@@ -13,7 +13,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go array console date function helper io math number shared strings types
+	go run docs/generate.go array console date function helper io math number strings types
 	@echo "Done!"
 
 test:
@@ -27,6 +27,11 @@ test:
 lint:
 	@echo "Running linter..."
 	gofmt -w -s . && goimports -w . && go fmt ./...
+	@echo "Done!"
+
+count:
+	@echo "Counting lines..."
+	./count.sh public/count.svg true 13708a array console date function helper io math number strings types
 	@echo "Done!"
 
 clean:

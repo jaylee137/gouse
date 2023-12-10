@@ -7,6 +7,7 @@
     <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
     <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
+    <img src="./public/count.svg" alt="gouse_functions_count">
     <!-- <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <img alt="Codecov" src="https://img.shields.io/codecov/c/github/thuongtruong1009/gouse"> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
@@ -77,6 +78,56 @@ func main() {
 ## 📖 Documentation
 
 - [API Reference](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+
+<!-- ## 📊 Benchmark
+
+## 📚 Examples -->
+
+<!-- Development -->
+
+## 🛠️ Development
+
+#### 1. Clone this repository
+
+```bash
+$ git clone https://github.com/thuongtruong1009/gouse.git
+```
+
+#### 2. Install dependencies
+
+```bash
+$ make install
+```
+
+#### 3. Run
+
+```bash
+$ make run
+```
+
+#### 4. Build
+
+```bash
+$ make build
+```
+
+#### 5. Run tests
+
+```bash
+$ make test
+```
+
+#### 6. Run linters & formatters
+
+```bash
+$ make lint
+```
+
+<!-- #### 7. Run benchmarks
+
+```bash
+$ make bench
+``` -->
 
 ## 📝 Contributing
 
