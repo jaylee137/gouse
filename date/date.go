@@ -25,7 +25,7 @@ func ISO(date ...interface{}) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006-01-02T15:04:05.999Z")
 	} else {
-		return format(date[0].(time.Time), "2006-01-02T15:04:05.999Z")
+		return format(date[0], "2006-01-02T15:04:05.999Z")
 	}
 }
 

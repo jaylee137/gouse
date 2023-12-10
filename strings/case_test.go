@@ -79,5 +79,3 @@ func TestCamelCase(t *testing.T) {
 		}
 	}
 }
-
-// go test -v ./strings/...

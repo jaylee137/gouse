@@ -6,20 +6,19 @@
     <a href="https://app.deepsource.com/gh/thuongtruong1009/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
     <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
     <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
-    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
+    <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
+    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
+    <a href=""><img src="https://img.shields.io/github/license/thuongtruong1009/gouse" alt="license"></a>
     <!-- <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
-    <!-- <img alt="Codecov" src="https://img.shields.io/codecov/c/github/thuongtruong1009/gouse"> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
-    <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse?tab=doc"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a> -->
-    <!-- <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse" rel="nofollow"><img src="https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse" style="max-width: 100%;"></a> -->
 </div>
 
 ![](/public/banner.png)
 
 ## 📝 Why Gouse?
 
-- Gouse is a modern essential [Golang](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [Lodash](https://lodash.com/).
+- Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Lodash`](https://lodash.com/).
 - Gouse provides a wide variety of methods, taking the hassle out of working with arrays, numbers, objects, strings, etc.
 - Each method has a different set of features, so you can pick the ones that fit your project best.
 - Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
@@ -36,22 +35,23 @@
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
 - [ ] API
-- [x] [Array](docs/gen/array)
-- [x] [Console](docs/gen/console)
+- [x] [`Array`](docs/gen/array)
+- [x] [`Console`](docs/gen/console)
 - [ ] Collection
 - [ ] Connection
-- [x] [Date](docs/gen/date)
+- [x] [`Date`](docs/gen/date)
 - [ ] Error
-- [x] [Function](docs/gen/function)
-- [x] [Helper](docs/gen/helper)
-- [x] [I/O](docs/gen/io)
+- [x] [`Function`](docs/gen/function)
+- [x] [`Helper`](docs/gen/helper)
+- [x] [`I/O`](docs/gen/io)
 - [ ] Lang
 - [ ] Log
-- [x] [Math](docs/gen/math)
-- [x] [Number](docs/gen/number)
+- [x] [`Math`](docs/gen/math)
+- [x] [`Number`](docs/gen/number)
 - [ ] Struct
-- [x] [String](docs/gen/string)
-- [x] [Type](docs/gen/type)
+- [x] [`String`](docs/gen/string)
+- [ ] Tools
+- [x] [`Type`](docs/gen/type)
 
 ## 📋 Requirements
 
@@ -77,7 +77,8 @@ func main() {
 
 ## 📖 Documentation
 
-- [API Reference](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- Modules reference at [**`Gouse`**](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
 <!-- ## 📊 Benchmark
 
@@ -133,33 +134,41 @@ $ make bench
 
 - We welcome your contributions! If you're looking for issues to work on, try looking at the good first issue list. We do our best to tag issues suitable for new external contributors with that label, so it's a great way to find something you can help with!
 
-- [Code of Conduct](.github/CODE_OF_CONDUCT.md) and [Contributing Guide](.github/CONTRIBUTING.md) for the project.
+- [`Code of Conduct`](.github/CODE_OF_CONDUCT.md) and [`Contributing Guide`](.github/CONTRIBUTING.md) for the project.
 
 ## 📄 License
 
-- Gouse is released under the [MIT License](LICENSE). See the LICENSE file for more information.
+- Gouse is released under the [`MIT License`](LICENSE). See the LICENSE file for more information.
 
-- For more information, see the [Licensing FAQs](https://opensource.org/faq#mit-vs-bsd).
+- For more information, see the [`Licensing FAQs`](https://opensource.org/faq#mit-vs-bsd).
 
 ## 📌 Support
 
 - The tool has been tested on a variety of inputs, but it's not perfect.
 - For support in using Gouse, please reach out in the following venues:
-  - [Raise Issues](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
-  - [Join Discussions](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
+  - [`Raise Issues`](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
+  - [`Join Discussions`](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
 
 ## 📜 Changelog
 
-- [CHANGELOG](CHANGELOG.md) for project history.
+- [`CHANGELOG`](CHANGELOG.md) for project history.
 
 ## 🌸 Sponsor
 
-- If you like this project, you can sponsor me on [Github](https://sponsor.com/thuongtruong1009) or [Paypal](https://paypal.me/thuongtruong1009)
+- If you like this project, you can sponsor me on:
+
+[![Github sponsor](https://img.shields.io/badge/GitHub_Sponsors-000000?style=for-the-badge&logo=github&logoColor=white)](https://sponsor.com/thuongtruong1009)
+[![Paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/thuongtruong1009)
+[![Kofi](https://img.shields.io/badge/ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/thuongtruong1009)
+
+<!-- ![Static Badge](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black) -->
 
 ## 📮 Contact
 
-- Email: [thuongtruongofficial@gmail.com](mailto:thuongtruongofficial@gmail.com)
-- Github: [thuongtruong1009](https://github.com/thuongtruong1009)
+- If you have any questions, please contact me:
+
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thuongtruongofficial@gmail.com)
+[![Github](https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thuongtruong1009)
 
 ## 📚 References
 
