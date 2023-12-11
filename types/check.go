@@ -12,12 +12,54 @@ func IsInt(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "int")
 }
 
+func IsUnInt(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "uint")
+}
+
 func IsFloat(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "float")
 }
 
+func IsComplex(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "complex")
+}
+
+func IsNumber(v interface{}) bool {
+	return IsInt(v) || IsFloat(v)
+}
+
 func IsString(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "string")
+}
+
+func IsRune(v interface{}) bool {
+	_, ok := v.(rune)
+	return ok
+}
+
+func IsByte(v interface{}) bool {
+	_, ok := v.(byte)
+	return ok
+}
+
+func IsUintptr(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "uintptr")
+}
+
+func IsError(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "error")
+}
+
+func IsInterface(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "interface")
+}
+
+func IsChannel(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "chan")
+}
+
+func IsUnsafePointer(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "unsafe.Pointer")
 }
 
 func IsBool(v interface{}) bool {
@@ -50,20 +92,14 @@ func IsFunc(v interface{}) bool {
 
 func IsNil(v interface{}) bool {
 	return v == nil
+
+	// 	v := reflect.ValueOf(value)
+	// 	if v.Kind() == reflect.Ptr || v.Kind() == reflect.Interface {
+	// 		return v.IsNil()
+	// 	}
+
+	// 	return false
 }
-
-// func IsNil(value interface{}) bool {
-// 	if value == nil {
-// 		return true
-// 	}
-
-// 	v := reflect.ValueOf(value)
-// 	if v.Kind() == reflect.Ptr || v.Kind() == reflect.Interface {
-// 		return v.IsNil()
-// 	}
-
-// 	return false
-// }
 
 func IsEmpty(v interface{}) bool {
 	if v == nil {

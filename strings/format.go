@@ -197,24 +197,21 @@ func Trim(s string) string {
 	return RTrim(tmp)
 }
 
-// this func not yet in example
 func TrimBlank(s string) string {
-	var result string
-	var flag bool
+	start := 0
+	end := len(s) - 1
 
-	for _, v := range s {
-		if v != ' ' && v != '\n' && v != '\t' {
-			flag = true
-			result += string(v)
-		} else if flag {
-			result += string(v)
-		}
+	for start <= end && (s[start] == ' ' || s[start] == '\t' || s[start] == '\n') {
+		start++
 	}
 
-	return result
+	for end >= start && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n') {
+		end--
+	}
+
+	return s[start : end+1]
 }
 
-// this func not yet in example
 func TrimPrefix(s string, prefix string) string {
 	if len(s) < len(prefix) {
 		return s
@@ -227,7 +224,6 @@ func TrimPrefix(s string, prefix string) string {
 	return s
 }
 
-// this func not yet in example
 func TrimSuffix(s string, suffix string) string {
 	if len(s) < len(suffix) {
 		return s
@@ -263,7 +259,20 @@ func Concat(s ...string) string {
 	return result
 }
 
-func Slice(s string, start int, end int) string {
+func Slice(s string, index ...int) string {
+	var start, end int
+	if len(index) == 0 {
+		return s
+	}
+
+	if len(index) == 1 {
+		start = index[0]
+		end = len(s)
+	} else {
+		start = index[0]
+		end = index[1]
+	}
+
 	if start < 0 {
 		start = len(s) + start
 	}
@@ -276,31 +285,43 @@ func Slice(s string, start int, end int) string {
 		end = len(s)
 	}
 
-	if start > end {
+	if start > end || start == end {
 		return ""
+	}
+
+	if start == end-1 {
+		return string(s[start])
 	}
 
 	return s[start:end]
 }
 
-func Splice(s string, start int, deleteCount int, items ...string) string {
+func Splice(s string, start, replaceCount int, items ...string) string {
+	if len(items) == 0 {
+		return s[:start] + s[start+replaceCount:]
+	}
+
 	if start < 0 {
 		start = len(s) + start
 	}
 
-	if deleteCount < 0 {
-		deleteCount = 0
+	if replaceCount < 0 {
+		replaceCount = 0
 	}
 
 	if start > len(s) {
 		start = len(s)
 	}
 
-	if deleteCount > len(s)-start {
-		deleteCount = len(s) - start
+	if replaceCount > len(s)-start {
+		replaceCount = len(s) - start
 	}
 
-	return s[:start] + Join(items, "") + s[start+deleteCount:]
+	if replaceCount > len(items) {
+		replaceCount = len(items) - 1
+	}
+
+	return s[:start] + Join(items, "") + s[start+replaceCount:]
 }
 
 func Escape(s string) string {
@@ -368,12 +389,8 @@ func Unescape(s string) string {
 // 	return Repeat(pad, (length-len(s))/2) + s + Repeat(pad, (length-len(s)+1)/2)
 // }
 
-func pad(s string, length int, padChar byte) string {
-	if len(s) >= length {
-		return s
-	}
-
-	padding := make([]byte, length-len(s))
+func pad(s string, addAmount int, padChar byte) string {
+	padding := make([]byte, addAmount-len(s))
 	for i := range padding {
 		padding[i] = padChar
 	}
@@ -381,10 +398,17 @@ func pad(s string, length int, padChar byte) string {
 	return string(padding)
 }
 
-func PadStart(s string, length int, padChar byte) string {
-	return pad(s, length, padChar) + s
+func PadStart(s string, addAmount int, padChar byte) string {
+	if len(s) >= addAmount {
+		return s
+	}
+	return pad(s, addAmount, padChar) + s
 }
 
-func PadEnd(s string, length int, padChar byte) string {
-	return s + pad(s, length, padChar)
+func PadEnd(s string, addAmount int, padChar byte) string {
+	if len(s) >= addAmount {
+		return s
+	}
+
+	return s + pad(s, addAmount, padChar)
 }

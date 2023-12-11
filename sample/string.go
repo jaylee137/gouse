@@ -105,6 +105,23 @@ func strTrim() {
 	println("Trim right string: ", strings.RTrim(str))
 }
 
+func strTrimBlank() {
+	println("Trim blank string: ", strings.TrimBlank("   hello world, this is world   "))
+	println("Trim left blank string: ", strings.TrimBlank("   hello world, this is world   \t"))
+	println("Trim right blank string: ", strings.TrimBlank("   hello world, this is world   \n"))
+}
+
+func strTrimPrefix() {
+	var str = "   hello world, this is world   "
+	println("Trim prefix string: ", strings.TrimPrefix(str, "   "))
+	println("Trim suffix string: ", strings.TrimSuffix(str, "   "))
+}
+
+func strTrimSuffix() {
+	var str = "   hello world, this is world   "
+	println("Trim suffix string: ", strings.TrimSuffix(str, "   "))
+}
+
 func strJoin() {
 	var str = []string{"hello", "world"}
 	println("Join string: ", strings.Join(str, "-"))
@@ -117,12 +134,17 @@ func strConcat() {
 func strSlice() {
 	var str = "hello world, this is world"
 	println("Slice string: ", strings.Slice(str, 0, 5))
+	println("Slice string: ", strings.Slice(str, 0, 1))
+	println("Slice string (only start): ", strings.Slice(str, -5))
+	println("Slice string (not parameters): ", strings.Slice(str))
+	println("Slice string (with negative index): ", strings.Slice(str, -5, -1))
 }
 
 func strSplice() {
-	var str = "hello world, this is world"
+	var str = "helloworld, this is world"
 	println("Splice string (default not replace): ", strings.Splice(str, 0, 5))
-	println("Splice string (with replace): ", strings.Splice(str, 0, 5, "golang"))
+	println("Splice string (with replace): ", strings.Splice(str, 1, 5, "golang"))
+	println("Splice string (with replace multiple): ", strings.Splice(str, 1, 5, "golang1", "golang2"))
 }
 
 func strStartsWith() {
@@ -194,6 +216,9 @@ func StringExample() {
 	strTruncate()
 	strReplace()
 	strTrim()
+	strTrimBlank()
+	strTrimPrefix()
+	strTrimSuffix()
 	strJoin()
 	strConcat()
 	strSlice()

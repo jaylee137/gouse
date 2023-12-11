@@ -20,6 +20,25 @@ func IsInt(v interface{}) bool {
 }
 ```
 
+### IsUnInt
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsUnInt(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "uint")
+}
+```
+
 ### IsFloat
 ```go
 import (
@@ -39,6 +58,44 @@ func IsFloat(v interface{}) bool {
 }
 ```
 
+### IsComplex
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsComplex(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "complex")
+}
+```
+
+### IsNumber
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsNumber(v interface{}) bool {
+	return IsInt(v) || IsFloat(v)
+}
+```
+
 ### IsString
 ```go
 import (
@@ -55,6 +112,141 @@ import (
 ```go
 func IsString(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "string")
+}
+```
+
+### IsRune
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsRune(v interface{}) bool {
+	_, ok := v.(rune)
+	return ok
+}
+```
+
+### IsByte
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsByte(v interface{}) bool {
+	_, ok := v.(byte)
+	return ok
+}
+```
+
+### IsUintptr
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsUintptr(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "uintptr")
+}
+```
+
+### IsError
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsError(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "error")
+}
+```
+
+### IsInterface
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsInterface(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "interface")
+}
+```
+
+### IsChannel
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsChannel(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "chan")
+}
+```
+
+### IsUnsafePointer
+```go
+import (
+	"fmt"
+
+	"strings"
+
+	"github.com/google/uuid"
+
+	"github.com/thuongtruong1009/gouse/constants"
+)
+```
+
+```go
+func IsUnsafePointer(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "unsafe.Pointer")
 }
 ```
 
@@ -207,6 +399,13 @@ import (
 ```go
 func IsNil(v interface{}) bool {
 	return v == nil
+
+	// 	v := reflect.ValueOf(value)
+	// 	if v.Kind() == reflect.Ptr || v.Kind() == reflect.Interface {
+	// 		return v.IsNil()
+	// 	}
+
+	// 	return false
 }
 ```
 

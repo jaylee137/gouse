@@ -1,6 +1,110 @@
 # Ultilities
 
 
+### Capitalize
+```go
+import ()
+```
+
+```go
+func Capitalize(sentence string) string {
+	sentenceBytes := []byte(sentence)
+
+	for i := 0; i < len(sentenceBytes); i++ {
+		if (i == 0 || sentenceBytes[i-1] == ' ') && IsLetter(sentenceBytes[i]) {
+			sentenceBytes[i] = Upper(sentenceBytes[i])
+		}
+	}
+
+	return string(sentenceBytes)
+}
+```
+
+### CamelCase
+```go
+import ()
+```
+
+```go
+func CamelCase(s string) string {
+	var result string
+	upperNext := false
+
+	for _, char := range s {
+		if IsLetter(char) || IsDigit(char) {
+			if upperNext {
+				result += string(Upper(char))
+				upperNext = false
+			} else {
+				result += string(Lower(char))
+			}
+		} else {
+			// If the character is not a letter or digit, set the flag to capitalize the next valid character.
+			upperNext = true
+		}
+	}
+
+	return result
+}
+```
+
+### concatCase
+```go
+import ()
+```
+
+```go
+func concatCase(s string, sep string) string {
+	spliStr := Split(s, " ")
+	var result string
+
+	if len(spliStr) == 1 {
+		for i, char := range s {
+			if i > 0 && (IsUpper(char) || IsDigit(char)) && !IsDigit(s[i-1]) {
+				result += sep
+			} else if i > 0 && !IsLetter(char) && !IsDigit(char) && string(char) != sep {
+				result += sep
+				continue
+			}
+			result += string(Lower(char))
+		}
+
+		return result
+	} else {
+		for i, str := range spliStr {
+			if i > 0 {
+				result += sep
+			}
+			result += str
+		}
+
+		return result
+	}
+}
+```
+
+### SnakeCase
+```go
+import ()
+```
+
+```go
+func SnakeCase(s string) string {
+	return concatCase(s, "_")
+}
+```
+
+### KebabCase
+```go
+import ()
+```
+
+```go
+func KebabCase(s string) string {
+	return concatCase(s, "-")
+}
+```
+
 ### IsLetter
 ```go
 import ()
@@ -52,6 +156,9 @@ import ()
 
 ```go
 func EndsWith(s string, substr string) bool {
+	if len(s) < len(substr) {
+		return false
+	}
 	return LIndex(s, substr) == len(s)-len(substr)
 }
 ```
@@ -90,16 +197,21 @@ func Split(s string, separator string) []string {
 	var result []string
 	var temp string
 
-	for _, v := range s {
-		if string(v) == separator {
-			result = append(result, temp)
-			temp = ""
-		} else {
-			temp += string(v)
+	if len(separator) == 0 {
+		for _, v := range s {
+			result = append(result, string(v))
 		}
+	} else {
+		for _, v := range s {
+			if string(v) == separator {
+				result = append(result, temp)
+				temp = ""
+			} else {
+				temp += string(v)
+			}
+		}
+		result = append(result, temp)
 	}
-
-	result = append(result, temp)
 
 	return result
 }
@@ -255,6 +367,7 @@ func UpperFirst(s string) string {
 		return s
 	}
 
+	// it is capital case
 	return string(Upper(s[0])) + s[1:]
 }
 ```
@@ -313,6 +426,10 @@ import (
 
 ```go
 func Replace(s string, old string, new string) string {
+	if len(old) == 0 {
+		return s
+	}
+
 	var result string
 
 	for i := 0; i < len(s); {
@@ -325,31 +442,6 @@ func Replace(s string, old string, new string) string {
 			// If no match, append the current character to the result and move to the next character
 			result += string(s[i])
 			i++
-		}
-	}
-
-	return result
-}
-```
-
-### Trim
-```go
-import (
-	"html"
-)
-```
-
-```go
-func Trim(s string) string {
-	var result string
-	var flag bool
-
-	for _, v := range s {
-		if v != ' ' {
-			flag = true
-			result += string(v)
-		} else if flag {
-			result += string(v)
 		}
 	}
 
@@ -407,6 +499,20 @@ func RTrim(s string) string {
 }
 ```
 
+### Trim
+```go
+import (
+	"html"
+)
+```
+
+```go
+func Trim(s string) string {
+	tmp := LTrim(s)
+	return RTrim(tmp)
+}
+```
+
 ### TrimBlank
 ```go
 import (
@@ -416,19 +522,18 @@ import (
 
 ```go
 func TrimBlank(s string) string {
-	var result string
-	var flag bool
+	start := 0
+	end := len(s) - 1
 
-	for _, v := range s {
-		if v != ' ' && v != '\n' && v != '\t' {
-			flag = true
-			result += string(v)
-		} else if flag {
-			result += string(v)
-		}
+	for start <= end && (s[start] == ' ' || s[start] == '\t' || s[start] == '\n') {
+		start++
 	}
 
-	return result
+	for end >= start && (s[end] == ' ' || s[end] == '\t' || s[end] == '\n') {
+		end--
+	}
+
+	return s[start : end+1]
 }
 ```
 
@@ -523,7 +628,20 @@ import (
 ```
 
 ```go
-func Slice(s string, start int, end int) string {
+func Slice(s string, index ...int) string {
+	var start, end int
+	if len(index) == 0 {
+		return s
+	}
+
+	if len(index) == 1 {
+		start = index[0]
+		end = len(s)
+	} else {
+		start = index[0]
+		end = index[1]
+	}
+
 	if start < 0 {
 		start = len(s) + start
 	}
@@ -536,8 +654,12 @@ func Slice(s string, start int, end int) string {
 		end = len(s)
 	}
 
-	if start > end {
+	if start > end || start == end {
 		return ""
+	}
+
+	if start == end-1 {
+		return string(s[start])
 	}
 
 	return s[start:end]
@@ -552,24 +674,32 @@ import (
 ```
 
 ```go
-func Splice(s string, start int, deleteCount int, items ...string) string {
+func Splice(s string, start, replaceCount int, items ...string) string {
+	if len(items) == 0 {
+		return s[:start] + s[start+replaceCount:]
+	}
+
 	if start < 0 {
 		start = len(s) + start
 	}
 
-	if deleteCount < 0 {
-		deleteCount = 0
+	if replaceCount < 0 {
+		replaceCount = 0
 	}
 
 	if start > len(s) {
 		start = len(s)
 	}
 
-	if deleteCount > len(s)-start {
-		deleteCount = len(s) - start
+	if replaceCount > len(s)-start {
+		replaceCount = len(s) - start
 	}
 
-	return s[:start] + Join(items, "") + s[start+deleteCount:]
+	if replaceCount > len(items) {
+		replaceCount = len(items) - 1
+	}
+
+	return s[:start] + Join(items, "") + s[start+replaceCount:]
 }
 ```
 
@@ -652,12 +782,8 @@ import (
 ```
 
 ```go
-func pad(s string, length int, padChar byte) string {
-	if len(s) >= length {
-		return s
-	}
-
-	padding := make([]byte, length-len(s))
+func pad(s string, addAmount int, padChar byte) string {
+	padding := make([]byte, addAmount-len(s))
 	for i := range padding {
 		padding[i] = padChar
 	}
@@ -674,8 +800,11 @@ import (
 ```
 
 ```go
-func PadStart(s string, length int, padChar byte) string {
-	return pad(s, length, padChar) + s
+func PadStart(s string, addAmount int, padChar byte) string {
+	if len(s) >= addAmount {
+		return s
+	}
+	return pad(s, addAmount, padChar) + s
 }
 ```
 
@@ -687,8 +816,12 @@ import (
 ```
 
 ```go
-func PadEnd(s string, length int, padChar byte) string {
-	return s + pad(s, length, padChar)
+func PadEnd(s string, addAmount int, padChar byte) string {
+	if len(s) >= addAmount {
+		return s
+	}
+
+	return s + pad(s, addAmount, padChar)
 }
 ```
 
