@@ -187,8 +187,31 @@ func strLines() {
 
 func strIndex() {
 	var str = "hello world, this is world"
-	println("First index of substring start at: ", strings.FIndex(str, "world"))
-	println("Last Index of substring end at: ", strings.LIndex(str, "world"))
+
+	f1, l1 := strings.Index(str, "l")
+	fmt.Printf("First index start at: %d, end at: %d\n", f1, l1)
+
+	f2, l2 := strings.Index(str, "world")
+	fmt.Printf("First index start at: %d, end at: %d\n", f2, l2)
+
+	f3 := strings.FIndex(str, "l")
+	fmt.Println("First index start at: ", f3)
+
+	l3 := strings.LIndex(str, "world")
+	fmt.Println("Last index start at: ", l3)
+
+	f4, l4 := strings.Index(str, "oo")
+	if f4 == -1 || l4 == -1 {
+		fmt.Println("Not found")
+	}
+
+	if strings.FIndex(str, "oo") == -1 {
+		fmt.Println("Not found")
+	}
+
+	if strings.LIndex(str, "oo") == -1 {
+		fmt.Println("Not found")
+	}
 }
 
 func strRandom() {

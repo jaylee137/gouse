@@ -14,7 +14,7 @@
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
-![](/public/banner.png)
+# ![](/public/banner.png)
 
 ## 📝 Why Gouse?
 
@@ -65,6 +65,8 @@ $ go get github.com/thuongtruong1009/gouse
 
 ## 🦄 Usage
 
+- Using package directly in your module as ultra-lightweight utility functions.
+
 ```go
 package main
 
@@ -77,14 +79,12 @@ func main() {
 
 ## 📖 Documentation
 
-- Modules reference at [**`Gouse`**](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- Modules reference at [**`Gouse package`**](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 - [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
 <!-- ## 📊 Benchmark
 
 ## 📚 Examples -->
-
-<!-- Development -->
 
 ## 🛠️ Development
 

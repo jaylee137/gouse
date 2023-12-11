@@ -74,9 +74,9 @@ func typeCastToString() {
 
 func TypeExample() {
 	typeCheck()
-	// typeCheckUUID()
+	typeCheckUUID()
 
-	// typeStructToString()
-	// typeStringConvert()
-	// typeCastToString()
+	typeStructToString()
+	typeStringConvert()
+	typeCastToString()
 }

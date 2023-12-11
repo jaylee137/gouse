@@ -42,28 +42,34 @@ func Lines(s string) int {
 	return len(result)
 }
 
-func FIndex(s string, substr string) int {
+func Index(s, substr string) (int, int) {
+	firstIndex := -1
+	lastIndex := -1
+
 	for i := 0; i < len(s); i++ {
-		if s[i] == substr[0] && len(s)-i >= len(substr) {
-			if s[i:i+len(substr)] == substr {
-				return i
+		if len(s)-i < len(substr) {
+			break
+		}
+
+		if s[i:i+len(substr)] == substr {
+			if firstIndex == -1 {
+				firstIndex = i
 			}
+			lastIndex = i
 		}
 	}
 
-	return -1
+	return firstIndex, lastIndex
+}
+
+func FIndex(s string, substr string) int {
+	firstIndex, _ := Index(s, substr)
+	return firstIndex
 }
 
 func LIndex(s string, substr string) int {
-	for i := len(s) - 1; i >= 0; i-- {
-		if s[i] == substr[0] && len(s)-i >= len(substr) {
-			if s[i:i+len(substr)] == substr {
-				return i
-			}
-		}
-	}
-
-	return -1
+	_, lastIndex := Index(s, substr)
+	return lastIndex
 }
 
 func Random(n int) string {

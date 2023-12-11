@@ -884,6 +884,37 @@ func Lines(s string) int {
 }
 ```
 
+### Index
+```go
+import (
+	"github.com/thuongtruong1009/gouse/constants"
+
+	"github.com/thuongtruong1009/gouse/number"
+)
+```
+
+```go
+func Index(s, substr string) (int, int) {
+	firstIndex := -1
+	lastIndex := -1
+
+	for i := 0; i < len(s); i++ {
+		if len(s)-i < len(substr) {
+			break
+		}
+
+		if s[i:i+len(substr)] == substr {
+			if firstIndex == -1 {
+				firstIndex = i
+			}
+			lastIndex = i
+		}
+	}
+
+	return firstIndex, lastIndex
+}
+```
+
 ### FIndex
 ```go
 import (
@@ -895,15 +926,8 @@ import (
 
 ```go
 func FIndex(s string, substr string) int {
-	for i := 0; i < len(s); i++ {
-		if s[i] == substr[0] && len(s)-i >= len(substr) {
-			if s[i:i+len(substr)] == substr {
-				return i
-			}
-		}
-	}
-
-	return -1
+	firstIndex, _ := Index(s, substr)
+	return firstIndex
 }
 ```
 
@@ -918,15 +942,8 @@ import (
 
 ```go
 func LIndex(s string, substr string) int {
-	for i := len(s) - 1; i >= 0; i-- {
-		if s[i] == substr[0] && len(s)-i >= len(substr) {
-			if s[i:i+len(substr)] == substr {
-				return i
-			}
-		}
-	}
-
-	return -1
+	_, lastIndex := Index(s, substr)
+	return lastIndex
 }
 ```
 
