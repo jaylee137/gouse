@@ -212,7 +212,7 @@ func TrimBlank(s string) string {
 	return s[start : end+1]
 }
 
-func TrimPrefix(s string, prefix string) string {
+func TrimPrefix(s, prefix string) string {
 	if len(s) < len(prefix) {
 		return s
 	}
@@ -224,7 +224,7 @@ func TrimPrefix(s string, prefix string) string {
 	return s
 }
 
-func TrimSuffix(s string, suffix string) string {
+func TrimSuffix(s, suffix string) string {
 	if len(s) < len(suffix) {
 		return s
 	}

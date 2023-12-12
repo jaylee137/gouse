@@ -81,3 +81,37 @@ func Random(n int) string {
 
 	return result
 }
+
+func At(s string, index int) string {
+	if index < 0 {
+		index = len(s) + index
+	}
+
+	if index < 0 || index >= len(s) {
+		return ""
+	}
+
+	return string(s[index])
+}
+
+func CodePointAt(s string, index int) int {
+	if index < 0 {
+		index = len(s) + index
+	}
+
+	if index < 0 || index >= len(s) {
+		return -1
+	}
+
+	return int(s[index])
+}
+
+func CodePoint(input string) []int {
+    asciiValues := make([]int, len(input))
+
+    for i, char := range input {
+        asciiValues[i] = int(char)
+    }
+
+    return asciiValues
+}

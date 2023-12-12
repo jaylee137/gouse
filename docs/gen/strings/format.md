@@ -545,7 +545,7 @@ import (
 ```
 
 ```go
-func TrimPrefix(s string, prefix string) string {
+func TrimPrefix(s, prefix string) string {
 	if len(s) < len(prefix) {
 		return s
 	}
@@ -566,7 +566,7 @@ import (
 ```
 
 ```go
-func TrimSuffix(s string, suffix string) string {
+func TrimSuffix(s, suffix string) string {
 	if len(s) < len(suffix) {
 		return s
 	}

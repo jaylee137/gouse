@@ -18,7 +18,7 @@
 
 ## 📝 Why Gouse?
 
-- Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Lodash`](https://lodash.com/).
+- Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Javascript`](https://javascript.com) and [`Lodash`](https://lodash.com/).
 - Gouse provides a wide variety of methods, taking the hassle out of working with arrays, numbers, objects, strings, etc.
 - Each method has a different set of features, so you can pick the ones that fit your project best.
 - Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
@@ -176,6 +176,7 @@ $ make bench
 - [Golang Docs](https://pkg.go.dev/)
 - [Lodash.js](https://lodash.com/)
 - [Lodash collection](https://www.geeksforgeeks.org/lodash/?ref=header_search)
+- [Javascript methods reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at)
 - [File handling in Golang](https://www.cloudhadoop.com/2018/11/learn-golang-tutorials-file-directory.html)
 - [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)
 - [Dynamic HTML](https://css-tricks.com/dynamic-page-replacing-content)

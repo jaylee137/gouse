@@ -1,4 +1,4 @@
-# Regex
+# Form
 
 
 ### IsInt
@@ -7,10 +7,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -26,10 +22,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -45,10 +37,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -64,10 +52,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -83,10 +67,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -102,10 +82,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -121,10 +97,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -141,10 +113,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -161,10 +129,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -180,10 +144,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -199,10 +159,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -218,10 +174,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -237,10 +189,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -256,10 +204,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -275,10 +219,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -294,10 +234,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -313,10 +249,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -332,10 +264,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -351,10 +279,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -370,10 +294,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -389,10 +309,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -415,10 +331,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -472,10 +384,6 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
@@ -491,44 +399,12 @@ import (
 	"fmt"
 
 	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
 )
 ```
 
 ```go
 func IsZero(v interface{}) bool {
 	return v == nil || IsEmpty(v)
-}
-```
-
-### IsUUID
-```go
-import (
-	"fmt"
-
-	"strings"
-
-	"github.com/google/uuid"
-
-	"github.com/thuongtruong1009/gouse/constants"
-)
-```
-
-```go
-func IsUUID(input string) (bool, error) {
-	if input == "" {
-		return false, constants.ErrRequiredUUID
-	}
-
-	_, err := uuid.Parse(input)
-	if err != nil {
-		return false, constants.ErrInvalidUUID
-	}
-
-	return true, nil
 }
 ```
 
@@ -768,15 +644,169 @@ func RuneToString(data rune) string {
 }
 ```
 
-### MatchRegex
+### IsUUID
 ```go
 import (
-	"regexp"
-)
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
 ```
 
 ```go
-func MatchRegex(regex, chain string) bool {
-	return regexp.MustCompile(regex).MatchString(chain)
-}
+func IsUUID(input string) (bool, error) {
+	if input == "" {
+		return false, constants.ErrRequiredUUID
+	}
+
+	_, err := uuid.Parse(input)
+	if err != nil {
+		return false, constants.ErrInvalidUUID
+	}
+
+	return true, nil
+}```
+
+### isMail
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
 ```
+
+```go
+func isMail(emailStr, domain string) (bool, error) {
+	if strings.Includes(emailStr, "@") {
+		if !regex.IsMatch(shared.EmailLenReg, emailStr) {
+			return false, constants.ErrEmailLen
+		}
+
+		split := strings.Split(emailStr, "@")
+		if len(split) != 2 || !strings.Includes(split[1], ".") {
+			return false, constants.ErrInvalidEmail
+		} else if !strings.Includes(split[1], domain) {
+			return false, constants.ErrInvalidEmail
+		} else {
+			return true, nil
+		}
+	} else {
+		return false, constants.ErrInvalidEmail
+	}
+}```
+
+### IsGmail
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsGmail(emailStr string) (bool, error) {
+	return isMail(emailStr, "gmail.com")
+}```
+
+### IsYahoo
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsYahoo(emailStr string) (bool, error) {
+	return isMail(emailStr, "yahoo.com")
+}```
+
+### IsOutlook
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsOutlook(emailStr string) (bool, error) {
+	return isMail(emailStr, "outlook.com")
+}```
+
+### IsEdu
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsEdu(emailStr string) (bool, error) {
+	return isMail(emailStr, "edu")
+}```
+
+### IsEmail
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsEmail(emailStr, customDomain string) (bool, error) {
+	return isMail(emailStr, customDomain)
+}```
+
+### IsUsername
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsUsername(username string) (bool, error) {
+	if !regex.IsMatch(shared.UsernameReg, username) {
+		return false, constants.ErrInvalidUsername
+	}
+
+	return true, nil
+}```
+
+### IsPassword
+```go
+import (
+	"github.com/google/uuid"
+	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong1009/gouse/strings")
+```
+
+```go
+func IsPassword(password string) (bool, error) {
+	if !regex.IsMatch(shared.PasswordReg, password) {
+		return false, constants.ErrInvalidPassword
+	}
+
+	return true, nil
+}```

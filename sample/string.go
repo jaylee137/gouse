@@ -218,42 +218,66 @@ func strRandom() {
 	println("Random string: ", strings.Random(10))
 }
 
+func strAt() {
+	var str = "hello world"
+	println("At string: ", strings.At(str, 1))
+	println("At string: ", strings.At(str, -5))
+}
+
+func strCodePointAt() {
+	var str = "hello world"
+	println("Code point at string: ", strings.CodePointAt(str, 1))
+	println("Code point at string: ", strings.CodePointAt(str, -5))
+}
+
+func strCodePoint() {
+	asciiValues := strings.CodePoint("hello world")
+
+	print("Code point string: ")
+	for _, asciiValue := range asciiValues {
+		fmt.Printf("%d ", asciiValue)
+	}
+}
+
 func StringExample() {
-	strCapitalize()
-	strCamelCase()
-	strSnakeCase()
-	strKebabCase()
+	// strCapitalize()
+	// strCamelCase()
+	// strSnakeCase()
+	// strKebabCase()
 
-	strIsLetter()
-	strIsDigit()
-	strIncludes()
-	strIsLower()
-	strIsUpper()
+	// strIsLetter()
+	// strIsDigit()
+	// strIncludes()
+	// strIsLower()
+	// strIsUpper()
 
-	strSplit()
-	strWords()
-	strReverse()
-	strLower()
-	strUpper()
-	strRepeat()
-	strTruncate()
-	strReplace()
-	strTrim()
-	strTrimBlank()
-	strTrimPrefix()
-	strTrimSuffix()
-	strJoin()
-	strConcat()
-	strSlice()
-	strSplice()
-	strStartsWith()
-	strEndsWith()
-	strEscape()
-	strUnescape()
-	strPad()
+	// strSplit()
+	// strWords()
+	// strReverse()
+	// strLower()
+	// strUpper()
+	// strRepeat()
+	// strTruncate()
+	// strReplace()
+	// strTrim()
+	// strTrimBlank()
+	// strTrimPrefix()
+	// strTrimSuffix()
+	// strJoin()
+	// strConcat()
+	// strSlice()
+	// strSplice()
+	// strStartsWith()
+	// strEndsWith()
+	// strEscape()
+	// strUnescape()
+	// strPad()
 
-	strCount()
-	strLines()
-	strIndex()
-	strRandom()
+	// strCount()
+	// strLines()
+	// strIndex()
+	// strRandom()
+	// strAt()
+	strCodePointAt()
+	strCodePoint()
 }

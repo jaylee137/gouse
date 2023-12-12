@@ -91,3 +91,13 @@ func Compact[T interface{}](arr []T) []T {
 	}
 	return compact
 }
+
+// func Sort[T interface{}](arr []T) []T {
+// 	var sorted []T
+// 	for _, v := range arr {
+// 		if types.IsNumber(v) {
+// 			sorted = append(sorted, v)
+// 		}
+// 	}
+// 	return sorted
+// }

@@ -545,7 +545,7 @@ import (
 ```
 
 ```go
-func TrimPrefix(s string, prefix string) string {
+func TrimPrefix(s, prefix string) string {
 	if len(s) < len(prefix) {
 		return s
 	}
@@ -566,7 +566,7 @@ import (
 ```
 
 ```go
-func TrimSuffix(s string, suffix string) string {
+func TrimSuffix(s, suffix string) string {
 	if len(s) < len(suffix) {
 		return s
 	}
@@ -965,5 +965,72 @@ func Random(n int) string {
 	}
 
 	return result
+}
+```
+
+### At
+```go
+import (
+	"github.com/thuongtruong1009/gouse/constants"
+
+	"github.com/thuongtruong1009/gouse/number"
+)
+```
+
+```go
+func At(s string, index int) string {
+	if index < 0 {
+		index = len(s) + index
+	}
+
+	if index < 0 || index >= len(s) {
+		return ""
+	}
+
+	return string(s[index])
+}
+```
+
+### CodePointAt
+```go
+import (
+	"github.com/thuongtruong1009/gouse/constants"
+
+	"github.com/thuongtruong1009/gouse/number"
+)
+```
+
+```go
+func CodePointAt(s string, index int) int {
+	if index < 0 {
+		index = len(s) + index
+	}
+
+	if index < 0 || index >= len(s) {
+		return -1
+	}
+
+	return int(s[index])
+}
+```
+
+### CodePoint
+```go
+import (
+	"github.com/thuongtruong1009/gouse/constants"
+
+	"github.com/thuongtruong1009/gouse/number"
+)
+```
+
+```go
+func CodePoint(input string) []int {
+    asciiValues := make([]int, len(input))
+
+    for i, char := range input {
+        asciiValues[i] = int(char)
+    }
+
+    return asciiValues
 }
 ```
