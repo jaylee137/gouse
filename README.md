@@ -48,6 +48,7 @@
 - [ ] Log
 - [x] [`Math`](docs/gen/math)
 - [x] [`Number`](docs/gen/number)
+- [x] [`Regex`](docs/gen/regex)
 - [ ] Struct
 - [x] [`String`](docs/gen/string)
 - [ ] Tools

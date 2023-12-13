@@ -19,8 +19,7 @@ doc:
 test:
 	@echo "Running tests..."
 	go clean -testcache
-    # go test -timeout 30s ./pkg/helpers -run ^TestParallelize$ -v
-	go test -v -count=1 -cover -coverprofile=coverage.out ./date/... ./number/... ./regex/... ./strings/...
+	go test -v -count=1 -cover -coverprofile=coverage.out ./date/... ./number/... ./regex/... ./strings/... ./types/...
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
@@ -31,7 +30,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	./count.sh public/count.svg true 13708a array console date function helper io math number regex strings types
+	sh count.sh public/count.svg true 13708a array console date function helper io math number regex strings types
 	@echo "Done!"
 
 clean:

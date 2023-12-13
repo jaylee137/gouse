@@ -69,17 +69,25 @@ func IsUsername(username string) (bool, error) {
 }
 
 func IsPassword(password string) (bool, error) {
-	if !regex.IsMatch(shared.PasswordReg, password) {
-		return false, constants.ErrInvalidPassword
+	if !regex.IsMatch(shared.PasswordLenReg, password) {
+		return false, constants.ErrPasswordLen
+	} else if !regex.IsMatch(shared.PasswordLowerReg, password) {
+		return false, constants.ErrPasswordEmptyLower
+	} else if !regex.IsMatch(shared.PasswordUpperReg, password) {
+		return false, constants.ErrPasswordEmptyUpper
+	} else if !regex.IsMatch(shared.PasswordDigitReg, password) {
+		return false, constants.ErrPasswordEmptyDigit
+	} else if !regex.IsMatch(shared.PasswordSpecialReg, password) {
+		return false, constants.ErrPasswordEmptySpecial
+	} else {
+		return true, nil
+	}
+}
+
+func IsPhone(phone string) (bool, error) {
+	if !regex.IsMatch(shared.PhoneReg, phone) {
+		return false, constants.ErrInvalidPhone
 	}
 
 	return true, nil
 }
-
-// func IsPassword(password string) bool {
-// 	return MatchRegex(shared.PasswordReg, password)
-// }
-
-// func IsPhone(phone string) bool {
-// 	return MatchRegex(shared.PhoneReg, phone)
-// }

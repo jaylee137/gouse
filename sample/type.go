@@ -6,8 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 
-func typeStructToString() {
-	println("Struct to string start:")
+func typeStructConvert() {
 	type CompanyInfo struct {
 		Company string
 		Address string
@@ -25,9 +24,11 @@ func typeStructToString() {
 }
 
 func typeStringConvert() {
-	println("String to int: ", types.StringToInt("1"))
-	fmt.Println("String to float: ", types.StringToFloat("1.1"))
-	println("String to bool: ", types.StringToBool("true"))
+	println("Convert string to int: ", types.StringToInt("1"))
+	fmt.Println("Convert string to float: ", types.StringToFloat("1.1"))
+	println("Convert string to bool: ", types.StringToBool("true"))
+	fmt.Println("Convert string to bytes: ", string(types.StringToBytes("1")), "->", types.StringToBytes("1"))
+	fmt.Println("Convert strings to bytes: ", string(types.StringsToBytes([]string{"1", "2", "3"})), "->", types.StringsToBytes([]string{"1", "2", "3"}))
 }
 
 func typeCastToString() {
@@ -35,6 +36,8 @@ func typeCastToString() {
 	fmt.Println("Cast float to string: ", types.FloatToString(1.1))
 	println("Cast bool to string: ", types.BoolToString(true))
 	println("Cast interface to string: ", types.InterfaceToString([]int{1, 2, 3}))
+	println("Cast bytes to string: ", types.BytesToString([]byte{49, 50, 51}))
+	println("Cast rune to string: ", types.RuneToString('a'))
 }
 
 func typeCheck() {
@@ -72,19 +75,19 @@ func typeCheckUUID() {
 	println("Check is valid uuid: ", isValid)
 }
 
-func typeCheckEmail() {
-	emails := []string{
-		"okahehe@gmail.com",
-		"test@example.com",
-		"short@ex.com",
-		"toolong@exampledomain.com",
-		"missingat.sign.com",
-		"invalid@.domain.com",
-		"user2@yahoo.com",
-		"bean@outlook.com",
-		"ititiu19228@student.hcmiu.edu.vn",
-	}
+var emails = []string{
+	"okahehe@gmail.com",
+	"test@example.com",
+	"short@ex.com",
+	"toolong@exampledomain.com",
+	"missingat.sign.com",
+	"invalid@.domain.com",
+	"user2@yahoo.com",
+	"bean@outlook.com",
+	"ititiu19228@student.hcmiu.edu.vn",
+}
 
+func typeCheckGmail() {
 	println("--- Check valid gmail ---")
 	for _, email := range emails {
 		isEmail, err := types.IsGmail(email)
@@ -96,8 +99,10 @@ func typeCheckEmail() {
 			fmt.Printf("%s - valid gmail\n", email)
 		}
 	}
+}
 
-	println("\n--- Check valid yahoo ---")
+func typeCheckYahoo() {
+	println("--- Check valid yahoo ---")
 	for _, email := range emails {
 		isEmail, err := types.IsYahoo(email)
 		if err != nil {
@@ -105,11 +110,13 @@ func typeCheckEmail() {
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid yahoo\n", email)
+			fmt.Printf("%s - valid yahoo email\n", email)
 		}
 	}
+}
 
-	println("\n--- Check valid outlook ---")
+func typeCheckOutlook() {
+	println("--- Check valid outlook ---")
 	for _, email := range emails {
 		isEmail, err := types.IsOutlook(email)
 		if err != nil {
@@ -117,11 +124,13 @@ func typeCheckEmail() {
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid outlook\n", email)
+			fmt.Printf("%s - valid outlook email\n", email)
 		}
 	}
+}
 
-	println("\n--- Check valid education mail ---")
+func typeCheckEdu() {
+	println("--- Check valid education mail ---")
 	for _, email := range emails {
 		isEmail, err := types.IsEdu(email)
 		if err != nil {
@@ -129,11 +138,13 @@ func typeCheckEmail() {
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid edu\n", email)
+			fmt.Printf("%s - valid education email\n", email)
 		}
 	}
+}
 
-	println("\n--- Check valid custom domain ---")
+func typeCheckEmail() {
+	println("--- Check valid custom domain ---")
 	for _, email := range emails {
 		isEmail, err := types.IsEmail(email, "edu.vn")
 		if err != nil {
@@ -141,7 +152,7 @@ func typeCheckEmail() {
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid custom domain\n", email)
+			fmt.Printf("%s - valid custom domain email\n", email)
 		}
 	}
 }
@@ -166,34 +177,65 @@ func typeCheckUsername() {
 	}
 }
 
-// func typeCheckPassword() {
-// 	passwords := []string{
-// 		"okahehe",
-// 		"missingat.sign",
-// 		"#$%&*()",
-// 	}
+func typeCheckPassword() {
+	passwords := []string{
+		"okahehe",
+		"missingat.sign",
+		"#$%&*()",
+		"Username01$",
+	}
 
-// 	println("--- Check valid password ---")
-// 	for _, password := range passwords {
-// 		isPassword, err := types.IsPassword(password)
-// 		if err != nil {
-// 			fmt.Printf("%s - %s\n", password, err)
-// 		}
+	println("--- Check valid password ---")
+	for _, password := range passwords {
+		isPassword, err := types.IsPassword(password)
+		if err != nil {
+			fmt.Printf("%s - %s\n", password, err)
+		}
 
-// 		if isPassword {
-// 			fmt.Printf("%s - valid password\n", password)
-// 		}
-// 	}
-// }
+		if isPassword {
+			fmt.Printf("%s - valid password\n", password)
+		}
+	}
+}
+
+func typeCheckPhone() {
+	//  Note: Phone format syntax: +<country_calling_code> (<area_Prefix_mobile_code>) <phone_number>
+	// Reference at https://en.wikipedia.org/wiki/List_of_mobile_telephone_prefixes_by_country#:~:text=Property%20Value%20%20Country%20or%20unrecognized%20territory%20,73%20%20%20Etisalat%20%20%20www.etisalat.af%20
+	phoneNumbers := []string{
+		"+1 (123) 456-7890",
+		"+44 (20) 1234-5678",
+		"+81 (3) 1234-5678",
+		"InvalidPhoneNumber",
+		"+1 (123) 45-67890",
+		"+84 (3) 668-22796",
+	}
+
+	println("--- Check valid phone number ---")
+	for _, phoneNumber := range phoneNumbers {
+		isPhoneNumber, err := types.IsPhone(phoneNumber)
+		if err != nil {
+			fmt.Printf("%s - %s\n", phoneNumber, err)
+		}
+
+		if isPhoneNumber {
+			fmt.Printf("%s - valid phone number\n", phoneNumber)
+		}
+	}
+}
 
 func TypeExample() {
-	typeStructToString()
-	typeStringConvert()
-	typeCastToString()
+	// typeStructConvert()
+	// typeStringConvert()
+	// typeCastToString()
 
-	typeCheck()
-	typeCheckUUID()
-	typeCheckEmail()
-	typeCheckUsername()
+	// typeCheck()
+	// typeCheckUUID()
+	// typeCheckGmail()
+	// typeCheckYahoo()
+	// typeCheckOutlook()
+	// typeCheckEdu()
+	// typeCheckEmail()
+	// typeCheckUsername()
 	// typeCheckPassword()
+	// typeCheckPhone()
 }

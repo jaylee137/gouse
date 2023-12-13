@@ -8,10 +8,20 @@ package shared
 
 const (
 	UsernameReg = `^[a-zA-Z0-9_]{3,20}$`
-	PasswordReg = `^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,32}$`
 )
 
 const (
-	// PasswordLenReg = `^.{8,32}$`
+	PasswordLenReg     = `^.{8,32}$`
+	PasswordLowerReg   = `[a-z]`
+	PasswordUpperReg   = `[A-Z]`
+	PasswordDigitReg   = `\d`
+	PasswordSpecialReg = `[!@#$%^&*]`
+)
+
+const (
 	EmailLenReg = `^.{8,32}$`
+)
+
+const (
+	PhoneReg = `^\+\d{1,2}\s?\(\d{1,4}\)\s?\d{1,6}-\d{1,6}$`
 )

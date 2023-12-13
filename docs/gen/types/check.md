@@ -6,6 +6,8 @@
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -20,6 +22,8 @@ func IsInt(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -36,6 +40,8 @@ func IsUnInt(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -50,6 +56,8 @@ func IsFloat(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -66,6 +74,8 @@ func IsComplex(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -81,6 +91,8 @@ func IsNumber(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -95,6 +107,8 @@ func IsString(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -112,6 +126,8 @@ func IsRune(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -128,6 +144,8 @@ func IsByte(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -142,6 +160,8 @@ func IsUintptr(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -158,13 +178,16 @@ func IsError(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
 
 ```go
 func IsInterface(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "interface")
+	_, ok := v.(interface{})
+	return ok
 }
 ```
 
@@ -172,6 +195,8 @@ func IsInterface(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -188,13 +213,32 @@ func IsChannel(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
 
 ```go
 func IsUnsafePointer(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "unsafe.Pointer")
+	return reflect.TypeOf(v).Kind() == reflect.Uintptr
+}
+```
+
+### IsPointer
+```go
+import (
+	"fmt"
+
+	"reflect"
+
+	"strings"
+)
+```
+
+```go
+func IsPointer(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "*")
 }
 ```
 
@@ -202,6 +246,8 @@ func IsUnsafePointer(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -218,6 +264,8 @@ func IsBool(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -232,6 +280,8 @@ func IsSlice(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -248,13 +298,15 @@ func IsMap(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
 
 ```go
 func IsStruct(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "struct")
+	return reflect.TypeOf(v).Kind() == reflect.Struct
 }
 ```
 
@@ -262,6 +314,8 @@ func IsStruct(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -273,25 +327,12 @@ func IsArray(v interface{}) bool {
 }
 ```
 
-### IsPointer
-```go
-import (
-	"fmt"
-
-	"strings"
-)
-```
-
-```go
-func IsPointer(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "*")
-}
-```
-
 ### IsFunc
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -307,6 +348,8 @@ func IsFunc(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -329,6 +372,8 @@ func IsNil(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )
@@ -383,6 +428,8 @@ func IsEmpty(v interface{}) bool {
 import (
 	"fmt"
 
+	"reflect"
+
 	"strings"
 )
 ```
@@ -397,6 +444,8 @@ func IsUndefined(v interface{}) bool {
 ```go
 import (
 	"fmt"
+
+	"reflect"
 
 	"strings"
 )

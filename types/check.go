@@ -2,6 +2,7 @@ package types
 
 import (
 	"fmt"
+	"reflect"
 	"strings"
 )
 
@@ -48,7 +49,8 @@ func IsError(v interface{}) bool {
 }
 
 func IsInterface(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "interface")
+	_, ok := v.(interface{})
+	return ok
 }
 
 func IsChannel(v interface{}) bool {
@@ -56,7 +58,11 @@ func IsChannel(v interface{}) bool {
 }
 
 func IsUnsafePointer(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "unsafe.Pointer")
+	return reflect.TypeOf(v).Kind() == reflect.Uintptr
+}
+
+func IsPointer(v interface{}) bool {
+	return strings.Contains(fmt.Sprintf("%T", v), "*")
 }
 
 func IsBool(v interface{}) bool {
@@ -72,15 +78,11 @@ func IsMap(v interface{}) bool {
 }
 
 func IsStruct(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "struct")
+	return reflect.TypeOf(v).Kind() == reflect.Struct
 }
 
 func IsArray(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "[")
-}
-
-func IsPointer(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "*")
 }
 
 func IsFunc(v interface{}) bool {
