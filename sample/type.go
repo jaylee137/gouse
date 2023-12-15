@@ -224,18 +224,18 @@ func typeCheckPhone() {
 }
 
 func TypeExample() {
-	// typeStructConvert()
-	// typeStringConvert()
-	// typeCastToString()
+	typeStructConvert()
+	typeStringConvert()
+	typeCastToString()
 
-	// typeCheck()
-	// typeCheckUUID()
-	// typeCheckGmail()
-	// typeCheckYahoo()
-	// typeCheckOutlook()
-	// typeCheckEdu()
-	// typeCheckEmail()
-	// typeCheckUsername()
-	// typeCheckPassword()
-	// typeCheckPhone()
+	typeCheck()
+	typeCheckUUID()
+	typeCheckGmail()
+	typeCheckYahoo()
+	typeCheckOutlook()
+	typeCheckEdu()
+	typeCheckEmail()
+	typeCheckUsername()
+	typeCheckPassword()
+	typeCheckPhone()
 }

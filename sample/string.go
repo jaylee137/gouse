@@ -239,6 +239,15 @@ func strCodePoint() {
 	}
 }
 
+func strFromCodePointAt() {
+	println("From code point at string: ", strings.FromCodePointAt(9733))
+	println("From code point at string: ", strings.FromCodePointAt(9731))
+}
+
+func strFromCodePoint() {
+	println("From code point string: ", strings.FromCodePoint(104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100))
+}
+
 func StringExample() {
 	// strCapitalize()
 	// strCamelCase()
@@ -278,6 +287,8 @@ func StringExample() {
 	// strIndex()
 	// strRandom()
 	// strAt()
-	strCodePointAt()
-	strCodePoint()
+	// strCodePointAt()
+	// strCodePoint()
+	strFromCodePointAt()
+	strFromCodePoint()
 }

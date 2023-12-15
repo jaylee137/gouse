@@ -1,6 +1,8 @@
 package strings
 
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 	"github.com/thuongtruong1009/gouse/number"
 )
@@ -107,11 +109,25 @@ func CodePointAt(s string, index int) int {
 }
 
 func CodePoint(input string) []int {
-    asciiValues := make([]int, len(input))
+	asciiValues := make([]int, len(input))
 
-    for i, char := range input {
-        asciiValues[i] = int(char)
-    }
+	for i, char := range input {
+		asciiValues[i] = int(char)
+	}
 
-    return asciiValues
+	return asciiValues
+}
+
+func FromCodePointAt(codePoint int) string {
+	return string(rune(codePoint))
+}
+
+func FromCodePoint(codePoint ...int) string {
+	var result string
+
+	for _, v := range codePoint {
+		result += fmt.Sprintf("%c", v)
+	}
+
+	return result
 }

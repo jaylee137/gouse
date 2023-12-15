@@ -32,3 +32,22 @@ func Match(regex, chain string) []string {
 	return result
 }
 ```
+
+### MatchIndex
+```go
+import (
+	"regexp"
+)
+```
+
+```go
+func MatchIndex(regex, chain string) int {
+	for i, v := range chain {
+		if IsMatch(regex, string(v)) {
+			return i
+		}
+	}
+
+	return -1
+}
+```

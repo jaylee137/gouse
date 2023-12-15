@@ -828,6 +828,8 @@ func PadEnd(s string, addAmount int, padChar byte) string {
 ### Count
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -858,6 +860,8 @@ func Count(s string, substr ...string) int {
 ### Lines
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -887,6 +891,8 @@ func Lines(s string) int {
 ### Index
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -918,6 +924,8 @@ func Index(s, substr string) (int, int) {
 ### FIndex
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -934,6 +942,8 @@ func FIndex(s string, substr string) int {
 ### LIndex
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -950,6 +960,8 @@ func LIndex(s string, substr string) int {
 ### Random
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -971,6 +983,8 @@ func Random(n int) string {
 ### At
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -994,6 +1008,8 @@ func At(s string, index int) string {
 ### CodePointAt
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -1017,6 +1033,8 @@ func CodePointAt(s string, index int) int {
 ### CodePoint
 ```go
 import (
+	"fmt"
+
 	"github.com/thuongtruong1009/gouse/constants"
 
 	"github.com/thuongtruong1009/gouse/number"
@@ -1025,12 +1043,52 @@ import (
 
 ```go
 func CodePoint(input string) []int {
-    asciiValues := make([]int, len(input))
+	asciiValues := make([]int, len(input))
 
-    for i, char := range input {
-        asciiValues[i] = int(char)
-    }
+	for i, char := range input {
+		asciiValues[i] = int(char)
+	}
 
-    return asciiValues
+	return asciiValues
+}
+```
+
+### FromCodePointAt
+```go
+import (
+	"fmt"
+
+	"github.com/thuongtruong1009/gouse/constants"
+
+	"github.com/thuongtruong1009/gouse/number"
+)
+```
+
+```go
+func FromCodePointAt(codePoint int) string {
+	return string(rune(codePoint))
+}
+```
+
+### FromCodePoint
+```go
+import (
+	"fmt"
+
+	"github.com/thuongtruong1009/gouse/constants"
+
+	"github.com/thuongtruong1009/gouse/number"
+)
+```
+
+```go
+func FromCodePoint(codePoint ...int) string {
+	var result string
+
+	for _, v := range codePoint {
+		result += fmt.Sprintf("%c", v)
+	}
+
+	return result
 }
 ```

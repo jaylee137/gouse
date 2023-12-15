@@ -1,3 +1,5 @@
+# Gouse (development stage)
+
 <div align="center">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
@@ -22,7 +24,9 @@
 - Gouse provides a wide variety of methods, taking the hassle out of working with arrays, numbers, objects, strings, etc.
 - Each method has a different set of features, so you can pick the ones that fit your project best.
 - Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
-- Utility functions are available to handle complex logic usecases such as database connection, build APIs, error handling, log management... can all be set up quickly and easily
+- Javascript user-friendly syntax.
+- No config - import as utility functions.
+- Available functions to handle complex logic usecases such as database connection, build APIs, error handling, log management... can all be set up quickly and easily.
 
 ## ✨ Motivation
 

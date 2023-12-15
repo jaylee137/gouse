@@ -95,6 +95,76 @@ func TestIsGmail(t *testing.T) {
 	}
 }
 
+func TestIsYahoo(t *testing.T) {
+	tests := []shared.ITest{
+		{
+			Name:    "Test 1",
+			Input:   "example@yahoo.com",
+			Want:    true,
+			WantErr: false,
+		},
+		{
+			Name:    "Test 2",
+			Input:   "example",
+			Want:    false,
+			WantErr: true,
+		},
+		{
+			Name:    "Test 3",
+			Input:   "example@.com",
+			Want:    false,
+			WantErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		isValid, err := IsYahoo(tt.Input)
+		if (err != nil) != tt.WantErr {
+			t.Errorf("IsYahoo(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
+			return
+		}
+
+		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
+			t.Errorf("IsYahoo(): %s got = %v, want %v", tt.Name, isValid, tt.Want)
+		}
+	}
+}
+
+func TestIsOutlook(t *testing.T) {
+	tests := []shared.ITest{
+		{
+			Name:    "Test 1",
+			Input:   "example@outlook.com",
+			Want:    true,
+			WantErr: false,
+		},
+		{
+			Name:    "Test 2",
+			Input:   "example",
+			Want:    false,
+			WantErr: true,
+		},
+		{
+			Name:    "Test 3",
+			Input:   "example@.com",
+			Want:    false,
+			WantErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		isValid, err := IsOutlook(tt.Input)
+		if (err != nil) != tt.WantErr {
+			t.Errorf("IsOutlook(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
+			return
+		}
+
+		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
+			t.Errorf("IsOutlook(): %s got = %v, want %v", tt.Name, isValid, tt.Want)
+		}
+	}
+}
+
 func TestUsername(t *testing.T) {
 	tests := []shared.ITest{
 		{
