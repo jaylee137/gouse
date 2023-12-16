@@ -620,6 +620,56 @@ func Concat(s ...string) string {
 }
 ```
 
+### SubStr
+```go
+import (
+	"html"
+)
+```
+
+```go
+func SubStr(s string, start int, length ...int) string {
+	if len(length) > 0 {
+		if start < 0 {
+			start = len(s) + start
+		}
+
+		if length[0] < 0 || start == length[0] || start > len(s) {
+			return ""
+		}
+
+		if start+length[0] > len(s) || start == length[0]-1 {
+			if (start >= len(s)) || (length[0] >= len(s)) {
+				if start >= len(s) && length[0] >= len(s) {
+					return ""
+				} else {
+					if length[0] >= len(s) {
+						return s[start:]
+					} else if start >= len(s) {
+						return ""
+					}
+				}
+			} else {
+				if start == length[0]-1 {
+					return string(s[start])
+				}
+			}
+		}
+
+		if start+length[0] == len(s) {
+			if start == 0 {
+				return s
+			} else {
+				return s[start : start+length[0]-1]
+			}
+		}
+
+		return s[start : start+length[0]]
+	}
+	return s[start:]
+}
+```
+
 ### Slice
 ```go
 import (

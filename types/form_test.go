@@ -45,7 +45,6 @@ func TestIsUUID(t *testing.T) {
 		isValid, err := IsUUID(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsUUID(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
@@ -86,7 +85,6 @@ func TestIsGmail(t *testing.T) {
 		isValid, err := IsGmail(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsGmail(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
@@ -121,7 +119,6 @@ func TestIsYahoo(t *testing.T) {
 		isValid, err := IsYahoo(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsYahoo(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
@@ -156,7 +153,6 @@ func TestIsOutlook(t *testing.T) {
 		isValid, err := IsOutlook(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsOutlook(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
@@ -197,7 +193,6 @@ func TestUsername(t *testing.T) {
 		isValid, err := IsUsername(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsUsername(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
@@ -226,7 +221,6 @@ func TestIsPassword(t *testing.T) {
 		isValid, err := IsPassword(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsPassword(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
@@ -255,7 +249,6 @@ func TestIsPhone(t *testing.T) {
 		isValid, err := IsPhone(tt.Input)
 		if (err != nil) != tt.WantErr {
 			t.Errorf("IsPhone(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
-			return
 		}
 
 		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {

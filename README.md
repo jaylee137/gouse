@@ -1,4 +1,4 @@
-# Gouse (development stage)
+# Gouse (development stage...)
 
 <div align="center">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
@@ -84,8 +84,7 @@ func main() {
 
 ## 📖 Documentation
 
-- Modules reference at [**`Gouse package`**](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
-- [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- Package documentation reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
 <!-- ## 📊 Benchmark
 
