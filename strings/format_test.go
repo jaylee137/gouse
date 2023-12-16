@@ -455,6 +455,43 @@ func TestConcat(t *testing.T) {
 	}
 }
 
+func TestSubStr(t *testing.T) {
+	tests := []struct {
+		input    string
+		start    int
+		end      int
+		expected string
+	}{
+		{"test", 0, 1, "t"},
+		{"test", 0, 2, "te"},
+		{"test", 0, 3, "tes"},
+		{"test", 0, 4, "test"},
+		{"test", 0, 5, "test"},
+		{"test", 1, 1, ""},
+		{"test", 1, 2, "e"},
+		{"test", 1, 3, "es"},
+		{"test", 1, 4, "est"},
+		{"test", 1, 5, "est"},
+		{"test", 2, 2, ""},
+		{"test", 2, 3, "s"},
+		{"test", 2, 4, "st"},
+		{"test", 2, 5, "st"},
+		{"test", 3, 3, ""},
+		{"test", 3, 4, "t"},
+		{"test", 3, 5, "t"},
+		{"test", 4, 4, ""},
+		{"test", 4, 5, ""},
+		{"test", 5, 5, ""},
+	}
+
+	for _, test := range tests {
+		actual := SubStr(test.input, test.start, test.end)
+		if actual != test.expected {
+			t.Errorf("SubStr(%q, %q, %q): expected %q, actual %q", test.input, test.start, test.end, test.expected, actual)
+		}
+	}
+}
+
 func TestSlice(t *testing.T) {
 	tests := []struct {
 		input    string

@@ -131,6 +131,14 @@ func strConcat() {
 	println("Concat string: ", strings.Concat("hello", "world"))
 }
 
+func strSubStr() {
+	var str = "hello world, this is world"
+	println("Sub string: ", strings.SubStr(str, 0, 5))
+	println("Sub string: ", strings.SubStr(str, 0, 1))
+	println("Sub string (only start): ", strings.SubStr(str, -5))
+	println("Sub string (with negative index): ", strings.SubStr(str, -5, -1))
+}
+
 func strSlice() {
 	var str = "hello world, this is world"
 	println("Slice string: ", strings.Slice(str, 0, 5))
@@ -169,7 +177,6 @@ func strUnescape() {
 
 func strPad() {
 	var str = "hello world"
-	// println("Pad string: ", strings.Pad(str, 20, '*'))
 	println("Pad-left string: ", strings.PadStart(str, 20, '$'))
 	println("Pad-right string: ", strings.PadEnd(str, 20, '@'))
 }
@@ -249,46 +256,47 @@ func strFromCodePoint() {
 }
 
 func StringExample() {
-	// strCapitalize()
-	// strCamelCase()
-	// strSnakeCase()
-	// strKebabCase()
+	strCapitalize()
+	strCamelCase()
+	strSnakeCase()
+	strKebabCase()
 
-	// strIsLetter()
-	// strIsDigit()
-	// strIncludes()
-	// strIsLower()
-	// strIsUpper()
+	strIsLetter()
+	strIsDigit()
+	strIncludes()
+	strIsLower()
+	strIsUpper()
 
-	// strSplit()
-	// strWords()
-	// strReverse()
-	// strLower()
-	// strUpper()
-	// strRepeat()
-	// strTruncate()
-	// strReplace()
-	// strTrim()
-	// strTrimBlank()
-	// strTrimPrefix()
-	// strTrimSuffix()
-	// strJoin()
-	// strConcat()
-	// strSlice()
-	// strSplice()
-	// strStartsWith()
-	// strEndsWith()
-	// strEscape()
-	// strUnescape()
-	// strPad()
+	strSplit()
+	strWords()
+	strReverse()
+	strLower()
+	strUpper()
+	strRepeat()
+	strTruncate()
+	strReplace()
+	strTrim()
+	strTrimBlank()
+	strTrimPrefix()
+	strTrimSuffix()
+	strJoin()
+	strConcat()
+	strSubStr()
+	strSlice()
+	strSplice()
+	strStartsWith()
+	strEndsWith()
+	strEscape()
+	strUnescape()
+	strPad()
 
-	// strCount()
-	// strLines()
-	// strIndex()
-	// strRandom()
-	// strAt()
-	// strCodePointAt()
-	// strCodePoint()
+	strCount()
+	strLines()
+	strIndex()
+	strRandom()
+	strAt()
+	strCodePointAt()
+	strCodePoint()
 	strFromCodePointAt()
 	strFromCodePoint()
 }

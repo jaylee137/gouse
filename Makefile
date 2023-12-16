@@ -13,7 +13,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go array console date function helper io math number regex strings types
+	go run docs/generate.go array console date function helper io math number regex strings structs types
 	@echo "Done!"
 
 test:
@@ -30,7 +30,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	sh count.sh public/count.svg true 13708a array console date function helper io math number regex strings types
+	sh count.sh public/count.svg true 13708a array console date function helper io math number regex strings structs types
 	@echo "Done!"
 
 clean:

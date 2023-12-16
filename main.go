@@ -20,6 +20,7 @@ func main() {
 	// sample.MathExample()
 	// sample.NumberExample()
 	// sample.RegexExample()
-	sample.StringExample()
+	// sample.StringExample()
+	sample.StructExample()
 	// sample.TypeExample()
 }

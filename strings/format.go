@@ -259,6 +259,48 @@ func Concat(s ...string) string {
 	return result
 }
 
+func SubStr(s string, start int, length ...int) string {
+	if len(length) == 0 {
+		return s[start:]
+	}
+
+	if start < 0 {
+		start = len(s) + start
+	}
+
+	if length[0] < 0 || start == length[0] || start > len(s) {
+		return ""
+	}
+
+	if start+length[0] > len(s) || start == length[0]-1 {
+		if (start >= len(s)) || (length[0] >= len(s)) {
+			if start >= len(s) && length[0] >= len(s) {
+				return ""
+			} else {
+				if length[0] >= len(s) {
+					return s[start:]
+				} else if start >= len(s) {
+					return ""
+				}
+			}
+		} else {
+			if start == length[0]-1 {
+				return string(s[start])
+			}
+		}
+	}
+
+	if start+length[0] == len(s) {
+		if start == 0 {
+			return s
+		} else {
+			return s[start : start+length[0]-1]
+		}
+	}
+
+	return s[start : start+length[0]]
+}
+
 func Slice(s string, index ...int) string {
 	var start, end int
 	if len(index) == 0 {
@@ -376,18 +418,6 @@ func Unescape(s string) string {
 
 	return s
 }
-
-// func Pad(s string, length int, pad ...string) string {
-// 	if len(s) >= length {
-// 		return s
-// 	}
-
-// 	if len(pad) == 0 {
-// 		pad = append(pad, " ")
-// 	}
-
-// 	return Repeat(pad, (length-len(s))/2) + s + Repeat(pad, (length-len(s)+1)/2)
-// }
 
 func pad(s string, addAmount int, padChar byte) string {
 	padding := make([]byte, addAmount-len(s))
