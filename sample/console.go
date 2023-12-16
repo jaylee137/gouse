@@ -50,7 +50,7 @@ func consoleWithColor() {
 func consoleHelp() {
 	name := "myprogram"
 	options := []*console.HelpOptions{
-		&console.HelpOptions{
+		{
 			Opt:  "name",
 			Desc: "Enter your name",
 			Val:  "Example name",
@@ -58,7 +58,7 @@ func consoleHelp() {
 				println("Your name is: ", name)
 			},
 		},
-		&console.HelpOptions{
+		{
 			Opt:  "age",
 			Desc: "Enter your age",
 			Val:  18,
@@ -66,7 +66,7 @@ func consoleHelp() {
 				println("this is age: ", age)
 			},
 		},
-		&console.HelpOptions{
+		{
 			Opt:  "learning",
 			Desc: "Enter your confirm",
 			Val:  true,
@@ -94,29 +94,29 @@ func consoleSelect() {
 func consoleList() {
 	title := "My Fave Things"
 	items := []list.Item{
-		list.Item{Label: "Raspberry Pi’s", Desc: "I have ’em all over my house"},
-		list.Item{Label: "Nutella", Desc: "It's good on toast"},
-		list.Item{Label: "Bitter melon", Desc: "It cools you down"},
-		list.Item{Label: "Nice socks", Desc: "And by that I mean socks without holes"},
-		list.Item{Label: "Eight hours of sleep", Desc: "I had this once"},
-		list.Item{Label: "Cats", Desc: "Usually"},
-		list.Item{Label: "Plantasia, the album", Desc: "My plants love it too"},
-		list.Item{Label: "Pour over coffee", Desc: "It takes forever to make though"},
-		list.Item{Label: "VR", Desc: "Virtual reality...what is there to say?"},
-		list.Item{Label: "Noguchi Lamps", Desc: "Such pleasing organic forms"},
-		list.Item{Label: "Linux", Desc: "Pretty much the best OS"},
-		list.Item{Label: "Business school", Desc: "Just kidding"},
-		list.Item{Label: "Pottery", Desc: "Wet clay is a great feeling"},
-		list.Item{Label: "Shampoo", Desc: "Nothing like clean hair"},
-		list.Item{Label: "Table tennis", Desc: "It’s surprisingly exhausting"},
-		list.Item{Label: "Milk crates", Desc: "Great for packing in your extra stuff"},
-		list.Item{Label: "Afternoon tea", Desc: "Especially the tea sandwich part"},
-		list.Item{Label: "Stickers", Desc: "The thicker the vinyl the better"},
-		list.Item{Label: "20° Weather", Desc: "Celsius, not Fahrenheit"},
-		list.Item{Label: "Warm light", Desc: "Like around 2700 Kelvin"},
-		list.Item{Label: "The vernal equinox", Desc: "The autumnal equinox is pretty good too"},
-		list.Item{Label: "Gaffer’s tape", Desc: "Basically sticky fabric"},
-		list.Item{Label: "Terrycloth", Desc: "In other words, towel fabric"},
+		{Label: "Raspberry Pi’s", Desc: "I have ’em all over my house"},
+		{Label: "Nutella", Desc: "It's good on toast"},
+		{Label: "Bitter melon", Desc: "It cools you down"},
+		{Label: "Nice socks", Desc: "And by that I mean socks without holes"},
+		{Label: "Eight hours of sleep", Desc: "I had this once"},
+		{Label: "Cats", Desc: "Usually"},
+		{Label: "Plantasia, the album", Desc: "My plants love it too"},
+		{Label: "Pour over coffee", Desc: "It takes forever to make though"},
+		{Label: "VR", Desc: "Virtual reality...what is there to say?"},
+		{Label: "Noguchi Lamps", Desc: "Such pleasing organic forms"},
+		{Label: "Linux", Desc: "Pretty much the best OS"},
+		{Label: "Business school", Desc: "Just kidding"},
+		{Label: "Pottery", Desc: "Wet clay is a great feeling"},
+		{Label: "Shampoo", Desc: "Nothing like clean hair"},
+		{Label: "Table tennis", Desc: "It’s surprisingly exhausting"},
+		{Label: "Milk crates", Desc: "Great for packing in your extra stuff"},
+		{Label: "Afternoon tea", Desc: "Especially the tea sandwich part"},
+		{Label: "Stickers", Desc: "The thicker the vinyl the better"},
+		{Label: "20° Weather", Desc: "Celsius, not Fahrenheit"},
+		{Label: "Warm light", Desc: "Like around 2700 Kelvin"},
+		{Label: "The vernal equinox", Desc: "The autumnal equinox is pretty good too"},
+		{Label: "Gaffer’s tape", Desc: "Basically sticky fabric"},
+		{Label: "Terrycloth", Desc: "In other words, towel fabric"},
 	}
 
 	list.Default(title, items)

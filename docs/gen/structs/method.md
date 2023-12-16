@@ -5,7 +5,9 @@
 ```go
 import (
 	"fmt"
-	"reflect")
+
+	"reflect"
+)
 ```
 
 ```go
@@ -56,13 +58,16 @@ func Merge(structs ...interface{}) interface{} {
 	}
 
 	return newStructValue.Interface()
-}```
+}
+```
 
 ### Remove
 ```go
 import (
 	"fmt"
-	"reflect")
+
+	"reflect"
+)
 ```
 
 ```go
@@ -96,13 +101,16 @@ func Remove(structInstance interface{}, fields ...string) interface{} {
 	}
 
 	return newStructValue.Interface()
-}```
+}
+```
 
 ### Add
 ```go
 import (
 	"fmt"
-	"reflect")
+
+	"reflect"
+)
 ```
 
 ```go
@@ -146,13 +154,16 @@ func Add(structInstance interface{}, fields map[string]interface{}) interface{} 
 	}
 
 	return newStructValue.Interface()
-}```
+}
+```
 
 ### Set
 ```go
 import (
 	"fmt"
-	"reflect")
+
+	"reflect"
+)
 ```
 
 ```go
@@ -184,13 +195,16 @@ func Set(structInstance interface{}, fieldName string, value interface{}) {
 	} else {
 		fmt.Printf("Field %s type mismatch: expected %s, got %s\n", fieldName, field.Type(), reflect.ValueOf(value).Type())
 	}
-}```
+}
+```
 
 ### Get
 ```go
 import (
 	"fmt"
-	"reflect")
+
+	"reflect"
+)
 ```
 
 ```go
@@ -201,4 +215,5 @@ func Get(structInstance interface{}, fieldName string) interface{} {
 	fieldValue := structValue.FieldByName(fieldName)
 
 	return fieldValue.Interface()
-}```
+}
+```

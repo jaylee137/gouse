@@ -629,8 +629,11 @@ func WriteFileObj[T any](path string, data T) error {
 ```go
 import (
 	"io/ioutil"
+
 	"os"
-	"path/filepath")
+
+	"path/filepath"
+)
 ```
 
 ```go
@@ -657,14 +660,18 @@ func CreatePath(relativePath string) error {
 	defer file.Close()
 
 	return nil
-}```
+}
+```
 
 ### ReadPath
 ```go
 import (
 	"io/ioutil"
+
 	"os"
-	"path/filepath")
+
+	"path/filepath"
+)
 ```
 
 ```go
@@ -682,14 +689,18 @@ func ReadPath(relativePath string) ([]byte, error) {
 	}
 
 	return content, nil
-}```
+}
+```
 
 ### WritePath
 ```go
 import (
 	"io/ioutil"
+
 	"os"
-	"path/filepath")
+
+	"path/filepath"
+)
 ```
 
 ```go
@@ -707,4 +718,5 @@ func WritePath(relativePath string, content []byte) error {
 	}
 
 	return nil
-}```
+}
+```

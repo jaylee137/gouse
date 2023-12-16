@@ -161,6 +161,62 @@ func TestIsOutlook(t *testing.T) {
 	}
 }
 
+func TestIsEdu(t *testing.T) {
+	tests := []shared.ITest{
+		{
+			Name:    "Test 1",
+			Input:   "example@edu.vn",
+			Want:    true,
+			WantErr: false,
+		},
+		{
+			Name:    "Test 2",
+			Input:   "",
+			Want:    false,
+			WantErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		isValid, err := IsEdu(tt.Input)
+		if (err != nil) != tt.WantErr {
+			t.Errorf("IsEdu(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
+		}
+
+		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
+			t.Errorf("IsEdu(): %s got = %v, want %v", tt.Name, isValid, tt.Want)
+		}
+	}
+}
+
+func TestIsEmail(t *testing.T) {
+	tests := []shared.ITest{
+		{
+			Name:    "Test 1",
+			Input:   "user01@example.com",
+			Want:    true,
+			WantErr: false,
+		},
+		{
+			Name:    "Test 2",
+			Input:   "",
+			Want:    false,
+			WantErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		isValid, err := IsEmail(tt.Input, "example.com")
+		if (err != nil) != tt.WantErr {
+			t.Errorf("IsEmail(): %s error = %v, wantErr %v", tt.Name, err, tt.WantErr)
+		}
+
+		if (isValid != tt.Want) || !reflect.DeepEqual(isValid, tt.Want) {
+			t.Errorf("IsEmail(): %s got = %v, want %v", tt.Name, isValid, tt.Want)
+		}
+	}
+}
+
 func TestUsername(t *testing.T) {
 	tests := []shared.ITest{
 		{

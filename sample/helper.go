@@ -5,7 +5,11 @@ import (
 )
 
 func helperRandomID() {
-	println("randomID: ", helper.RandomID())
+	println("Generate random ID: ", helper.RandomID())
+}
+
+func helperUUID() {
+	println("New uuid: ", helper.UUID())
 }
 
 func helperAutoMdDoc() {
@@ -16,5 +20,6 @@ func helperAutoMdDoc() {
 
 func HelperExample() {
 	helperRandomID()
+	helperUUID()
 	helperAutoMdDoc()
 }

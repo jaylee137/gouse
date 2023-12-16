@@ -5,59 +5,86 @@
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
 func (f Function) HighlightImport() string {
 	return fmt.Sprintf("```go\nimport (%s)\n```\n", f.Import)
-}```
+}
+```
 
 ### HighlightBody
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
 func (f Function) HighlightBody() string {
 	return fmt.Sprintf("\n```go\n%s```\n", f.Body)
-}```
+}
+```
 
 ### HighlightName
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
 func (f Function) HighlightName() string {
 	return fmt.Sprintf("\n### %s\n", f.Name)
-}```
+}
+```
 
 ### extractImports
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
@@ -81,17 +108,24 @@ func extractImports(content []byte) string {
 	}
 
 	return string(result)
-}```
+}
+```
 
 ### ExtractFunctions
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
@@ -119,17 +153,24 @@ func ExtractFunctions(code []byte) []Function {
 	}
 
 	return functions
-}```
+}
+```
 
 ### detectContent
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
@@ -148,17 +189,24 @@ func detectContent(content []byte) []byte {
 	}
 
 	return types.StringsToBytes(result)
-}```
+}
+```
 
 ### AutoMdDoc
 ```go
 import (
 	"fmt"
+
 	"go/ast"
+
 	"go/parser"
+
 	"go/token"
+
 	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types")
+
+	"github.com/thuongtruong1009/gouse/types"
+)
 ```
 
 ```go
@@ -174,4 +222,5 @@ func AutoMdDoc(inputFilePath string, outputFilePath string) {
 	if err != nil {
 		panic(err)
 	}
-}```
+}
+```

@@ -4,7 +4,8 @@
 ### Select
 ```go
 import (
-	"github.com/AlecAivazis/survey/v2")
+	"github.com/AlecAivazis/survey/v2"
+)
 ```
 
 ```go
@@ -16,12 +17,14 @@ func Select(label string, options []string) (string, error) {
 	}
 	err := survey.AskOne(prompt, &selected)
 	return selected, err
-}```
+}
+```
 
 ### Confirm
 ```go
 import (
-	"github.com/AlecAivazis/survey/v2")
+	"github.com/AlecAivazis/survey/v2"
+)
 ```
 
 ```go
@@ -32,4 +35,5 @@ func Confirm(label string) (bool, error) {
 	}
 	err := survey.AskOne(prompt, &confirm)
 	return confirm, err
-}```
+}
+```

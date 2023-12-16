@@ -697,10 +697,15 @@ func RuneToString(data rune) string {
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
@@ -715,16 +720,22 @@ func IsUUID(input string) (bool, error) {
 	}
 
 	return true, nil
-}```
+}
+```
 
 ### isMail
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
@@ -745,91 +756,127 @@ func isMail(emailStr, domain string) (bool, error) {
 	} else {
 		return false, constants.ErrInvalidEmail
 	}
-}```
+}
+```
 
 ### IsGmail
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
 func IsGmail(emailStr string) (bool, error) {
 	return isMail(emailStr, "gmail.com")
-}```
+}
+```
 
 ### IsYahoo
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
 func IsYahoo(emailStr string) (bool, error) {
 	return isMail(emailStr, "yahoo.com")
-}```
+}
+```
 
 ### IsOutlook
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
 func IsOutlook(emailStr string) (bool, error) {
 	return isMail(emailStr, "outlook.com")
-}```
+}
+```
 
 ### IsEdu
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
 func IsEdu(emailStr string) (bool, error) {
 	return isMail(emailStr, "edu")
-}```
+}
+```
 
 ### IsEmail
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
 func IsEmail(emailStr, customDomain string) (bool, error) {
 	return isMail(emailStr, customDomain)
-}```
+}
+```
 
 ### IsUsername
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
@@ -839,16 +886,22 @@ func IsUsername(username string) (bool, error) {
 	}
 
 	return true, nil
-}```
+}
+```
 
 ### IsPassword
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
@@ -866,16 +919,22 @@ func IsPassword(password string) (bool, error) {
 	} else {
 		return true, nil
 	}
-}```
+}
+```
 
 ### IsPhone
 ```go
 import (
 	"github.com/google/uuid"
+
 	"github.com/thuongtruong1009/gouse/constants"
+
 	"github.com/thuongtruong1009/gouse/regex"
+
 	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings")
+
+	"github.com/thuongtruong1009/gouse/strings"
+)
 ```
 
 ```go
@@ -885,4 +944,5 @@ func IsPhone(phone string) (bool, error) {
 	}
 
 	return true, nil
-}```
+}
+```

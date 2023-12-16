@@ -1,5 +1,3 @@
-# Gouse (development stage...)
-
 <div align="center">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
     <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
@@ -13,7 +11,7 @@
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
     <a href=""><img src="https://img.shields.io/github/license/thuongtruong1009/gouse" alt="license"></a>
     <!-- <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
-    <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> -->
+    <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> --> 
 </div>
 
 # ![](/public/banner.png)
@@ -173,6 +171,16 @@ $ make bench
 
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thuongtruongofficial@gmail.com)
 [![Github](https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thuongtruong1009)
+
+<!-- dependencies used -->
+
+## 🧬 Dependencies
+
+- Special thanks to the following dependencies that helped make this project possible:
+
+- [github.com/google/uuid](github.com/google/uuid) - A fast and simple UUID library for Go
+- [github.com/AlecAivazis/survey/v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals.
+- [github.com/charmbracelet/bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
 
 ## 📚 References
 
