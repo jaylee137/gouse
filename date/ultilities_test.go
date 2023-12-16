@@ -32,36 +32,33 @@ func TestToHour(t *testing.T) {
 	}
 }
 
-func TestSleepSecond(t *testing.T) {
-	// nowSecond := time.Now().Second()
-	// second := 1
-	// SleepSecond(second)
-	// if nowSecond == time.Now().Second() {
-	// 	t.Errorf("Expected %v but it got %v", nowSecond+second, time.Now().Second())
-	// }
+// skip this test because it will take a long time
+// func TestSleepSecond(t *testing.T) {
+// 	nowSecond := time.Now().Second()
+// 	second := 1
+// 	SleepSecond(second)
+// 	if nowSecond == time.Now().Second() {
+// 		t.Errorf("Expected %v but it got %v", nowSecond+second, time.Now().Second())
+// 	}
+// }
 
-	t.Skip("skip this test will sleep for 1 second, so it will take a long time to run")
-}
+// skip this test because it will take a long time
+// func TestSleepMinute(t *testing.T) {
+// 	nowMinute := time.Now().Minute()
+// 	minute := 1
 
-func TestSleepMinute(t *testing.T) {
-	// nowMinute := time.Now().Minute()
-	// minute := 1
+// 	SleepMinute(minute)
+// 	if nowMinute == time.Now().Minute() {
+// 		t.Errorf("Expected %v but it got %v", nowMinute+minute, time.Now().Minute())
+// 	}
+// }
 
-	// SleepMinute(minute)
-	// if nowMinute == time.Now().Minute() {
-	// 	t.Errorf("Expected %v but it got %v", nowMinute+minute, time.Now().Minute())
-	// }
-
-	t.Skip("skip this test will sleep for 1 minute, so it will take a long time to run")
-}
-
-func TestSleepHour(t *testing.T) {
-	// nowHour := time.Now().Hour()
-	// hour := 1
-	// SleepHour(hour)
-	// if nowHour == time.Now().Hour() {
-	// 	t.Errorf("Expected %v but it got %v", nowHour+hour, time.Now().Hour())
-	// }
-
-	t.Skip("skip this test will sleep for 1 hour, so it will take a long time to run")
-}
+// skip this test because it will take a long time
+// func TestSleepHour(t *testing.T) {
+// 	nowHour := time.Now().Hour()
+// 	hour := 1
+// 	SleepHour(hour)
+// 	if nowHour == time.Now().Hour() {
+// 		t.Errorf("Expected %v but it got %v", nowHour+hour, time.Now().Hour())
+// 	}
+// }

@@ -176,7 +176,7 @@ $ make bench
 
 ## 🧬 Dependencies
 
-- Special thanks to the following dependencies that helped make this project possible:
+Special thanks to the following dependencies that helped make this project possible:
 
 - [github.com/google/uuid](github.com/google/uuid) - A fast and simple UUID library for Go
 - [github.com/AlecAivazis/survey/v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals.

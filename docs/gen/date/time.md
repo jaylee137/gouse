@@ -213,7 +213,6 @@ func UTC(date ...interface{}) string {
 	} else {
 		return format(date[0].(time.Time), "Jan 2, 2006 at 3:04pm (MST)")
 	}
-
 }
 ```
 

@@ -33,10 +33,9 @@ count:
 	sh count.sh public/count.svg true 13708a array console date function helper io math number regex strings structs types
 	@echo "Done!"
 
-commit:
+precommit:
 	make build && make test && make doc && make lint
 	git add .
-	git commit -m "$(word 2, $(MAKECMDGOALS))"
 
 clean:
 	go clean -i -x -cache -testcache -modcache
