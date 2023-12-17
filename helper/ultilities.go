@@ -16,7 +16,3 @@ func UUID() string {
 	uuid := uuid.New()
 	return uuid.String()
 }
-
-// func URIEncode(s string) string {
-// 	return url.QueryEscape(s)
-// }

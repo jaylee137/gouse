@@ -2,9 +2,6 @@
 
 
 ### IsPrime
-```go
-import ()
-```
 
 ```go
 func IsPrime(num int) bool {
@@ -21,9 +18,6 @@ func IsPrime(num int) bool {
 ```
 
 ### IsEven
-```go
-import ()
-```
 
 ```go
 func IsEven(num int) bool {
@@ -32,9 +26,6 @@ func IsEven(num int) bool {
 ```
 
 ### IsOdd
-```go
-import ()
-```
 
 ```go
 func IsOdd(num int) bool {
@@ -43,9 +34,6 @@ func IsOdd(num int) bool {
 ```
 
 ### IsPerfectSquare
-```go
-import ()
-```
 
 ```go
 func IsPerfectSquare(num int) bool {
@@ -59,11 +47,6 @@ func IsPerfectSquare(num int) bool {
 ```
 
 ### Log
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log(number, base int) int {
@@ -72,11 +55,6 @@ func Log(number, base int) int {
 ```
 
 ### LogF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func LogF(number, base float64) float64 {
@@ -85,11 +63,6 @@ func LogF(number, base float64) float64 {
 ```
 
 ### Log2
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log2(number int) int {
@@ -98,11 +71,6 @@ func Log2(number int) int {
 ```
 
 ### Log2F
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log2F(number float64) float64 {
@@ -111,11 +79,6 @@ func Log2F(number float64) float64 {
 ```
 
 ### Log10
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log10(number int) int {
@@ -124,11 +87,6 @@ func Log10(number int) int {
 ```
 
 ### Log10F
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log10F(number float64) float64 {
@@ -137,11 +95,6 @@ func Log10F(number float64) float64 {
 ```
 
 ### Pytago
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pytago(side1, side2 int) float64 {
@@ -150,11 +103,6 @@ func Pytago(side1, side2 int) float64 {
 ```
 
 ### PytagoF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PytagoF(side1, side2 float64) float64 {
@@ -163,11 +111,6 @@ func PytagoF(side1, side2 float64) float64 {
 ```
 
 ### Sin
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Sin(angle int) float64 {
@@ -176,11 +119,6 @@ func Sin(angle int) float64 {
 ```
 
 ### SinF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func SinF(angle float64) float64 {
@@ -189,11 +127,6 @@ func SinF(angle float64) float64 {
 ```
 
 ### Cos
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Cos(angle int) float64 {
@@ -202,11 +135,6 @@ func Cos(angle int) float64 {
 ```
 
 ### CosF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func CosF(angle float64) float64 {
@@ -215,11 +143,6 @@ func CosF(angle float64) float64 {
 ```
 
 ### Tan
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Tan(angle int) float64 {
@@ -228,11 +151,6 @@ func Tan(angle int) float64 {
 ```
 
 ### TanF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func TanF(angle float64) float64 {
@@ -241,11 +159,6 @@ func TanF(angle float64) float64 {
 ```
 
 ### Speed
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Speed(distance, time float64) float64 {
@@ -254,11 +167,6 @@ func Speed(distance, time float64) float64 {
 ```
 
 ### Distance
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Distance(speed, time float64) float64 {
@@ -267,11 +175,6 @@ func Distance(speed, time float64) float64 {
 ```
 
 ### Time
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Time(distance, speed float64) float64 {
@@ -280,11 +183,6 @@ func Time(distance, speed float64) float64 {
 ```
 
 ### AreaRect
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaRect(length, width int) int {
@@ -293,11 +191,6 @@ func AreaRect(length, width int) int {
 ```
 
 ### AreaRectF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaRectF(length, width float64) float64 {
@@ -306,11 +199,6 @@ func AreaRectF(length, width float64) float64 {
 ```
 
 ### PeriRect
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriRect(length, width int) int {
@@ -319,11 +207,6 @@ func PeriRect(length, width int) int {
 ```
 
 ### PeriRectF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriRectF(length, width float64) float64 {
@@ -332,11 +215,6 @@ func PeriRectF(length, width float64) float64 {
 ```
 
 ### DiagRect
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func DiagRect(length, width int) float64 {
@@ -345,11 +223,6 @@ func DiagRect(length, width int) float64 {
 ```
 
 ### DiagRectF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func DiagRectF(length, width float64) float64 {
@@ -358,11 +231,6 @@ func DiagRectF(length, width float64) float64 {
 ```
 
 ### VolRect
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolRect(length, width, height int) int {
@@ -371,11 +239,6 @@ func VolRect(length, width, height int) int {
 ```
 
 ### VolRectF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolRectF(length, width, height float64) float64 {
@@ -384,11 +247,6 @@ func VolRectF(length, width, height float64) float64 {
 ```
 
 ### AreaCircle
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCircle(radius int) float64 {
@@ -397,11 +255,6 @@ func AreaCircle(radius int) float64 {
 ```
 
 ### AreaCircleF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCircleF(radius float64) float64 {
@@ -410,11 +263,6 @@ func AreaCircleF(radius float64) float64 {
 ```
 
 ### PeriCircle
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriCircle(radius int) float64 {
@@ -423,11 +271,6 @@ func PeriCircle(radius int) float64 {
 ```
 
 ### PeriCircleF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriCircleF(radius float64) float64 {
@@ -436,11 +279,6 @@ func PeriCircleF(radius float64) float64 {
 ```
 
 ### AreaTriangle
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaTriangle(base, height int) int {
@@ -449,11 +287,6 @@ func AreaTriangle(base, height int) int {
 ```
 
 ### AreaTriangleF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaTriangleF(base, height float64) float64 {
@@ -462,11 +295,6 @@ func AreaTriangleF(base, height float64) float64 {
 ```
 
 ### PeriTriangle
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriTriangle(side1, side2, side3 int) int {
@@ -475,11 +303,6 @@ func PeriTriangle(side1, side2, side3 int) int {
 ```
 
 ### PeriTriangleF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriTriangleF(side1, side2, side3 float64) float64 {
@@ -488,11 +311,6 @@ func PeriTriangleF(side1, side2, side3 float64) float64 {
 ```
 
 ### AreaSquare
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaSquare(side int) int {
@@ -501,11 +319,6 @@ func AreaSquare(side int) int {
 ```
 
 ### AreaSquareF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaSquareF(side float64) float64 {
@@ -514,11 +327,6 @@ func AreaSquareF(side float64) float64 {
 ```
 
 ### PeriSquare
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriSquare(side int) int {
@@ -527,11 +335,6 @@ func PeriSquare(side int) int {
 ```
 
 ### PeriSquareF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriSquareF(side float64) float64 {
@@ -540,11 +343,6 @@ func PeriSquareF(side float64) float64 {
 ```
 
 ### AreaCube
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCube(side int) int {
@@ -553,11 +351,6 @@ func AreaCube(side int) int {
 ```
 
 ### AreaCubeF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCubeF(side float64) float64 {
@@ -566,11 +359,6 @@ func AreaCubeF(side float64) float64 {
 ```
 
 ### PeriCube
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriCube(side int) int {
@@ -579,11 +367,6 @@ func PeriCube(side int) int {
 ```
 
 ### PeriCubeF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PeriCubeF(side float64) float64 {
@@ -592,11 +375,6 @@ func PeriCubeF(side float64) float64 {
 ```
 
 ### VolCube
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolCube(side int) int {
@@ -605,11 +383,6 @@ func VolCube(side int) int {
 ```
 
 ### VolCubeF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolCubeF(side float64) float64 {
@@ -618,11 +391,6 @@ func VolCubeF(side float64) float64 {
 ```
 
 ### AreaSphere
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaSphere(radius int) float64 {
@@ -631,11 +399,6 @@ func AreaSphere(radius int) float64 {
 ```
 
 ### AreaSphereF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaSphereF(radius float64) float64 {
@@ -644,11 +407,6 @@ func AreaSphereF(radius float64) float64 {
 ```
 
 ### VolSphere
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolSphere(radius int) float64 {
@@ -657,11 +415,6 @@ func VolSphere(radius int) float64 {
 ```
 
 ### VolSphereF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolSphereF(radius float64) float64 {
@@ -670,11 +423,6 @@ func VolSphereF(radius float64) float64 {
 ```
 
 ### AreaCylinder
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCylinder(radius, height int) float64 {
@@ -683,11 +431,6 @@ func AreaCylinder(radius, height int) float64 {
 ```
 
 ### AreaCylinderF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCylinderF(radius, height float64) float64 {
@@ -696,11 +439,6 @@ func AreaCylinderF(radius, height float64) float64 {
 ```
 
 ### VolCylinder
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolCylinder(radius, height int) float64 {
@@ -709,11 +447,6 @@ func VolCylinder(radius, height int) float64 {
 ```
 
 ### VolCylinderF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolCylinderF(radius, height float64) float64 {
@@ -722,11 +455,6 @@ func VolCylinderF(radius, height float64) float64 {
 ```
 
 ### AreaCone
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaCone(radius, height int) float64 {
@@ -735,11 +463,6 @@ func AreaCone(radius, height int) float64 {
 ```
 
 ### AreaConeF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaConeF(radius, height float64) float64 {
@@ -748,11 +471,6 @@ func AreaConeF(radius, height float64) float64 {
 ```
 
 ### VolCone
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolCone(radius, height int) float64 {
@@ -761,11 +479,6 @@ func VolCone(radius, height int) float64 {
 ```
 
 ### VolConeF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func VolConeF(radius, height float64) float64 {
@@ -774,11 +487,6 @@ func VolConeF(radius, height float64) float64 {
 ```
 
 ### AreaTrapezoid
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaTrapezoid(base1, base2, height int) float64 {
@@ -787,11 +495,6 @@ func AreaTrapezoid(base1, base2, height int) float64 {
 ```
 
 ### AreaTrapezoidF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaTrapezoidF(base1, base2, height float64) float64 {
@@ -800,11 +503,6 @@ func AreaTrapezoidF(base1, base2, height float64) float64 {
 ```
 
 ### AreaParallelogram
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaParallelogram(base, height int) int {
@@ -813,11 +511,6 @@ func AreaParallelogram(base, height int) int {
 ```
 
 ### AreaParallelogramF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaParallelogramF(base, height float64) float64 {
@@ -826,11 +519,6 @@ func AreaParallelogramF(base, height float64) float64 {
 ```
 
 ### AreaRhombus
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaRhombus(diag1, diag2 int) int {
@@ -839,11 +527,6 @@ func AreaRhombus(diag1, diag2 int) int {
 ```
 
 ### AreaRhombusF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaRhombusF(diag1, diag2 float64) float64 {
@@ -852,11 +535,6 @@ func AreaRhombusF(diag1, diag2 float64) float64 {
 ```
 
 ### AreaEllipse
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaEllipse(major, minor int) float64 {
@@ -865,11 +543,6 @@ func AreaEllipse(major, minor int) float64 {
 ```
 
 ### AreaEllipseF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaEllipseF(major, minor float64) float64 {
@@ -878,11 +551,6 @@ func AreaEllipseF(major, minor float64) float64 {
 ```
 
 ### AreaPolygon
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AreaPolygon(lenSide float64, numSide int) float64 {
@@ -891,11 +559,6 @@ func AreaPolygon(lenSide float64, numSide int) float64 {
 ```
 
 ### Abs
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Abs(num int) int {
@@ -907,11 +570,6 @@ func Abs(num int) int {
 ```
 
 ### AbsF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AbsF(num float64) float64 {
@@ -923,11 +581,6 @@ func AbsF(num float64) float64 {
 ```
 
 ### Floor
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Floor(num float64) int {
@@ -936,11 +589,6 @@ func Floor(num float64) int {
 ```
 
 ### Ceil
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Ceil(num float64) int {
@@ -955,11 +603,6 @@ func Ceil(num float64) int {
 ```
 
 ### Round
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Round(num float64) int {
@@ -976,11 +619,6 @@ func Round(num float64) int {
 ```
 
 ### Max
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Max(nums ...int) int {
@@ -995,11 +633,6 @@ func Max(nums ...int) int {
 ```
 
 ### MaxF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func MaxF(nums ...float64) float64 {
@@ -1014,11 +647,6 @@ func MaxF(nums ...float64) float64 {
 ```
 
 ### Min
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Min(nums ...int) int {
@@ -1034,11 +662,6 @@ func Min(nums ...int) int {
 ```
 
 ### MinF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func MinF(nums ...float64) float64 {
@@ -1054,11 +677,6 @@ func MinF(nums ...float64) float64 {
 ```
 
 ### Sum
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Sum(nums ...int) int {
@@ -1071,11 +689,6 @@ func Sum(nums ...int) int {
 ```
 
 ### SumF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func SumF(nums ...float64) float64 {
@@ -1088,11 +701,6 @@ func SumF(nums ...float64) float64 {
 ```
 
 ### Add
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Add(num1, num2 int) int {
@@ -1101,11 +709,6 @@ func Add(num1, num2 int) int {
 ```
 
 ### AddF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func AddF(num1, num2 float64) float64 {
@@ -1114,11 +717,6 @@ func AddF(num1, num2 float64) float64 {
 ```
 
 ### Sub
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Sub(num1, num2 int) int {
@@ -1127,11 +725,6 @@ func Sub(num1, num2 int) int {
 ```
 
 ### SubF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func SubF(num1, num2 float64) float64 {
@@ -1140,11 +733,6 @@ func SubF(num1, num2 float64) float64 {
 ```
 
 ### Multi
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Multi(nums ...int) int {
@@ -1157,11 +745,6 @@ func Multi(nums ...int) int {
 ```
 
 ### MultiF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func MultiF(nums ...float64) float64 {
@@ -1174,11 +757,6 @@ func MultiF(nums ...float64) float64 {
 ```
 
 ### Divide
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Divide(num1, num2 int) int {
@@ -1187,11 +765,6 @@ func Divide(num1, num2 int) int {
 ```
 
 ### DivideF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func DivideF(num1, num2 float64) float64 {
@@ -1200,11 +773,6 @@ func DivideF(num1, num2 float64) float64 {
 ```
 
 ### Remainder
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Remainder(num1, num2 int) int {
@@ -1213,11 +781,6 @@ func Remainder(num1, num2 int) int {
 ```
 
 ### Mean
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Mean(nums ...int) int {
@@ -1226,11 +789,6 @@ func Mean(nums ...int) int {
 ```
 
 ### MeanF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func MeanF(nums ...float64) float64 {
@@ -1239,11 +797,6 @@ func MeanF(nums ...float64) float64 {
 ```
 
 ### Pow
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pow(base, exp int) int {
@@ -1256,11 +809,6 @@ func Pow(base, exp int) int {
 ```
 
 ### PowF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PowF(base, exp float64) float64 {
@@ -1273,11 +821,6 @@ func PowF(base, exp float64) float64 {
 ```
 
 ### Pow2
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pow2(base int) int {
@@ -1286,11 +829,6 @@ func Pow2(base int) int {
 ```
 
 ### Pow2F
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pow2F(base float64) float64 {
@@ -1299,11 +837,6 @@ func Pow2F(base float64) float64 {
 ```
 
 ### Pow3
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pow3(base int) int {
@@ -1312,11 +845,6 @@ func Pow3(base int) int {
 ```
 
 ### Pow3F
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pow3F(base float64) float64 {
@@ -1325,11 +853,6 @@ func Pow3F(base float64) float64 {
 ```
 
 ### Factorial
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Factorial(num int) int {
@@ -1341,11 +864,6 @@ func Factorial(num int) int {
 ```
 
 ### Root
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Root(number, n int) int {
@@ -1354,11 +872,6 @@ func Root(number, n int) int {
 ```
 
 ### RootF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func RootF(number, n float64) float64 {
@@ -1367,11 +880,6 @@ func RootF(number, n float64) float64 {
 ```
 
 ### Sqrt
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Sqrt(number int) int {
@@ -1380,11 +888,6 @@ func Sqrt(number int) int {
 ```
 
 ### SqrtF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func SqrtF(number float64) float64 {
@@ -1393,11 +896,6 @@ func SqrtF(number float64) float64 {
 ```
 
 ### Cbrt
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Cbrt(number int) int {
@@ -1406,11 +904,6 @@ func Cbrt(number int) int {
 ```
 
 ### CbrtF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func CbrtF(number float64) float64 {

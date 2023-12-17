@@ -1,7 +1,7 @@
 # Convert
 
+## Imports
 
-### IsInt
 ```go
 import (
 	"fmt"
@@ -11,6 +11,10 @@ import (
 	"strings"
 )
 ```
+## Functions
+
+
+### IsInt
 
 ```go
 func IsInt(v interface{}) bool {
@@ -19,15 +23,6 @@ func IsInt(v interface{}) bool {
 ```
 
 ### IsUnInt
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUnInt(v interface{}) bool {
@@ -36,15 +31,6 @@ func IsUnInt(v interface{}) bool {
 ```
 
 ### IsFloat
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsFloat(v interface{}) bool {
@@ -53,15 +39,6 @@ func IsFloat(v interface{}) bool {
 ```
 
 ### IsComplex
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsComplex(v interface{}) bool {
@@ -70,15 +47,6 @@ func IsComplex(v interface{}) bool {
 ```
 
 ### IsNumber
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsNumber(v interface{}) bool {
@@ -87,15 +55,6 @@ func IsNumber(v interface{}) bool {
 ```
 
 ### IsString
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsString(v interface{}) bool {
@@ -104,15 +63,6 @@ func IsString(v interface{}) bool {
 ```
 
 ### IsRune
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsRune(v interface{}) bool {
@@ -122,15 +72,6 @@ func IsRune(v interface{}) bool {
 ```
 
 ### IsByte
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsByte(v interface{}) bool {
@@ -140,15 +81,6 @@ func IsByte(v interface{}) bool {
 ```
 
 ### IsUintptr
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUintptr(v interface{}) bool {
@@ -157,15 +89,6 @@ func IsUintptr(v interface{}) bool {
 ```
 
 ### IsError
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsError(v interface{}) bool {
@@ -174,15 +97,6 @@ func IsError(v interface{}) bool {
 ```
 
 ### IsInterface
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsInterface(v interface{}) bool {
@@ -192,15 +106,6 @@ func IsInterface(v interface{}) bool {
 ```
 
 ### IsChannel
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsChannel(v interface{}) bool {
@@ -209,15 +114,6 @@ func IsChannel(v interface{}) bool {
 ```
 
 ### IsUnsafePointer
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUnsafePointer(v interface{}) bool {
@@ -226,15 +122,6 @@ func IsUnsafePointer(v interface{}) bool {
 ```
 
 ### IsPointer
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsPointer(v interface{}) bool {
@@ -243,15 +130,6 @@ func IsPointer(v interface{}) bool {
 ```
 
 ### IsBool
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsBool(v interface{}) bool {
@@ -260,15 +138,6 @@ func IsBool(v interface{}) bool {
 ```
 
 ### IsSlice
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsSlice(v interface{}) bool {
@@ -277,15 +146,6 @@ func IsSlice(v interface{}) bool {
 ```
 
 ### IsMap
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsMap(v interface{}) bool {
@@ -294,15 +154,6 @@ func IsMap(v interface{}) bool {
 ```
 
 ### IsStruct
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsStruct(v interface{}) bool {
@@ -311,15 +162,6 @@ func IsStruct(v interface{}) bool {
 ```
 
 ### IsArray
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsArray(v interface{}) bool {
@@ -328,15 +170,6 @@ func IsArray(v interface{}) bool {
 ```
 
 ### IsFunc
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsFunc(v interface{}) bool {
@@ -345,15 +178,6 @@ func IsFunc(v interface{}) bool {
 ```
 
 ### IsNil
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsNil(v interface{}) bool {
@@ -369,15 +193,6 @@ func IsNil(v interface{}) bool {
 ```
 
 ### IsEmpty
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsEmpty(v interface{}) bool {
@@ -424,15 +239,6 @@ func IsEmpty(v interface{}) bool {
 ```
 
 ### IsUndefined
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUndefined(v interface{}) bool {
@@ -441,15 +247,6 @@ func IsUndefined(v interface{}) bool {
 ```
 
 ### IsZero
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsZero(v interface{}) bool {
@@ -458,13 +255,6 @@ func IsZero(v interface{}) bool {
 ```
 
 ### StructToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StructToString(data interface{}) string {
@@ -493,13 +283,6 @@ func StructToString(data interface{}) string {
 ```
 
 ### StructToMap
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StructToMap(data interface{}) map[string]interface{} {
@@ -519,13 +302,6 @@ func StructToMap(data interface{}) map[string]interface{} {
 ```
 
 ### StringToInt
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StringToInt(data string) int {
@@ -536,13 +312,6 @@ func StringToInt(data string) int {
 ```
 
 ### StringToFloat
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StringToFloat(data string) float64 {
@@ -553,13 +322,6 @@ func StringToFloat(data string) float64 {
 ```
 
 ### StringToBool
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StringToBool(data string) bool {
@@ -570,13 +332,6 @@ func StringToBool(data string) bool {
 ```
 
 ### StringToBytes
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StringToBytes(data string) []byte {
@@ -585,13 +340,6 @@ func StringToBytes(data string) []byte {
 ```
 
 ### StringsToBytes
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func StringsToBytes(data []string) []byte {
@@ -604,13 +352,6 @@ func StringsToBytes(data []string) []byte {
 ```
 
 ### IntToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func IntToString(data int) string {
@@ -619,13 +360,6 @@ func IntToString(data int) string {
 ```
 
 ### FloatToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func FloatToString(data float64) string {
@@ -634,13 +368,6 @@ func FloatToString(data float64) string {
 ```
 
 ### BoolToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func BoolToString(data bool) string {
@@ -649,13 +376,6 @@ func BoolToString(data bool) string {
 ```
 
 ### InterfaceToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func InterfaceToString(data interface{}) string {
@@ -664,13 +384,6 @@ func InterfaceToString(data interface{}) string {
 ```
 
 ### BytesToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func BytesToString(data []byte) string {
@@ -679,16 +392,31 @@ func BytesToString(data []byte) string {
 ```
 
 ### RuneToString
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func RuneToString(data rune) string {
 	return string(data)
+}
+```
+
+### MapAsString
+
+```go
+func MapAsString[T string | []string](data map[string]T) string {
+	var result string
+
+	for key, value := range data {
+		result += fmt.Sprintf("%s: %s\n", key, value)
+	}
+
+	return result
+}
+```
+
+### formatSlice
+
+```go
+func formatSlice[T string | []string](values T) string {
+	return "\"" + fmt.Sprintf("%s", values) + "\""
 }
 ```

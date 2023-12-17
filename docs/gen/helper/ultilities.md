@@ -1,7 +1,7 @@
 # Ultilities
 
+## Imports
 
-### HighlightImport
 ```go
 import (
 	"fmt"
@@ -17,6 +17,10 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 ```
+## Functions
+
+
+### HighlightImport
 
 ```go
 func (f Function) HighlightImport() string {
@@ -25,21 +29,6 @@ func (f Function) HighlightImport() string {
 ```
 
 ### HighlightBody
-```go
-import (
-	"fmt"
-
-	"go/ast"
-
-	"go/parser"
-
-	"go/token"
-
-	"github.com/thuongtruong1009/gouse/io"
-
-	"github.com/thuongtruong1009/gouse/types"
-)
-```
 
 ```go
 func (f Function) HighlightBody() string {
@@ -48,21 +37,6 @@ func (f Function) HighlightBody() string {
 ```
 
 ### HighlightName
-```go
-import (
-	"fmt"
-
-	"go/ast"
-
-	"go/parser"
-
-	"go/token"
-
-	"github.com/thuongtruong1009/gouse/io"
-
-	"github.com/thuongtruong1009/gouse/types"
-)
-```
 
 ```go
 func (f Function) HighlightName() string {
@@ -71,21 +45,6 @@ func (f Function) HighlightName() string {
 ```
 
 ### extractImports
-```go
-import (
-	"fmt"
-
-	"go/ast"
-
-	"go/parser"
-
-	"go/token"
-
-	"github.com/thuongtruong1009/gouse/io"
-
-	"github.com/thuongtruong1009/gouse/types"
-)
-```
 
 ```go
 func extractImports(content []byte) string {
@@ -112,21 +71,6 @@ func extractImports(content []byte) string {
 ```
 
 ### ExtractFunctions
-```go
-import (
-	"fmt"
-
-	"go/ast"
-
-	"go/parser"
-
-	"go/token"
-
-	"github.com/thuongtruong1009/gouse/io"
-
-	"github.com/thuongtruong1009/gouse/types"
-)
-```
 
 ```go
 func ExtractFunctions(code []byte) []Function {
@@ -157,21 +101,6 @@ func ExtractFunctions(code []byte) []Function {
 ```
 
 ### detectContent
-```go
-import (
-	"fmt"
-
-	"go/ast"
-
-	"go/parser"
-
-	"go/token"
-
-	"github.com/thuongtruong1009/gouse/io"
-
-	"github.com/thuongtruong1009/gouse/types"
-)
-```
 
 ```go
 func detectContent(content []byte) []byte {
@@ -193,21 +122,6 @@ func detectContent(content []byte) []byte {
 ```
 
 ### AutoMdDoc
-```go
-import (
-	"fmt"
-
-	"go/ast"
-
-	"go/parser"
-
-	"go/token"
-
-	"github.com/thuongtruong1009/gouse/io"
-
-	"github.com/thuongtruong1009/gouse/types"
-)
-```
 
 ```go
 func AutoMdDoc(inputFilePath string, outputFilePath string) {
@@ -226,15 +140,6 @@ func AutoMdDoc(inputFilePath string, outputFilePath string) {
 ```
 
 ### RandomID
-```go
-import (
-	"fmt"
-
-	"time"
-
-	"github.com/google/uuid"
-)
-```
 
 ```go
 func RandomID() string {
@@ -244,15 +149,6 @@ func RandomID() string {
 ```
 
 ### UUID
-```go
-import (
-	"fmt"
-
-	"time"
-
-	"github.com/google/uuid"
-)
-```
 
 ```go
 func UUID() string {

@@ -1,7 +1,7 @@
 # File
 
+## Imports
 
-### IsExistDir
 ```go
 import (
 	"os"
@@ -9,6 +9,10 @@ import (
 	"path/filepath"
 )
 ```
+## Functions
+
+
+### IsExistDir
 
 ```go
 func IsExistDir(dir string) (bool, error) {
@@ -26,13 +30,6 @@ func IsExistDir(dir string) (bool, error) {
 ```
 
 ### CreateDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func CreateDir(dir string) error {
@@ -52,13 +49,6 @@ func CreateDir(dir string) error {
 ```
 
 ### RemoveDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func RemoveDir(dir string) error {
@@ -77,13 +67,6 @@ func RemoveDir(dir string) error {
 ```
 
 ### LsDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func LsDir(dir string) ([]string, error) {
@@ -107,13 +90,6 @@ func LsDir(dir string) ([]string, error) {
 ```
 
 ### HierarchyDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func HierarchyDir(dir string) ([]string, error) {
@@ -136,13 +112,6 @@ func HierarchyDir(dir string) ([]string, error) {
 ```
 
 ### CurrentDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func CurrentDir() (string, error) {
@@ -156,21 +125,6 @@ func CurrentDir() (string, error) {
 ```
 
 ### IsExistFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func IsExistFile(path string) (bool, error) {
@@ -186,21 +140,6 @@ func IsExistFile(path string) (bool, error) {
 ```
 
 ### CreateFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func CreateFile(path string) error {
@@ -213,21 +152,6 @@ func CreateFile(path string) error {
 ```
 
 ### RemoveFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func RemoveFile(path string) error {
@@ -246,21 +170,6 @@ func RemoveFile(path string) error {
 ```
 
 ### WriteFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func WriteFile(path string, data []string) error {
@@ -270,21 +179,6 @@ func WriteFile(path string, data []string) error {
 ```
 
 ### AppendFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func AppendFile(path string, data []string) error {
@@ -310,21 +204,6 @@ func AppendFile(path string, data []string) error {
 ```
 
 ### ReadFileByLine
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func ReadFileByLine(path string) ([]string, error) {
@@ -356,21 +235,6 @@ func ReadFileByLine(path string) ([]string, error) {
 ```
 
 ### FileInfo
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func FileInfo(path string) (*FileInfoStruct, error) {
@@ -397,21 +261,6 @@ func FileInfo(path string) (*FileInfoStruct, error) {
 ```
 
 ### RenameFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func RenameFile(oldPath, newPath string) error {
@@ -430,21 +279,6 @@ func RenameFile(oldPath, newPath string) error {
 ```
 
 ### CopyFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func CopyFile(oldPath, newPath string) error {
@@ -485,21 +319,6 @@ func CopyFile(oldPath, newPath string) error {
 ```
 
 ### TruncateFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func TruncateFile(path string, size int64) error {
@@ -518,21 +337,6 @@ func TruncateFile(path string, size int64) error {
 ```
 
 ### CleanFile
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func CleanFile(path string) error {
@@ -542,21 +346,6 @@ func CleanFile(path string) error {
 ```
 
 ### ReadFileObj
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func ReadFileObj[T any](path string) ([]T, error) {
@@ -586,21 +375,6 @@ func ReadFileObj[T any](path string) ([]T, error) {
 ```
 
 ### WriteFileObj
-```go
-import (
-	"bufio"
-
-	"encoding/json"
-
-	"io"
-
-	"os"
-
-	"github.com/thuongtruong1009/gouse/date"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func WriteFileObj[T any](path string, data T) error {

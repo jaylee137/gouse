@@ -1,7 +1,7 @@
 # Check
 
+## Imports
 
-### IsInt
 ```go
 import (
 	"fmt"
@@ -11,6 +11,10 @@ import (
 	"strings"
 )
 ```
+## Functions
+
+
+### IsInt
 
 ```go
 func IsInt(v interface{}) bool {
@@ -19,15 +23,6 @@ func IsInt(v interface{}) bool {
 ```
 
 ### IsUnInt
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUnInt(v interface{}) bool {
@@ -36,15 +31,6 @@ func IsUnInt(v interface{}) bool {
 ```
 
 ### IsFloat
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsFloat(v interface{}) bool {
@@ -53,15 +39,6 @@ func IsFloat(v interface{}) bool {
 ```
 
 ### IsComplex
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsComplex(v interface{}) bool {
@@ -70,15 +47,6 @@ func IsComplex(v interface{}) bool {
 ```
 
 ### IsNumber
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsNumber(v interface{}) bool {
@@ -87,15 +55,6 @@ func IsNumber(v interface{}) bool {
 ```
 
 ### IsString
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsString(v interface{}) bool {
@@ -104,15 +63,6 @@ func IsString(v interface{}) bool {
 ```
 
 ### IsRune
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsRune(v interface{}) bool {
@@ -122,15 +72,6 @@ func IsRune(v interface{}) bool {
 ```
 
 ### IsByte
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsByte(v interface{}) bool {
@@ -140,15 +81,6 @@ func IsByte(v interface{}) bool {
 ```
 
 ### IsUintptr
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUintptr(v interface{}) bool {
@@ -157,15 +89,6 @@ func IsUintptr(v interface{}) bool {
 ```
 
 ### IsError
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsError(v interface{}) bool {
@@ -174,15 +97,6 @@ func IsError(v interface{}) bool {
 ```
 
 ### IsInterface
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsInterface(v interface{}) bool {
@@ -192,15 +106,6 @@ func IsInterface(v interface{}) bool {
 ```
 
 ### IsChannel
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsChannel(v interface{}) bool {
@@ -209,15 +114,6 @@ func IsChannel(v interface{}) bool {
 ```
 
 ### IsUnsafePointer
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUnsafePointer(v interface{}) bool {
@@ -226,15 +122,6 @@ func IsUnsafePointer(v interface{}) bool {
 ```
 
 ### IsPointer
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsPointer(v interface{}) bool {
@@ -243,15 +130,6 @@ func IsPointer(v interface{}) bool {
 ```
 
 ### IsBool
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsBool(v interface{}) bool {
@@ -260,15 +138,6 @@ func IsBool(v interface{}) bool {
 ```
 
 ### IsSlice
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsSlice(v interface{}) bool {
@@ -277,15 +146,6 @@ func IsSlice(v interface{}) bool {
 ```
 
 ### IsMap
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsMap(v interface{}) bool {
@@ -294,15 +154,6 @@ func IsMap(v interface{}) bool {
 ```
 
 ### IsStruct
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsStruct(v interface{}) bool {
@@ -311,15 +162,6 @@ func IsStruct(v interface{}) bool {
 ```
 
 ### IsArray
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsArray(v interface{}) bool {
@@ -328,15 +170,6 @@ func IsArray(v interface{}) bool {
 ```
 
 ### IsFunc
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsFunc(v interface{}) bool {
@@ -345,15 +178,6 @@ func IsFunc(v interface{}) bool {
 ```
 
 ### IsNil
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsNil(v interface{}) bool {
@@ -369,15 +193,6 @@ func IsNil(v interface{}) bool {
 ```
 
 ### IsEmpty
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsEmpty(v interface{}) bool {
@@ -424,15 +239,6 @@ func IsEmpty(v interface{}) bool {
 ```
 
 ### IsUndefined
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsUndefined(v interface{}) bool {
@@ -441,15 +247,6 @@ func IsUndefined(v interface{}) bool {
 ```
 
 ### IsZero
-```go
-import (
-	"fmt"
-
-	"reflect"
-
-	"strings"
-)
-```
 
 ```go
 func IsZero(v interface{}) bool {

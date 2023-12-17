@@ -2,9 +2,6 @@
 
 
 ### Capitalize
-```go
-import ()
-```
 
 ```go
 func Capitalize(sentence string) string {
@@ -21,9 +18,6 @@ func Capitalize(sentence string) string {
 ```
 
 ### CamelCase
-```go
-import ()
-```
 
 ```go
 func CamelCase(s string) string {
@@ -49,9 +43,6 @@ func CamelCase(s string) string {
 ```
 
 ### concatCase
-```go
-import ()
-```
 
 ```go
 func concatCase(s string, sep string) string {
@@ -84,9 +75,6 @@ func concatCase(s string, sep string) string {
 ```
 
 ### SnakeCase
-```go
-import ()
-```
 
 ```go
 func SnakeCase(s string) string {
@@ -95,9 +83,6 @@ func SnakeCase(s string) string {
 ```
 
 ### KebabCase
-```go
-import ()
-```
 
 ```go
 func KebabCase(s string) string {

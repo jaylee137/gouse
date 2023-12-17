@@ -2,9 +2,6 @@
 
 
 ### Capitalize
-```go
-import ()
-```
 
 ```go
 func Capitalize(sentence string) string {
@@ -21,9 +18,6 @@ func Capitalize(sentence string) string {
 ```
 
 ### CamelCase
-```go
-import ()
-```
 
 ```go
 func CamelCase(s string) string {
@@ -49,9 +43,6 @@ func CamelCase(s string) string {
 ```
 
 ### concatCase
-```go
-import ()
-```
 
 ```go
 func concatCase(s string, sep string) string {
@@ -84,9 +75,6 @@ func concatCase(s string, sep string) string {
 ```
 
 ### SnakeCase
-```go
-import ()
-```
 
 ```go
 func SnakeCase(s string) string {
@@ -95,9 +83,6 @@ func SnakeCase(s string) string {
 ```
 
 ### KebabCase
-```go
-import ()
-```
 
 ```go
 func KebabCase(s string) string {
@@ -106,9 +91,6 @@ func KebabCase(s string) string {
 ```
 
 ### IsLetter
-```go
-import ()
-```
 
 ```go
 func IsLetter[T byte | rune](char T) bool {
@@ -117,9 +99,6 @@ func IsLetter[T byte | rune](char T) bool {
 ```
 
 ### IsDigit
-```go
-import ()
-```
 
 ```go
 func IsDigit[T byte | rune](char T) bool {
@@ -128,9 +107,6 @@ func IsDigit[T byte | rune](char T) bool {
 ```
 
 ### Includes
-```go
-import ()
-```
 
 ```go
 func Includes(s string, substr string) bool {
@@ -139,9 +115,6 @@ func Includes(s string, substr string) bool {
 ```
 
 ### StartsWith
-```go
-import ()
-```
 
 ```go
 func StartsWith(s string, substr string) bool {
@@ -150,9 +123,6 @@ func StartsWith(s string, substr string) bool {
 ```
 
 ### EndsWith
-```go
-import ()
-```
 
 ```go
 func EndsWith(s string, substr string) bool {
@@ -164,9 +134,6 @@ func EndsWith(s string, substr string) bool {
 ```
 
 ### IsLower
-```go
-import ()
-```
 
 ```go
 func IsLower[T byte | rune](char T) bool {
@@ -175,9 +142,6 @@ func IsLower[T byte | rune](char T) bool {
 ```
 
 ### IsUpper
-```go
-import ()
-```
 
 ```go
 func IsUpper[T byte | rune](char T) bool {
@@ -186,11 +150,6 @@ func IsUpper[T byte | rune](char T) bool {
 ```
 
 ### Split
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Split(s string, separator string) []string {
@@ -218,11 +177,6 @@ func Split(s string, separator string) []string {
 ```
 
 ### Words
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Words(s string) []string {
@@ -241,11 +195,6 @@ func Words(s string) []string {
 ```
 
 ### Reverse
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Reverse(s string) string {
@@ -260,11 +209,6 @@ func Reverse(s string) string {
 ```
 
 ### Lowers
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Lowers(s string) string {
@@ -283,11 +227,6 @@ func Lowers(s string) string {
 ```
 
 ### Lower
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Lower[T byte | rune](char T) T {
@@ -299,11 +238,6 @@ func Lower[T byte | rune](char T) T {
 ```
 
 ### LowerFirst
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func LowerFirst(s string) string {
@@ -316,11 +250,6 @@ func LowerFirst(s string) string {
 ```
 
 ### Uppers
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Uppers(s string) string {
@@ -339,11 +268,6 @@ func Uppers(s string) string {
 ```
 
 ### Upper
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Upper[T byte | rune](char T) T {
@@ -355,11 +279,6 @@ func Upper[T byte | rune](char T) T {
 ```
 
 ### UpperFirst
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func UpperFirst(s string) string {
@@ -373,11 +292,6 @@ func UpperFirst(s string) string {
 ```
 
 ### Repeat
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Repeat(s string, count int) string {
@@ -393,11 +307,6 @@ func Repeat(s string, count int) string {
 ```
 
 ### Truncate
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Truncate(s string, length int, omission ...string) string {
@@ -418,11 +327,6 @@ func Truncate(s string, length int, omission ...string) string {
 ```
 
 ### Replace
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Replace(s string, old string, new string) string {
@@ -450,11 +354,6 @@ func Replace(s string, old string, new string) string {
 ```
 
 ### LTrim
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func LTrim(s string) string {
@@ -475,11 +374,6 @@ func LTrim(s string) string {
 ```
 
 ### RTrim
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func RTrim(s string) string {
@@ -500,11 +394,6 @@ func RTrim(s string) string {
 ```
 
 ### Trim
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Trim(s string) string {
@@ -514,11 +403,6 @@ func Trim(s string) string {
 ```
 
 ### TrimBlank
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func TrimBlank(s string) string {
@@ -538,11 +422,6 @@ func TrimBlank(s string) string {
 ```
 
 ### TrimPrefix
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func TrimPrefix(s, prefix string) string {
@@ -559,11 +438,6 @@ func TrimPrefix(s, prefix string) string {
 ```
 
 ### TrimSuffix
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func TrimSuffix(s, suffix string) string {
@@ -580,11 +454,6 @@ func TrimSuffix(s, suffix string) string {
 ```
 
 ### Join
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Join(s []string, separator string) string {
@@ -602,11 +471,6 @@ func Join(s []string, separator string) string {
 ```
 
 ### Concat
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Concat(s ...string) string {
@@ -621,11 +485,6 @@ func Concat(s ...string) string {
 ```
 
 ### SubStr
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func SubStr(s string, start int, length ...int) string {
@@ -671,11 +530,6 @@ func SubStr(s string, start int, length ...int) string {
 ```
 
 ### Slice
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Slice(s string, index ...int) string {
@@ -717,11 +571,6 @@ func Slice(s string, index ...int) string {
 ```
 
 ### Splice
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Splice(s string, start, replaceCount int, items ...string) string {
@@ -754,11 +603,6 @@ func Splice(s string, start, replaceCount int, items ...string) string {
 ```
 
 ### Escape
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Escape(s string) string {
@@ -802,11 +646,6 @@ func Escape(s string) string {
 ```
 
 ### Unescape
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func Unescape(s string) string {
@@ -825,11 +664,6 @@ func Unescape(s string) string {
 ```
 
 ### pad
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func pad(s string, addAmount int, padChar byte) string {
@@ -843,11 +677,6 @@ func pad(s string, addAmount int, padChar byte) string {
 ```
 
 ### PadStart
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func PadStart(s string, addAmount int, padChar byte) string {
@@ -859,11 +688,6 @@ func PadStart(s string, addAmount int, padChar byte) string {
 ```
 
 ### PadEnd
-```go
-import (
-	"html"
-)
-```
 
 ```go
 func PadEnd(s string, addAmount int, padChar byte) string {

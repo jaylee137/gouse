@@ -1,12 +1,16 @@
 # Ultilities
 
+## Imports
 
-### format
 ```go
 import (
 	"time"
 )
 ```
+## Functions
+
+
+### format
 
 ```go
 func format(input interface{}, format string) string {
@@ -30,11 +34,6 @@ func format(input interface{}, format string) string {
 ```
 
 ### ISO
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ISO(date ...interface{}) string {
@@ -47,11 +46,6 @@ func ISO(date ...interface{}) string {
 ```
 
 ### Short
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Short(date ...interface{}) string {
@@ -64,11 +58,6 @@ func Short(date ...interface{}) string {
 ```
 
 ### ShortNormal
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortNormal(date ...interface{}) string {
@@ -81,11 +70,6 @@ func ShortNormal(date ...interface{}) string {
 ```
 
 ### ShortReverse
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortReverse(date ...interface{}) string {
@@ -98,11 +82,6 @@ func ShortReverse(date ...interface{}) string {
 ```
 
 ### ShortDash
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortDash(date ...interface{}) string {
@@ -115,11 +94,6 @@ func ShortDash(date ...interface{}) string {
 ```
 
 ### ShortDot
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortDot(date ...interface{}) string {
@@ -132,11 +106,6 @@ func ShortDot(date ...interface{}) string {
 ```
 
 ### ShortUnderscore
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortUnderscore(date ...interface{}) string {
@@ -149,11 +118,6 @@ func ShortUnderscore(date ...interface{}) string {
 ```
 
 ### ShortSpace
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortSpace(date ...interface{}) string {
@@ -166,11 +130,6 @@ func ShortSpace(date ...interface{}) string {
 ```
 
 ### ShortMonth
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortMonth(date ...interface{}) string {
@@ -183,11 +142,6 @@ func ShortMonth(date ...interface{}) string {
 ```
 
 ### Long
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Long(date ...interface{}) string {
@@ -200,11 +154,6 @@ func Long(date ...interface{}) string {
 ```
 
 ### UTC
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UTC(date ...interface{}) string {
@@ -217,11 +166,6 @@ func UTC(date ...interface{}) string {
 ```
 
 ### Second
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Second() int {
@@ -230,11 +174,6 @@ func Second() int {
 ```
 
 ### Minute
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Minute() int {
@@ -243,11 +182,6 @@ func Minute() int {
 ```
 
 ### Hour
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Hour() int {
@@ -256,11 +190,6 @@ func Hour() int {
 ```
 
 ### Day
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Day() int {
@@ -269,11 +198,6 @@ func Day() int {
 ```
 
 ### Month
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Month() int {
@@ -282,11 +206,6 @@ func Month() int {
 ```
 
 ### Year
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Year() int {
@@ -295,11 +214,6 @@ func Year() int {
 ```
 
 ### Weekday
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Weekday() int {
@@ -308,11 +222,6 @@ func Weekday() int {
 ```
 
 ### Unix
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Unix() int64 {
@@ -321,11 +230,6 @@ func Unix() int64 {
 ```
 
 ### UnixMilli
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UnixMilli() int64 {
@@ -334,11 +238,6 @@ func UnixMilli() int64 {
 ```
 
 ### UnixMicro
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UnixMicro() int64 {
@@ -347,11 +246,6 @@ func UnixMicro() int64 {
 ```
 
 ### UnixNano
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UnixNano() int64 {
@@ -360,11 +254,6 @@ func UnixNano() int64 {
 ```
 
 ### UnixMilliToTime
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UnixMilliToTime(milli int64) time.Time {
@@ -373,11 +262,6 @@ func UnixMilliToTime(milli int64) time.Time {
 ```
 
 ### UnixMicroToTime
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UnixMicroToTime(micro int64) time.Time {
@@ -386,11 +270,6 @@ func UnixMicroToTime(micro int64) time.Time {
 ```
 
 ### UnixNanoToTime
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UnixNanoToTime(nano int64) time.Time {
@@ -399,11 +278,6 @@ func UnixNanoToTime(nano int64) time.Time {
 ```
 
 ### ToSecond
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ToSecond(second int) time.Duration {
@@ -412,11 +286,6 @@ func ToSecond(second int) time.Duration {
 ```
 
 ### ToMinute
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ToMinute(minute int) time.Duration {
@@ -425,11 +294,6 @@ func ToMinute(minute int) time.Duration {
 ```
 
 ### ToHour
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ToHour(hour int) time.Duration {
@@ -438,11 +302,6 @@ func ToHour(hour int) time.Duration {
 ```
 
 ### SleepSecond
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func SleepSecond(second int) {
@@ -451,11 +310,6 @@ func SleepSecond(second int) {
 ```
 
 ### SleepMinute
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func SleepMinute(minute int) {
@@ -464,11 +318,6 @@ func SleepMinute(minute int) {
 ```
 
 ### SleepHour
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func SleepHour(hour int) {

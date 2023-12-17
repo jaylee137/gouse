@@ -1,12 +1,16 @@
 # Delay
 
+## Imports
 
-### delay
 ```go
 import (
 	"time"
 )
 ```
+## Functions
+
+
+### delay
 
 ```go
 func delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
@@ -29,11 +33,6 @@ func delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
 ```
 
 ### DelayF
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func DelayF[T any](f func() T, timeout int) DelayedResult[T] {
@@ -42,11 +41,6 @@ func DelayF[T any](f func() T, timeout int) DelayedResult[T] {
 ```
 
 ### Delay
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Delay(f func(), timeout int) DelayedResult[struct{}] {

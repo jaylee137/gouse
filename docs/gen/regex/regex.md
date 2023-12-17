@@ -1,12 +1,16 @@
 # Regex
 
+## Imports
 
-### IsMatch
 ```go
 import (
 	"regexp"
 )
 ```
+## Functions
+
+
+### IsMatch
 
 ```go
 func IsMatch(regex, chain string) bool {
@@ -15,11 +19,6 @@ func IsMatch(regex, chain string) bool {
 ```
 
 ### Match
-```go
-import (
-	"regexp"
-)
-```
 
 ```go
 func Match(regex, chain string) []string {
@@ -34,11 +33,6 @@ func Match(regex, chain string) []string {
 ```
 
 ### MatchIndex
-```go
-import (
-	"regexp"
-)
-```
 
 ```go
 func MatchIndex(regex, chain string) int {

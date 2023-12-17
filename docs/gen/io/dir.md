@@ -1,7 +1,7 @@
 # Dir
 
+## Imports
 
-### IsExistDir
 ```go
 import (
 	"os"
@@ -9,6 +9,10 @@ import (
 	"path/filepath"
 )
 ```
+## Functions
+
+
+### IsExistDir
 
 ```go
 func IsExistDir(dir string) (bool, error) {
@@ -26,13 +30,6 @@ func IsExistDir(dir string) (bool, error) {
 ```
 
 ### CreateDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func CreateDir(dir string) error {
@@ -52,13 +49,6 @@ func CreateDir(dir string) error {
 ```
 
 ### RemoveDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func RemoveDir(dir string) error {
@@ -77,13 +67,6 @@ func RemoveDir(dir string) error {
 ```
 
 ### LsDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func LsDir(dir string) ([]string, error) {
@@ -107,13 +90,6 @@ func LsDir(dir string) ([]string, error) {
 ```
 
 ### HierarchyDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func HierarchyDir(dir string) ([]string, error) {
@@ -136,13 +112,6 @@ func HierarchyDir(dir string) ([]string, error) {
 ```
 
 ### CurrentDir
-```go
-import (
-	"os"
-
-	"path/filepath"
-)
-```
 
 ```go
 func CurrentDir() (string, error) {

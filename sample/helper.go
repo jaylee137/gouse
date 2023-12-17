@@ -21,5 +21,6 @@ func helperAutoMdDoc() {
 func HelperExample() {
 	helperRandomID()
 	helperUUID()
+
 	helperAutoMdDoc()
 }

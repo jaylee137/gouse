@@ -1,12 +1,16 @@
 # Date
 
+## Imports
 
-### format
 ```go
 import (
 	"time"
 )
 ```
+## Functions
+
+
+### format
 
 ```go
 func format(input interface{}, format string) string {
@@ -30,11 +34,6 @@ func format(input interface{}, format string) string {
 ```
 
 ### ISO
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ISO(date ...interface{}) string {
@@ -47,11 +46,6 @@ func ISO(date ...interface{}) string {
 ```
 
 ### Short
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Short(date ...interface{}) string {
@@ -64,11 +58,6 @@ func Short(date ...interface{}) string {
 ```
 
 ### ShortNormal
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortNormal(date ...interface{}) string {
@@ -81,11 +70,6 @@ func ShortNormal(date ...interface{}) string {
 ```
 
 ### ShortReverse
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortReverse(date ...interface{}) string {
@@ -98,11 +82,6 @@ func ShortReverse(date ...interface{}) string {
 ```
 
 ### ShortDash
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortDash(date ...interface{}) string {
@@ -115,11 +94,6 @@ func ShortDash(date ...interface{}) string {
 ```
 
 ### ShortDot
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortDot(date ...interface{}) string {
@@ -132,11 +106,6 @@ func ShortDot(date ...interface{}) string {
 ```
 
 ### ShortUnderscore
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortUnderscore(date ...interface{}) string {
@@ -149,11 +118,6 @@ func ShortUnderscore(date ...interface{}) string {
 ```
 
 ### ShortSpace
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortSpace(date ...interface{}) string {
@@ -166,11 +130,6 @@ func ShortSpace(date ...interface{}) string {
 ```
 
 ### ShortMonth
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func ShortMonth(date ...interface{}) string {
@@ -183,11 +142,6 @@ func ShortMonth(date ...interface{}) string {
 ```
 
 ### Long
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func Long(date ...interface{}) string {
@@ -200,11 +154,6 @@ func Long(date ...interface{}) string {
 ```
 
 ### UTC
-```go
-import (
-	"time"
-)
-```
 
 ```go
 func UTC(date ...interface{}) string {

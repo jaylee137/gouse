@@ -143,6 +143,20 @@ func TestRuneToString(t *testing.T) {
 	}
 }
 
+func TestMapAsString(t *testing.T) {
+	data := map[string]string{
+		"One":   "one",
+		"Two":   "two",
+		"Three": "three",
+	}
+	result := MapAsString(data)
+	expected := "One: one\nTwo: two\nThree: three\n"
+
+	if result != expected {
+		t.Errorf("Expected %s, got %s", expected, result)
+	}
+}
+
 // func TestStringToRune(t *testing.T) {
 // 	data := "t"
 // 	result := StringToRune(data)

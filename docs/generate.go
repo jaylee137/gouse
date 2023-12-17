@@ -60,9 +60,14 @@ func main() {
 
 			result = append(result, []byte("# "+strings.Capitalize(strings.TrimSuffix(file.Name(), ".go"))+"\n\n")...)
 
-			for _, function := range functions {
+			for i, function := range functions {
+				if i == 0 && len(function.Import) > 0 {
+					result = append(result, []byte("## Imports\n\n")...)
+					result = append(result, function.HighlightImport()...)
+					result = append(result, []byte("## Functions\n\n")...)
+				}
+
 				result = append(result, function.HighlightName()...)
-				result = append(result, function.HighlightImport()...)
 				result = append(result, function.HighlightBody()...)
 			}
 

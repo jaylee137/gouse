@@ -2,9 +2,6 @@
 
 
 ### IsPrime
-```go
-import ()
-```
 
 ```go
 func IsPrime(num int) bool {
@@ -21,9 +18,6 @@ func IsPrime(num int) bool {
 ```
 
 ### IsEven
-```go
-import ()
-```
 
 ```go
 func IsEven(num int) bool {
@@ -32,9 +26,6 @@ func IsEven(num int) bool {
 ```
 
 ### IsOdd
-```go
-import ()
-```
 
 ```go
 func IsOdd(num int) bool {
@@ -43,9 +34,6 @@ func IsOdd(num int) bool {
 ```
 
 ### IsPerfectSquare
-```go
-import ()
-```
 
 ```go
 func IsPerfectSquare(num int) bool {
@@ -59,11 +47,6 @@ func IsPerfectSquare(num int) bool {
 ```
 
 ### Log
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log(number, base int) int {
@@ -72,11 +55,6 @@ func Log(number, base int) int {
 ```
 
 ### LogF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func LogF(number, base float64) float64 {
@@ -85,11 +63,6 @@ func LogF(number, base float64) float64 {
 ```
 
 ### Log2
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log2(number int) int {
@@ -98,11 +71,6 @@ func Log2(number int) int {
 ```
 
 ### Log2F
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log2F(number float64) float64 {
@@ -111,11 +79,6 @@ func Log2F(number float64) float64 {
 ```
 
 ### Log10
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log10(number int) int {
@@ -124,11 +87,6 @@ func Log10(number int) int {
 ```
 
 ### Log10F
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Log10F(number float64) float64 {
@@ -137,11 +95,6 @@ func Log10F(number float64) float64 {
 ```
 
 ### Pytago
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Pytago(side1, side2 int) float64 {
@@ -150,11 +103,6 @@ func Pytago(side1, side2 int) float64 {
 ```
 
 ### PytagoF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func PytagoF(side1, side2 float64) float64 {
@@ -163,11 +111,6 @@ func PytagoF(side1, side2 float64) float64 {
 ```
 
 ### Sin
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Sin(angle int) float64 {
@@ -176,11 +119,6 @@ func Sin(angle int) float64 {
 ```
 
 ### SinF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func SinF(angle float64) float64 {
@@ -189,11 +127,6 @@ func SinF(angle float64) float64 {
 ```
 
 ### Cos
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Cos(angle int) float64 {
@@ -202,11 +135,6 @@ func Cos(angle int) float64 {
 ```
 
 ### CosF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func CosF(angle float64) float64 {
@@ -215,11 +143,6 @@ func CosF(angle float64) float64 {
 ```
 
 ### Tan
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Tan(angle int) float64 {
@@ -228,11 +151,6 @@ func Tan(angle int) float64 {
 ```
 
 ### TanF
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func TanF(angle float64) float64 {
@@ -241,11 +159,6 @@ func TanF(angle float64) float64 {
 ```
 
 ### Speed
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Speed(distance, time float64) float64 {
@@ -254,11 +167,6 @@ func Speed(distance, time float64) float64 {
 ```
 
 ### Distance
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Distance(speed, time float64) float64 {
@@ -267,11 +175,6 @@ func Distance(speed, time float64) float64 {
 ```
 
 ### Time
-```go
-import (
-	"math"
-)
-```
 
 ```go
 func Time(distance, speed float64) float64 {

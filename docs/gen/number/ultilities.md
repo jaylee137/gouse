@@ -1,7 +1,7 @@
 # Ultilities
 
+## Imports
 
-### Random
 ```go
 import (
 	"crypto/rand"
@@ -9,6 +9,10 @@ import (
 	"math/big"
 )
 ```
+## Functions
+
+
+### Random
 
 ```go
 func Random(min, max int) int {
@@ -23,13 +27,6 @@ func Random(min, max int) int {
 ```
 
 ### Clamp
-```go
-import (
-	"crypto/rand"
-
-	"math/big"
-)
-```
 
 ```go
 func Clamp(value int, min int, max int) int {
@@ -44,13 +41,6 @@ func Clamp(value int, min int, max int) int {
 ```
 
 ### InRange
-```go
-import (
-	"crypto/rand"
-
-	"math/big"
-)
-```
 
 ```go
 func InRange(value int, min int, max int) bool {

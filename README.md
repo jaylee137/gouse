@@ -49,6 +49,7 @@
 - [ ] Lang
 - [ ] Log
 - [x] [`Math`](docs/gen/math)
+- [x] [`Net`](docs/gen/net)
 - [x] [`Number`](docs/gen/number)
 - [x] [`Regex`](docs/gen/regex)
 - [x] [`Struct`](docs/gen/struct)
@@ -63,7 +64,19 @@
 ## 📦 Installation
 
 ```go
-$ go get github.com/thuongtruong1009/gouse
+go get github.com/thuongtruong1009/gouse
+```
+
+## 🕯️ Quick Start
+
+```go
+package main
+
+import "github.com/thuongtruong1009/gouse"
+
+func main() {
+    gouse.Stater()
+}
 ```
 
 ## 🦄 Usage
@@ -73,10 +86,13 @@ $ go get github.com/thuongtruong1009/gouse
 ```go
 package main
 
-import "github.com/thuongtruong1009/gouse"
+import (
+    "fmt"
+    "github.com/thuongtruong1009/gouse/math"
+)
 
 func main() {
-    println(gouse.Stater())
+    fmt.Println(math.Add(1, 2))
 }
 ```
 
@@ -126,11 +142,11 @@ $ make test
 $ make lint
 ```
 
-<!-- #### 7. Run benchmarks
+#### 7. Run benchmarks
 
 ```bash
 $ make bench
-``` -->
+```
 
 ## 📝 Contributing
 
@@ -178,8 +194,8 @@ $ make bench
 
 Special thanks to the following dependencies that helped make this project possible:
 
-- [github.com/google/uuid](github.com/google/uuid) - A fast and simple UUID library for Go
-- [github.com/AlecAivazis/survey/v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals.
+- [github.com/google/uuid](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
+- [github.com/AlecAivazis/survey/v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
 - [github.com/charmbracelet/bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
 
 ## 📚 References

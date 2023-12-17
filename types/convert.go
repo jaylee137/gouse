@@ -74,6 +74,10 @@ func StringsToBytes(data []string) []byte {
 	return result
 }
 
+// func ErrorToString(data error) string {
+// 	return data.Error()
+// }
+
 func IntToString(data int) string {
 	return fmt.Sprintf("%d", data)
 }
@@ -96,4 +100,19 @@ func BytesToString(data []byte) string {
 
 func RuneToString(data rune) string {
 	return string(data)
+}
+
+// this function is not yet in example
+func MapAsString[T string | []string](data map[string]T) string {
+	var result string
+
+	for key, value := range data {
+		result += fmt.Sprintf("%s: %s\n", key, value)
+	}
+
+	return result
+}
+
+func formatSlice[T string | []string](values T) string {
+	return "\"" + fmt.Sprintf("%s", values) + "\""
 }

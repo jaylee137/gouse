@@ -2,9 +2,6 @@
 
 
 ### IndexBy
-```go
-import ()
-```
 
 ```go
 func IndexBy[T comparable](arr []T, f func(T) bool) int {
@@ -18,9 +15,6 @@ func IndexBy[T comparable](arr []T, f func(T) bool) int {
 ```
 
 ### KeyBy
-```go
-import ()
-```
 
 ```go
 func KeyBy[T comparable](arr []T, f func(T) bool) int {
@@ -29,9 +23,6 @@ func KeyBy[T comparable](arr []T, f func(T) bool) int {
 ```
 
 ### FilterBy
-```go
-import ()
-```
 
 ```go
 func FilterBy[T comparable](arr []T, f func(T) bool) []T {
@@ -46,9 +37,6 @@ func FilterBy[T comparable](arr []T, f func(T) bool) []T {
 ```
 
 ### RejectBy
-```go
-import ()
-```
 
 ```go
 func RejectBy[T comparable](arr []T, f func(T) bool) []T {
@@ -63,9 +51,6 @@ func RejectBy[T comparable](arr []T, f func(T) bool) []T {
 ```
 
 ### FindBy
-```go
-import ()
-```
 
 ```go
 func FindBy[T comparable](arr []T, f func(T) bool) T {
@@ -79,9 +64,6 @@ func FindBy[T comparable](arr []T, f func(T) bool) T {
 ```
 
 ### ForBy
-```go
-import ()
-```
 
 ```go
 func ForBy[T comparable](arr []T, f func(T)) {
@@ -92,9 +74,6 @@ func ForBy[T comparable](arr []T, f func(T)) {
 ```
 
 ### MapBy
-```go
-import ()
-```
 
 ```go
 func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {

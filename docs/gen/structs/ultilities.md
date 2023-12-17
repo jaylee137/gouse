@@ -1,7 +1,7 @@
 # Ultilities
 
+## Imports
 
-### Merge
 ```go
 import (
 	"fmt"
@@ -9,6 +9,10 @@ import (
 	"reflect"
 )
 ```
+## Functions
+
+
+### Merge
 
 ```go
 func Merge(structs ...interface{}) interface{} {
@@ -62,13 +66,6 @@ func Merge(structs ...interface{}) interface{} {
 ```
 
 ### Remove
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func Remove(structInstance interface{}, fields ...string) interface{} {
@@ -105,13 +102,6 @@ func Remove(structInstance interface{}, fields ...string) interface{} {
 ```
 
 ### Add
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func Add(structInstance interface{}, fields map[string]interface{}) interface{} {
@@ -158,13 +148,6 @@ func Add(structInstance interface{}, fields map[string]interface{}) interface{} 
 ```
 
 ### Set
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func Set(structInstance interface{}, fieldName string, value interface{}) {
@@ -199,13 +182,6 @@ func Set(structInstance interface{}, fieldName string, value interface{}) {
 ```
 
 ### Get
-```go
-import (
-	"fmt"
-
-	"reflect"
-)
-```
 
 ```go
 func Get(structInstance interface{}, fieldName string) interface{} {
@@ -219,11 +195,6 @@ func Get(structInstance interface{}, fieldName string) interface{} {
 ```
 
 ### Clone
-```go
-import (
-	"reflect"
-)
-```
 
 ```go
 func Clone(structInstance interface{}) interface{} {
@@ -243,11 +214,6 @@ func Clone(structInstance interface{}) interface{} {
 ```
 
 ### Has
-```go
-import (
-	"reflect"
-)
-```
 
 ```go
 func Has(structInstance interface{}, fieldName string) bool {
@@ -258,11 +224,6 @@ func Has(structInstance interface{}, fieldName string) bool {
 ```
 
 ### HasEmpty
-```go
-import (
-	"reflect"
-)
-```
 
 ```go
 func HasEmpty(structInstance interface{}, fieldName string) bool {

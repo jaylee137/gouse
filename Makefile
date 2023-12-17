@@ -13,7 +13,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go array console date function helper io math number regex strings structs types
+	go run docs/generate.go array console date function helper io math net number regex strings structs types
 	@echo "Done!"
 
 test:
@@ -23,6 +23,11 @@ test:
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
+bench:
+	@echo "Running benchmarks..."
+	go test -count 5 -run=^# -bench=. ./number/...
+	@echo "Done!"
+
 lint:
 	@echo "Running linter..."
 	gofmt -w -s . && goimports -w . && go fmt ./...
@@ -30,7 +35,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	sh count.sh public/count.svg true 13708a array console date function helper io math number regex strings structs types
+	bash count.sh public/count.svg true 13708a array console date function helper io math net number regex strings structs types
 	@echo "Done!"
 
 precommit:

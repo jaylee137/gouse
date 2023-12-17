@@ -15,6 +15,15 @@ func TestRandom(t *testing.T) {
 	}
 }
 
+func BenchmarkRandom(b *testing.B) {
+	min := 1
+	max := 10
+
+	for i := 0; i < b.N; i++ {
+		Random(min, max)
+	}
+}
+
 func TestClamp(t *testing.T) {
 	min := 1
 	max := 10
@@ -38,6 +47,15 @@ func TestClamp(t *testing.T) {
 	}
 }
 
+func BenchmarkClamp(b *testing.B) {
+	min := 1
+	max := 10
+
+	for i := 0; i < b.N; i++ {
+		Clamp(5, min, max)
+	}
+}
+
 func TestInRange(t *testing.T) {
 	min := 1
 	max := 10
@@ -58,5 +76,14 @@ func TestInRange(t *testing.T) {
 
 	if !result {
 		t.Errorf("InRange() = %t; want true", result)
+	}
+}
+
+func BenchmarkInRange(b *testing.B) {
+	min := 1
+	max := 10
+
+	for i := 0; i < b.N; i++ {
+		InRange(5, min, max)
 	}
 }

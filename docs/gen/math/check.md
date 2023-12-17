@@ -2,9 +2,6 @@
 
 
 ### IsPrime
-```go
-import ()
-```
 
 ```go
 func IsPrime(num int) bool {
@@ -21,9 +18,6 @@ func IsPrime(num int) bool {
 ```
 
 ### IsEven
-```go
-import ()
-```
 
 ```go
 func IsEven(num int) bool {
@@ -32,9 +26,6 @@ func IsEven(num int) bool {
 ```
 
 ### IsOdd
-```go
-import ()
-```
 
 ```go
 func IsOdd(num int) bool {
@@ -43,9 +34,6 @@ func IsOdd(num int) bool {
 ```
 
 ### IsPerfectSquare
-```go
-import ()
-```
 
 ```go
 func IsPerfectSquare(num int) bool {

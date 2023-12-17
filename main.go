@@ -5,19 +5,20 @@ import (
 	"github.com/thuongtruong1009/gouse/strings"
 )
 
-func Starter() string {
-	return strings.Capitalize("hello world from Gouse!\n")
+func Starter() {
+	println(strings.Capitalize("hello world from Gouse!"))
 }
 
 func main() {
-	// println(Starter())
+	// Starter()
 	// sample.ArrayExample()
 	// sample.ConsoleExample()
 	// sample.DateExample()
 	// sample.FunctionExample()
-	sample.HelperExample()
+	// sample.HelperExample()
 	// sample.IOExample()
 	// sample.MathExample()
+	sample.NetExample()
 	// sample.NumberExample()
 	// sample.RegexExample()
 	// sample.StringExample()

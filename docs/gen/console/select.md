@@ -1,12 +1,16 @@
 # Select
 
+## Imports
 
-### Select
 ```go
 import (
 	"github.com/AlecAivazis/survey/v2"
 )
 ```
+## Functions
+
+
+### Select
 
 ```go
 func Select(label string, options []string) (string, error) {
@@ -21,11 +25,6 @@ func Select(label string, options []string) (string, error) {
 ```
 
 ### Confirm
-```go
-import (
-	"github.com/AlecAivazis/survey/v2"
-)
-```
 
 ```go
 func Confirm(label string) (bool, error) {

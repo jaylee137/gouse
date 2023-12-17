@@ -1,12 +1,16 @@
 # Ultilities
 
+## Imports
 
-### Select
 ```go
 import (
 	"github.com/AlecAivazis/survey/v2"
 )
 ```
+## Functions
+
+
+### Select
 
 ```go
 func Select(label string, options []string) (string, error) {
@@ -21,11 +25,6 @@ func Select(label string, options []string) (string, error) {
 ```
 
 ### Confirm
-```go
-import (
-	"github.com/AlecAivazis/survey/v2"
-)
-```
 
 ```go
 func Confirm(label string) (bool, error) {
@@ -39,23 +38,6 @@ func Confirm(label string) (bool, error) {
 ```
 
 ### Cmd
-```go
-import (
-	"flag"
-
-	"fmt"
-
-	"os"
-
-	"os/exec"
-
-	"runtime"
-
-	"strconv"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func Cmd(defaultCmmand string, windowsCmmand ...string) {
@@ -81,23 +63,6 @@ func Cmd(defaultCmmand string, windowsCmmand ...string) {
 ```
 
 ### Clear
-```go
-import (
-	"flag"
-
-	"fmt"
-
-	"os"
-
-	"os/exec"
-
-	"runtime"
-
-	"strconv"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func Clear() {
@@ -106,23 +71,6 @@ func Clear() {
 ```
 
 ### WithColor
-```go
-import (
-	"flag"
-
-	"fmt"
-
-	"os"
-
-	"os/exec"
-
-	"runtime"
-
-	"strconv"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func WithColor[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](color string, chain T) {
@@ -131,23 +79,6 @@ func WithColor[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | u
 ```
 
 ### autoDetectAction
-```go
-import (
-	"flag"
-
-	"fmt"
-
-	"os"
-
-	"os/exec"
-
-	"runtime"
-
-	"strconv"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func autoDetectAction(f interface{}) interface{} {
@@ -167,23 +98,6 @@ func autoDetectAction(f interface{}) interface{} {
 ```
 
 ### Help
-```go
-import (
-	"flag"
-
-	"fmt"
-
-	"os"
-
-	"os/exec"
-
-	"runtime"
-
-	"strconv"
-
-	"github.com/thuongtruong1009/gouse/strings"
-)
-```
 
 ```go
 func Help(name string, options []*HelpOptions) {
