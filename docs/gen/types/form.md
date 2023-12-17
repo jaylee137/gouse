@@ -413,14 +413,6 @@ func MapAsString[T string | []string](data map[string]T) string {
 }
 ```
 
-### formatSlice
-
-```go
-func formatSlice[T string | []string](values T) string {
-	return "\"" + fmt.Sprintf("%s", values) + "\""
-}
-```
-
 ### IsUUID
 
 ```go

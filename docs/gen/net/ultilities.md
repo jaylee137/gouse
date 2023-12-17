@@ -5,9 +5,13 @@
 ```go
 import (
 	"net/http"
+
 	"net/url"
+
 	"time"
-	"github.com/thuongtruong1009/gouse/console")
+
+	"github.com/thuongtruong1009/gouse/console"
+)
 ```
 ## Functions
 
@@ -17,14 +21,16 @@ import (
 ```go
 func Open(url string) {
 	console.Cmd("explorer " + url)
-}```
+}
+```
 
 ### Encode
 
 ```go
 func Encode(s string) string {
 	return url.QueryEscape(s)
-}```
+}
+```
 
 ### Decode
 
@@ -35,7 +41,8 @@ func Decode(s string) string {
 		return s
 	}
 	return decoded
-}```
+}
+```
 
 ### Check
 
@@ -47,7 +54,8 @@ func Check(url string) (bool, error) {
 	}
 
 	return true, nil
-}```
+}
+```
 
 ### CheckWithStatusCode
 
@@ -59,7 +67,8 @@ func CheckWithStatusCode(url string) (int, error) {
 	}
 
 	return resp.StatusCode, nil
-}```
+}
+```
 
 ### Header
 
@@ -71,7 +80,8 @@ func Header(url string) (http.Header, error) {
 	}
 
 	return resp.Header, nil
-}```
+}
+```
 
 ### ConnectTime
 
@@ -83,8 +93,12 @@ func ConnectTime(url string) (float64, error) {
 	if err != nil {
 		return 0, err
 	}
-	defer resp.Body.Close()
 
 	elapsedTime := time.Since(startTime)
+
+	if err := resp.Body.Close(); err != nil {
+		return 0, err
+	}
 	return elapsedTime.Seconds(), nil
-}```
+}
+```

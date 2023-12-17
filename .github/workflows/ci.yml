@@ -54,7 +54,7 @@ jobs:
           path: coverage.out
 
       - name: Benchmark test
-        run: mke bench
+        run: make bench
 
       # - name: Upload coverage to Codacy
       #   # run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.out --force-language go -t ${{ secrets.CODACY_PROJECT_TOKEN }}

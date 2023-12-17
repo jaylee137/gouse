@@ -6,6 +6,7 @@
     <a href="https://app.deepsource.com/gh/thuongtruong1009/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
     <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
     <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
+    <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong1009/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">

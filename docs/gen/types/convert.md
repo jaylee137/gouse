@@ -412,11 +412,3 @@ func MapAsString[T string | []string](data map[string]T) string {
 	return result
 }
 ```
-
-### formatSlice
-
-```go
-func formatSlice[T string | []string](values T) string {
-	return "\"" + fmt.Sprintf("%s", values) + "\""
-}
-```

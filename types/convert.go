@@ -102,7 +102,7 @@ func RuneToString(data rune) string {
 	return string(data)
 }
 
-// this function is not yet in example
+// MapAsString is not yet in example
 func MapAsString[T string | []string](data map[string]T) string {
 	var result string
 
@@ -113,6 +113,6 @@ func MapAsString[T string | []string](data map[string]T) string {
 	return result
 }
 
-func formatSlice[T string | []string](values T) string {
-	return "\"" + fmt.Sprintf("%s", values) + "\""
-}
+// func formatSlice[T string | []string](values T) string {
+// 	return "\"" + fmt.Sprintf("%s", values) + "\""
+// }

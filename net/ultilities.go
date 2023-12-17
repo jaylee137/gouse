@@ -58,8 +58,11 @@ func ConnectTime(url string) (float64, error) {
 	if err != nil {
 		return 0, err
 	}
-	defer resp.Body.Close()
 
 	elapsedTime := time.Since(startTime)
+
+	if err := resp.Body.Close(); err != nil {
+		return 0, err
+	}
 	return elapsedTime.Seconds(), nil
 }
