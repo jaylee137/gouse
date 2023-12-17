@@ -13,7 +13,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go array console date function helper io math net number regex strings structs types
+	go run docs/generate.go sample
 	@echo "Done!"
 
 test:

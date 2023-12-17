@@ -38,25 +38,25 @@
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
 - [ ] API
-- [x] [`Array`](docs/gen/array)
-- [x] [`Console`](docs/gen/console)
+- [x] [`Array`](docs/gen/sample/array.md)
+- [x] [`Console`](docs/gen/sample/console.md)
 - [ ] Collection
 - [ ] Connection
-- [x] [`Date`](docs/gen/date)
+- [x] [`Date`](docs/gen/sample/date.md)
 - [ ] Error
-- [x] [`Function`](docs/gen/function)
-- [x] [`Helper`](docs/gen/helper)
-- [x] [`I/O`](docs/gen/io)
+- [x] [`Function`](docs/gen/sample/function.md)
+- [x] [`Helper`](docs/gen/sample/helper.md)
+- [x] [`I/O`](docs/gen/sample/io.md)
 - [ ] Lang
 - [ ] Log
-- [x] [`Math`](docs/gen/math)
-- [x] [`Net`](docs/gen/net)
-- [x] [`Number`](docs/gen/number)
-- [x] [`Regex`](docs/gen/regex)
-- [x] [`Struct`](docs/gen/struct)
-- [x] [`String`](docs/gen/string)
+- [x] [`Math`](docs/gen/sample/math.md)
+- [x] [`Net`](docs/gen/sample/net.md)
+- [x] [`Number`](docs/gen/sample/number.md)
+- [x] [`Regex`](docs/gen/sample/regex.md)
+- [x] [`Struct`](docs/gen/sample/struct.md)
+- [x] [`String`](docs/gen/sample/string.md)
 - [ ] Tools
-- [x] [`Type`](docs/gen/type)
+- [x] [`Type`](docs/gen/sample/type.md)
 
 ## 📋 Requirements
 
@@ -96,6 +96,8 @@ func main() {
     fmt.Println(math.Add(1, 2))
 }
 ```
+
+- View more examples at [`sample`](sample) folder.
 
 ## 📖 Documentation
 
