@@ -5,53 +5,82 @@ import (
 	"reflect"
 )
 
+// func Merge(structs ...interface{}) interface{} {
+// 	if len(structs) < 2 {
+// 		panic("At least two structs are required to merge")
+// 	}
+
+// 	fieldValues := make(map[string]interface{})
+
+// 	// Iterate through the input structs
+// 	for _, structInstance := range structs {
+// 		structValue := reflect.ValueOf(structInstance)
+
+// 		// Iterate through the fields of the struct
+// 		for i := 0; i < structValue.NumField(); i++ {
+// 			field := structValue.Type().Field(i)
+// 			fieldName := field.Name
+
+// 			// Store field value in the map
+// 			fieldValues[fieldName] = structValue.Field(i).Interface()
+// 		}
+// 	}
+
+// 	// Create a slice of reflect.StructField for the new struct
+// 	var newFields []reflect.StructField
+
+// 	// Iterate through the fields of the new struct
+// 	for fieldName, value := range fieldValues {
+// 		// Add fields to the new struct dynamically
+// 		newFields = append(newFields, reflect.StructField{
+// 			Name: fieldName,
+// 			Type: reflect.TypeOf(value),
+// 		})
+// 	}
+
+// 	// Create a new struct type
+// 	newStructType := reflect.StructOf(newFields)
+
+// 	// Create a new instance of the struct
+// 	newStructValue := reflect.New(newStructType).Elem()
+
+// 	// Set field values in the new struct
+// 	for _, field := range newFields {
+// 		fieldName := field.Name
+// 		value := fieldValues[fieldName]
+// 		newStructValue.FieldByName(fieldName).Set(reflect.ValueOf(value))
+// 	}
+
+// 	return newStructValue.Interface()
+// }
+
 func Merge(structs ...interface{}) interface{} {
-	if len(structs) == 0 {
-		return nil
+	if len(structs) < 2 {
+		panic("At least two structs are required to merge")
 	}
 
-	fieldValues := make(map[string]interface{})
+	// Create a map to store field values
+	fieldValues := make(map[string]reflect.Value)
 
-	// Iterate through the input structs
-	for _, structInstance := range structs {
-		structValue := reflect.ValueOf(structInstance)
+	// Iterate over each struct
+	for _, s := range structs {
+		v := reflect.ValueOf(s)
+		t := v.Type()
 
-		// Iterate through the fields of the struct
-		for i := 0; i < structValue.NumField(); i++ {
-			field := structValue.Type().Field(i)
-			fieldName := field.Name
-
-			// Store field value in the map
-			fieldValues[fieldName] = structValue.Field(i).Interface()
+		// Iterate over fields of each struct
+		for i := 0; i < v.NumField(); i++ {
+			fieldName := t.Field(i).Name
+			fieldValues[fieldName] = v.Field(i)
 		}
 	}
 
-	// Create a slice of reflect.StructField for the new struct
-	var newFields []reflect.StructField
-
-	// Iterate through the fields of the new struct
-	for fieldName, value := range fieldValues {
-		// Add fields to the new struct dynamically
-		newFields = append(newFields, reflect.StructField{
-			Name: fieldName,
-			Type: reflect.TypeOf(value),
-		})
+	// Create a new map with merged fields
+	resultMap := make(map[string]interface{})
+	for fieldName, fieldValue := range fieldValues {
+		resultMap[fieldName] = fieldValue.Interface()
 	}
 
-	// Create a new struct type
-	newStructType := reflect.StructOf(newFields)
-
-	// Create a new instance of the struct
-	newStructValue := reflect.New(newStructType).Elem()
-
-	// Set field values in the new struct
-	for _, field := range newFields {
-		fieldName := field.Name
-		value := fieldValues[fieldName]
-		newStructValue.FieldByName(fieldName).Set(reflect.ValueOf(value))
-	}
-
-	return newStructValue.Interface()
+	return resultMap
 }
 
 func Remove(structInstance interface{}, fields ...string) interface{} {

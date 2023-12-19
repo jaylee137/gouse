@@ -31,7 +31,13 @@ func structMerge() {
 		ZipCode: "10001",
 	}
 
-	fmt.Printf("Struct after merged: %+v\n", structs.Merge(person, address))
+	merged := structs.Merge(person, address)
+
+	fmt.Printf("Struct after merged: %+v\n", merged)
+
+	fmt.Println("Name:", merged.(map[string]interface{})["Name"])
+
+	fmt.Println("City:", merged.(map[string]interface{})["City"])
 }
 
 func structRemove() {

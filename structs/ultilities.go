@@ -29,5 +29,9 @@ func HasEmpty(structInstance interface{}, fieldName string) bool {
 	structValue := reflect.ValueOf(structInstance)
 	fieldValue := structValue.FieldByName(fieldName)
 
+	if !fieldValue.IsValid() {
+		return true
+	}
+
 	return reflect.DeepEqual(fieldValue.Interface(), reflect.Zero(fieldValue.Type()).Interface())
 }

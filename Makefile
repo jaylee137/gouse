@@ -19,7 +19,7 @@ doc:
 test:
 	@echo "Running tests..."
 	go clean -testcache
-	go test -v -count=1 -cover -coverprofile=coverage.out ./date/... ./number/... ./regex/... ./strings/... ./types/...
+	go test -v -count=1 -cover -coverprofile=coverage.out ./date/... ./number/... ./regex/... ./strings/... ./structs/... ./types/...
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
@@ -38,7 +38,7 @@ count:
 	bash count.sh public/count.svg true 13708a array console date function helper io math net number regex strings structs types
 	@echo "Done!"
 
-precommit:
+pre:
 	make build && make test && make doc && make lint
 	git add .
 

@@ -18,10 +18,10 @@ func main() {
 	// sample.HelperExample()
 	// sample.IOExample()
 	// sample.MathExample()
-	sample.NetExample()
+	// sample.NetExample()
 	// sample.NumberExample()
 	// sample.RegexExample()
 	// sample.StringExample()
-	// sample.StructExample()
+	sample.StructExample()
 	// sample.TypeExample()
 }
