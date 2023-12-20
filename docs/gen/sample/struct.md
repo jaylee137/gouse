@@ -139,18 +139,3 @@ func structHas() {
 	fmt.Printf("Has empty: %+v\n", hasEmpty)
 }
 ```
-
-### StructExample
-
-```go
-func StructExample() {
-	structMerge()
-	structRemove()
-	structAdd()
-	structSet()
-	structGet()
-
-	structClone()
-	structHas()
-}
-```

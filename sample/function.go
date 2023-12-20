@@ -69,12 +69,3 @@ func funcRunTime() {
 	duration := function.RunTime(time.Now(), exampleFunc)
 	fmt.Printf("Function run in: %v\n", duration)
 }
-
-func FunctionExample() {
-	funcDelay()
-	funcRetry()
-	funcTimes()
-	funcInterval()
-	funcLock()
-	funcRunTime()
-}

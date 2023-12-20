@@ -17,10 +17,3 @@ func helperAutoMdDoc() {
 	outputFilePath := "main.md"
 	helper.AutoMdDoc(inputFilePath, outputFilePath)
 }
-
-func HelperExample() {
-	helperRandomID()
-	helperUUID()
-
-	helperAutoMdDoc()
-}

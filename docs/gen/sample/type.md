@@ -267,24 +267,3 @@ func typeCheckPhone() {
 	}
 }
 ```
-
-### TypeExample
-
-```go
-func TypeExample() {
-	typeStructConvert()
-	typeStringConvert()
-	typeCastToString()
-
-	typeCheck()
-	typeCheckUUID()
-	typeCheckGmail()
-	typeCheckYahoo()
-	typeCheckOutlook()
-	typeCheckEdu()
-	typeCheckEmail()
-	typeCheckUsername()
-	typeCheckPassword()
-	typeCheckPhone()
-}
-```

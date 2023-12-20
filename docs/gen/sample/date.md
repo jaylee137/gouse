@@ -118,23 +118,3 @@ func dateSleepHour() {
 	date.SleepHour(1)
 }
 ```
-
-### DateExample
-
-```go
-func DateExample() {
-	dateTime()
-
-	dateISO()
-	dateShort()
-	dateLong()
-	dateUTC()
-
-	dateToSecond()
-	dateToMinute()
-	dateToHour()
-	dateSleepSecond()
-	dateSleepMinute()
-	dateSleepHour()
-}
-```

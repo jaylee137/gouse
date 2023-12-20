@@ -52,13 +52,3 @@ func netConnectTime() {
 
 	fmt.Printf("Connect time: %fs\n", connectTime)
 }
-
-func NetExample() {
-	netOpen()
-	netEncode()
-	netDecode()
-	netCheck()
-	netCheckWithStatusCode()
-	netHeader()
-	netConnectTime()
-}

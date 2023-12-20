@@ -241,28 +241,3 @@ Bon appétit!
 `
 	glamour.Run(content)
 }
-
-func ConsoleExample() {
-	consoleCmd()
-	consoleClear()
-	consoleWithColor()
-	consoleSelect()
-	consoleHelp()
-
-	consoleList()
-	consolePaper()
-	consoleProgress()
-	consoleRealtime()
-	consoleChoice()
-	consoleSpinner()
-	consoleSplit()
-	consoleStopwatch()
-	consoleTable()
-	consoleTab()
-	consoleCountdown()
-	consoleSequence()
-	consoleInline()
-	consoleParallel()
-	consoleDir()
-	consoleGlamour()
-}

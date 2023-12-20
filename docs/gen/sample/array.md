@@ -443,32 +443,3 @@ func arrCompact() {
 	fmt.Println("Compact remove all falsy values: ", result)
 }
 ```
-
-### ArrayExample
-
-```go
-func ArrayExample() {
-	arrEqual()
-	arrIncludes()
-	arrMost()
-	arrSum()
-	arrChunk()
-	arrDiff()
-	arrDrop()
-	arrIndex()
-	arrMerge()
-	arrCompact()
-
-	arrIntersect()
-	arrMin()
-	arrMax()
-
-	arrKeyBy()
-	arrIndexBy()
-	arrFilterBy()
-	arrRejectBy()
-	arrFindBy()
-	arrForBy()
-	arrMapBy()
-}
-```

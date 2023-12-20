@@ -330,32 +330,3 @@ Bon appétit!
 	glamour.Run(content)
 }
 ```
-
-### ConsoleExample
-
-```go
-func ConsoleExample() {
-	consoleCmd()
-	consoleClear()
-	consoleWithColor()
-	consoleSelect()
-	consoleHelp()
-
-	consoleList()
-	consolePaper()
-	consoleProgress()
-	consoleRealtime()
-	consoleChoice()
-	consoleSpinner()
-	consoleSplit()
-	consoleStopwatch()
-	consoleTable()
-	consoleTab()
-	consoleCountdown()
-	consoleSequence()
-	consoleInline()
-	consoleParallel()
-	consoleDir()
-	consoleGlamour()
-}
-```

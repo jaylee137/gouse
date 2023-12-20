@@ -1,4 +1,4 @@
-package main
+package tools
 
 import (
 	"fmt"
@@ -11,9 +11,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func main() {
-	var outputPath = "docs/gen"
-
+func Doc(outputPath string) {
 	if len(os.Args) < 2 {
 		println("Please provide at least one path to a file or directory")
 		return

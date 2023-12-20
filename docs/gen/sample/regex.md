@@ -40,13 +40,3 @@ func regexMatchIndex() {
 	}
 }
 ```
-
-### RegexExample
-
-```go
-func RegexExample() {
-	regexIsMatch()
-	regexMatch()
-	regexMatchIndex()
-}
-```

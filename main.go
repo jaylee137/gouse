@@ -1,6 +1,8 @@
 package main
 
 import (
+	"flag"
+
 	"github.com/thuongtruong1009/gouse/sample"
 	"github.com/thuongtruong1009/gouse/strings"
 )
@@ -10,18 +12,12 @@ func Starter() {
 }
 
 func main() {
-	// Starter()
-	// sample.ArrayExample()
-	// sample.ConsoleExample()
-	// sample.DateExample()
-	// sample.FunctionExample()
-	// sample.HelperExample()
-	// sample.IOExample()
-	// sample.MathExample()
-	// sample.NetExample()
-	// sample.NumberExample()
-	// sample.RegexExample()
-	// sample.StringExample()
-	sample.StructExample()
-	// sample.TypeExample()
+	Starter()
+
+	// only for development mode testing
+	isDev := flag.Bool("isDev", false, "a bool type for toggle enviroment mode")
+	flag.Parse()
+	if *isDev {
+		sample.Run()
+	}
 }

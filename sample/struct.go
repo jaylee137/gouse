@@ -118,14 +118,3 @@ func structHas() {
 	hasEmpty := structs.HasEmpty(person, "Email")
 	fmt.Printf("Has empty: %+v\n", hasEmpty)
 }
-
-func StructExample() {
-	structMerge()
-	structRemove()
-	structAdd()
-	structSet()
-	structGet()
-
-	structClone()
-	structHas()
-}

@@ -1,8 +1,11 @@
 ./**/node_modules
 ./**/.next
 
-coverage.out
+*.out
 tmp
 *.txt
 
 *.sh
+
+*.log
+*.prof

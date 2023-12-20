@@ -98,16 +98,3 @@ func funcRunTime() {
 	fmt.Printf("Function run in: %v\n", duration)
 }
 ```
-
-### FunctionExample
-
-```go
-func FunctionExample() {
-	funcDelay()
-	funcRetry()
-	funcTimes()
-	funcInterval()
-	funcLock()
-	funcRunTime()
-}
-```

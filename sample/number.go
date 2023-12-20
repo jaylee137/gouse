@@ -14,9 +14,3 @@ func numClamp() {
 func numInRange() {
 	println("Check number is in range: ", number.InRange(5, 1, 10))
 }
-
-func NumberExample() {
-	numRandom()
-	numClamp()
-	numInRange()
-}

@@ -25,9 +25,3 @@ func regexMatchIndex() {
 		println("Not found index match regex")
 	}
 }
-
-func RegexExample() {
-	regexIsMatch()
-	regexMatch()
-	regexMatchIndex()
-}

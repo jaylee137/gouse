@@ -1,19 +1,21 @@
 export GO111MODULE=on
 
+dev=false
+
 install:
 	go get -v ./...
 	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
 
 run:
-	go run main.go
+	go run main.go -isDev=$(dev)
 
 build:
 	go build ./...
 
 doc:
 	@echo "Generating docs..."
-	go run tools/doc.go ./sample
+	go run docs/generate.go ./sample
 	@echo "Done!"
 
 test:
@@ -25,7 +27,7 @@ test:
 
 bench:
 	@echo "Running benchmarks..."
-	go test -count 5 -run=^# -bench=. ./number/...
+	go test -count 5 -run=^# -benchmem -cpuprofile=cpu.out -memprofile=mem.out -bench=. ./number/... ./regex/...
 	@echo "Done!"
 
 lint:
@@ -35,7 +37,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	bash count.sh public/count.svg true 13708a array console date function helper io math net number regex strings structs types
+	bash count.sh public/count.svg true 13708a array console date function helper io math net number regex strings structs tools types
 	@echo "Done!"
 
 pre:

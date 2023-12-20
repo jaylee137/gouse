@@ -55,7 +55,7 @@
 - [x] [`Regex`](docs/gen/sample/regex.md)
 - [x] [`Struct`](docs/gen/sample/struct.md)
 - [x] [`String`](docs/gen/sample/string.md)
-- [ ] Tools
+- [x] [`Tool`](docs/gen/sample/tool.md)
 - [x] [`Type`](docs/gen/sample/type.md)
 
 ## 📋 Requirements

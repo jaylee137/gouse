@@ -235,29 +235,3 @@ func ioWritePath() {
 	}
 	println("File updated successfully.")
 }
-
-func IOExample() {
-	ioCheckDir()
-	ioCreateDir()
-	ioRemoveDir()
-	ioLsDir()
-	ioHierarchyDir()
-	ioCurrentDir()
-
-	ioCheckFile()
-	ioCreateFile()
-	ioRemoveFile()
-	ioReadFileByLine()
-	ioFileInfo()
-	ioRenameFile()
-	ioCopyFile()
-	ioTruncateFile()
-	ioCleanFile()
-	ioWriteToFile()
-	ioAppendToFile()
-	ioFileObj()
-
-	ioCreatePath()
-	ioReadPath()
-	ioWritePath()
-}

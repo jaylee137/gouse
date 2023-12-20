@@ -201,39 +201,3 @@ func mathTransition() {
 	println("Distance: ", fmt.Sprintf("%f", math.Distance(speed, time)))
 	println("Time: ", fmt.Sprintf("%f", math.Time(distance, speed)))
 }
-
-func MathExample() {
-	mathIsPrime()
-	mathIsEven()
-	mathIsOdd()
-	mathIsPerfectSquare()
-
-	mathAbs()
-	mathFloor()
-	mathCeil()
-	mathRound()
-	mathMinMax()
-	mathOperators()
-	mathPower()
-	mathFactorial()
-	mathRoot()
-
-	mathLog()
-	mathPytago()
-	mathTrigonometry()
-	mathTransition()
-
-	mathRect()
-	mathCircle()
-	mathTriangle()
-	mathSquare()
-	mathCube()
-	mathSphere()
-	mathCylinder()
-	mathCone()
-	mathTrapezoid()
-	mathParallelogram()
-	mathRhombus()
-	mathEllipse()
-	mathPolygon()
-}

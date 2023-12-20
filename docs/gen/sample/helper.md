@@ -35,14 +35,3 @@ func helperAutoMdDoc() {
 	helper.AutoMdDoc(inputFilePath, outputFilePath)
 }
 ```
-
-### HelperExample
-
-```go
-func HelperExample() {
-	helperRandomID()
-	helperUUID()
-
-	helperAutoMdDoc()
-}
-```
