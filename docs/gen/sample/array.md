@@ -5,7 +5,6 @@
 ```go
 import (
 	"fmt"
-
 	"github.com/thuongtruong1009/gouse/array"
 )
 ```

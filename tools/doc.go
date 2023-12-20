@@ -86,6 +86,9 @@ func main() {
 				fmt.Println("Error writing file:", err)
 				return
 			}
+
+			functions = nil
+			result = nil
 		}
 	}
 }

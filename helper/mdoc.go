@@ -18,7 +18,7 @@ type Function struct {
 }
 
 func (f Function) HighlightImport() string {
-	return fmt.Sprintf("```go\nimport (%s)\n```\n", f.Import)
+	return fmt.Sprintf("```go\nimport (\n%s)\n```\n", f.Import)
 }
 
 func (f Function) HighlightBody() string {
@@ -42,7 +42,7 @@ func extractImports(content []byte) string {
 		if genDecl, ok := decl.(*ast.GenDecl); ok && genDecl.Tok == token.IMPORT {
 			for _, spec := range genDecl.Specs {
 				if importSpec, ok := spec.(*ast.ImportSpec); ok {
-					result = append(result, fmt.Sprintf("\n\t%s", string(content[importSpec.Pos()-1:importSpec.End()]))...)
+					result = append(result, fmt.Sprintf("\t%s", string(content[importSpec.Pos()-1:importSpec.End()]))...)
 				}
 			}
 		}

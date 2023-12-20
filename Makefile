@@ -13,7 +13,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go sample
+	go run tools/doc.go ./sample
 	@echo "Done!"
 
 test:
