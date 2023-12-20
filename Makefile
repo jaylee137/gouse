@@ -27,7 +27,7 @@ test:
 
 bench:
 	@echo "Running benchmarks..."
-	go test -count 5 -run=^# -benchmem -cpuprofile=cpu.out -memprofile=mem.out -bench=. ./number/... ./regex/...
+	go test -count 5 -run=^# -bench=. ./number/... ./regex/...
 	@echo "Done!"
 
 lint:

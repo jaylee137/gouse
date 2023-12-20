@@ -1,7 +1,6 @@
 package tools
 
 import (
-	"flag"
 	"log"
 	_ "net/http/pprof"
 	"os"
@@ -9,14 +8,7 @@ import (
 	"runtime/pprof"
 )
 
-// var cpuprofile = flag.String("cpuprofile", "", "write cpu profile to `file`")
-// var memprofile = flag.String("memprofile", "", "write memory profile to `file`")
-
-var cpuprofile = "cpu.prof"
-var memprofile = "mem.prof"
-
-func Profile() {
-	flag.Parse()
+func Profile(cpuprofile, memprofile string) {
 	if cpuprofile != "" {
 		f, err := os.Create(cpuprofile)
 		if err != nil {

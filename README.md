@@ -42,6 +42,9 @@
 - [x] [`Console`](docs/gen/sample/console.md)
 - [ ] Collection
 - [ ] Connection
+- [ ] Config
+- [ ] Cron
+- [ ] Chart
 - [x] [`Date`](docs/gen/sample/date.md)
 - [ ] Error
 - [x] [`Function`](docs/gen/sample/function.md)
@@ -211,3 +214,4 @@ Special thanks to the following dependencies that helped make this project possi
 - [File handling in Golang](https://www.cloudhadoop.com/2018/11/learn-golang-tutorials-file-directory.html)
 - [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)
 - [Dynamic HTML](https://css-tricks.com/dynamic-page-replacing-content)
+- [Profiling Go Programs](https://blog.golang.org/pprof) - [Example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6)
