@@ -1,14 +1,15 @@
 export GO111MODULE=on
 
-dev=false
-
 install:
 	go get -v ./...
 	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
 
-run:
-	go run main.go -isDev=$(dev)
+start:
+	go run main.go
+
+dev:
+	go run main.go -isDev=true
 
 build:
 	go build ./...
@@ -37,7 +38,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	bash count.sh public/count.svg true 13708a array console date function helper io math net number regex strings structs tools types
+	bash count.sh public/count.svg true 13708a array config console date function helper io math net number regex strings structs tools types
 	@echo "Done!"
 
 pre:

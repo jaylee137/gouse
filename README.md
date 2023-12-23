@@ -38,28 +38,28 @@
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
 - [ ] API
-- [x] [`Array`](docs/gen/sample/array.md)
-- [x] [`Console`](docs/gen/sample/console.md)
+- ✅ [`Array`](docs/gen/sample/array.md)
+- ✅ [`Console`](docs/gen/sample/console.md)
 - [ ] Collection
 - [ ] Connection
 - [ ] Config
 - [ ] Cron
 - [ ] Chart
-- [x] [`Date`](docs/gen/sample/date.md)
+- ✅ [`Date`](docs/gen/sample/date.md)
 - [ ] Error
-- [x] [`Function`](docs/gen/sample/function.md)
-- [x] [`Helper`](docs/gen/sample/helper.md)
-- [x] [`I/O`](docs/gen/sample/io.md)
+- ✅ [`Function`](docs/gen/sample/function.md)
+- ✅ [`Helper`](docs/gen/sample/helper.md)
+- ✅ [`I/O`](docs/gen/sample/io.md)
 - [ ] Lang
 - [ ] Log
-- [x] [`Math`](docs/gen/sample/math.md)
-- [x] [`Net`](docs/gen/sample/net.md)
-- [x] [`Number`](docs/gen/sample/number.md)
-- [x] [`Regex`](docs/gen/sample/regex.md)
-- [x] [`Struct`](docs/gen/sample/struct.md)
-- [x] [`String`](docs/gen/sample/string.md)
-- [x] [`Tool`](docs/gen/sample/tool.md)
-- [x] [`Type`](docs/gen/sample/type.md)
+- ✅ [`Math`](docs/gen/sample/math.md)
+- ✅ [`Net`](docs/gen/sample/net.md)
+- ✅ [`Number`](docs/gen/sample/number.md)
+- ✅ [`Regex`](docs/gen/sample/regex.md)
+- ✅ [`Struct`](docs/gen/sample/struct.md)
+- ✅ [`String`](docs/gen/sample/string.md)
+- ✅ [`Tool`](docs/gen/sample/tool.md)
+- ✅ [`Type`](docs/gen/sample/type.md)
 
 ## 📋 Requirements
 
@@ -104,7 +104,7 @@ func main() {
 
 ## 📖 Documentation
 
-- Package documentation reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- To read the completely package documentation, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
 <!-- ## 📊 Benchmark
 

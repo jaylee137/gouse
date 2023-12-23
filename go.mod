@@ -12,6 +12,7 @@ require (
 	github.com/mattn/go-isatty v0.0.18
 	github.com/muesli/reflow v0.3.0
 	github.com/muesli/termenv v0.15.2
+	github.com/patrickmn/go-cache v2.1.0+incompatible
 )
 
 require (

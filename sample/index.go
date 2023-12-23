@@ -25,6 +25,11 @@ func arrayExample() {
 	arrMapBy()
 }
 
+func configExample() {
+	confCacheTmp()
+	confCacheLocal()
+}
+
 func consoleExample() {
 	consoleCmd()
 	consoleClear()
@@ -241,17 +246,18 @@ func typeExample() {
 }
 
 func Run() {
-	arrayExample()
-	consoleExample()
-	dateExample()
-	functionExample()
-	helperExample()
-	iOExample()
-	mathExample()
-	netExample()
-	numberExample()
-	regexExample()
-	stringExample()
-	structExample()
-	typeExample()
+	// arrayExample()
+	configExample()
+	// consoleExample()
+	// dateExample()
+	// functionExample()
+	// helperExample()
+	// iOExample()
+	// mathExample()
+	// netExample()
+	// numberExample()
+	// regexExample()
+	// stringExample()
+	// structExample()
+	// typeExample()
 }

@@ -30,6 +30,15 @@ func arrayExample() {
 }
 ```
 
+### configExample
+
+```go
+func configExample() {
+	confCacheTmp()
+	confCacheLocal()
+}
+```
+
 ### consoleExample
 
 ```go
@@ -297,18 +306,19 @@ func typeExample() {
 
 ```go
 func Run() {
-	arrayExample()
-	consoleExample()
-	dateExample()
-	functionExample()
-	helperExample()
-	iOExample()
-	mathExample()
-	netExample()
-	numberExample()
-	regexExample()
-	stringExample()
-	structExample()
-	typeExample()
+	// arrayExample()
+	configExample()
+	// consoleExample()
+	// dateExample()
+	// functionExample()
+	// helperExample()
+	// iOExample()
+	// mathExample()
+	// netExample()
+	// numberExample()
+	// regexExample()
+	// stringExample()
+	// structExample()
+	// typeExample()
 }
 ```
