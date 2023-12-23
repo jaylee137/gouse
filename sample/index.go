@@ -1,5 +1,22 @@
 package sample
 
+func Run() {
+	arrayExample()
+	cacheExample()
+	consoleExample()
+	dateExample()
+	functionExample()
+	helperExample()
+	iOExample()
+	mathExample()
+	netExample()
+	numberExample()
+	regexExample()
+	stringExample()
+	structExample()
+	typeExample()
+}
+
 func arrayExample() {
 	arrEqual()
 	arrIncludes()
@@ -25,9 +42,9 @@ func arrayExample() {
 	arrMapBy()
 }
 
-func configExample() {
-	confCacheTmp()
-	confCacheLocal()
+func cacheExample() {
+	cacheCacheLocal()
+	cacheCacheTmp()
 }
 
 func consoleExample() {
@@ -243,21 +260,4 @@ func typeExample() {
 	typeCheckUsername()
 	typeCheckPassword()
 	typeCheckPhone()
-}
-
-func Run() {
-	// arrayExample()
-	configExample()
-	// consoleExample()
-	// dateExample()
-	// functionExample()
-	// helperExample()
-	// iOExample()
-	// mathExample()
-	// netExample()
-	// numberExample()
-	// regexExample()
-	// stringExample()
-	// structExample()
-	// typeExample()
 }

@@ -5,12 +5,14 @@ import (
 	"time"
 )
 
+const desc = "Expected %v but it got %v"
+
 func TestToSecond(t *testing.T) {
 	second := 1
 	expected := time.Duration(second) * time.Second
 	actual := ToSecond(second)
 	if expected != actual {
-		t.Errorf("Expected %v but it got %v", expected, actual)
+		t.Errorf(desc, expected, actual)
 	}
 }
 
@@ -19,7 +21,7 @@ func TestToMinute(t *testing.T) {
 	expected := time.Duration(minute) * time.Minute
 	actual := ToMinute(minute)
 	if expected != actual {
-		t.Errorf("Expected %v but it got %v", expected, actual)
+		t.Errorf(desc, expected, actual)
 	}
 }
 
@@ -28,7 +30,7 @@ func TestToHour(t *testing.T) {
 	expected := time.Duration(hour) * time.Hour
 	actual := ToHour(hour)
 	if expected != actual {
-		t.Errorf("Expected %v but it got %v", expected, actual)
+		t.Errorf(desc, expected, actual)
 	}
 }
 

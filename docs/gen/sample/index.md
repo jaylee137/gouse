@@ -1,6 +1,27 @@
 # Index
 
 
+### Run
+
+```go
+func Run() {
+	arrayExample()
+	cacheExample()
+	consoleExample()
+	dateExample()
+	functionExample()
+	helperExample()
+	iOExample()
+	mathExample()
+	netExample()
+	numberExample()
+	regexExample()
+	stringExample()
+	structExample()
+	typeExample()
+}
+```
+
 ### arrayExample
 
 ```go
@@ -30,12 +51,12 @@ func arrayExample() {
 }
 ```
 
-### configExample
+### cacheExample
 
 ```go
-func configExample() {
-	confCacheTmp()
-	confCacheLocal()
+func cacheExample() {
+	cacheCacheLocal()
+	cacheCacheTmp()
 }
 ```
 
@@ -299,26 +320,5 @@ func typeExample() {
 	typeCheckUsername()
 	typeCheckPassword()
 	typeCheckPhone()
-}
-```
-
-### Run
-
-```go
-func Run() {
-	// arrayExample()
-	configExample()
-	// consoleExample()
-	// dateExample()
-	// functionExample()
-	// helperExample()
-	// iOExample()
-	// mathExample()
-	// netExample()
-	// numberExample()
-	// regexExample()
-	// stringExample()
-	// structExample()
-	// typeExample()
 }
 ```

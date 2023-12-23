@@ -37,29 +37,32 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
-- [ ] API
-- ✅ [`Array`](docs/gen/sample/array.md)
-- ✅ [`Console`](docs/gen/sample/console.md)
-- [ ] Collection
-- [ ] Connection
-- [ ] Config
-- [ ] Cron
-- [ ] Chart
-- ✅ [`Date`](docs/gen/sample/date.md)
-- [ ] Error
-- ✅ [`Function`](docs/gen/sample/function.md)
-- ✅ [`Helper`](docs/gen/sample/helper.md)
-- ✅ [`I/O`](docs/gen/sample/io.md)
-- [ ] Lang
-- [ ] Log
-- ✅ [`Math`](docs/gen/sample/math.md)
-- ✅ [`Net`](docs/gen/sample/net.md)
-- ✅ [`Number`](docs/gen/sample/number.md)
-- ✅ [`Regex`](docs/gen/sample/regex.md)
-- ✅ [`Struct`](docs/gen/sample/struct.md)
-- ✅ [`String`](docs/gen/sample/string.md)
-- ✅ [`Tool`](docs/gen/sample/tool.md)
-- ✅ [`Type`](docs/gen/sample/type.md)
+[ ] API <br/>
+✅ [`Array`](docs/gen/sample/array.md) <br/>
+✅ [`Cache`](docs/gen/sample/cache.md) <br/>
+✅ [`Console`](docs/gen/sample/console.md) <br/>
+[ ] Collection <br/>
+[ ] Connection <br/>
+[ ] Config <br/>
+[ ] Cron <br/>
+[ ] Chart <br/>
+✅ [`Date`](docs/gen/sample/date.md) <br/>
+[ ] Error <br/>
+✅ [`Function`](docs/gen/sample/function.md) <br/>
+[ ] Json <br/>
+✅ [`Helper`](docs/gen/sample/helper.md) <br/>
+✅ [`I/O`](docs/gen/sample/io.md) <br/>
+[ ] Image <br/>
+[ ] Lang <br/>
+[ ] Log <br/>
+✅ [`Math`](docs/gen/sample/math.md) <br/>
+✅ [`Net`](docs/gen/sample/net.md) <br/>
+✅ [`Number`](docs/gen/sample/number.md) <br/>
+✅ [`Regex`](docs/gen/sample/regex.md) <br/>
+✅ [`Struct`](docs/gen/sample/struct.md) <br/>
+✅ [`String`](docs/gen/sample/string.md) <br/>
+✅ [`Tool`](docs/gen/sample/tool.md) <br/>
+✅ [`Type`](docs/gen/sample/type.md) <br/>
 
 ## 📋 Requirements
 
