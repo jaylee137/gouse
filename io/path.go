@@ -1,7 +1,6 @@
 package io
 
 import (
-	"io/ioutil"
 	"os"
 	"path/filepath"
 )
@@ -39,7 +38,7 @@ func ReadPath(relativePath string) ([]byte, error) {
 	}
 
 	// Read the file
-	content, err := ioutil.ReadFile(absolutePath)
+	content, err := os.ReadFile(absolutePath)
 	if err != nil {
 		return nil, err
 	}
@@ -55,7 +54,7 @@ func WritePath(relativePath string, content []byte) error {
 	}
 
 	// Write to the file
-	err = ioutil.WriteFile(absolutePath, content, 0644)
+	err = os.WriteFile(absolutePath, content, 0644)
 	if err != nil {
 		return err
 	}

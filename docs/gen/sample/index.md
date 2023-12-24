@@ -302,6 +302,15 @@ func structExample() {
 }
 ```
 
+### toolsExample
+
+```go
+func toolsExample() {
+	toolDoc()
+	toolProfile()
+}
+```
+
 ### typeExample
 
 ```go

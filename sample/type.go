@@ -55,7 +55,6 @@ func typeCheck() {
 	println("Check type is map: ", types.IsMap(map[string]int{"a": 1}))
 	println("Check type is struct: ", types.IsStruct(struct{}{}))
 	println("Check type is error: ", types.IsError(new(error)))
-	println("Check type is interface: ", types.IsInterface(new(interface{})))
 	println("Check type is channel: ", types.IsChannel(make(chan int)))
 	println("Check type is array: ", types.IsArray([3]int{1, 2, 3}))
 	println("Check type is unsafe pointer: ", types.IsUnsafePointer(new(*int)))

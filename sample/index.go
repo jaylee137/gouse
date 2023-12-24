@@ -245,6 +245,11 @@ func structExample() {
 	structHas()
 }
 
+func toolsExample() {
+	toolDoc()
+	toolProfile()
+}
+
 func typeExample() {
 	typeStructConvert()
 	typeStringConvert()

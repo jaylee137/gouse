@@ -125,6 +125,12 @@ func main() {
 
 <!-- ## 📚 Examples -->
 
+<!-- project structure -->
+
+## 📁 Project Structure
+
+![Project Structure](https://raw.githubusercontent.com/thuongtruong1009/gouse/diagram/project-structure.svg)
+
 ## 🛠️ Development
 
 #### 1. Clone this repository
@@ -227,6 +233,7 @@ Special thanks to the following dependencies that helped make this project possi
 - [Survey v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
 - [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
 - [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
+- [BenchStat](golang.org/x/tools/cmd/benchstat) - A command-line tool for analyzing benchmarks and printing pretty reports 📊
 
 ## 📚 References
 

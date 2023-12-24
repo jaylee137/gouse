@@ -75,14 +75,6 @@ func TestIsError(t *testing.T) {
 	}
 }
 
-func TestIsInterface(t *testing.T) {
-	var i interface{} = 1
-
-	if !IsInterface(i) {
-		t.Error("IsInterface(i) should return true")
-	}
-}
-
 func TestIsChannel(t *testing.T) {
 	var i chan int
 	if !IsChannel(i) {

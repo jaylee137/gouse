@@ -48,11 +48,6 @@ func IsError(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "error")
 }
 
-func IsInterface(v interface{}) bool {
-	_, ok := v.(interface{})
-	return ok
-}
-
 func IsChannel(v interface{}) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "chan")
 }
@@ -104,39 +99,22 @@ func IsEmpty(v interface{}) bool {
 	if v == nil {
 		return true
 	}
-	switch v.(type) {
+
+	switch value := v.(type) {
 	case string:
-		return v.(string) == ""
-	case int:
-		return v.(int) == 0
-	case int8:
-		return v.(int8) == 0
-	case int16:
-		return v.(int16) == 0
-	case int32:
-		return v.(int32) == 0
-	case int64:
-		return v.(int64) == 0
-	case uint:
-		return v.(uint) == 0
-	case uint8:
-		return v.(uint8) == 0
-	case uint16:
-		return v.(uint16) == 0
-	case uint32:
-		return v.(uint32) == 0
-	case uint64:
-		return v.(uint64) == 0
-	case float32:
-		return v.(float32) == 0
-	case float64:
-		return v.(float64) == 0
+		return value == ""
+	case int, int8, int16, int32, int64:
+		return value == 0
+	case uint, uint8, uint16, uint32, uint64:
+		return value == 0
+	case float32, float64:
+		return value == 0
 	case bool:
-		return !v.(bool)
+		return !value
 	case []interface{}:
-		return len(v.([]interface{})) == 0
+		return len(value) == 0
 	case map[string]interface{}:
-		return len(v.(map[string]interface{})) == 0
+		return len(value) == 0
 	default:
 		return false
 	}
