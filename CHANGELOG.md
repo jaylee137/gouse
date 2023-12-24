@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Initial release
-- Array, type, and utility functions
+- Setup project structure
+- Create utility functions
 - Documentation
-- CI tests
+- Unit tests, benchmark tests, code coverage, static checks
+- Plugin integration, CI, code quality checks

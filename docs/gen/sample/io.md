@@ -324,3 +324,64 @@ func ioWritePath() {
 	println("File updated successfully.")
 }
 ```
+
+### ioZip
+
+```go
+func ioZip() {
+	filesToZip := []string{"file1.txt", "file2.txt"}
+	zipFileName := "archive.zip"
+	err := io.Zip(zipFileName, filesToZip)
+	if err != nil {
+		fmt.Println("Error zipping files:", err)
+	}
+
+	println("Files zipped successfully:", zipFileName)
+}
+```
+
+### ioUnzip
+
+```go
+func ioUnzip() {
+	destFolder := "unzipped"
+	zipFileName := "archive.zip"
+	err := io.Unzip(zipFileName, destFolder)
+	if err != nil {
+		fmt.Println("Error unzipping files:", err)
+	}
+
+	println("Files unzipped successfully to:", destFolder)
+}
+```
+
+### ioEncode
+
+```go
+func ioEncode() {
+	data := []byte("This is a sample data")
+
+	encodedData, err := io.Encode(data)
+	if err != nil {
+		fmt.Println("Error encoding data:", err)
+		return
+	}
+	fmt.Println("Raw data:", string(data))
+	fmt.Println("Encoded data:", string(encodedData))
+}
+```
+
+### ioDecode
+
+```go
+func ioDecode() {
+	data := []byte("VGhpcyBpcyBhIHNhbXBsZSBkYXRh")
+	decodedData, err := io.Decode(data)
+	if err != nil {
+		fmt.Println("Error decoding data:", err)
+		return
+	}
+	fmt.Println("Raw encoded data:", string(data))
+	fmt.Println("Decoded data:", string(decodedData))
+}
+```

@@ -1,40 +1,93 @@
 package io
 
 import (
-	"bytes"
-	"compress/gzip"
 	"io"
+	"path/filepath"
+
+	"archive/zip"
+	"encoding/base64"
+	"os"
 )
 
-func GzipEncode(input []byte) ([]byte, error) {
-	var buf bytes.Buffer
-	w := gzip.NewWriter(&buf)
-	defer w.Close()
-	_, err := w.Write(input)
-	if err == nil {
-		w.Close()
+func Zip(zipFileName string, files []string) error {
+	zipFile, err := os.Create(zipFileName)
+	if err != nil {
+		return err
 	}
-	return buf.Bytes(), err
+	defer zipFile.Close()
+
+	zipWriter := zip.NewWriter(zipFile)
+	defer zipWriter.Close()
+
+	for _, file := range files {
+		fileToZip, err := os.Open(file)
+		if err != nil {
+			return err
+		}
+		defer fileToZip.Close()
+
+		zipWriter, err := zipWriter.Create(file)
+		if err != nil {
+			return err
+		}
+
+		_, err = io.Copy(zipWriter, fileToZip)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
-func GzipDecode(input []byte) ([]byte, error) {
-	reader, err := gzip.NewReader(bytes.NewBuffer(input))
+func Unzip(zipFile, destFolder string) error {
+	zipReader, err := zip.OpenReader(zipFile)
+	if err != nil {
+		return err
+	}
+	defer zipReader.Close()
+
+	for _, file := range zipReader.File {
+		filePath := filepath.Join(destFolder, file.Name)
+
+		if file.FileInfo().IsDir() {
+			os.MkdirAll(filePath, os.ModePerm)
+			continue
+		}
+
+		if err := os.MkdirAll(filepath.Dir(filePath), os.ModePerm); err != nil {
+			return err
+		}
+
+		fileToExtract, err := file.Open()
+		if err != nil {
+			return err
+		}
+		defer fileToExtract.Close()
+
+		targetFile, err := os.Create(filePath)
+		if err != nil {
+			return err
+		}
+		defer targetFile.Close()
+
+		_, err = io.Copy(targetFile, fileToExtract)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func Encode(input []byte) ([]byte, error) {
+	encodedData := base64.StdEncoding.EncodeToString(input)
+	return []byte(encodedData), nil
+}
+
+func Decode(input []byte) ([]byte, error) {
+	decodedData, err := base64.StdEncoding.DecodeString(string(input))
 	if err != nil {
 		return nil, err
 	}
-	defer reader.Close()
-	var result []byte
-	buf := make([]byte, 1024)
-	for {
-		count, err := reader.Read(buf)
-		if err != nil && err != io.EOF {
-			return nil, err
-		}
-		if count > 0 {
-			result = append(result, buf[0:count]...)
-		} else {
-			break
-		}
-	}
-	return result, nil
+	return decodedData, nil
 }

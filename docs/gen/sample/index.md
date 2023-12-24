@@ -18,6 +18,7 @@ func Run() {
 	regexExample()
 	stringExample()
 	structExample()
+	toolsExample()
 	typeExample()
 }
 ```
@@ -160,6 +161,11 @@ func iOExample() {
 	ioCreatePath()
 	ioReadPath()
 	ioWritePath()
+
+	ioZip()
+	ioUnzip()
+	ioEncode()
+	ioDecode()
 }
 ```
 

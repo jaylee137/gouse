@@ -23,16 +23,28 @@
 - `Javascript` and `Redis` user-friendly syntax.
 - No config - import as utility functions.
 - Lightweight package: Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
-- Powerful package for handling complex logic usecases such as database connection, build APIs, error handling, log management... can all be set up quickly and easily.
 - Gouse provides a wide variety of available methods, taking the hassle out of working with arrays, numbers, objects, strings, etc. Each method has a different set of features, so you can pick the ones that fit your project best.
 - Comprehensive documentation and examples.
-- Suitable for small to large projects and compatible on all OS platforms
+- Powerful package which suitable for small to large projects and compatible on all OS platforms
+- Thanks to Gouse, you can:
+  - Setup and scale projects rapidly.
+  - Handle complex logic usecases such as database connection, build APIs, error handling, log management...
+  - Optimize performance and increase productivity.
+  - Build easily a complete system with available functions.
+  - Reduce the number of lines of code and make it easier to read, understand and maintain.
+  - Avoid compatibility conflicts and unexpected errors.
+  - And more...
 
 ## ✨ Motivation
 
 - Go has emerged as a server language, but it still doesn't have complete and consistent packages available to support coding development.
-
-- To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
+  - Developers must write by hand or search manually. That wastes time and even causes many compatibility conflicts
+  - Must update each dependent package every time you update
+  - Unexpected errors can easily arise during execution
+  - Performance is not optimized
+  - The number of lines of code is very long that not easy to read and understand
+  - Code logic may not be consistent, making it difficult to maintain and scale
+- `-->` To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
 
 ## 🚀 Features
 
@@ -227,13 +239,14 @@ $ make doc
 
 ## 🧬 Dependencies
 
-Special thanks to the following dependencies that helped make this project possible:
+- Gouse is built on top of the following below and others open-source projects
 
-- [Google UUID](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
-- [Survey v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
-- [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
-- [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
-- [BenchStat](golang.org/x/tools/cmd/benchstat) - A command-line tool for analyzing benchmarks and printing pretty reports 📊
+- Special thanks to the following dependencies that helped make this project possible:
+  - [Google UUID](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
+  - [Survey v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
+  - [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
+  - [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
+  - [BenchStat](golang.org/x/tools/cmd/benchstat) - A command-line tool for analyzing benchmarks and printing pretty reports 📊
 
 ## 📚 References
 
