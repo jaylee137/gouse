@@ -16,6 +16,7 @@ require (
 )
 
 require (
+	github.com/aclements/go-moremath v0.0.0-20210112150236-f10218a38794 // indirect
 	github.com/alecthomas/chroma v0.10.0 // indirect
 	github.com/atotto/clipboard v0.1.4 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
@@ -40,9 +41,10 @@ require (
 	github.com/stretchr/testify v1.8.2 // indirect
 	github.com/yuin/goldmark v1.5.2 // indirect
 	github.com/yuin/goldmark-emoji v1.0.1 // indirect
-	golang.org/x/net v0.8.0 // indirect
+	golang.org/x/net v0.19.0 // indirect
+	golang.org/x/perf v0.0.0-20231127181059-b53752263861 // indirect
 	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/sys v0.12.0 // indirect
-	golang.org/x/term v0.6.0 // indirect
-	golang.org/x/text v0.8.0 // indirect
+	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/term v0.15.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 )

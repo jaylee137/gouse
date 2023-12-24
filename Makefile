@@ -1,9 +1,8 @@
-export GO111MODULE=on
-
 install:
 	go get -v ./...
 	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
+	go install golang.org/x/perf/cmd/benchstat
 
 start:
 	go run main.go
@@ -26,9 +25,21 @@ test:
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
+BENCH_CMD = go test -count 5 -run=^\# -bench=. ./number/... ./regex/...
+
 bench:
 	@echo "Running benchmarks..."
-	go test -count 5 -run=^# -bench=. ./number/... ./regex/...
+	$(BENCH_CMD)
+	@echo "Done!"
+
+bench_filter:
+	BENCH_CMD -benchmem > $(f)
+
+bench_stat:
+	@echo "Running stat filter benchmarks..."
+	make bench_filter f=old.txt
+	make bench_filter f=new.txt
+	benchstat old.txt new.txt
 	@echo "Done!"
 
 lint:

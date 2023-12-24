@@ -17,15 +17,16 @@
 
 # ![](/public/banner.png)
 
-## 📝 Why Gouse?
+## 🧠 Why Gouse?
 
 - Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Javascript`](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [`Lodash`](https://lodash.com/).
-- Gouse provides a wide variety of methods, taking the hassle out of working with arrays, numbers, objects, strings, etc.
-- Each method has a different set of features, so you can pick the ones that fit your project best.
-- Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
 - `Javascript` and `Redis` user-friendly syntax.
 - No config - import as utility functions.
-- Available functions to handle complex logic usecases such as database connection, build APIs, error handling, log management... can all be set up quickly and easily.
+- Lightweight package: Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
+- Powerful package for handling complex logic usecases such as database connection, build APIs, error handling, log management... can all be set up quickly and easily.
+- Gouse provides a wide variety of available methods, taking the hassle out of working with arrays, numbers, objects, strings, etc. Each method has a different set of features, so you can pick the ones that fit your project best.
+- Comprehensive documentation and examples.
+- Suitable for small to large projects and compatible on all OS platforms
 
 ## ✨ Motivation
 
@@ -37,24 +38,25 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
-[ ] API <br/>
-✅ [`Array`](docs/gen/sample/array.md) <br/>
-✅ [`Cache`](docs/gen/sample/cache.md) <br/>
-✅ [`Console`](docs/gen/sample/console.md) <br/>
-[ ] Collection <br/>
+<!-- [ ] API <br/> -->
+<!-- [ ] Collection <br/>
 [ ] Connection <br/>
 [ ] Config <br/>
 [ ] Cron <br/>
-[ ] Chart <br/>
+[ ] Chart <br/> -->
+<!-- [ ] Error <br/> -->
+<!-- [ ] Json <br/> -->
+<!-- [ ] Image <br/>
+[ ] Lang <br/>
+[ ] Log <br/> -->
+
+✅ [`Array`](docs/gen/sample/array.md) <br/>
+✅ [`Cache`](docs/gen/sample/cache.md) <br/>
+✅ [`Console`](docs/gen/sample/console.md) <br/>
 ✅ [`Date`](docs/gen/sample/date.md) <br/>
-[ ] Error <br/>
 ✅ [`Function`](docs/gen/sample/function.md) <br/>
-[ ] Json <br/>
 ✅ [`Helper`](docs/gen/sample/helper.md) <br/>
 ✅ [`I/O`](docs/gen/sample/io.md) <br/>
-[ ] Image <br/>
-[ ] Lang <br/>
-[ ] Log <br/>
 ✅ [`Math`](docs/gen/sample/math.md) <br/>
 ✅ [`Net`](docs/gen/sample/net.md) <br/>
 ✅ [`Number`](docs/gen/sample/number.md) <br/>
@@ -107,11 +109,21 @@ func main() {
 
 ## 📖 Documentation
 
-- To read the completely package documentation, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- To read the completely package documentation guide, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
 
-<!-- ## 📊 Benchmark
+## 📊 Benchmark
 
-## 📚 Examples -->
+`GOOS`: windows
+
+`GOARCH`: amd64
+
+`CPU`: AMD Ryzen 5 5600U with Radeon Graphics (12) @ 2.300GHz
+
+`ITERATIONS`: 5
+
+`INPUT`: 1000000
+
+<!-- ## 📚 Examples -->
 
 ## 🛠️ Development
 
@@ -157,6 +169,12 @@ $ make lint
 $ make bench
 ```
 
+#### 8. Auto-generate docs
+
+```bash
+$ make doc
+```
+
 ## 📝 Contributing
 
 - We welcome your contributions! If you're looking for issues to work on, try looking at the good first issue list. We do our best to tag issues suitable for new external contributors with that label, so it's a great way to find something you can help with!
@@ -178,7 +196,9 @@ $ make bench
 
 ## 📜 Changelog
 
-- [`CHANGELOG`](CHANGELOG.md) for project history.
+- Gouse is under active development. This means that new features, bug fixes, and breaking changes will be released frequently. We encourage you to keep the [`CHANGELOG`](CHANGELOG.md) open while upgrading to see what's new!
+
+- For more information on how to use the changelog, please refer to [`Keeping a Changelog`](https://keepachangelog.com/en/1.0.0/).
 
 ## 🌸 Sponsor
 
@@ -196,16 +216,17 @@ $ make bench
 
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thuongtruongofficial@gmail.com)
 [![Github](https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thuongtruong1009)
-
-<!-- dependencies used -->
+[![Linkedin](https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thuongtruong1009)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/thuongtruong1009)
 
 ## 🧬 Dependencies
 
 Special thanks to the following dependencies that helped make this project possible:
 
-- [github.com/google/uuid](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
-- [github.com/AlecAivazis/survey/v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
-- [github.com/charmbracelet/bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
+- [Google UUID](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
+- [Survey v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
+- [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
+- [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
 
 ## 📚 References
 
