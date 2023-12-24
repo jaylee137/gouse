@@ -4,7 +4,9 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/crypto")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/crypto"
+)
 ```
 ## Functions
 
@@ -22,7 +24,8 @@ func cryptoEncode() {
 	}
 	fmt.Println("Raw data:", string(data))
 	fmt.Println("Encoded data:", string(encodedData))
-}```
+}
+```
 
 ### cryptoDecode
 
@@ -36,7 +39,8 @@ func cryptoDecode() {
 	}
 	fmt.Println("Raw encoded data:", string(data))
 	fmt.Println("Decoded data:", string(decodedData))
-}```
+}
+```
 
 ### cryptoEncryptPassword
 
@@ -51,7 +55,8 @@ func cryptoEncryptPassword() {
 	}
 	fmt.Println("Raw data:", string(data))
 	fmt.Println("Encrypted data:", string(encryptedData))
-}```
+}
+```
 
 ### cryptoDecryptPassword
 
@@ -64,7 +69,8 @@ func cryptoDecryptPassword() {
 		return
 	}
 	println("Password matched")
-}```
+}
+```
 
 ### cryptoEncryptFile
 
@@ -72,7 +78,8 @@ func cryptoDecryptPassword() {
 func cryptoEncryptFile() {
 	crypto.EncryptFile("sample.txt", []byte("password"))
 	println("File content encrypted")
-}```
+}
+```
 
 ### cryptoDecryptFile
 
@@ -80,4 +87,5 @@ func cryptoEncryptFile() {
 func cryptoDecryptFile() {
 	crypto.DecryptFile("sample.txt", []byte("password"))
 	println("File content decrypted")
-}```
+}
+```

@@ -2,7 +2,9 @@ install:
 	go get -v ./...
 	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
+	go get golang.org/x/perf/cmd/benchstat
 	go install golang.org/x/perf/cmd/benchstat
+	go install honnef.co/go/tools/cmd/staticcheck@latest
 
 start:
 	go run main.go
@@ -42,9 +44,14 @@ bench_stat:
 	benchstat old.txt new.txt
 	@echo "Done!"
 
-lint:
-	@echo "Running linter..."
+format:
+	@echo "Running format..."
 	gofmt -w -s . && goimports -w . && go fmt ./...
+	@echo "Done!"
+
+lint:
+	@echo "Running lint..."
+	staticcheck ./...
 	@echo "Done!"
 
 count:
@@ -53,7 +60,7 @@ count:
 	@echo "Done!"
 
 pre:
-	make build && make test && make doc && make lint
+	make build && make test && make format && make lint && make doc
 	git add .
 
 clean:

@@ -77,6 +77,9 @@ func DecryptFile(source string, password []byte) {
 	str := hex.EncodeToString(salt)
 
 	nonce, err := hex.DecodeString(str)
+	if err != nil {
+		panic(err.Error())
+	}
 
 	dk := pbkdf2.Key(key, nonce, 4096, 32, sha1.New)
 
