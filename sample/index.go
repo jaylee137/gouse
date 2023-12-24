@@ -4,6 +4,7 @@ func Run() {
 	arrayExample()
 	cacheExample()
 	consoleExample()
+	cryptoExample()
 	dateExample()
 	functionExample()
 	helperExample()
@@ -73,6 +74,15 @@ func consoleExample() {
 	consoleGlamour()
 }
 
+func cryptoExample() {
+	cryptoEncode()
+	cryptoDecode()
+	cryptoEncryptPassword()
+	cryptoDecryptPassword()
+	cryptoEncryptFile()
+	cryptoDecryptFile()
+}
+
 func dateExample() {
 	dateTime()
 
@@ -132,8 +142,6 @@ func iOExample() {
 
 	ioZip()
 	ioUnzip()
-	ioEncode()
-	ioDecode()
 }
 
 func mathExample() {

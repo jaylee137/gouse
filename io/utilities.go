@@ -1,12 +1,12 @@
 package io
 
 import (
-	"io"
-	"path/filepath"
-
 	"archive/zip"
-	"encoding/base64"
+	"errors"
+	"fmt"
+	"io"
 	"os"
+	"path/filepath"
 )
 
 func Zip(zipFileName string, files []string) error {
@@ -14,37 +14,56 @@ func Zip(zipFileName string, files []string) error {
 	if err != nil {
 		return err
 	}
-	defer zipFile.Close()
+	defer func() {
+		if closeErr := zipFile.Close(); closeErr != nil {
+			fmt.Println("Error closing zip file:", closeErr)
+		}
+	}()
 
 	zipWriter := zip.NewWriter(zipFile)
-	defer zipWriter.Close()
+	defer func() {
+		if closeErr := zipWriter.Close(); closeErr != nil {
+			fmt.Println("Error closing zip writer:", closeErr)
+		}
+	}()
 
 	for _, file := range files {
 		fileToZip, err := os.Open(file)
 		if err != nil {
 			return err
 		}
-		defer fileToZip.Close()
 
-		zipWriter, err := zipWriter.Create(file)
+		zipEntryWriter, err := zipWriter.Create(file)
 		if err != nil {
+			fileToZip.Close() // Close the file in case of an error
 			return err
 		}
 
-		_, err = io.Copy(zipWriter, fileToZip)
+		_, err = io.Copy(zipEntryWriter, fileToZip)
+		fileToZip.Close() // Close the file after copying
 		if err != nil {
 			return err
 		}
 	}
+
 	return nil
 }
+
+const maxFileSize = 100 * 1024 * 1024  // 100 MB
+const maxTotalSize = 500 * 1024 * 1024 // 500 MB
 
 func Unzip(zipFile, destFolder string) error {
 	zipReader, err := zip.OpenReader(zipFile)
 	if err != nil {
 		return err
 	}
-	defer zipReader.Close()
+	defer func() {
+		if closeErr := zipReader.Close(); closeErr != nil {
+			fmt.Println("Error closing zip reader:", closeErr)
+		}
+	}()
+
+	var totalSize int64
 
 	for _, file := range zipReader.File {
 		filePath := filepath.Join(destFolder, file.Name)
@@ -70,24 +89,20 @@ func Unzip(zipFile, destFolder string) error {
 		}
 		defer targetFile.Close()
 
-		_, err = io.Copy(targetFile, fileToExtract)
-		if err != nil {
+		// Check the size of the file before copying
+		fileSize, err := io.CopyN(targetFile, fileToExtract, maxFileSize)
+		if err != nil && err != io.EOF {
 			return err
+		}
+
+		// Update the total size
+		totalSize += fileSize
+
+		// Check the total size limit
+		if totalSize > maxTotalSize {
+			return errors.New("exceeded maximum total size limit for extraction")
 		}
 	}
 
 	return nil
-}
-
-func Encode(input []byte) ([]byte, error) {
-	encodedData := base64.StdEncoding.EncodeToString(input)
-	return []byte(encodedData), nil
-}
-
-func Decode(input []byte) ([]byte, error) {
-	decodedData, err := base64.StdEncoding.DecodeString(string(input))
-	if err != nil {
-		return nil, err
-	}
-	return decodedData, nil
 }

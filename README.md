@@ -50,21 +50,10 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
-<!-- [ ] API <br/> -->
-<!-- [ ] Collection <br/>
-[ ] Connection <br/>
-[ ] Config <br/>
-[ ] Cron <br/>
-[ ] Chart <br/> -->
-<!-- [ ] Error <br/> -->
-<!-- [ ] Json <br/> -->
-<!-- [ ] Image <br/>
-[ ] Lang <br/>
-[ ] Log <br/> -->
-
 ✅ [`Array`](docs/gen/sample/array.md) <br/>
 ✅ [`Cache`](docs/gen/sample/cache.md) <br/>
 ✅ [`Console`](docs/gen/sample/console.md) <br/>
+✅ [`Crypto`](docs/gen/sample/crypto.md) <br/>
 ✅ [`Date`](docs/gen/sample/date.md) <br/>
 ✅ [`Function`](docs/gen/sample/function.md) <br/>
 ✅ [`Helper`](docs/gen/sample/helper.md) <br/>
@@ -77,6 +66,23 @@
 ✅ [`String`](docs/gen/sample/string.md) <br/>
 ✅ [`Tool`](docs/gen/sample/tool.md) <br/>
 ✅ [`Type`](docs/gen/sample/type.md) <br/>
+
+- [ ] API
+- [ ] Collection
+- [ ] Connection
+- [ ] Config
+- [ ] Cron
+- [ ] Chart
+- [ ] Error
+- [ ] Json
+- [ ] Lang
+- [ ] Log
+- [ ] Mail
+- [ ] Media
+- [ ] ORM
+- [ ] Queue
+- [ ] Socket
+- [ ] Template
 
 ## 📋 Requirements
 
@@ -247,6 +253,7 @@ $ make doc
   - [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
   - [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
   - [BenchStat](golang.org/x/tools/cmd/benchstat) - A command-line tool for analyzing benchmarks and printing pretty reports 📊
+  - [Crypto](golang.org/x/crypto) - A collection of cryptographic algorithms and protocols for Go 📦
 
 ## 📚 References
 

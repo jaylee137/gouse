@@ -26,5 +26,10 @@ var (
 )
 
 var (
+	ErrHashPassword    error = errors.New("error when encrypt password")
+	ErrComparePassword error = errors.New("password not match")
+)
+
+var (
 	ErrInvalidPhone error = errors.New("phone is invalid")
 )

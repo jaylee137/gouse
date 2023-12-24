@@ -8,6 +8,7 @@ func Run() {
 	arrayExample()
 	cacheExample()
 	consoleExample()
+	cryptoExample()
 	dateExample()
 	functionExample()
 	helperExample()
@@ -90,6 +91,19 @@ func consoleExample() {
 }
 ```
 
+### cryptoExample
+
+```go
+func cryptoExample() {
+	cryptoEncode()
+	cryptoDecode()
+	cryptoEncryptPassword()
+	cryptoDecryptPassword()
+	cryptoEncryptFile()
+	cryptoDecryptFile()
+}
+```
+
 ### dateExample
 
 ```go
@@ -164,8 +178,6 @@ func iOExample() {
 
 	ioZip()
 	ioUnzip()
-	ioEncode()
-	ioDecode()
 }
 ```
 
