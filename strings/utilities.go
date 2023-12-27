@@ -74,11 +74,21 @@ func LIndex(s string, substr string) int {
 	return lastIndex
 }
 
-func Random(n int) string {
+func RandomStr(n int) string {
 	var result string
 
 	for i := 0; i < n; i++ {
-		result += string(constants.KeyStr[number.Random(0, len(constants.KeyStr)-1)])
+		result += string(constants.ChainStr[number.Random(0, len(constants.ChainStr)-1)])
+	}
+
+	return result
+}
+
+func RandomNum(n int) string {
+	var result string
+
+	for i := 0; i < n; i++ {
+		result += string(constants.ChainNum[number.Random(0, len(constants.ChainNum)-1)])
 	}
 
 	return result

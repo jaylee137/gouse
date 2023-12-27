@@ -278,12 +278,29 @@ func TestLIndex(t *testing.T) {
 	}
 }
 
-func TestRandom(t *testing.T) {
-	expected := 10
-	got := Random(expected)
+func TestRandomStr(t *testing.T) {
+	expectedLength := 10
+	got := RandomStr(expectedLength)
 
-	if len(got) != expected {
-		t.Errorf("Random() = %v, want %v", len(got), expected)
+	if len(got) != expectedLength {
+		t.Errorf("RandomStr() = %v, want %v", len(got), expectedLength)
+	}
+
+	if reflect.TypeOf(got).Kind() != reflect.String {
+		t.Errorf("RandomStr() = %v, want %v", reflect.TypeOf(got).Kind(), reflect.String)
+	}
+}
+
+func TestRandomNum(t *testing.T) {
+	expectedLength := 6
+	got := RandomNum(expectedLength)
+
+	if len(got) != expectedLength {
+		t.Errorf("RandomNum() = %v, want %v", len(got), expectedLength)
+	}
+
+	if reflect.TypeOf(got).Kind() != reflect.String {
+		t.Errorf("RandomNum() = %v, want %v", reflect.TypeOf(got).Kind(), reflect.String)
 	}
 }
 

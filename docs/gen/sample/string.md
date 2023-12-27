@@ -366,7 +366,9 @@ func strIndex() {
 
 ```go
 func strRandom() {
-	println("Random string: ", strings.Random(10))
+	println("Random chain string: ", strings.RandomStr(10))
+
+	println("Random chain number: ", strings.RandomNum(6))
 }
 ```
 

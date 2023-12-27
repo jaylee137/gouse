@@ -34,15 +34,14 @@ func TestToHour(t *testing.T) {
 	}
 }
 
-// skip this test because it will take a long time
-// func TestSleepSecond(t *testing.T) {
-// 	nowSecond := time.Now().Second()
-// 	second := 1
-// 	SleepSecond(second)
-// 	if nowSecond == time.Now().Second() {
-// 		t.Errorf("Expected %v but it got %v", nowSecond+second, time.Now().Second())
-// 	}
-// }
+func TestSleepSecond(t *testing.T) {
+	nowSecond := time.Now().Second()
+	second := 1
+	SleepSecond(second)
+	if nowSecond == time.Now().Second() {
+		t.Errorf("Expected %v but it got %v", nowSecond+second, time.Now().Second())
+	}
+}
 
 // skip this test because it will take a long time
 // func TestSleepMinute(t *testing.T) {

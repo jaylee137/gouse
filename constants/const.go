@@ -1,5 +1,6 @@
 package constants
 
 const (
-	KeyStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|:<>?/.,';][=-`~"
+	ChainStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}[]|:<>?/.,';][=-`~"
+	ChainNum = "0123456789"
 )
