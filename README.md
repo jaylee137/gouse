@@ -58,6 +58,7 @@
 ✅ [`Function`](docs/gen/sample/function.md) <br/>
 ✅ [`Helper`](docs/gen/sample/helper.md) <br/>
 ✅ [`I/O`](docs/gen/sample/io.md) <br/>
+✅ [`Log`](docs/gen/sample/log.md) <br/>
 ✅ [`Math`](docs/gen/sample/math.md) <br/>
 ✅ [`Net`](docs/gen/sample/net.md) <br/>
 ✅ [`Number`](docs/gen/sample/number.md) <br/>
@@ -67,7 +68,7 @@
 ✅ [`Tool`](docs/gen/sample/tool.md) <br/>
 ✅ [`Type`](docs/gen/sample/type.md) <br/>
 
-- [ ] API
+<!-- - [ ] API
 - [ ] Collection
 - [ ] Connection
 - [ ] Config
@@ -76,13 +77,12 @@
 - [ ] Error
 - [ ] Json
 - [ ] Lang
-- [ ] Log
 - [ ] Mail
 - [ ] Media
 - [ ] ORM
 - [ ] Queue
 - [ ] Socket
-- [ ] Template
+- [ ] Template -->
 
 ## 📋 Requirements
 
