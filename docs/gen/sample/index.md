@@ -57,8 +57,8 @@ func arrayExample() {
 
 ```go
 func cacheExample() {
-	cacheCacheLocal()
-	cacheCacheTmp()
+	cacheLocal()
+	cacheTmp()
 }
 ```
 

@@ -5,38 +5,47 @@ import (
 	"sync"
 )
 
-var set = make(map[string]string)
-var lock sync.RWMutex
+type Local struct {
+	Set  map[string]string
+	Lock sync.RWMutex
+}
 
-func GetLocal(key string) (string, error) {
-	lock.RLock()
-	defer lock.RUnlock()
-	if set == nil {
+func NewLocal() *Local {
+	return &Local{
+		Set:  make(map[string]string),
+		Lock: sync.RWMutex{},
+	}
+}
+
+func (c *Local) GetLocal(key string) (string, error) {
+	c.Lock.RLock()
+	defer c.Lock.RUnlock()
+	if c.Set == nil {
 		return "", errors.New("set cache is not initialized")
 	}
-	return set[key], nil
+	return c.Set[key], nil
 }
 
-func SetLocal(key, value string) {
-	lock.Lock()
-	defer lock.Unlock()
-	set[key] = value
+func (c *Local) SetLocal(key, value string) {
+	c.Lock.Lock()
+	defer c.Lock.Unlock()
+	c.Set[key] = value
 }
 
-func DelLocal(key string) {
-	lock.Lock()
-	defer lock.Unlock()
-	delete(set, key)
+func (c *Local) DelLocal(key string) {
+	c.Lock.Lock()
+	defer c.Lock.Unlock()
+	delete(c.Set, key)
 }
 
-func FlushLocal() {
-	lock.Lock()
-	defer lock.Unlock()
-	set = map[string]string{}
+func (c *Local) FlushLocal() {
+	c.Lock.Lock()
+	defer c.Lock.Unlock()
+	c.Set = map[string]string{}
 }
 
-func AllLocal() map[string]string {
-	lock.RLock()
-	defer lock.RUnlock()
-	return set
+func (c *Local) AllLocal() map[string]string {
+	c.Lock.RLock()
+	defer c.Lock.RUnlock()
+	return c.Set
 }

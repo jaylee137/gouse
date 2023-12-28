@@ -6,14 +6,21 @@ import (
 	"time"
 )
 
-const maxLogFileSize = 1 * 1024 * 1024 // 1 MB
-
 func Handle(logID, logMessage, output string) {
 	file, err := os.OpenFile(output, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
 	if err != nil {
 		log.Fatal("Failed to open log file: ", err)
 	}
-	defer file.Close()
+
+	if err := (os.Chmod(output, 0666)); err != nil {
+		log.Fatalf("Error setting chmod log file handle permissions: %v", err)
+	}
+
+	defer func() {
+		if err := file.Close(); err != nil {
+			log.Fatal("Failed to close log file: ", err)
+		}
+	}()
 
 	// Create a new logger that writes to the log file
 	logger := log.New(file, logID, log.Ldate|log.Ltime|log.Lshortfile)
@@ -22,12 +29,27 @@ func Handle(logID, logMessage, output string) {
 	logger.Println(logMessage)
 }
 
-func RotateTruncate(maxFileSize int64, output string) {
+func RotateTruncate(output string, maxFileSize ...int64) {
+	maxSize := int64(1 * 1024 * 1024) // 1MB
+
+	if len(maxFileSize) > 0 {
+		maxSize = int64(maxFileSize[0])
+	}
+
 	logFile, err := os.OpenFile(output, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("Error opening log file: %v", err)
 	}
-	defer logFile.Close()
+
+	if err := (os.Chmod(output, 0666)); err != nil {
+		log.Fatalf("Error setting chmod rotate log file permissions: %v", err)
+	}
+
+	defer func() {
+		if err := logFile.Close(); err != nil {
+			log.Fatal("Failed to close log file: ", err)
+		}
+	}()
 
 	log.SetOutput(logFile)
 
@@ -37,7 +59,7 @@ func RotateTruncate(maxFileSize int64, output string) {
 			log.Printf("Error getting log file stats: %v", err)
 		}
 
-		if info.Size() >= maxLogFileSize {
+		if info.Size() >= maxSize {
 			err = truncateLogFile(logFile)
 			if err != nil {
 				log.Printf("Error truncating log file: %v", err)

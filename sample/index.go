@@ -45,8 +45,8 @@ func arrayExample() {
 }
 
 func cacheExample() {
-	cacheCacheLocal()
-	cacheCacheTmp()
+	cacheLocal()
+	cacheTmp()
 }
 
 func consoleExample() {

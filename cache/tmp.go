@@ -7,35 +7,51 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 
-var caching = cache.New(24*time.Hour, 24*time.Hour)
+type Tmp struct {
+	Expires time.Duration
+	Set     *cache.Cache
+}
 
-func GetTmp(cacheKey string) interface{} {
-	if val, found := caching.Get(cacheKey); found {
+func NewTmp(expires ...time.Duration) *Tmp {
+	var expire time.Duration
+	if len(expires) > 0 {
+		expire = expires[0]
+	} else {
+		expire = 24 * time.Hour
+	}
+	return &Tmp{
+		Expires: expire,
+		Set:     cache.New(expire, expire),
+	}
+}
+
+func (c *Tmp) GetTmp(cacheKey string) interface{} {
+	if val, found := c.Set.Get(cacheKey); found {
 		return val
 	}
 	return nil
 }
 
-func SetTmp(cacheKey string, value interface{}, expireTime time.Duration) {
+func (c *Tmp) SetTmp(cacheKey string, value interface{}, expireTime time.Duration) {
 	if expireTime == 0 {
 		expireTime = cache.DefaultExpiration
 	}
 
-	caching.Set(cacheKey, value, expireTime)
+	c.Set.Set(cacheKey, value, expireTime)
 }
 
-func DelTmp(cacheKey string) {
-	caching.Delete(cacheKey)
+func (c *Tmp) DelTmp(cacheKey string) {
+	c.Set.Delete(cacheKey)
 }
 
-func FlushTmp() {
-	caching.Flush()
+func (c *Tmp) FlushTmp() {
+	c.Set.Flush()
 }
 
-func AllTmp() map[string]string {
+func (c *Tmp) AllTmp() map[string]string {
 	result := make(map[string]string)
-	for k := range caching.Items() {
-		result[k] = types.InterfaceToString(GetTmp(k))
+	for k := range c.Set.Items() {
+		result[k] = types.InterfaceToString(c.GetTmp(k))
 	}
 	return result
 }
