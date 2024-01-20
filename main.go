@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 
-	"github.com/thuongtruong1009/gouse/sample"
+	"github.com/thuongtruong1009/gouse/samples"
 	"github.com/thuongtruong1009/gouse/strings"
 )
 
@@ -18,6 +18,6 @@ func main() {
 	isDev := flag.Bool("isDev", false, "a bool type for toggle enviroment mode")
 	flag.Parse()
 	if *isDev {
-		sample.Run()
+		samples.Run()
 	}
 }

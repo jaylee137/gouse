@@ -1,4 +1,4 @@
-package sample
+package samples
 
 func Run() {
 	arrayExample()
@@ -53,6 +53,7 @@ func consoleExample() {
 	consoleCmd()
 	consoleClear()
 	consoleWithColor()
+	consoleBanner()
 	consoleSelect()
 	consoleHelp()
 

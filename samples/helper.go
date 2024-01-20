@@ -1,4 +1,4 @@
-package sample
+package samples
 
 import (
 	"github.com/thuongtruong1009/gouse/helper"

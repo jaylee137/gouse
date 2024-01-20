@@ -9,16 +9,16 @@ import (
 func Handle(logID, logMessage, output string) {
 	file, err := os.OpenFile(output, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
 	if err != nil {
-		log.Fatal("Failed to open log file: ", err)
+		log.Printf("Failed to open log file: ", err)
 	}
 
-	if err := (os.Chmod(output, 0666)); err != nil {
-		log.Fatalf("Error setting chmod log file handle permissions: %v", err)
+	if err := (os.Chmod(output, 0600)); err != nil {
+		log.Printf("Error setting chmod log file handle permissions: %v", err)
 	}
 
 	defer func() {
 		if err := file.Close(); err != nil {
-			log.Fatal("Failed to close log file: ", err)
+			log.Print("Failed to close log file: ", err)
 		}
 	}()
 
@@ -38,16 +38,16 @@ func RotateTruncate(output string, maxFileSize ...int64) {
 
 	logFile, err := os.OpenFile(output, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
-		log.Fatalf("Error opening log file: %v", err)
+		log.Printf("Error opening log file: %v", err)
 	}
 
-	if err := (os.Chmod(output, 0666)); err != nil {
-		log.Fatalf("Error setting chmod rotate log file permissions: %v", err)
+	if err := (os.Chmod(output, 0600)); err != nil {
+		log.Printf("Error setting chmod rotate log file permissions: %v", err)
 	}
 
 	defer func() {
 		if err := logFile.Close(); err != nil {
-			log.Fatal("Failed to close log file: ", err)
+			log.Print("Failed to close log file: ", err)
 		}
 	}()
 

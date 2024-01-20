@@ -64,6 +64,16 @@ func consoleWithColor() {
 }
 ```
 
+### consoleBanner
+
+```go
+func consoleBanner() {
+	// param1: font name, param2: your input string
+	console.Banner(shared.DOUBLE_ALPHA, "gouse - type double")
+	console.Banner(shared.DOUBLE_ALPHA, "gouse - type single")
+}
+```
+
 ### consoleHelp
 
 ```go

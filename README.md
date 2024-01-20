@@ -50,23 +50,85 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
-✅ [`Array`](docs/gen/sample/array.md) <br/>
-✅ [`Cache`](docs/gen/sample/cache.md) <br/>
-✅ [`Console`](docs/gen/sample/console.md) <br/>
-✅ [`Crypto`](docs/gen/sample/crypto.md) <br/>
-✅ [`Date`](docs/gen/sample/date.md) <br/>
-✅ [`Function`](docs/gen/sample/function.md) <br/>
-✅ [`Helper`](docs/gen/sample/helper.md) <br/>
-✅ [`I/O`](docs/gen/sample/io.md) <br/>
-✅ [`Log`](docs/gen/sample/log.md) <br/>
-✅ [`Math`](docs/gen/sample/math.md) <br/>
-✅ [`Net`](docs/gen/sample/net.md) <br/>
-✅ [`Number`](docs/gen/sample/number.md) <br/>
-✅ [`Regex`](docs/gen/sample/regex.md) <br/>
-✅ [`Struct`](docs/gen/sample/struct.md) <br/>
-✅ [`String`](docs/gen/sample/string.md) <br/>
-✅ [`Tool`](docs/gen/sample/tool.md) <br/>
-✅ [`Type`](docs/gen/sample/type.md) <br/>
+<details>
+  <summary>✅ <a href="docs/gen/samples/array.md" target="_blank">Array</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/cache.md" target="_blank">Cache</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/console.md" target="_blank">Console</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/date.md" target="_blank">Date</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/function.md" target="_blank">Function</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/helper.md" target="_blank">Helper</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/io.md" target="_blank">I/O</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/log.md" target="_blank">Log</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/math.md" target="_blank">Math</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/net.md" target="_blank">Net</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/number.md" target="_blank">Number</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/regex.md" target="_blank">Regex</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/struct.md" target="_blank">Struct</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/string.md" target="_blank">String</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/tool.md" target="_blank">Tool</a></summary>
+  This is the summary content.
+</details>
+
+<details>
+  <summary>✅ <a href="docs/gen/samples/type.md" target="_blank">Type</a></summary>
+  This is the summary content.
+</details>
 
 <!-- - [ ] API
 - [ ] Collection

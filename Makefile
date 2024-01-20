@@ -2,6 +2,7 @@ install:
 	go get -v ./...
 	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
+	go get golang.org/x/perf/cmd/benchstat
 	go install golang.org/x/perf/cmd/benchstat
 	go install honnef.co/go/tools/cmd/staticcheck@latest
 
@@ -16,7 +17,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go ./sample
+	go run docs/generate.go ./samples
 	@echo "Done!"
 
 test:

@@ -1,4 +1,4 @@
-package sample
+package samples
 
 import (
 	"fmt"
@@ -45,6 +45,12 @@ func consoleWithColor() {
 	console.WithColor(shared.BLUE_FG, "this is blue")
 	console.WithColor(shared.MAGENTA_FG, "this is magenta")
 	console.WithColor(shared.CYAN_FG, "this is cyan")
+}
+
+func consoleBanner() {
+	// param1: font name, param2: your input string
+	console.Banner(shared.DOUBLE_ALPHA, "gouse - type double")
+	console.Banner(shared.DOUBLE_ALPHA, "gouse - type single")
 }
 
 func consoleHelp() {

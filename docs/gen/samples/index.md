@@ -69,6 +69,7 @@ func consoleExample() {
 	consoleCmd()
 	consoleClear()
 	consoleWithColor()
+	consoleBanner()
 	consoleSelect()
 	consoleHelp()
 
