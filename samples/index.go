@@ -1,22 +1,23 @@
 package samples
 
 func Run() {
-	arrayExample()
-	cacheExample()
-	consoleExample()
-	cryptoExample()
-	dateExample()
-	functionExample()
-	helperExample()
-	iOExample()
-	mathExample()
-	netExample()
-	numberExample()
-	regexExample()
-	stringExample()
-	structExample()
-	toolsExample()
-	typeExample()
+	// arrayExample()
+	// cacheExample()
+	chartExample()
+	// consoleExample()
+	// cryptoExample()
+	// dateExample()
+	// functionExample()
+	// helperExample()
+	// iOExample()
+	// mathExample()
+	// netExample()
+	// numberExample()
+	// regexExample()
+	// stringExample()
+	// structExample()
+	// toolsExample()
+	// typeExample()
 }
 
 func arrayExample() {
@@ -47,6 +48,10 @@ func arrayExample() {
 func cacheExample() {
 	cacheLocal()
 	cacheTmp()
+}
+
+func chartExample() {
+	chartBar()
 }
 
 func consoleExample() {

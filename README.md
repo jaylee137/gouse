@@ -315,6 +315,7 @@ $ make doc
   - [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
   - [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
   - [Crypto](golang.org/x/crypto) - A collection of cryptographic algorithms and protocols for Go 📦
+  - [Chart](github.com/go-echarts/go-echarts) - 🎨 The adorable charts library for Golang 📊
 
 ## 📚 References
 

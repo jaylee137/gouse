@@ -8,6 +8,7 @@ require (
 	github.com/charmbracelet/bubbletea v0.24.2
 	github.com/charmbracelet/glamour v0.6.0
 	github.com/charmbracelet/lipgloss v0.9.1
+	github.com/go-echarts/go-echarts/v2 v2.3.3
 	github.com/google/uuid v1.4.0
 	github.com/mattn/go-isatty v0.0.18
 	github.com/muesli/reflow v0.3.0
