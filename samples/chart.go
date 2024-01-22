@@ -6,14 +6,14 @@ import (
 
 func chartBar() {
 	newChart := &chart.BarChartOpts{
+		Output:   "bar.html",
 		Title:    "Bar chart in Go",
 		Subtitle: "This is fun to use!",
 		XAxis:    []string{"Jan", "Feb", "Mar", "Apr", "May", "Jun"},
-		Nums:     6,
 		Items: []chart.BarChartItem{
-			{Name: "Category A", Value: 200},
-			{Name: "Category B", Value: 300},
-			{Name: "Category C", Value: 400},
+			{Name: "Category A", Values: []float64{100, 200, 300, 400, 500, 600}},
+			{Name: "Category B", Values: []float64{200, 300, 400, 500, 600, 700}},
+			{Name: "Category C", Values: []float64{300, 400, 500, 600, 700, 800}},
 		},
 	}
 

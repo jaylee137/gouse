@@ -8,26 +8,22 @@ import (
 )
 
 type BarChartItem struct {
-	Name  string
-	Value float64
+	Name   string
+	Values []float64
 }
 
 type BarChartOpts struct {
+	Output   string
 	Title    string
 	Subtitle string
 	XAxis    []string
-	Nums     int
 	Items    []BarChartItem
 }
 
-func (opts *BarChartOpts) GetNums() int {
-	return opts.Nums
-}
-
-func generateBarItems(nums int, val float64) []opts.BarData {
+func generateBarItems(values []float64) []opts.BarData {
 	items := make([]opts.BarData, 0)
-	for i := 0; i < nums; i++ {
-		items = append(items, opts.BarData{Value: val})
+	for i := 0; i < len(values); i++ {
+		items = append(items, opts.BarData{Value: values[i]})
 	}
 	return items
 }
@@ -40,15 +36,11 @@ func CreateBarChart(options *BarChartOpts) {
 		Subtitle: options.Subtitle,
 	}))
 
-	// bar.SetXAxis(options.XAxis).
-	// 	AddSeries("Category A", generateBarItems()).
-	// 	AddSeries("Category B", generateBarItems())
-
 	for _, item := range options.Items {
 		bar.SetXAxis(options.XAxis).
-			AddSeries(item.Name, generateBarItems(options.Nums, item.Value))
+			AddSeries(item.Name, generateBarItems(item.Values))
 	}
 
-	f, _ := os.Create("bar.html")
+	f, _ := os.Create(options.Output)
 	_ = bar.Render(f)
 }
