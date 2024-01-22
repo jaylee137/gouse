@@ -7,6 +7,7 @@
 func Run() {
 	arrayExample()
 	cacheExample()
+	chartExample()
 	consoleExample()
 	cryptoExample()
 	dateExample()
@@ -59,6 +60,15 @@ func arrayExample() {
 func cacheExample() {
 	cacheLocal()
 	cacheTmp()
+}
+```
+
+### chartExample
+
+```go
+func chartExample() {
+	chartBar()
+	chartLine()
 }
 ```
 

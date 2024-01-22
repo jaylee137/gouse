@@ -56,7 +56,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	bash count.sh public/count.svg true 13708a array cache crypto console date function helper io log math net number regex strings structs tools types
+	bash count.sh public/count.svg true 13708a array cache chart crypto console date function helper io log math net number regex strings structs tools types
 	@echo "Done!"
 
 pre:

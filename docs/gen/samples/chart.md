@@ -1,9 +1,18 @@
-package samples
+# Chart
 
+## Imports
+
+```go
 import (
 	"github.com/thuongtruong1009/gouse/chart"
 )
+```
+## Functions
 
+
+### chartBar
+
+```go
 func chartBar() {
 	newChart := &chart.BarChartOpts{
 		Output:   "bar.html",
@@ -19,7 +28,11 @@ func chartBar() {
 
 	chart.CreateBarChart(newChart)
 }
+```
 
+### chartLine
+
+```go
 func chartLine() {
 	newChart := &chart.LineChartOpts{
 		Output:   "line.html",
@@ -34,3 +47,4 @@ func chartLine() {
 
 	chart.CreateLineChart(newChart)
 }
+```

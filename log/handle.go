@@ -9,7 +9,7 @@ import (
 func Handle(logID, logMessage, output string) {
 	file, err := os.OpenFile(output, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
 	if err != nil {
-		log.Printf("Failed to open log file: ", err)
+		log.Printf("Failed to open log file: %v", err)
 	}
 
 	if err := (os.Chmod(output, 0600)); err != nil {
@@ -18,7 +18,7 @@ func Handle(logID, logMessage, output string) {
 
 	defer func() {
 		if err := file.Close(); err != nil {
-			log.Print("Failed to close log file: ", err)
+			log.Printf("Failed to close log file: %v", err)
 		}
 	}()
 

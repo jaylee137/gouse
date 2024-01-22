@@ -61,6 +61,11 @@
 </details>
 
 <details>
+  <summary>✅ <a href="docs/gen/samples/chart.md" target="_blank">Chart</a></summary>
+  This is the summary content.
+</details>
+
+<details>
   <summary>✅ <a href="docs/gen/samples/console.md" target="_blank">Console</a></summary>
   This is the summary content.
 </details>
