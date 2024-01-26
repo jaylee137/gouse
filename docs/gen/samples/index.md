@@ -69,6 +69,7 @@ func cacheExample() {
 func chartExample() {
 	chartBar()
 	chartLine()
+	chartPie()
 }
 ```
 

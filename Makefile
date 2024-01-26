@@ -23,7 +23,7 @@ doc:
 test:
 	@echo "Running tests..."
 	go clean -testcache
-	go test -v -count=1 -cover -coverprofile=coverage.out ./cache/... ./date/... ./number/... ./regex/... ./strings/... ./structs/... ./types/...
+	go test -v -count=1 -cover -coverprofile=coverage.out ./cache/... ./chart/... ./date/... ./number/... ./regex/... ./strings/... ./structs/... ./types/...
 	go tool cover -func=coverage.out
 	@echo "Done!"
 

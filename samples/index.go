@@ -53,6 +53,7 @@ func cacheExample() {
 func chartExample() {
 	chartBar()
 	chartLine()
+	chartPie()
 }
 
 func consoleExample() {

@@ -19,10 +19,10 @@
 
 ## 🧠 Why Gouse?
 
-- Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Javascript`](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [`Lodash`](https://lodash.com/).
-- `Javascript` and `Redis` user-friendly syntax.
+- Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Lodash`](https://lodash.com/).
+- `Javascript` user-friendly syntax.
 - No config - import as utility functions.
-- Lightweight package: Easy to use, chainable, and extendable, and available in a variety of builds & module formats.
+- Lightweight package: easy to use, chainable, and extendable, and available in a variety of builds & module formats.
 - Gouse provides a wide variety of available methods, taking the hassle out of working with arrays, numbers, objects, strings, etc. Each method has a different set of features, so you can pick the ones that fit your project best.
 - Comprehensive documentation and examples.
 - Powerful package which suitable for small to large projects and compatible on all OS platforms
@@ -44,7 +44,7 @@
   - Performance is not optimized
   - The number of lines of code is very long that not easy to read and understand
   - Code logic may not be consistent, making it difficult to maintain and scale
-- `-->` To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
+    👉 To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
 
 ## 🚀 Features
 
@@ -153,7 +153,7 @@
 
 ## 📋 Requirements
 
-> Compatibility with Go >= `1.18`
+> Compatibility with Go >= **`1.18`**
 
 ## 📦 Installation
 

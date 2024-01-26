@@ -42,11 +42,6 @@ func CreateLineChart(options *LineChartOpts) {
 		}),
 	)
 
-	// line.SetXAxis([]string{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}).
-	// 	AddSeries("Category A", generateLineItems()).
-	// 	AddSeries("Category B", generateLineItems()).
-	// 	SetSeriesOptions(charts.WithLineChartOpts(opts.LineChart{Smooth: true}))
-
 	for _, item := range options.Items {
 		line.SetXAxis(options.XAxis).
 			AddSeries(item.Name, generateLineItems(item.Values)).
