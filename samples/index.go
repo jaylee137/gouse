@@ -4,6 +4,7 @@ func Run() {
 	arrayExample()
 	cacheExample()
 	chartExample()
+	configExample()
 	consoleExample()
 	cryptoExample()
 	dateExample()
@@ -54,6 +55,10 @@ func chartExample() {
 	chartBar()
 	chartLine()
 	chartPie()
+}
+
+func configExample() {
+	configJson()
 }
 
 func consoleExample() {
