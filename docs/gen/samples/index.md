@@ -8,6 +8,7 @@ func Run() {
 	arrayExample()
 	cacheExample()
 	chartExample()
+	configExample()
 	consoleExample()
 	cryptoExample()
 	dateExample()
@@ -70,6 +71,16 @@ func chartExample() {
 	chartBar()
 	chartLine()
 	chartPie()
+}
+```
+
+### configExample
+
+```go
+func configExample() {
+	configJson()
+	configYaml()
+	configToml()
 }
 ```
 

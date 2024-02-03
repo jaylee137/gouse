@@ -59,6 +59,8 @@ func chartExample() {
 
 func configExample() {
 	configJson()
+	configYaml()
+	configToml()
 }
 
 func consoleExample() {

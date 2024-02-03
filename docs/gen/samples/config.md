@@ -1,11 +1,19 @@
-package samples
+# Config
 
+## Imports
+
+```go
 import (
 	"fmt"
-
 	"github.com/thuongtruong1009/gouse/config"
 )
+```
+## Functions
 
+
+### configJson
+
+```go
 func configJson() {
 	type Configuration struct {
 		Users  []string
@@ -21,7 +29,11 @@ func configJson() {
 	fmt.Println("Users:", myConf.Users)
 	fmt.Println("Groups:", myConf.Groups)
 }
+```
 
+### configYaml
+
+```go
 func configYaml() {
 	type Configuration struct {
 		Server struct {
@@ -45,7 +57,11 @@ func configYaml() {
 	fmt.Println("DB Username:", myConf.Database.Username)
 	fmt.Println("DB Password:", myConf.Database.Password)
 }
+```
 
+### configToml
+
+```go
 func configToml() {
 	type Configuration struct {
 		Mysql struct {
@@ -67,3 +83,4 @@ func configToml() {
 	fmt.Println("Mysql Password:", myConf.Mysql.Password)
 	fmt.Println("Mysql Database:", myConf.Mysql.Database)
 }
+```

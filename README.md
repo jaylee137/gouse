@@ -44,7 +44,8 @@
   - Performance is not optimized
   - The number of lines of code is very long that not easy to read and understand
   - Code logic may not be consistent, making it difficult to maintain and scale
-    👉 To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
+
+👉 To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
 
 ## 🚀 Features
 
@@ -318,9 +319,10 @@ $ make doc
   - [Google UUID](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
   - [Survey v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
   - [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
-  - [Go-cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
+  - [Go Cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
   - [Crypto](golang.org/x/crypto) - A collection of cryptographic algorithms and protocols for Go 📦
-  - [Chart](github.com/go-echarts/go-echarts) - 🎨 The adorable charts library for Golang 📊
+  - [Go eCharts](github.com/go-echarts/go-echarts) - 🎨 The adorable charts library for Golang 📊
+  - [Env config](github.com/kelseyhightower/envconfig) x [Go Toml](github.com/pelletier/go-toml) - A Go library for managing configuration data from files 📄
 
 ## 📚 References
 

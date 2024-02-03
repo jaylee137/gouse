@@ -61,7 +61,7 @@ func TestShortMonth(t *testing.T) {
 }
 
 func TestLong(t *testing.T) {
-	if Long() != time.Now().Format("Monday, January 02, 2006") {
+	if Long() != time.Now().Format("Monday, January 2, 2006") {
 		t.Error("Long() should return today's date in Long format")
 	}
 }

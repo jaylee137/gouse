@@ -12,3 +12,7 @@ tmp
 *.pprof
 *.zip
 *.html
+*.json
+*.yaml
+*.toml
+!.deepsource.toml
