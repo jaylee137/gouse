@@ -12,11 +12,12 @@ func Yaml[T any](path string, configuration *T) error {
 	if err != nil {
 		return err
 	}
-	defer func ()  {
+
+	defer func() {
 		if err := f.Close(); err != nil {
 			panic(err)
 		}
-	}
+	}()
 
 	decoder := yaml.NewDecoder(f)
 	err = decoder.Decode(configuration)
