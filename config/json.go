@@ -17,9 +17,5 @@ func Json[T any](path string, configuration *T) error {
 	}()
 
 	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(configuration); err != nil {
-		return err
-	}
-
-	return nil
+	return decoder.Decode(configuration)
 }

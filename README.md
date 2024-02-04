@@ -51,97 +51,29 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
 
-<details>
-  <summary>✅ <a href="docs/gen/samples/array.md" target="_blank">Array</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/cache.md" target="_blank">Cache</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/chart.md" target="_blank">Chart</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/console.md" target="_blank">Console</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/date.md" target="_blank">Date</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/function.md" target="_blank">Function</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/helper.md" target="_blank">Helper</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/io.md" target="_blank">I/O</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/log.md" target="_blank">Log</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/math.md" target="_blank">Math</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/net.md" target="_blank">Net</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/number.md" target="_blank">Number</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/regex.md" target="_blank">Regex</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/struct.md" target="_blank">Struct</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/string.md" target="_blank">String</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/tool.md" target="_blank">Tool</a></summary>
-  This is the summary content.
-</details>
-
-<details>
-  <summary>✅ <a href="docs/gen/samples/type.md" target="_blank">Type</a></summary>
-  This is the summary content.
-</details>
+✅ [Array](docs/gen/samples/array.md) <br/>
+✅ [Cache](docs/gen/samples/cache.md) <br/>
+✅ [Chart](docs/gen/samples/chart.md) <br/>
+✅ [Config](docs/gen/samples/config.md) <br/>
+✅ [Console](docs/gen/samples/console.md) <br/>
+✅ [Date](docs/gen/samples/date.md) <br/>
+✅ [Function](docs/gen/samples/function.md) <br/>
+✅ [Helper](docs/gen/samples/helper.md) <br/>
+✅ [I/O](docs/gen/samples/io.md) <br/>
+✅ [Log](docs/gen/samples/log.md) <br/>
+✅ [Math](docs/gen/samples/math.md) <br/>
+✅ [Net](docs/gen/samples/net.md) <br/>
+✅ [Number](docs/gen/samples/number.md) <br/>
+✅ [Regex](docs/gen/samples/regex.md) <br/>
+✅ [Struct](docs/gen/samples/struct.md) <br/>
+✅ [String](docs/gen/samples/string.md) <br/>
+✅ [Tool](docs/gen/samples/tool.md) <br/>
+✅ [Type](docs/gen/samples/type.md) <br/>
 
 <!-- - [ ] API
 - [ ] Collection
 - [ ] Connection
-- [ ] Config
 - [ ] Cron
-- [ ] Chart
 - [ ] Error
 - [ ] Json
 - [ ] Lang
@@ -210,8 +142,6 @@ func main() {
 `INPUT`: 1000000
 
 <!-- ## 📚 Examples -->
-
-<!-- project structure -->
 
 ## 📁 Project Structure
 
