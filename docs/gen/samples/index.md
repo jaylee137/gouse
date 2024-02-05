@@ -5,24 +5,34 @@
 
 ```go
 func Run() {
-	arrayExample()
-	cacheExample()
-	chartExample()
-	configExample()
-	consoleExample()
-	cryptoExample()
-	dateExample()
-	functionExample()
-	helperExample()
-	iOExample()
-	mathExample()
-	netExample()
-	numberExample()
-	regexExample()
-	stringExample()
-	structExample()
-	toolsExample()
-	typeExample()
+	apiExample()
+	// arrayExample()
+	// cacheExample()
+	// chartExample()
+	// configExample()
+	// consoleExample()
+	// cryptoExample()
+	// dateExample()
+	// functionExample()
+	// helperExample()
+	// iOExample()
+	// mathExample()
+	// netExample()
+	// numberExample()
+	// regexExample()
+	// stringExample()
+	// structExample()
+	// toolsExample()
+	// typeExample()
+}
+```
+
+### apiExample
+
+```go
+func apiExample() {
+	apiPortScanner()
+	apiPortChecker()
 }
 ```
 
@@ -144,6 +154,8 @@ func dateExample() {
 	dateSleepSecond()
 	dateSleepMinute()
 	dateSleepHour()
+
+	dateClock()
 }
 ```
 

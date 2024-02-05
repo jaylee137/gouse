@@ -118,3 +118,11 @@ func dateSleepHour() {
 	date.SleepHour(1)
 }
 ```
+
+### dateClock
+
+```go
+func dateClock() {
+	date.TerminalClock()
+}
+```
