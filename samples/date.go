@@ -69,3 +69,7 @@ func dateSleepMinute() {
 func dateSleepHour() {
 	date.SleepHour(1)
 }
+
+func dateClock() {
+	date.TerminalClock()
+}
