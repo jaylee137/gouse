@@ -1,24 +1,30 @@
 package samples
 
 func Run() {
-	arrayExample()
-	cacheExample()
-	chartExample()
-	configExample()
-	consoleExample()
-	cryptoExample()
-	dateExample()
-	functionExample()
-	helperExample()
-	iOExample()
-	mathExample()
-	netExample()
-	numberExample()
-	regexExample()
-	stringExample()
-	structExample()
-	toolsExample()
-	typeExample()
+	apiExample()
+	// arrayExample()
+	// cacheExample()
+	// chartExample()
+	// configExample()
+	// consoleExample()
+	// cryptoExample()
+	// dateExample()
+	// functionExample()
+	// helperExample()
+	// iOExample()
+	// mathExample()
+	// netExample()
+	// numberExample()
+	// regexExample()
+	// stringExample()
+	// structExample()
+	// toolsExample()
+	// typeExample()
+}
+
+func apiExample() {
+	apiPortScanner()
+	apiPortChecker()
 }
 
 func arrayExample() {
@@ -112,6 +118,8 @@ func dateExample() {
 	dateSleepSecond()
 	dateSleepMinute()
 	dateSleepHour()
+
+	dateClock()
 }
 
 func functionExample() {

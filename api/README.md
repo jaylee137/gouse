@@ -8,5 +8,4 @@
 - mock data
 - http methods
 - routing
-- validation
 - interceptors
