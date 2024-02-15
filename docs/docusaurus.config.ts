@@ -9,9 +9,10 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://gouse.vercel.app",
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+  baseUrlIssueBanner: true,
 
   organizationName: "thuongtruong1009",
   projectName: "gouse",
@@ -52,6 +53,7 @@ const config: Config = {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "Gouse",
+      hideOnScroll: true,
       logo: {
         alt: "Gouse Logo",
         src: "img/logo.svg",
@@ -66,8 +68,9 @@ const config: Config = {
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/thuongtruong1009/gouse",
-          label: "GitHub",
           position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
       ],
     },
@@ -78,17 +81,21 @@ const config: Config = {
           title: "References",
           items: [
             {
-              label: "Tutorial",
+              label: "Introduction",
               to: "/docs/intro",
             },
             {
               label: "Receipts",
               to: "/receipts",
             },
+            {
+              label: "Examples",
+              to: "/examples",
+            },
           ],
         },
         {
-          title: "More",
+          title: "Links",
           items: [
             {
               label: "GitHub",
@@ -108,23 +115,45 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              href: "https://blog.thuongtruong.me",
+              label: "License",
+              href: "https://github.com/thuongtruong1009/gouse/blob/main/LICENSE",
             },
             {
-              label: "Awards",
-              href: "https://awards.thuongtruong.me",
+              label: "Change Log",
+              href: "https://github.com/thuontruong1009/gouse/blob/main/CHANGELOG.md",
+            },
+            {
+              label: "Funding",
+              href: "https://fund.thuongtruong.me",
             },
           ],
         },
       ],
-      copyright: `Copyright © 2024 Gouse`,
+      copyright: `Copyright © 2024 Gouse ❤️`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // make Tailwind CSS and Docusaurus dark mode coexist
+    // colorMode: {
+    //   disableSwitch: true,
+    //   respectPrefersColorScheme: true,
+    // },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
 };
 
 export default config;

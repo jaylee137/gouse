@@ -8,11 +8,4 @@ tmp
 *.sh
 
 *.log
-*.prof
-*.pprof
-*.zip
 *.html
-*.json
-*.yaml
-*.toml
-!.deepsource.toml
