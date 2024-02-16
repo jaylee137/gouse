@@ -8,3 +8,10 @@ name = "go"
 
   [analyzers.meta]
   import_root = "github.com/thuongtruong1009/gouse"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = ["react"]
+  environment = ["nodejs"]

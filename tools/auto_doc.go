@@ -70,7 +70,8 @@ func Doc(outputPath string) {
 			}
 
 			fileName := strings.Replace(file.Name(), ".go", ".md")
-			subPath := filepath.Join(outputPath, path, filepath.Dir(file.Name()))
+			// subPath := filepath.Join(outputPath, path, filepath.Dir(file.Name()))
+			subPath := filepath.Join(outputPath, filepath.Dir(file.Name()))
 
 			// create file path if not exist
 			err = io.CreatePath(filepath.Join(subPath, fileName))

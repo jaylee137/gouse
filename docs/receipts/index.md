@@ -1,9 +1,18 @@
-package samples
+# Index
 
+## Imports
+
+```go
 import (
 	"github.com/thuongtruong1009/gouse/samples/api"
 )
+```
+## Functions
 
+
+### Run
+
+```go
 func Run() {
 	apiSample()
 	// arraySample()
@@ -25,12 +34,20 @@ func Run() {
 	// toolsSample()
 	// typeSample()
 }
+```
 
+### apiSample
+
+```go
 func apiSample() {
 	api.SampleApiPortScanner()
 	api.SampleApiPortChecker()
 }
+```
 
+### arraySample
+
+```go
 func arraySample() {
 	arrEqual()
 	arrIncludes()
@@ -55,24 +72,40 @@ func arraySample() {
 	arrForBy()
 	arrMapBy()
 }
+```
 
+### cacheSample
+
+```go
 func cacheSample() {
 	cacheLocal()
 	cacheTmp()
 }
+```
 
+### chartSample
+
+```go
 func chartSample() {
 	chartBar()
 	chartLine()
 	chartPie()
 }
+```
 
+### configSample
+
+```go
 func configSample() {
 	configJson()
 	configYaml()
 	configToml()
 }
+```
 
+### consoleSample
+
+```go
 func consoleSample() {
 	consoleCmd()
 	consoleClear()
@@ -98,7 +131,11 @@ func consoleSample() {
 	consoleDir()
 	consoleGlamour()
 }
+```
 
+### cryptoSample
+
+```go
 func cryptoSample() {
 	cryptoEncode()
 	cryptoDecode()
@@ -107,7 +144,11 @@ func cryptoSample() {
 	cryptoEncryptFile()
 	cryptoDecryptFile()
 }
+```
 
+### dateSample
+
+```go
 func dateSample() {
 	dateTime()
 
@@ -125,7 +166,11 @@ func dateSample() {
 
 	dateClock()
 }
+```
 
+### functionSample
+
+```go
 func functionSample() {
 	funcDelay()
 	funcRetry()
@@ -134,14 +179,22 @@ func functionSample() {
 	funcLock()
 	funcRunTime()
 }
+```
 
+### helperSample
+
+```go
 func helperSample() {
 	helperRandomID()
 	helperUUID()
 
 	helperAutoMdDoc()
 }
+```
 
+### iOSample
+
+```go
 func iOSample() {
 	ioCheckDir()
 	ioCreateDir()
@@ -170,7 +223,11 @@ func iOSample() {
 	ioZip()
 	ioUnzip()
 }
+```
 
+### mathSample
+
+```go
 func mathSample() {
 	mathIsPrime()
 	mathIsEven()
@@ -206,7 +263,11 @@ func mathSample() {
 	mathEllipse()
 	mathPolygon()
 }
+```
 
+### netSample
+
+```go
 func netSample() {
 	netOpen()
 	netEncode()
@@ -216,19 +277,31 @@ func netSample() {
 	netHeader()
 	netConnectTime()
 }
+```
 
+### numberSample
+
+```go
 func numberSample() {
 	numRandom()
 	numClamp()
 	numInRange()
 }
+```
 
+### regexSample
+
+```go
 func regexSample() {
 	regexIsMatch()
 	regexMatch()
 	regexMatchIndex()
 }
+```
 
+### stringSample
+
+```go
 func stringSample() {
 	strCapitalize()
 	strCamelCase()
@@ -274,7 +347,11 @@ func stringSample() {
 	strFromCodePointAt()
 	strFromCodePoint()
 }
+```
 
+### structSample
+
+```go
 func structSample() {
 	structMerge()
 	structRemove()
@@ -285,12 +362,20 @@ func structSample() {
 	structClone()
 	structHas()
 }
+```
 
+### toolsSample
+
+```go
 func toolsSample() {
 	toolDoc()
 	toolProfile()
 }
+```
 
+### typeSample
+
+```go
 func typeSample() {
 	typeStructConvert()
 	typeStringConvert()
@@ -307,3 +392,4 @@ func typeSample() {
 	typeCheckPassword()
 	typeCheckPhone()
 }
+```

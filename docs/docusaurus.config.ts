@@ -67,6 +67,12 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
+          to: "/receipts/",
+          label: "Receipts",
+          position: "left",
+          activeBaseRegex: `/receipts/`,
+        },
+        {
           href: "https://github.com/thuongtruong1009/gouse",
           position: "right",
           className: "header-github-link",
