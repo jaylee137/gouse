@@ -11,14 +11,14 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func Doc(outputPath string) {
+func Doc(outputPath, newName string) {
 	if len(os.Args) < 2 {
 		println("Please provide at least one path to a file or directory")
 		return
 	}
 
 	// clear output path
-	err := os.RemoveAll(outputPath)
+	err := os.RemoveAll(filepath.Join(outputPath, newName))
 	if err != nil {
 		fmt.Println("Error removing output path:", err)
 		return
@@ -29,6 +29,17 @@ func Doc(outputPath string) {
 		_, err := io.IsExistDir(path)
 		if err != nil {
 			println("Please provide a path to a directory")
+			return
+		}
+
+		stat, err := os.Stat(path)
+		if err != nil {
+			fmt.Println("Error getting file stat:", err)
+			return
+		}
+
+		if !stat.IsDir() {
+			fmt.Println("Please provide a path to a directory")
 			return
 		}
 
@@ -44,7 +55,7 @@ func Doc(outputPath string) {
 				continue
 			}
 
-			fmt.Println("Processing file:", file.Name())
+			// fmt.Println("Processing file:", file.Name())
 
 			content, err := os.ReadFile(filepath.Join(path, file.Name()))
 			if err != nil {
@@ -70,8 +81,12 @@ func Doc(outputPath string) {
 			}
 
 			fileName := strings.Replace(file.Name(), ".go", ".md")
-			// subPath := filepath.Join(outputPath, path, filepath.Dir(file.Name()))
-			subPath := filepath.Join(outputPath, filepath.Dir(file.Name()))
+
+			// replace new name for path (./oldName/*.go -> ./newName/*.go)
+			detectOld := strings.Split(path, "/")[1]
+			renamedPath := strings.Replace(path, detectOld, newName)
+
+			subPath := filepath.Join(outputPath, renamedPath, filepath.Dir(file.Name()))
 
 			// create file path if not exist
 			err = io.CreatePath(filepath.Join(subPath, fileName))
