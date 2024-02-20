@@ -17,7 +17,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/log ./samples/math ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/tools ./samples/types
+	go run doc.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/log ./samples/math ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/tools ./samples/types -tags doc
 	@echo "Done!"
 
 test:
@@ -56,7 +56,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	bash count.sh public/count.svg true 13708a api array cache chart config crypto console date function helper io log math net number regex strings structs tools types
+	bash count.sh public/count.svg true 13708a api array cache chart config connection crypto console date function helper io log math net number regex strings structs tools types
 	@echo "Done!"
 
 pre:

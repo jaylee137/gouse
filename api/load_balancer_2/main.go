@@ -1,9 +1,6 @@
 package main
 
 const (
-  Attempts int = iota
-  Retry
+	Attempts int = iota
+	Retry
 )
-
-
-

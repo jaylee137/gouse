@@ -52,28 +52,27 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
-✅ [Array](docs/gen/samples/array.md) <br/>
-✅ [Cache](docs/gen/samples/cache.md) <br/>
-✅ [Chart](docs/gen/samples/chart.md) <br/>
-✅ [Config](docs/gen/samples/config.md) <br/>
-✅ [Console](docs/gen/samples/console.md) <br/>
-✅ [Date](docs/gen/samples/date.md) <br/>
-✅ [Function](docs/gen/samples/function.md) <br/>
-✅ [Helper](docs/gen/samples/helper.md) <br/>
-✅ [I/O](docs/gen/samples/io.md) <br/>
-✅ [Log](docs/gen/samples/log.md) <br/>
-✅ [Math](docs/gen/samples/math.md) <br/>
-✅ [Net](docs/gen/samples/net.md) <br/>
-✅ [Number](docs/gen/samples/number.md) <br/>
-✅ [Regex](docs/gen/samples/regex.md) <br/>
-✅ [Struct](docs/gen/samples/struct.md) <br/>
-✅ [String](docs/gen/samples/string.md) <br/>
-✅ [Tool](docs/gen/samples/tool.md) <br/>
-✅ [Type](docs/gen/samples/type.md) <br/>
+✅ Array <br/>
+✅ Cache <br/>
+✅ Chart <br/>
+✅ Config <br/>
+✅ Connection <br/>
+✅ Console <br/>
+✅ Date <br/>
+✅ Function <br/>
+✅ Helper <br/>
+✅ I/O <br/>
+✅ Log <br/>
+✅ Math <br/>
+✅ Net <br/>
+✅ Number <br/>
+✅ Regex <br/>
+✅ Struct <br/>
+✅ String <br/>
+✅ Tool <br/>
+✅ Type <br/>
 
 <!-- - [ ] API
-- [ ] Collection
-- [ ] Connection
 - [ ] Cron
 - [ ] Error
 - [ ] Json

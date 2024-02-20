@@ -15,9 +15,9 @@ func main() {
 	Starter()
 
 	// only for development mode testing
-	isDev := flag.Bool("isDev", false, "a bool type for toggle enviroment mode")
+	isDevFlag := flag.Bool("isDev", false, "toggle enviroment mode")
 	flag.Parse()
-	if *isDev {
+	if *isDevFlag == true {
 		samples.Run()
 	}
 }

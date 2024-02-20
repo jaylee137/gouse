@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Date
 
 ## Imports
@@ -8,8 +12,8 @@ import (
 	"github.com/thuongtruong1009/gouse/date"
 )
 ```
-## Functions
 
+## Functions
 
 ### dateTime
 

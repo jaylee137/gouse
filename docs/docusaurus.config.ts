@@ -51,6 +51,15 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    liveCodeBlock: {
+      playgroundPosition: "bottom",
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
     navbar: {
       title: "Gouse",
       hideOnScroll: true,
@@ -61,17 +70,11 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "docSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Docs",
         },
         { to: "/blog", label: "Blog", position: "left" },
-        {
-          to: "/receipts/",
-          label: "Receipts",
-          position: "left",
-          activeBaseRegex: `/receipts/`,
-        },
         {
           href: "https://github.com/thuongtruong1009/gouse",
           position: "right",

@@ -10,9 +10,9 @@ func Run() {
 	// cacheSample()
 	// chartSample()
 	// configSample()
-	// consoleSample()
+	consoleSample()
 	// cryptoSample()
-	// dateSample()
+	dateSample()
 	// functionSample()
 	// helperSample()
 	// iOSample()
@@ -31,47 +31,47 @@ func apiSample() {
 	api.SampleApiPortChecker()
 }
 
-func arraySample() {
-	arrEqual()
-	arrIncludes()
-	arrMost()
-	arrSum()
-	arrChunk()
-	arrDiff()
-	arrDrop()
-	arrIndex()
-	arrMerge()
-	arrCompact()
+// func arraySample() {
+// 	arrEqual()
+// 	arrIncludes()
+// 	arrMost()
+// 	arrSum()
+// 	arrChunk()
+// 	arrDiff()
+// 	arrDrop()
+// 	arrIndex()
+// 	arrMerge()
+// 	arrCompact()
 
-	arrIntersect()
-	arrMin()
-	arrMax()
+// 	arrIntersect()
+// 	arrMin()
+// 	arrMax()
 
-	arrKeyBy()
-	arrIndexBy()
-	arrFilterBy()
-	arrRejectBy()
-	arrFindBy()
-	arrForBy()
-	arrMapBy()
-}
+// 	arrKeyBy()
+// 	arrIndexBy()
+// 	arrFilterBy()
+// 	arrRejectBy()
+// 	arrFindBy()
+// 	arrForBy()
+// 	arrMapBy()
+// }
 
-func cacheSample() {
-	cacheLocal()
-	cacheTmp()
-}
+// func cacheSample() {
+// 	cacheLocal()
+// 	cacheTmp()
+// }
 
-func chartSample() {
-	chartBar()
-	chartLine()
-	chartPie()
-}
+// func chartSample() {
+// 	chartBar()
+// 	chartLine()
+// 	chartPie()
+// }
 
-func configSample() {
-	configJson()
-	configYaml()
-	configToml()
-}
+// func configSample() {
+// 	configJson()
+// 	configYaml()
+// 	configToml()
+// }
 
 func consoleSample() {
 	consoleCmd()
@@ -99,14 +99,14 @@ func consoleSample() {
 	consoleGlamour()
 }
 
-func cryptoSample() {
-	cryptoEncode()
-	cryptoDecode()
-	cryptoEncryptPassword()
-	cryptoDecryptPassword()
-	cryptoEncryptFile()
-	cryptoDecryptFile()
-}
+// func cryptoSample() {
+// 	cryptoEncode()
+// 	cryptoDecode()
+// 	cryptoEncryptPassword()
+// 	cryptoDecryptPassword()
+// 	cryptoEncryptFile()
+// 	cryptoDecryptFile()
+// }
 
 func dateSample() {
 	dateTime()
@@ -126,184 +126,184 @@ func dateSample() {
 	dateClock()
 }
 
-func functionSample() {
-	funcDelay()
-	funcRetry()
-	funcTimes()
-	funcInterval()
-	funcLock()
-	funcRunTime()
-}
+// func functionSample() {
+// 	funcDelay()
+// 	funcRetry()
+// 	funcTimes()
+// 	funcInterval()
+// 	funcLock()
+// 	funcRunTime()
+// }
 
-func helperSample() {
-	helperRandomID()
-	helperUUID()
+// func helperSample() {
+// 	helperRandomID()
+// 	helperUUID()
 
-	helperAutoMdDoc()
-}
+// 	helperAutoMdDoc()
+// }
 
-func iOSample() {
-	ioCheckDir()
-	ioCreateDir()
-	ioRemoveDir()
-	ioLsDir()
-	ioHierarchyDir()
-	ioCurrentDir()
+// func iOSample() {
+// 	ioCheckDir()
+// 	ioCreateDir()
+// 	ioRemoveDir()
+// 	ioLsDir()
+// 	ioHierarchyDir()
+// 	ioCurrentDir()
 
-	ioCheckFile()
-	ioCreateFile()
-	ioRemoveFile()
-	ioReadFileByLine()
-	ioFileInfo()
-	ioRenameFile()
-	ioCopyFile()
-	ioTruncateFile()
-	ioCleanFile()
-	ioWriteToFile()
-	ioAppendToFile()
-	ioFileObj()
+// 	ioCheckFile()
+// 	ioCreateFile()
+// 	ioRemoveFile()
+// 	ioReadFileByLine()
+// 	ioFileInfo()
+// 	ioRenameFile()
+// 	ioCopyFile()
+// 	ioTruncateFile()
+// 	ioCleanFile()
+// 	ioWriteToFile()
+// 	ioAppendToFile()
+// 	ioFileObj()
 
-	ioCreatePath()
-	ioReadPath()
-	ioWritePath()
+// 	ioCreatePath()
+// 	ioReadPath()
+// 	ioWritePath()
 
-	ioZip()
-	ioUnzip()
-}
+// 	ioZip()
+// 	ioUnzip()
+// }
 
-func mathSample() {
-	mathIsPrime()
-	mathIsEven()
-	mathIsOdd()
-	mathIsPerfectSquare()
+// func mathSample() {
+// 	mathIsPrime()
+// 	mathIsEven()
+// 	mathIsOdd()
+// 	mathIsPerfectSquare()
 
-	mathAbs()
-	mathFloor()
-	mathCeil()
-	mathRound()
-	mathMinMax()
-	mathOperators()
-	mathPower()
-	mathFactorial()
-	mathRoot()
+// 	mathAbs()
+// 	mathFloor()
+// 	mathCeil()
+// 	mathRound()
+// 	mathMinMax()
+// 	mathOperators()
+// 	mathPower()
+// 	mathFactorial()
+// 	mathRoot()
 
-	mathLog()
-	mathPytago()
-	mathTrigonometry()
-	mathTransition()
+// 	mathLog()
+// 	mathPytago()
+// 	mathTrigonometry()
+// 	mathTransition()
 
-	mathRect()
-	mathCircle()
-	mathTriangle()
-	mathSquare()
-	mathCube()
-	mathSphere()
-	mathCylinder()
-	mathCone()
-	mathTrapezoid()
-	mathParallelogram()
-	mathRhombus()
-	mathEllipse()
-	mathPolygon()
-}
+// 	mathRect()
+// 	mathCircle()
+// 	mathTriangle()
+// 	mathSquare()
+// 	mathCube()
+// 	mathSphere()
+// 	mathCylinder()
+// 	mathCone()
+// 	mathTrapezoid()
+// 	mathParallelogram()
+// 	mathRhombus()
+// 	mathEllipse()
+// 	mathPolygon()
+// }
 
-func netSample() {
-	netOpen()
-	netEncode()
-	netDecode()
-	netCheck()
-	netCheckWithStatusCode()
-	netHeader()
-	netConnectTime()
-}
+// func netSample() {
+// 	netOpen()
+// 	netEncode()
+// 	netDecode()
+// 	netCheck()
+// 	netCheckWithStatusCode()
+// 	netHeader()
+// 	netConnectTime()
+// }
 
-func numberSample() {
-	numRandom()
-	numClamp()
-	numInRange()
-}
+// func numberSample() {
+// 	numRandom()
+// 	numClamp()
+// 	numInRange()
+// }
 
-func regexSample() {
-	regexIsMatch()
-	regexMatch()
-	regexMatchIndex()
-}
+// func regexSample() {
+// 	regexIsMatch()
+// 	regexMatch()
+// 	regexMatchIndex()
+// }
 
-func stringSample() {
-	strCapitalize()
-	strCamelCase()
-	strSnakeCase()
-	strKebabCase()
+// func stringSample() {
+// 	strCapitalize()
+// 	strCamelCase()
+// 	strSnakeCase()
+// 	strKebabCase()
 
-	strIsLetter()
-	strIsDigit()
-	strIncludes()
-	strIsLower()
-	strIsUpper()
+// 	strIsLetter()
+// 	strIsDigit()
+// 	strIncludes()
+// 	strIsLower()
+// 	strIsUpper()
 
-	strSplit()
-	strWords()
-	strReverse()
-	strLower()
-	strUpper()
-	strRepeat()
-	strTruncate()
-	strReplace()
-	strTrim()
-	strTrimBlank()
-	strTrimPrefix()
-	strTrimSuffix()
-	strJoin()
-	strConcat()
-	strSubStr()
-	strSlice()
-	strSplice()
-	strStartsWith()
-	strEndsWith()
-	strEscape()
-	strUnescape()
-	strPad()
+// 	strSplit()
+// 	strWords()
+// 	strReverse()
+// 	strLower()
+// 	strUpper()
+// 	strRepeat()
+// 	strTruncate()
+// 	strReplace()
+// 	strTrim()
+// 	strTrimBlank()
+// 	strTrimPrefix()
+// 	strTrimSuffix()
+// 	strJoin()
+// 	strConcat()
+// 	strSubStr()
+// 	strSlice()
+// 	strSplice()
+// 	strStartsWith()
+// 	strEndsWith()
+// 	strEscape()
+// 	strUnescape()
+// 	strPad()
 
-	strCount()
-	strLines()
-	strIndex()
-	strRandom()
-	strAt()
-	strCodePointAt()
-	strCodePoint()
-	strFromCodePointAt()
-	strFromCodePoint()
-}
+// 	strCount()
+// 	strLines()
+// 	strIndex()
+// 	strRandom()
+// 	strAt()
+// 	strCodePointAt()
+// 	strCodePoint()
+// 	strFromCodePointAt()
+// 	strFromCodePoint()
+// }
 
-func structSample() {
-	structMerge()
-	structRemove()
-	structAdd()
-	structSet()
-	structGet()
+// func structSample() {
+// 	structMerge()
+// 	structRemove()
+// 	structAdd()
+// 	structSet()
+// 	structGet()
 
-	structClone()
-	structHas()
-}
+// 	structClone()
+// 	structHas()
+// }
 
-func toolsSample() {
-	toolDoc()
-	toolProfile()
-}
+// func toolsSample() {
+// 	toolDoc()
+// 	toolProfile()
+// }
 
-func typeSample() {
-	typeStructConvert()
-	typeStringConvert()
-	typeCastToString()
+// func typeSample() {
+// 	typeStructConvert()
+// 	typeStringConvert()
+// 	typeCastToString()
 
-	typeCheck()
-	typeCheckUUID()
-	typeCheckGmail()
-	typeCheckYahoo()
-	typeCheckOutlook()
-	typeCheckEdu()
-	typeCheckEmail()
-	typeCheckUsername()
-	typeCheckPassword()
-	typeCheckPhone()
-}
+// 	typeCheck()
+// 	typeCheckUUID()
+// 	typeCheckGmail()
+// 	typeCheckYahoo()
+// 	typeCheckOutlook()
+// 	typeCheckEdu()
+// 	typeCheckEmail()
+// 	typeCheckUsername()
+// 	typeCheckPassword()
+// 	typeCheckPhone()
+// }
