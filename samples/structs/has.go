@@ -12,7 +12,7 @@ type Has_Person struct {
 	Email string
 }
 
-func structHas() {
+func SampleStructHas() {
 	person := Has_Person{
 		Name:  "Example",
 		Age:   40,

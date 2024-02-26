@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/chart")
+	"github.com/thuongtruong1009/gouse/chart"
+)
 ```
 ## Functions
 
 
-### chartLine
+### SampleChartLine
 
 ```go
-func chartLine() {
+func SampleChartLine() {
 	newChart := &chart.LineChartOpts{
 		Output:   "line.html",
 		Title:    "Line chart in Go",
@@ -25,4 +26,5 @@ func chartLine() {
 	}
 
 	chart.CreateLineChart(newChart)
-}```
+}
+```

@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioReadPath() {
+func SampleIoReadPath() {
 	relativePath := "tmp/example.txt"
 
 	content, err := io.ReadPath(relativePath)

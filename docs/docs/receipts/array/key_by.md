@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/array")
+	"github.com/thuongtruong1009/gouse/array"
+)
 ```
 ## Functions
 
 
-### arrKeyBy
+### SampleArrayKeyBy
 
 ```go
-func arrKeyBy() {
+func SampleArrayKeyBy() {
 	println("--- Find key of element pass condition in callback function ---")
 	println("[int]: ", array.KeyBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
@@ -41,4 +42,5 @@ func arrKeyBy() {
 	println("[struct]: ", array.KeyBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
 		return v.a == 3
 	}))
-}```
+}
+```

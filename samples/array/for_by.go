@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrForBy() {
+func SampleArrayForBy() {
 	println("--- Loop array then handler with callback function ---")
 	print("[int]: ")
 	array.ForBy([]int{1, -2, 3, -4, 5, 6}, func(v int) {

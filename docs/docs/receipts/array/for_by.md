@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/array")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/array"
+)
 ```
 ## Functions
 
 
-### arrForBy
+### SampleArrayForBy
 
 ```go
-func arrForBy() {
+func SampleArrayForBy() {
 	println("--- Loop array then handler with callback function ---")
 	print("[int]: ")
 	array.ForBy([]int{1, -2, 3, -4, 5, 6}, func(v int) {
@@ -48,4 +50,5 @@ func arrForBy() {
 	array.ForBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) {
 		fmt.Println(v)
 	})
-}```
+}
+```

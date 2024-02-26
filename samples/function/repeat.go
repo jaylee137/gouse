@@ -2,7 +2,7 @@ package function
 
 import "github.com/thuongtruong1009/gouse/function"
 
-func funcTimes() {
+func SampleFuncTimes() {
 	function.Times(func() {
 		println("Times")
 	}, 3)

@@ -2,7 +2,7 @@ package array
 
 import "github.com/thuongtruong1009/gouse/array"
 
-func arrIncludes() {
+func SampleArrayIncludes() {
 	println("--- Check element is exist in array ---")
 	println("[int]: ", array.Includes([]int{1, -2, 3}, 1))
 	println("[uint]: ", array.Includes([]uint{1, 2, 3}, 1))

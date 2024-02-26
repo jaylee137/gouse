@@ -2,6 +2,6 @@ package helper
 
 import "github.com/thuongtruong1009/gouse/helper"
 
-func helperRandomID() {
+func SampleHelperRandomID() {
 	println("Generate random ID: ", helper.RandomID())
 }

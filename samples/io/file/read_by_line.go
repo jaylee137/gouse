@@ -2,7 +2,7 @@ package file
 
 import "github.com/thuongtruong1009/gouse/io"
 
-func ioReadFileByLine() {
+func SampleIoReadFileByLine() {
 	data, err := io.ReadFileByLine("main.go")
 	if err != nil {
 		println(err.Error())

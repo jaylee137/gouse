@@ -2,6 +2,6 @@ package helper
 
 import "github.com/thuongtruong1009/gouse/helper"
 
-func helperUUID() {
+func SampleHelperUUID() {
 	println("New uuid: ", helper.UUID())
 }

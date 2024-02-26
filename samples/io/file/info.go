@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioFileInfo() {
+func SampleIoFileInfo() {
 	data, err := io.FileInfo("main.go")
 	if err != nil {
 		println(err.Error())

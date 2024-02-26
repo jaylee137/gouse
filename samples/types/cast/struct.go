@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 
-func typeStructConvert() {
+func SampleTypeStructConvert() {
 	type CompanyInfo struct {
 		Company string
 		Address string

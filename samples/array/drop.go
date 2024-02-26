@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrDrop() {
+func SampleArrayDrop() {
 	println("--- Drop elements in array (default n = 1) ---")
 	fmt.Println("[int] with default: ", array.Drop([]int{1, -2, 3, -4, 5, 6}))
 	fmt.Println("[int]: ", array.Drop([]int{1, -2, 3, -4, 5, 6}, 2))

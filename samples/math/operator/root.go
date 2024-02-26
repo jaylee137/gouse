@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/math"
 )
 
-func mathRoot() {
+func SampleMathRoot() {
 	println("Square-Root of integer number: ", math.Sqrt(16))
 	println("Square-Root of float number: ", fmt.Sprintf("%f", math.SqrtF(20.0)))
 

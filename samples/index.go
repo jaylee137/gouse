@@ -2,28 +2,53 @@ package samples
 
 import (
 	"github.com/thuongtruong1009/gouse/samples/api"
+	"github.com/thuongtruong1009/gouse/samples/array"
+	"github.com/thuongtruong1009/gouse/samples/cache"
+	"github.com/thuongtruong1009/gouse/samples/chart"
+	"github.com/thuongtruong1009/gouse/samples/config"
+	"github.com/thuongtruong1009/gouse/samples/console"
+	"github.com/thuongtruong1009/gouse/samples/crypto"
+	"github.com/thuongtruong1009/gouse/samples/date"
+	"github.com/thuongtruong1009/gouse/samples/function"
+	"github.com/thuongtruong1009/gouse/samples/helper"
+	"github.com/thuongtruong1009/gouse/samples/io"
+	"github.com/thuongtruong1009/gouse/samples/io/dir"
+	"github.com/thuongtruong1009/gouse/samples/io/file"
+	"github.com/thuongtruong1009/gouse/samples/io/path"
+	math_check "github.com/thuongtruong1009/gouse/samples/math/check"
+	math_fomular "github.com/thuongtruong1009/gouse/samples/math/fomular"
+	math_geometry "github.com/thuongtruong1009/gouse/samples/math/geometry"
+	math_operator "github.com/thuongtruong1009/gouse/samples/math/operator"
+	"github.com/thuongtruong1009/gouse/samples/net"
+	"github.com/thuongtruong1009/gouse/samples/number"
+	"github.com/thuongtruong1009/gouse/samples/regex"
+	"github.com/thuongtruong1009/gouse/samples/strings"
+	"github.com/thuongtruong1009/gouse/samples/structs"
+	"github.com/thuongtruong1009/gouse/samples/tools"
+	types_cast "github.com/thuongtruong1009/gouse/samples/types/cast"
+	types_check "github.com/thuongtruong1009/gouse/samples/types/check"
 )
 
 func Run() {
 	apiSample()
-	// arraySample()
-	// cacheSample()
-	// chartSample()
-	// configSample()
+	arraySample()
+	cacheSample()
+	chartSample()
+	configSample()
 	consoleSample()
-	// cryptoSample()
+	cryptoSample()
 	dateSample()
-	// functionSample()
-	// helperSample()
-	// iOSample()
-	// mathSample()
-	// netSample()
-	// numberSample()
-	// regexSample()
-	// stringSample()
-	// structSample()
-	// toolsSample()
-	// typeSample()
+	functionSample()
+	helperSample()
+	ioSample()
+	mathSample()
+	netSample()
+	numberSample()
+	regexSample()
+	stringSample()
+	structSample()
+	toolsSample()
+	typeSample()
 }
 
 func apiSample() {
@@ -31,279 +56,282 @@ func apiSample() {
 	api.SampleApiPortChecker()
 }
 
-// func arraySample() {
-// 	arrEqual()
-// 	arrIncludes()
-// 	arrMost()
-// 	arrSum()
-// 	arrChunk()
-// 	arrDiff()
-// 	arrDrop()
-// 	arrIndex()
-// 	arrMerge()
-// 	arrCompact()
+func arraySample() {
+	array.SampleArrayEqual()
+	array.SampleArrayIncludes()
+	array.SampleArrayMost()
+	array.SampleArraySum()
+	array.SampleArrayChunk()
+	array.SampleArrayDiff()
+	array.SampleArrayDrop()
+	array.SampleArrayIndex()
+	array.SampleArrayMerge()
+	array.SampleArrayCompact()
 
-// 	arrIntersect()
-// 	arrMin()
-// 	arrMax()
+	array.SampleArrayIntersect()
+	array.SampleArrayMin()
+	array.SampleArrayMax()
 
-// 	arrKeyBy()
-// 	arrIndexBy()
-// 	arrFilterBy()
-// 	arrRejectBy()
-// 	arrFindBy()
-// 	arrForBy()
-// 	arrMapBy()
-// }
+	array.SampleArrayKeyBy()
+	array.SampleArrayIndexBy()
+	array.SampleArrayFilterBy()
+	array.SampleArrayRejectBy()
+	array.SampleArrayFindBy()
+	array.SampleArrayForBy()
+	array.SampleArrayMapBy()
+}
 
-// func cacheSample() {
-// 	cacheLocal()
-// 	cacheTmp()
-// }
+func cacheSample() {
+	cache.SampleCacheLocal()
+	cache.SampleCacheTmp()
+}
 
-// func chartSample() {
-// 	chartBar()
-// 	chartLine()
-// 	chartPie()
-// }
+func chartSample() {
+	chart.SampleChartBar()
+	chart.SampleChartLine()
+	chart.SampleChartPie()
+}
 
-// func configSample() {
-// 	configJson()
-// 	configYaml()
-// 	configToml()
-// }
+func configSample() {
+	config.SampleConfigJson()
+	config.SampleConfigYaml()
+	config.SampleConfigToml()
+}
 
 func consoleSample() {
-	consoleCmd()
-	consoleClear()
-	consoleWithColor()
-	consoleBanner()
-	consoleSelect()
-	consoleHelp()
+	console.SampleConsoleCmd()
+	console.SampleConsoleClear()
+	console.SampleConsoleWithColor()
+	console.SampleConsoleBanner()
+	console.SampleConsoleSelect()
+	console.SampleConsoleHelp()
 
-	consoleList()
-	consolePaper()
-	consoleProgress()
-	consoleRealtime()
-	consoleChoice()
-	consoleSpinner()
-	consoleSplit()
-	consoleStopwatch()
-	consoleTable()
-	consoleTab()
-	consoleCountdown()
-	consoleSequence()
-	consoleInline()
-	consoleParallel()
-	consoleDir()
-	consoleGlamour()
+	console.SampleConsoleList()
+	console.SampleConsolePaper()
+	console.SampleConsoleProgress()
+	console.SampleConsoleRealtime()
+	console.SampleConsoleChoice()
+	console.SampleConsoleSpinner()
+	console.SampleConsoleSplit()
+	console.SampleConsoleStopwatch()
+	console.SampleConsoleTable()
+	console.SampleConsoleTab()
+	console.SampleConsoleCountdown()
+	console.SampleConsoleSequence()
+	console.SampleConsoleInline()
+	console.SampleConsoleParallel()
+	console.SampleConsoleDir()
+	console.SampleConsoleGlamour()
 }
 
-// func cryptoSample() {
-// 	cryptoEncode()
-// 	cryptoDecode()
-// 	cryptoEncryptPassword()
-// 	cryptoDecryptPassword()
-// 	cryptoEncryptFile()
-// 	cryptoDecryptFile()
-// }
+func cryptoSample() {
+	crypto.SampleCryptoEncode()
+	crypto.SampleCryptoDecode()
+	crypto.SampleCryptoEncryptPassword()
+	crypto.SampleCryptoDecryptPassword()
+	crypto.SampleCryptoEncryptFile()
+	crypto.SampleCryptoDecryptFile()
+}
 
 func dateSample() {
-	dateTime()
+	date.SampleDateTime()
 
-	dateISO()
-	dateShort()
-	dateLong()
-	dateUTC()
+	date.SampleDateISO()
+	date.SampleDateShort()
+	date.SampleDateLong()
+	date.SampleDateUTC()
 
-	dateToSecond()
-	dateToMinute()
-	dateToHour()
-	dateSleepSecond()
-	dateSleepMinute()
-	dateSleepHour()
+	date.SampleDateToSecond()
+	date.SampleDateToMinute()
+	date.SampleDateToHour()
+	date.SampleDateSleepSecond()
+	date.SampleDateSleepMinute()
+	date.SampleDateSleepHour()
 
-	dateClock()
+	date.SampleDateClock()
 }
 
-// func functionSample() {
-// 	funcDelay()
-// 	funcRetry()
-// 	funcTimes()
-// 	funcInterval()
-// 	funcLock()
-// 	funcRunTime()
-// }
+func functionSample() {
+	function.SampleFuncDelay()
+	function.SampleFuncRetry()
+	function.SampleFuncTimes()
+	function.SampleFuncInterval()
+	function.SampleFuncLock()
+	function.SampleFuncRunTime()
+}
 
-// func helperSample() {
-// 	helperRandomID()
-// 	helperUUID()
+func helperSample() {
+	helper.SampleHelperRandomID()
+	helper.SampleHelperUUID()
 
-// 	helperAutoMdDoc()
-// }
+	helper.SampleHelperAutoMdDoc()
+}
 
-// func iOSample() {
-// 	ioCheckDir()
-// 	ioCreateDir()
-// 	ioRemoveDir()
-// 	ioLsDir()
-// 	ioHierarchyDir()
-// 	ioCurrentDir()
+func ioSample() {
+	dir.SampleIoCheckDir()
+	dir.SampleIoCreateDir()
+	dir.SampleIoRemoveDir()
+	dir.SampleIoLsDir()
+	dir.SampleIoHierarchyDir()
+	dir.SampleIoCurrentDir()
 
-// 	ioCheckFile()
-// 	ioCreateFile()
-// 	ioRemoveFile()
-// 	ioReadFileByLine()
-// 	ioFileInfo()
-// 	ioRenameFile()
-// 	ioCopyFile()
-// 	ioTruncateFile()
-// 	ioCleanFile()
-// 	ioWriteToFile()
-// 	ioAppendToFile()
-// 	ioFileObj()
+	file.SampleIoCheckFile()
+	file.SampleIoCreateFile()
+	file.SampleIoRemoveFile()
+	file.SampleIoReadFileByLine()
+	file.SampleIoFileInfo()
+	file.SampleIoRenameFile()
+	file.SampleIoCopyFile()
+	file.SampleIoTruncateFile()
+	file.SampleIoCleanFile()
+	file.SampleIoWriteToFile()
+	file.SampleIoAppendToFile()
+	file.SampleIoFileObj()
 
-// 	ioCreatePath()
-// 	ioReadPath()
-// 	ioWritePath()
+	path.SampleIoCreatePath()
+	path.SampleIoReadPath()
+	path.SampleIoWritePath()
 
-// 	ioZip()
-// 	ioUnzip()
-// }
+	io.SampleIoZip()
+	io.SampleIoUnzip()
+}
 
-// func mathSample() {
-// 	mathIsPrime()
-// 	mathIsEven()
-// 	mathIsOdd()
-// 	mathIsPerfectSquare()
+func mathSample() {
+	math_check.SampleMathIsPrime()
+	math_check.SampleMathIsEven()
+	math_check.SampleMathIsOdd()
+	math_check.SampleMathIsPerfectSquare()
 
-// 	mathAbs()
-// 	mathFloor()
-// 	mathCeil()
-// 	mathRound()
-// 	mathMinMax()
-// 	mathOperators()
-// 	mathPower()
-// 	mathFactorial()
-// 	mathRoot()
+	math_operator.SampleMathAbs()
+	math_operator.SampleMathFloor()
+	math_operator.SampleMathCeil()
+	math_operator.SampleMathRound()
+	math_operator.SampleMathMin()
+	math_operator.SampleMathMax()
+	math_operator.SampleMathSum()
+	math_operator.SampleMathMean()
+	math_operator.SampleMathOperators()
+	math_operator.SampleMathPower()
+	math_operator.SampleMathFactorial()
+	math_operator.SampleMathRoot()
 
-// 	mathLog()
-// 	mathPytago()
-// 	mathTrigonometry()
-// 	mathTransition()
+	math_fomular.SampleMathLog()
+	math_fomular.SampleMathPytago()
+	math_fomular.SampleMathTrigonometry()
+	math_fomular.SampleMathTransition()
 
-// 	mathRect()
-// 	mathCircle()
-// 	mathTriangle()
-// 	mathSquare()
-// 	mathCube()
-// 	mathSphere()
-// 	mathCylinder()
-// 	mathCone()
-// 	mathTrapezoid()
-// 	mathParallelogram()
-// 	mathRhombus()
-// 	mathEllipse()
-// 	mathPolygon()
-// }
+	math_geometry.SampleMathRect()
+	math_geometry.SampleMathCircle()
+	math_geometry.SampleMathTriangle()
+	math_geometry.SampleMathSquare()
+	math_geometry.SampleMathCube()
+	math_geometry.SampleMathSphere()
+	math_geometry.SampleMathCylinder()
+	math_geometry.SampleMathCone()
+	math_geometry.SampleMathTrapezoid()
+	math_geometry.SampleMathParallelogram()
+	math_geometry.SampleMathRhombus()
+	math_geometry.SampleMathEllipse()
+	math_geometry.SampleMathPolygon()
+}
 
-// func netSample() {
-// 	netOpen()
-// 	netEncode()
-// 	netDecode()
-// 	netCheck()
-// 	netCheckWithStatusCode()
-// 	netHeader()
-// 	netConnectTime()
-// }
+func netSample() {
+	net.SampleNetOpen()
+	net.SampleNetEncode()
+	net.SampleNetDecode()
+	net.SampleNetCheck()
+	net.SampleNetCheckWithStatusCode()
+	net.SampleNetHeader()
+	net.SampleNetConnectTime()
+}
 
-// func numberSample() {
-// 	numRandom()
-// 	numClamp()
-// 	numInRange()
-// }
+func numberSample() {
+	number.SampleNumRandom()
+	number.SampleNumClamp()
+	number.SampleNumInRange()
+}
 
-// func regexSample() {
-// 	regexIsMatch()
-// 	regexMatch()
-// 	regexMatchIndex()
-// }
+func regexSample() {
+	regex.SampleRegexIsMatch()
+	regex.SampleRegexMatch()
+	regex.SampleRegexMatchIndex()
+}
 
-// func stringSample() {
-// 	strCapitalize()
-// 	strCamelCase()
-// 	strSnakeCase()
-// 	strKebabCase()
+func stringSample() {
+	strings.SampleStringCapitalize()
+	strings.SampleStringCamelCase()
+	strings.SampleStringSnakeCase()
+	strings.SampleStringKebabCase()
 
-// 	strIsLetter()
-// 	strIsDigit()
-// 	strIncludes()
-// 	strIsLower()
-// 	strIsUpper()
+	strings.SampleStringIsLetter()
+	strings.SampleStringIsDigit()
+	strings.SampleStringIncludes()
+	strings.SampleStringIsLower()
+	strings.SampleStringIsUpper()
 
-// 	strSplit()
-// 	strWords()
-// 	strReverse()
-// 	strLower()
-// 	strUpper()
-// 	strRepeat()
-// 	strTruncate()
-// 	strReplace()
-// 	strTrim()
-// 	strTrimBlank()
-// 	strTrimPrefix()
-// 	strTrimSuffix()
-// 	strJoin()
-// 	strConcat()
-// 	strSubStr()
-// 	strSlice()
-// 	strSplice()
-// 	strStartsWith()
-// 	strEndsWith()
-// 	strEscape()
-// 	strUnescape()
-// 	strPad()
+	strings.SampleStringSplit()
+	strings.SampleStringWords()
+	strings.SampleStringReverse()
+	strings.SampleStringLower()
+	strings.SampleStringUpper()
+	strings.SampleStringRepeat()
+	strings.SampleStringTruncate()
+	strings.SampleStringReplace()
+	strings.SampleStringTrim()
+	strings.SampleStringTrimBlank()
+	strings.SampleStringTrimPrefix()
+	strings.SampleStringTrimSuffix()
+	strings.SampleStringJoin()
+	strings.SampleStringConcat()
+	strings.SampleStringSubStr()
+	strings.SampleStringSlice()
+	strings.SampleStringSplice()
+	strings.SampleStringStartsWith()
+	strings.SampleStringEndsWith()
+	strings.SampleStringEscape()
+	strings.SampleStringUnescape()
+	strings.SampleStringPad()
 
-// 	strCount()
-// 	strLines()
-// 	strIndex()
-// 	strRandom()
-// 	strAt()
-// 	strCodePointAt()
-// 	strCodePoint()
-// 	strFromCodePointAt()
-// 	strFromCodePoint()
-// }
+	strings.SampleStringCount()
+	strings.SampleStringLines()
+	strings.SampleStringIndex()
+	strings.SampleStringRandom()
+	strings.SampleStringAt()
+	strings.SampleStringCodePointAt()
+	strings.SampleStringCodePoint()
+	strings.SampleStringFromCodePointAt()
+	strings.SampleStringFromCodePoint()
+}
 
-// func structSample() {
-// 	structMerge()
-// 	structRemove()
-// 	structAdd()
-// 	structSet()
-// 	structGet()
+func structSample() {
+	structs.SampleStructMerge()
+	structs.SampleStructRemove()
+	structs.SampleStructAdd()
+	structs.SampleStructSet()
+	structs.SampleStructGet()
 
-// 	structClone()
-// 	structHas()
-// }
+	structs.SampleStructClone()
+	structs.SampleStructHas()
+}
 
-// func toolsSample() {
-// 	toolDoc()
-// 	toolProfile()
-// }
+func toolsSample() {
+	tools.SampleToolDoc()
+	tools.SampleToolProfile()
+}
 
-// func typeSample() {
-// 	typeStructConvert()
-// 	typeStringConvert()
-// 	typeCastToString()
+func typeSample() {
+	types_cast.SampleTypeStringConvert()
+	types_cast.SampleTypeStructConvert()
+	types_cast.SampleTypeCastToString()
 
-// 	typeCheck()
-// 	typeCheckUUID()
-// 	typeCheckGmail()
-// 	typeCheckYahoo()
-// 	typeCheckOutlook()
-// 	typeCheckEdu()
-// 	typeCheckEmail()
-// 	typeCheckUsername()
-// 	typeCheckPassword()
-// 	typeCheckPhone()
-// }
+	types_check.SampleTypeCheck()
+	types_check.SampleTypeCheckUUID()
+	types_check.SampleTypeCheckGmail()
+	types_check.SampleTypeCheckYahoo()
+	types_check.SampleTypeCheckOutlook()
+	types_check.SampleTypeCheckEdu()
+	types_check.SampleTypeCheckEmail()
+	types_check.SampleTypeCheckUsername()
+	types_check.SampleTypeCheckPassword()
+	types_check.SampleTypeCheckPhone()
+}

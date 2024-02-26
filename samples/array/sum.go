@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrSum() {
+func SampleArraySum() {
 	println("--- Sum elements in array ---")
 	println("[int]: ", array.Sum([]int{1, -2, 3}))
 	println("[uint]: ", array.Sum([]uint{1, 2, 3}))

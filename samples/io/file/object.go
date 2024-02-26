@@ -8,7 +8,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioFileObj() {
+func SampleIoFileObj() {
 	type User struct {
 		Name string
 		Age  int

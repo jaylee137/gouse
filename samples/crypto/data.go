@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/crypto"
 )
 
-func cryptoEncode() {
+func SampleCryptoEncode() {
 	data := []byte("This is a sample data")
 
 	encodedData, err := crypto.Encode(data)
@@ -18,7 +18,7 @@ func cryptoEncode() {
 	fmt.Println("Encoded data:", string(encodedData))
 }
 
-func cryptoDecode() {
+func SampleCryptoDecode() {
 	data := []byte("VGhpcyBpcyBhIHNhbXBsZSBkYXRh")
 	decodedData, err := crypto.Decode(data)
 	if err != nil {

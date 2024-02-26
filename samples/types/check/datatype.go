@@ -2,7 +2,7 @@ package check
 
 import "github.com/thuongtruong1009/gouse/types"
 
-func typeCheck() {
+func SampleTypeCheck() {
 	println("Check type is int: ", types.IsInt(1))
 	println("Check type is uint: ", types.IsUnInt(-1))
 	println("Check type is float: ", types.IsFloat(1.1))

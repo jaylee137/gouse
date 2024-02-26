@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/chart")
+	"github.com/thuongtruong1009/gouse/chart"
+)
 ```
 ## Functions
 
 
-### chartPie
+### SampleChartPie
 
 ```go
-func chartPie() {
+func SampleChartPie() {
 	newChart := &chart.PieChartOpts{
 		Output:    "pie.html",
 		Title:     "Pie chart in Go",
@@ -31,4 +32,5 @@ func chartPie() {
 	}
 
 	chart.CreatePieChart(newChart)
-}```
+}
+```

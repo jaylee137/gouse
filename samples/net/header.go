@@ -7,7 +7,7 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 
-func netHeader() {
+func SampleNetHeader() {
 	header, err := net.Header("https://google.com")
 	if err != nil {
 		panic(err)

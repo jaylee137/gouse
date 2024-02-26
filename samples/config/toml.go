@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/config"
 )
 
-func configToml() {
+func SampleConfigToml() {
 	type Configuration struct {
 		Mysql struct {
 			Host     string

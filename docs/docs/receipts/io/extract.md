@@ -11,10 +11,10 @@ import (
 ## Functions
 
 
-### ioUnzip
+### SampleIoUnzip
 
 ```go
-func ioUnzip() {
+func SampleIoUnzip() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := io.Unzip(zipFileName, destFolder)

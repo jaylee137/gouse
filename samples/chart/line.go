@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/chart"
 )
 
-func chartLine() {
+func SampleChartLine() {
 	newChart := &chart.LineChartOpts{
 		Output:   "line.html",
 		Title:    "Line chart in Go",

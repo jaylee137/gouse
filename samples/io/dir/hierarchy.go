@@ -2,7 +2,7 @@ package dir
 
 import "github.com/thuongtruong1009/gouse/io"
 
-func ioHierarchyDir() {
+func SampleIoHierarchyDir() {
 	data, err := io.HierarchyDir(".")
 	if err != nil {
 		println(err.Error())

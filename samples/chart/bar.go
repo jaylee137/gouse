@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/chart"
 )
 
-func chartBar() {
+func SampleChartBar() {
 	newChart := &chart.BarChartOpts{
 		Output:   "bar.html",
 		Title:    "Bar chart in Go",

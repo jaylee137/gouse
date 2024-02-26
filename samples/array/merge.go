@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrMerge() {
+func SampleArrayMerge() {
 	println("--- Merge arrays ---")
 	println("[int]: ", array.Merge([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}, []int{1, -2, 3, -4, 5, 6}))
 	println("[uint]: ", array.Merge([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))

@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrDiff() {
+func SampleArrayDiff() {
 	println("--- Difference array ---")
 	fmt.Println("[int]: ", array.Diff([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
 	fmt.Println("[uint]: ", array.Diff([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))

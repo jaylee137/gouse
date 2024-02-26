@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/io")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/io"
+)
 ```
 ## Functions
 
 
-### ioZip
+### SampleIoZip
 
 ```go
-func ioZip() {
+func SampleIoZip() {
 	filesToZip := []string{"file1.txt", "file2.txt"}
 	zipFileName := "archive.zip"
 	err := io.Zip(zipFileName, filesToZip)
@@ -21,4 +23,5 @@ func ioZip() {
 	}
 
 	println("Files zipped successfully:", zipFileName)
-}```
+}
+```

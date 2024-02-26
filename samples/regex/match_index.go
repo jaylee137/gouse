@@ -8,7 +8,7 @@ import (
 
 // Note: regex pattern is not include one of (^, $, /g)
 
-func regexMatchIndex() {
+func SampleRegexMatchIndex() {
 	paragraph := "I think Ruth's dog is cuter than your dog!"
 	matchIdx := regex.MatchIndex(`[^\w\s']`, paragraph)
 	if matchIdx != -1 {

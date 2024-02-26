@@ -8,6 +8,6 @@ import (
 
 // Note: regex pattern is not include one of (^, $, /g)
 
-func regexIsMatch() {
+func SampleRegexIsMatch() {
 	fmt.Println("Match string with regex: ", regex.IsMatch(`[a-z]+\s[a-z]+`, "hello world"))
 }

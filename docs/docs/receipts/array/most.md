@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/array")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/array"
+)
 ```
 ## Functions
 
 
-### arrMost
+### SampleArrayMost
 
 ```go
-func arrMost() {
+func SampleArrayMost() {
 	println("--- Most frequency in array ---")
 	println("[int]: ", array.Most([]int{1, -2, 3, 2, 2, 1, 2, 3}))
 	println("[uint]: ", array.Most([]uint{1, 2, 3, 2, 2, 1, 2, 3}))
@@ -21,4 +23,5 @@ func arrMost() {
 	println("[rune]: ", string(array.Most([]rune{'a', 'b', 'c', 'b', 'b', 'a', 'b', 'c'})))
 	fmt.Println("[complex]: ", array.Most([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 2 + 3i, 2 + 3i, 1 + 2i, 2 + 3i, 3 + 4i}))
 	fmt.Println("[struct]: ", array.Most([]struct{ a int }{{1}, {2}, {3}, {2}, {2}, {1}, {2}, {3}}))
-}```
+}
+```

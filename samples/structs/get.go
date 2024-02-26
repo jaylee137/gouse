@@ -12,7 +12,7 @@ type Get_Person struct {
 	Email string
 }
 
-func structGet() {
+func SampleStructGet() {
 	person := Get_Person{
 		Name:  "Example",
 		Age:   40,

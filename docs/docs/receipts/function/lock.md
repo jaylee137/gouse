@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/function")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/function"
+)
 ```
 ## Functions
 
 
-### funcLock
+### SampleFuncLock
 
 ```go
-func funcLock() {
+func SampleFuncLock() {
 	oneInOneOutFuc := function.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
@@ -26,4 +28,5 @@ func funcLock() {
 	function.LockFunc(func() {
 		println("no input - no output")
 	}).(func())()
-}```
+}
+```

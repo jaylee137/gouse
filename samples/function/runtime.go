@@ -7,7 +7,7 @@ import (
 	"github.com/thuongtruong1009/gouse/function"
 )
 
-func funcRunTime() {
+func SampleFuncRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
 		fmt.Println("Task completed.")

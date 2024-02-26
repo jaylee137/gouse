@@ -12,7 +12,7 @@ type Clone_Person struct {
 	Email string
 }
 
-func structClone() {
+func SampleStructClone() {
 	person := Clone_Person{
 		Name:  "Example",
 		Age:   40,

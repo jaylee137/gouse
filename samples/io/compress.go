@@ -1,4 +1,4 @@
-package path
+package io
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioZip() {
+func SampleIoZip() {
 	filesToZip := []string{"file1.txt", "file2.txt"}
 	zipFileName := "archive.zip"
 	err := io.Zip(zipFileName, filesToZip)

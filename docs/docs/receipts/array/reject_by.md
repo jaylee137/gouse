@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/array")
+	"github.com/thuongtruong1009/gouse/array"
+)
 ```
 ## Functions
 
 
-### arrRejectBy
+### SampleArrayRejectBy
 
 ```go
-func arrRejectBy() {
+func SampleArrayRejectBy() {
 	println("--- Reject elements in array by pass condition in callback function---")
 	println("[int]: ", array.RejectBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v > 2
@@ -37,4 +38,5 @@ func arrRejectBy() {
 	println("[complex]: ", array.RejectBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) bool {
 		return real(v) > 3
 	}))
-}```
+}
+```

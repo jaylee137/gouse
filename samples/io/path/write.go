@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioWritePath() {
+func SampleIoWritePath() {
 	relativePath := "tmp/example.txt"
 
 	newContent := []byte("This is a new content")

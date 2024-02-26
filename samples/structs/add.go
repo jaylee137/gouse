@@ -12,7 +12,7 @@ type Add_Person struct {
 	Email string
 }
 
-func structAdd() {
+func SampleStructAdd() {
 	person := Add_Person{
 		Name:  "Example",
 		Age:   40,

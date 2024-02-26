@@ -2,7 +2,7 @@ package tools
 
 import "github.com/thuongtruong1009/gouse/tools"
 
-func toolProfile() {
+func SampleToolProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"
 	tools.Profile(cpuprofile, memprofile)
 

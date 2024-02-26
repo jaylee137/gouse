@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/config")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/config"
+)
 ```
 ## Functions
 
 
-### configJson
+### SampleConfigJson
 
 ```go
-func configJson() {
+func SampleConfigJson() {
 	type Configuration struct {
 		Users  []string
 		Groups []string
@@ -26,4 +28,5 @@ func configJson() {
 
 	fmt.Println("Users:", myConf.Users)
 	fmt.Println("Groups:", myConf.Groups)
-}```
+}
+```

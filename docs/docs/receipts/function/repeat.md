@@ -10,10 +10,10 @@ import (
 ## Functions
 
 
-### funcTimes
+### SampleFuncTimes
 
 ```go
-func funcTimes() {
+func SampleFuncTimes() {
 	function.Times(func() {
 		println("Times")
 	}, 3)

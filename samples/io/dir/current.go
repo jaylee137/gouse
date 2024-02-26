@@ -2,7 +2,7 @@ package dir
 
 import "github.com/thuongtruong1009/gouse/io"
 
-func ioCurrentDir() {
+func SampleIoCurrentDir() {
 	data, err := io.CurrentDir()
 	if err != nil {
 		println(err.Error())

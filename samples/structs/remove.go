@@ -12,7 +12,7 @@ type Remove_Person struct {
 	Email string
 }
 
-func structRemove() {
+func SampleStructRemove() {
 	person := Remove_Person{
 		Name:  "Example",
 		Age:   40,

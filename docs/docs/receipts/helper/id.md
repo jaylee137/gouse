@@ -4,14 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/helper")
+	"github.com/thuongtruong1009/gouse/helper"
+)
 ```
 ## Functions
 
 
-### helperRandomID
+### SampleHelperRandomID
 
 ```go
-func helperRandomID() {
+func SampleHelperRandomID() {
 	println("Generate random ID: ", helper.RandomID())
-}```
+}
+```

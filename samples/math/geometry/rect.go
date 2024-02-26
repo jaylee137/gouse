@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/math"
 )
 
-func mathRect() {
+func SampleMathRect() {
 	println("Area of rectangle: ", math.AreaRect(10, 20))
 	println("Perimeter of rectangle (integer): ", math.PeriRect(10, 20))
 	println("Perimeter of rectangle (float): ", fmt.Sprintf("%f", math.PeriRectF(10.0, 20.0)))

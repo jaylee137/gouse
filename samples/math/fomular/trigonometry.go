@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/math"
 )
 
-func mathTrigonometry() {
+func SampleMathTrigonometry() {
 	println("Sine of integer number: ", math.Sin(90))
 	println("Sine of float number: ", fmt.Sprintf("%f", math.SinF(90.0)))
 	println("Cosine of integer number: ", math.Cos(90))

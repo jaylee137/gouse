@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/function"
 )
 
-func funcLock() {
+func SampleFuncLock() {
 	oneInOneOutFuc := function.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")

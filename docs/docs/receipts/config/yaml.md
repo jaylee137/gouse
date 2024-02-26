@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/config")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/config"
+)
 ```
 ## Functions
 
 
-### configYaml
+### SampleConfigYaml
 
 ```go
-func configYaml() {
+func SampleConfigYaml() {
 	type Configuration struct {
 		Server struct {
 			Port string `envconfig:"SERVER_PORT"`
@@ -34,4 +36,5 @@ func configYaml() {
 	fmt.Println("Server Host:", myConf.Server.Host)
 	fmt.Println("DB Username:", myConf.Database.Username)
 	fmt.Println("DB Password:", myConf.Database.Password)
-}```
+}
+```

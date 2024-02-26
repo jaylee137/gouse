@@ -4,14 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/helper")
+	"github.com/thuongtruong1009/gouse/helper"
+)
 ```
 ## Functions
 
 
-### helperUUID
+### SampleHelperUUID
 
 ```go
-func helperUUID() {
+func SampleHelperUUID() {
 	println("New uuid: ", helper.UUID())
-}```
+}
+```

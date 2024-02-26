@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 
-func typeStringConvert() {
+func SampleTypeStringConvert() {
 	println("Convert string to int: ", types.StringToInt("1"))
 	fmt.Println("Convert string to float: ", types.StringToFloat("1.1"))
 	println("Convert string to bool: ", types.StringToBool("true"))
@@ -14,7 +14,7 @@ func typeStringConvert() {
 	fmt.Println("Convert strings to bytes: ", string(types.StringsToBytes([]string{"1", "2", "3"})), "->", types.StringsToBytes([]string{"1", "2", "3"}))
 }
 
-func typeCastToString() {
+func SampleTypeCastToString() {
 	println("Cast int to string: ", types.IntToString(1))
 	fmt.Println("Cast float to string: ", types.FloatToString(1.1))
 	println("Cast bool to string: ", types.BoolToString(true))

@@ -9,7 +9,7 @@ import (
 	"github.com/thuongtruong1009/gouse/date"
 )
 
-func cacheTmp() {
+func SampleCacheTmp() {
 	newCache := cache.NewTmp(date.ToSecond(3))
 	newCache.SetTmp("key1", "temp cache value 1", date.ToSecond(3))
 	newCache.SetTmp("key2", "temp cache value 2", date.ToSecond(6))

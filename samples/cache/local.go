@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/cache"
 )
 
-func cacheLocal() {
+func SampleCacheLocal() {
 	newCache := cache.NewLocal()
 	newCache.SetLocal("key1", "local cache value 1")
 	newCache.SetLocal("key2", "local cache value 2")

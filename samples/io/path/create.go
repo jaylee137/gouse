@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioCreatePath() {
+func SampleIoCreatePath() {
 	relativePath := "tmp/example.txt"
 
 	if err := io.CreatePath(relativePath); err != nil {

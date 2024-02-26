@@ -17,7 +17,7 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run doc.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/log ./samples/math ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/tools ./samples/types -tags doc
+	go run docs/generate.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/io/dir ./samples/io/file ./samples/io/path ./samples/math/check ./samples/math/operator ./samples/math/geometry ./samples/math/fomular ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/tools ./samples/types/cast ./samples/types/check
 	@echo "Done!"
 
 test:

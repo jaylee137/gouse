@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrMost() {
+func SampleArrayMost() {
 	println("--- Most frequency in array ---")
 	println("[int]: ", array.Most([]int{1, -2, 3, 2, 2, 1, 2, 3}))
 	println("[uint]: ", array.Most([]uint{1, 2, 3, 2, 2, 1, 2, 3}))

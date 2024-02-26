@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrIndex() {
+func SampleArrayIndex() {
 	println("--- Index of element in array ---")
 	println("[int]: ", array.Index([]int{1, -2, 3, -4, 5, 6}, 3))
 	println("[uint]: ", array.Index([]uint{1, 2, 3, 4, 5, 7}, 3))

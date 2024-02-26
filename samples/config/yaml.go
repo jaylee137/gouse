@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/config"
 )
 
-func configYaml() {
+func SampleConfigYaml() {
 	type Configuration struct {
 		Server struct {
 			Port string `envconfig:"SERVER_PORT"`

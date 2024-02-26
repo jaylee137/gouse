@@ -2,6 +2,6 @@ package tools
 
 import "github.com/thuongtruong1009/gouse/tools"
 
-func toolDoc() {
+func SampleToolDoc() {
 	tools.Doc("docs", "gen")
 }

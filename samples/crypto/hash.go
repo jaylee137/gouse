@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/crypto"
 )
 
-func cryptoEncryptPassword() {
+func SampleCryptoEncryptPassword() {
 	data := "This is a sample data"
 
 	encryptedData, err := crypto.EncryptPassword(data)
@@ -18,7 +18,7 @@ func cryptoEncryptPassword() {
 	fmt.Println("Encrypted data:", string(encryptedData))
 }
 
-func cryptoDecryptPassword() {
+func SampleCryptoDecryptPassword() {
 	data := "$2a$10$bcA002IOHi5SYHNH4lmIbuHjHplGl7TQZ.MznNrL1N70vAi7ovTa2"
 	err := crypto.DecryptPassword(data, "This is a sample data")
 	if err != nil {

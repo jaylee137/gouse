@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/function")
+	"github.com/thuongtruong1009/gouse/function"
+)
 ```
 ## Functions
 
 
-### funcDelay
+### SampleFuncDelay
 
 ```go
-func funcDelay() {
+func SampleFuncDelay() {
 	println("Delay start:")
 
 	result := function.DelayF(func() string {
@@ -28,4 +29,5 @@ func funcDelay() {
 	function.Delay(func() {
 		println("Delayed not return")
 	}, 3)
-}```
+}
+```

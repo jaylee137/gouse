@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/array")
+	"github.com/thuongtruong1009/gouse/array"
+)
 ```
 ## Functions
 
 
-### arrIndexBy
+### SampleArrayIndexBy
 
 ```go
-func arrIndexBy() {
+func SampleArrayIndexBy() {
 	println("--- Find index of element pass condition in callback function ---")
 	println("[int]: ", array.IndexBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
@@ -41,4 +42,5 @@ func arrIndexBy() {
 	println("[struct]: ", array.IndexBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
 		return v.a == 3
 	}))
-}```
+}
+```

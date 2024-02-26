@@ -4,15 +4,18 @@
 
 ```go
 import (
-	"fmt"	"time"	"github.com/thuongtruong1009/gouse/function")
+	"fmt"
+	"time"
+	"github.com/thuongtruong1009/gouse/function"
+)
 ```
 ## Functions
 
 
-### funcRunTime
+### SampleFuncRunTime
 
 ```go
-func funcRunTime() {
+func SampleFuncRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
 		fmt.Println("Task completed.")
@@ -20,4 +23,5 @@ func funcRunTime() {
 
 	duration := function.RunTime(time.Now(), exampleFunc)
 	fmt.Printf("Function run in: %v\n", duration)
-}```
+}
+```

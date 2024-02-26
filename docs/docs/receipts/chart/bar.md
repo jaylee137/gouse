@@ -4,15 +4,16 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/chart")
+	"github.com/thuongtruong1009/gouse/chart"
+)
 ```
 ## Functions
 
 
-### chartBar
+### SampleChartBar
 
 ```go
-func chartBar() {
+func SampleChartBar() {
 	newChart := &chart.BarChartOpts{
 		Output:   "bar.html",
 		Title:    "Bar chart in Go",
@@ -26,4 +27,5 @@ func chartBar() {
 	}
 
 	chart.CreateBarChart(newChart)
-}```
+}
+```

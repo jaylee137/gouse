@@ -2,7 +2,7 @@ package dir
 
 import "github.com/thuongtruong1009/gouse/io"
 
-func ioLsDir() {
+func SampleIoLsDir() {
 	data, err := io.LsDir(".")
 	if err != nil {
 		println(err.Error())

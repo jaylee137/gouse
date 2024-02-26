@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrMapBy() {
+func SampleArrayMapBy() {
 	println("--- Map array then handler with callback function ---")
 	fmt.Println("[int]: ", array.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
 		return v * 2

@@ -2,7 +2,7 @@ package function
 
 import "github.com/thuongtruong1009/gouse/function"
 
-func funcDelay() {
+func SampleFuncDelay() {
 	println("Delay start:")
 
 	result := function.DelayF(func() string {

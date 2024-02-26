@@ -12,7 +12,7 @@ type Set_Person struct {
 	Email string
 }
 
-func structSet() {
+func SampleStructSet() {
 	person := &Set_Person{
 		Name:  "Example",
 		Age:   40,

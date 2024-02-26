@@ -18,7 +18,7 @@ type Merge_Address struct {
 	ZipCode string
 }
 
-func structMerge() {
+func SampleStructMerge() {
 	person := Merge_Person{
 		Name:  "Example",
 		Age:   40,

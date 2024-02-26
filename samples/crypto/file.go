@@ -2,12 +2,12 @@ package crypto
 
 import "github.com/thuongtruong1009/gouse/crypto"
 
-func cryptoEncryptFile() {
+func SampleCryptoEncryptFile() {
 	crypto.EncryptFile("sample.txt", []byte("password"))
 	println("File content encrypted")
 }
 
-func cryptoDecryptFile() {
+func SampleCryptoDecryptFile() {
 	crypto.DecryptFile("sample.txt", []byte("password"))
 	println("File content decrypted")
 }

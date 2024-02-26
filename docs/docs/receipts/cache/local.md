@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/cache")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/cache"
+)
 ```
 ## Functions
 
 
-### cacheLocal
+### SampleCacheLocal
 
 ```go
-func cacheLocal() {
+func SampleCacheLocal() {
 	newCache := cache.NewLocal()
 	newCache.SetLocal("key1", "local cache value 1")
 	newCache.SetLocal("key2", "local cache value 2")
@@ -42,4 +44,5 @@ func cacheLocal() {
 
 	all = newCache.AllLocal()
 	fmt.Println("All local cache values (after flush):", all)
-}```
+}
+```

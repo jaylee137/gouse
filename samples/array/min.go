@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrMin() {
+func SampleArrayMin() {
 	println("--- Min element in array ---")
 	println("[int]: ", array.Min([]int{1, -2, 3}))
 	println("[uint]: ", array.Min([]uint{1, 2, 3}))

@@ -8,6 +8,7 @@ func Parallelize(functions ...func()) {
 	waitGroup.Add(len(functions))
 
 	ch := make(chan struct{}, len(functions))
+	done := make(chan struct{}, len(functions))
 
 	for _, f := range functions {
 		ch <- struct{}{}
@@ -19,5 +20,11 @@ func Parallelize(functions ...func()) {
 			copyFunc()
 		}(f)
 	}
-	waitGroup.Wait()
+
+	go func() {
+		waitGroup.Wait()
+		close(done)
+	}()
+
+	<-done
 }

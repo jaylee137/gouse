@@ -2,7 +2,7 @@ package net
 
 import "github.com/thuongtruong1009/gouse/net"
 
-func netCheck() {
+func SampleNetCheck() {
 	ok, err := net.Check("https://google.com")
 	if err != nil {
 		panic(err)
@@ -10,7 +10,7 @@ func netCheck() {
 	println("Response: ", ok)
 }
 
-func netCheckWithStatusCode() {
+func SampleNetCheckWithStatusCode() {
 	statusCode, err := net.CheckWithStatusCode("https://google.com")
 	if err != nil {
 		panic(err)

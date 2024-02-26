@@ -10,19 +10,19 @@ import (
 ## Functions
 
 
-### cryptoEncryptFile
+### SampleCryptoEncryptFile
 
 ```go
-func cryptoEncryptFile() {
+func SampleCryptoEncryptFile() {
 	crypto.EncryptFile("sample.txt", []byte("password"))
 	println("File content encrypted")
 }
 ```
 
-### cryptoDecryptFile
+### SampleCryptoDecryptFile
 
 ```go
-func cryptoDecryptFile() {
+func SampleCryptoDecryptFile() {
 	crypto.DecryptFile("sample.txt", []byte("password"))
 	println("File content decrypted")
 }

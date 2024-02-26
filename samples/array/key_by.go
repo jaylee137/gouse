@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrKeyBy() {
+func SampleArrayKeyBy() {
 	println("--- Find key of element pass condition in callback function ---")
 	println("[int]: ", array.KeyBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3

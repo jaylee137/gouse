@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/chart"
 )
 
-func chartPie() {
+func SampleChartPie() {
 	newChart := &chart.PieChartOpts{
 		Output:    "pie.html",
 		Title:     "Pie chart in Go",

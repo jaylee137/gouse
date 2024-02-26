@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/types"
 )
 
-func typeCheckUUID() {
+func SampleTypeCheckUUID() {
 	isValid, err := types.IsUUID("123e4567-e89b-12d3-a456-426614174000")
 	if err != nil {
 		println(err.Error())
@@ -26,7 +26,7 @@ var emails = []string{
 	"ititiu19228@student.hcmiu.edu.vn",
 }
 
-func typeCheckGmail() {
+func SampleTypeCheckGmail() {
 	println("--- Check valid gmail ---")
 	for _, email := range emails {
 		isEmail, err := types.IsGmail(email)
@@ -40,7 +40,7 @@ func typeCheckGmail() {
 	}
 }
 
-func typeCheckYahoo() {
+func SampleTypeCheckYahoo() {
 	println("--- Check valid yahoo ---")
 	for _, email := range emails {
 		isEmail, err := types.IsYahoo(email)
@@ -54,7 +54,7 @@ func typeCheckYahoo() {
 	}
 }
 
-func typeCheckOutlook() {
+func SampleTypeCheckOutlook() {
 	println("--- Check valid outlook ---")
 	for _, email := range emails {
 		isEmail, err := types.IsOutlook(email)
@@ -68,7 +68,7 @@ func typeCheckOutlook() {
 	}
 }
 
-func typeCheckEdu() {
+func SampleTypeCheckEdu() {
 	println("--- Check valid education mail ---")
 	for _, email := range emails {
 		isEmail, err := types.IsEdu(email)
@@ -82,7 +82,7 @@ func typeCheckEdu() {
 	}
 }
 
-func typeCheckEmail() {
+func SampleTypeCheckEmail() {
 	println("--- Check valid custom domain ---")
 	for _, email := range emails {
 		isEmail, err := types.IsEmail(email, "edu.vn")
@@ -96,7 +96,7 @@ func typeCheckEmail() {
 	}
 }
 
-func typeCheckUsername() {
+func SampleTypeCheckUsername() {
 	usernames := []string{
 		"okahehe",
 		"missingat.sign",
@@ -116,7 +116,7 @@ func typeCheckUsername() {
 	}
 }
 
-func typeCheckPassword() {
+func SampleTypeCheckPassword() {
 	passwords := []string{
 		"okahehe",
 		"missingat.sign",
@@ -137,7 +137,7 @@ func typeCheckPassword() {
 	}
 }
 
-func typeCheckPhone() {
+func SampleTypeCheckPhone() {
 	//  Note: Phone format syntax: +<country_calling_code> (<area_Prefix_mobile_code>) <phone_number>
 	// Reference at https://en.wikipedia.org/wiki/List_of_mobile_telephone_prefixes_by_country#:~:text=Property%20Value%20%20Country%20or%20unrecognized%20territory%20,73%20%20%20Etisalat%20%20%20www.etisalat.af%20
 	phoneNumbers := []string{

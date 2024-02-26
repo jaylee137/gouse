@@ -1,4 +1,4 @@
-package path
+package io
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/io"
 )
 
-func ioUnzip() {
+func SampleIoUnzip() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := io.Unzip(zipFileName, destFolder)

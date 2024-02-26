@@ -2,6 +2,6 @@ package net
 
 import "github.com/thuongtruong1009/gouse/net"
 
-func netOpen() {
+func SampleNetOpen() {
 	net.Open("https://google.com")
 }

@@ -2,7 +2,7 @@ package array
 
 import "github.com/thuongtruong1009/gouse/array"
 
-func arrEqual() {
+func SampleArrayEqual() {
 	println("--- Compare equal ---")
 	println("[int]: ", array.Equal(1, 1))
 	println("[uint]: ", array.Equal(uint(1), uint(1)))

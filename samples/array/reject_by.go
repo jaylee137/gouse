@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrRejectBy() {
+func SampleArrayRejectBy() {
 	println("--- Reject elements in array by pass condition in callback function---")
 	println("[int]: ", array.RejectBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v > 2

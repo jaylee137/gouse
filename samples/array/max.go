@@ -4,7 +4,7 @@ import (
 	"github.com/thuongtruong1009/gouse/array"
 )
 
-func arrMax() {
+func SampleArrayMax() {
 	println("--- Max element in array ---")
 	println("[int]: ", array.Max([]int{1, -2, 3}))
 	println("[uint]: ", array.Max([]uint{1, 2, 3}))

@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/net"
 )
 
-func netConnectTime() {
+func SampleNetConnectTime() {
 	connectTime, err := net.ConnectTime("https://google.com")
 	if err != nil {
 		panic(err)

@@ -4,7 +4,9 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/api")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/api"
+)
 ```
 ## Functions
 
@@ -15,4 +17,5 @@ import (
 func SampleApiPortChecker() {
 	open := api.PortChecker("tcp", "localhost", 1313)
 	fmt.Printf("Port Open: %t\n", open)
-}```
+}
+```

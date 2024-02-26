@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/array")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/array"
+)
 ```
 ## Functions
 
 
-### arrMapBy
+### SampleArrayMapBy
 
 ```go
-func arrMapBy() {
+func SampleArrayMapBy() {
 	println("--- Map array then handler with callback function ---")
 	fmt.Println("[int]: ", array.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
 		return v * 2
@@ -41,4 +43,5 @@ func arrMapBy() {
 	fmt.Println("[struct]: ", array.MapBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) struct{ a int } {
 		return struct{ a int }{v.a * 2}
 	}))
-}```
+}
+```

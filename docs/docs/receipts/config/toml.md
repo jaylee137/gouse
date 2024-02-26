@@ -4,15 +4,17 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong1009/gouse/config")
+	"fmt"
+	"github.com/thuongtruong1009/gouse/config"
+)
 ```
 ## Functions
 
 
-### configToml
+### SampleConfigToml
 
 ```go
-func configToml() {
+func SampleConfigToml() {
 	type Configuration struct {
 		Mysql struct {
 			Host     string
@@ -32,4 +34,5 @@ func configToml() {
 	fmt.Println("Mysql Username:", myConf.Mysql.Username)
 	fmt.Println("Mysql Password:", myConf.Mysql.Password)
 	fmt.Println("Mysql Database:", myConf.Mysql.Database)
-}```
+}
+```

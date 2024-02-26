@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/math"
 )
 
-func mathLog() {
+func SampleMathLog() {
 	println("Logarithm of integer number: ", math.Log(16, 2))
 	println("Logarithm of float number: ", fmt.Sprintf("%f", math.LogF(20.0, 2.0)))
 

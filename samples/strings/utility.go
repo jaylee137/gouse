@@ -6,18 +6,18 @@ import (
 	"github.com/thuongtruong1009/gouse/strings"
 )
 
-func strCount() {
+func SampleStringCount() {
 	var str = "hello world wo wo"
 	println("Count words/substr in string (default): ", strings.Count(str))
 	println("Count words/substr in string (with char): ", strings.Count(str, "wo"))
 }
 
-func strLines() {
+func SampleStringLines() {
 	var str = "hello world\nwo wo"
 	println("Count lines of string: ", strings.Lines(str))
 }
 
-func strIndex() {
+func SampleStringIndex() {
 	var str = "hello world, this is world"
 
 	f1, l1 := strings.Index(str, "l")
@@ -46,25 +46,25 @@ func strIndex() {
 	}
 }
 
-func strRandom() {
+func SampleStringRandom() {
 	println("Random chain string: ", strings.RandomStr(10))
 
 	println("Random chain number: ", strings.RandomNum(6))
 }
 
-func strAt() {
+func SampleStringAt() {
 	var str = "hello world"
 	println("At string: ", strings.At(str, 1))
 	println("At string: ", strings.At(str, -5))
 }
 
-func strCodePointAt() {
+func SampleStringCodePointAt() {
 	var str = "hello world"
 	println("Code point at string: ", strings.CodePointAt(str, 1))
 	println("Code point at string: ", strings.CodePointAt(str, -5))
 }
 
-func strCodePoint() {
+func SampleStringCodePoint() {
 	asciiValues := strings.CodePoint("hello world")
 
 	print("Code point string: ")
@@ -73,11 +73,11 @@ func strCodePoint() {
 	}
 }
 
-func strFromCodePointAt() {
+func SampleStringFromCodePointAt() {
 	println("From code point at string: ", strings.FromCodePointAt(9733))
 	println("From code point at string: ", strings.FromCodePointAt(9731))
 }
 
-func strFromCodePoint() {
+func SampleStringFromCodePoint() {
 	println("From code point string: ", strings.FromCodePoint(104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100))
 }

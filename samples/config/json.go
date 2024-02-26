@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong1009/gouse/config"
 )
 
-func configJson() {
+func SampleConfigJson() {
 	type Configuration struct {
 		Users  []string
 		Groups []string
