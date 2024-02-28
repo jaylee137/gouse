@@ -43,12 +43,12 @@ func lbHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Round Robin
 	mutex.Lock()
-	currentBackend := cfg.Backends[idx%maxLen]
+	currentBackend := &cfg.Backends[idx%maxLen]
 	if currentBackend.GetIsDead() {
 		idx++
 	}
 
-	targetURL, err := url.Parse(cfg.Backends[idx%maxLen].URL)
+	targetURL, err := url.Parse(currentBackend.URL)
 	if err != nil {
 		log.Println(err.Error())
 	}
@@ -69,7 +69,13 @@ func isAlive(url *url.URL) bool {
 		log.Printf("Unreachable tp %v, error:%v", url.Host, err.Error())
 		return false
 	}
-	defer conn.Close()
+
+	defer func() {
+		if conn != nil {
+			conn.Close()
+		}
+	}()
+
 	return true
 }
 
@@ -77,10 +83,12 @@ func HealthCheck() {
 	t := time.NewTicker(time.Minute * 1)
 
 	for range t.C {
-		for _, backend := range cfg.Backends {
+		for i := range cfg.Backends {
+			backend := &cfg.Backends[i]
 			pingURL, err := url.Parse(backend.URL)
 			if err != nil {
-				log.Fatal(err.Error())
+				log.Print(err.Error())
+				continue
 			}
 			isAlive := isAlive(pingURL)
 			backend.SetDead(!isAlive)

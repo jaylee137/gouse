@@ -21,8 +21,5 @@ func ReadRequest(ctxBind func() error, ctxReq func() context.Context, req interf
 
 	ctx := ctxReq()
 
-	if err := validate.StructCtx(ctx, req); err != nil {
-		return err
-	}
-	return nil
+	return validate.StructCtx(ctx, req)
 }

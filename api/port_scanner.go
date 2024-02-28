@@ -27,6 +27,12 @@ func PortChecker(protocol, hostname string, port int) bool {
 	if err != nil {
 		return false
 	}
-	defer conn.Close()
+
+	defer func() {
+		if conn != nil {
+			conn.Close()
+		}
+	}()
+
 	return true
 }

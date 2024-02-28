@@ -25,7 +25,11 @@ func GracefulShutdown() {
 	signal.Notify(c, os.Interrupt)
 
 	fmt.Println("server started!")
-	srv := http.Server{Addr: ":8080"}
+
+	srv := http.Server{
+		Addr:              ":8080",
+		ReadHeaderTimeout: 5 * time.Second, // mitigate Slowloris attack by set timeout
+	}
 
 	go func() {
 		<-c
