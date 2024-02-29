@@ -110,10 +110,12 @@ func LoadBalancer(proxyPort string, backends []Backend) {
 	go HealthCheck()
 
 	s := http.Server{
-		Addr:    ":" + cfg.ProxyPort,
-		Handler: http.HandlerFunc(lbHandler),
+		Addr:              ":" + cfg.ProxyPort,
+		Handler:           http.HandlerFunc(lbHandler),
+		ReadHeaderTimeout: 10 * time.Second, // Set an appropriate timeout value
 	}
+
 	if err := s.ListenAndServe(); err != nil {
-		log.Fatal(err.Error())
+		log.Printf("Error starting server: %s", err.Error())
 	}
 }

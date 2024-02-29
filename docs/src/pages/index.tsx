@@ -28,8 +28,8 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className="flex justify-center items-center space-x-4">
-          {buttons.map((button) => (
-            <button className={styles.buttons}>
+          {buttons.map((button, idx) => (
+            <button className={styles.buttons} key={idx}>
               <Link
                 className="button button--secondary button--lg"
                 to={button.link}

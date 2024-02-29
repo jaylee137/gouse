@@ -2,6 +2,7 @@ import clsx from "clsx";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
+  _id: string;
   title: string;
   Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: JSX.Element;
@@ -9,6 +10,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    _id: "1",
     title: "Easy to Use",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
@@ -19,6 +21,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    _id: "2",
     title: "Focus on What Matters",
     Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
@@ -29,6 +32,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    _id: "3",
     title: "Powered by React",
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
@@ -59,8 +63,8 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {FeatureList.map((props) => (
+            <Feature key={props._id} {...props} />
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import type * as Preset from "@docusaurus/preset-classic";
+import * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
 
@@ -136,7 +136,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © 2024 Gouse ❤️`,
+      copyright: "Copyright © 2024 Gouse ❤️",
     },
     prism: {
       theme: prismThemes.github,
@@ -150,7 +150,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
-    async function myPlugin(context, options) {
+    function myPlugin(_context, _options) {
       return {
         name: "docusaurus-tailwindcss",
         configurePostCss(postcssOptions) {
