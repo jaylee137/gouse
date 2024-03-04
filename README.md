@@ -22,16 +22,17 @@
 - Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Lodash`](https://lodash.com/).
 - `Javascript` user-friendly syntax.
 - No config - import as utility functions.
-- Lightweight package: easy to use, chainable, and extendable, and available in a variety of builds & module formats.
-- Gouse provides a wide variety of available methods, taking the hassle out of working with arrays, numbers, objects, strings, etc. Each method has a different set of features, so you can pick the ones that fit your project best.
+- Lightweight package: easy to use, chainable, and extendable, and available in various builds & module formats.
+- Gouse provides a wide variety of available methods, taking the hassle out of working with arrays, numbers, objects, strings, etc. Each method has different features, so you can pick the ones that fit your project best.
 - Comprehensive documentation and examples.
-- Powerful package which suitable for small to large projects and compatible on all OS platforms
+- Powerful package that is suitable for small to large projects and compatible with all OS platforms
 - Thanks to Gouse, you can:
-  - Setup and scale projects rapidly.
-  - Handle complex logic usecases such as database connection, build APIs, error handling, log management...
+  - Set up and scale projects rapidly.
+  - Handle complex logic use-cases such as database connection, build APIs, error handling, log management...
   - Optimize performance and increase productivity.
-  - Build easily a complete system with available functions.
-  - Reduce the number of lines of code and make it easier to read, understand and maintain.
+  - Build easily consistent systems with available functions.
+  - Avoid writing repetitive code and a unified code style.
+  - Reduce the number of lines of code and make it easier to read, understand, and maintain.
   - Avoid compatibility conflicts and unexpected errors.
   - And more...
 
@@ -49,30 +50,29 @@
 
 ## 🚀 Features
 
-> Below is a list of modules that Gouse supports. This project is still in development, so not all features are available.
+> Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
-✅ [Array](docs/gen/samples/array.md) <br/>
-✅ [Cache](docs/gen/samples/cache.md) <br/>
-✅ [Chart](docs/gen/samples/chart.md) <br/>
-✅ [Config](docs/gen/samples/config.md) <br/>
-✅ [Console](docs/gen/samples/console.md) <br/>
-✅ [Date](docs/gen/samples/date.md) <br/>
-✅ [Function](docs/gen/samples/function.md) <br/>
-✅ [Helper](docs/gen/samples/helper.md) <br/>
-✅ [I/O](docs/gen/samples/io.md) <br/>
-✅ [Log](docs/gen/samples/log.md) <br/>
-✅ [Math](docs/gen/samples/math.md) <br/>
-✅ [Net](docs/gen/samples/net.md) <br/>
-✅ [Number](docs/gen/samples/number.md) <br/>
-✅ [Regex](docs/gen/samples/regex.md) <br/>
-✅ [Struct](docs/gen/samples/struct.md) <br/>
-✅ [String](docs/gen/samples/string.md) <br/>
-✅ [Tool](docs/gen/samples/tool.md) <br/>
-✅ [Type](docs/gen/samples/type.md) <br/>
+✅ Array <br/>
+✅ Cache <br/>
+✅ Chart <br/>
+✅ Config <br/>
+✅ Connection <br/>
+✅ Console <br/>
+✅ Date <br/>
+✅ Function <br/>
+✅ Helper <br/>
+✅ I/O <br/>
+✅ Log <br/>
+✅ Math <br/>
+✅ Net <br/>
+✅ Number <br/>
+✅ Regex <br/>
+✅ Struct <br/>
+✅ String <br/>
+✅ Tool <br/>
+✅ Type <br/>
 
 <!-- - [ ] API
-- [ ] Collection
-- [ ] Connection
 - [ ] Cron
 - [ ] Error
 - [ ] Json
@@ -149,59 +149,19 @@ func main() {
 
 ## 🛠️ Development
 
-#### 1. Clone this repository
-
 ```bash
 $ git clone https://github.com/thuongtruong1009/gouse.git
 ```
 
-#### 2. Install dependencies
-
-```bash
-$ make install
-```
-
-#### 3. Run
-
-```bash
-$ make run
-```
-
-#### 4. Build
-
-```bash
-$ make build
-```
-
-#### 5. Run tests
-
-```bash
-$ make test
-```
-
-#### 6. Run linters & formatters
-
-```bash
-$ make lint
-```
-
-#### 7. Run benchmarks
-
-```bash
-$ make bench
-```
-
-#### 8. Auto-generate docs
-
-```bash
-$ make doc
-```
+- Refer to the [`Contributing Commands`](.github/CONTRIBUTING.md#commands) section for more information on how to develop the project.
 
 ## 📝 Contributing
 
 - We welcome your contributions! If you're looking for issues to work on, try looking at the good first issue list. We do our best to tag issues suitable for new external contributors with that label, so it's a great way to find something you can help with!
 
-- [`Code of Conduct`](.github/CODE_OF_CONDUCT.md) and [`Contributing Guide`](.github/CONTRIBUTING.md) for the project.
+- Please read our [`Code of Conduct`](.github/CODE_OF_CONDUCT.md) before contributing.
+
+- Refer to the [`Contributing Guide`](.github/CONTRIBUTING.md) for more information on how to get started.
 
 ## 📄 License
 
@@ -253,6 +213,7 @@ $ make doc
   - [Crypto](golang.org/x/crypto) - A collection of cryptographic algorithms and protocols for Go 📦
   - [Go eCharts](github.com/go-echarts/go-echarts) - 🎨 The adorable charts library for Golang 📊
   - [Env config](github.com/kelseyhightower/envconfig) x [Go Toml](github.com/pelletier/go-toml) - A Go library for managing configuration data from files 📄
+  - [Minio Client Go](github.com/minio/minio-go/v7) - MinIO Go Library for Amazon S3 compatible cloud storage 📦
 
 ## 📚 References
 

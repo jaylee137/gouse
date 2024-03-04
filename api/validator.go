@@ -1,22 +1,25 @@
 package api
 
-// import (
-// 	"github.com/go-playground/validator/v10"
-// )
+import (
+	"context"
 
-// var validate *validator.Validate
+	"github.com/go-playground/validator/v10"
+)
 
-// func init() {
-// 	validate = validator.New()
-// }
+var validate *validator.Validate
 
-// func ReadRequest(ctxBind func() error, ctxReq func(), req interface{}) error {
-// 	if err := ctxBind(); err != nil {
-// 		return err
-// 	}
+func initValidator() {
+	validate = validator.New()
+}
 
-// 	if err := validate.StructCtx(ctxReq(), req); err != nil {
-// 		return err
-// 	}
-// 	return validate.StructCtx(ctxReq(), req)
-// }
+func ReadRequest(ctxBind func() error, ctxReq func() context.Context, req interface{}) error {
+	initValidator()
+
+	if err := ctxBind(); err != nil {
+		return err
+	}
+
+	ctx := ctxReq()
+
+	return validate.StructCtx(ctx, req)
+}

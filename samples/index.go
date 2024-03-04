@@ -1,297 +1,337 @@
 package samples
 
+import (
+	"github.com/thuongtruong1009/gouse/samples/api"
+	"github.com/thuongtruong1009/gouse/samples/array"
+	"github.com/thuongtruong1009/gouse/samples/cache"
+	"github.com/thuongtruong1009/gouse/samples/chart"
+	"github.com/thuongtruong1009/gouse/samples/config"
+	"github.com/thuongtruong1009/gouse/samples/console"
+	"github.com/thuongtruong1009/gouse/samples/crypto"
+	"github.com/thuongtruong1009/gouse/samples/date"
+	"github.com/thuongtruong1009/gouse/samples/function"
+	"github.com/thuongtruong1009/gouse/samples/helper"
+	"github.com/thuongtruong1009/gouse/samples/io"
+	"github.com/thuongtruong1009/gouse/samples/io/dir"
+	"github.com/thuongtruong1009/gouse/samples/io/file"
+	"github.com/thuongtruong1009/gouse/samples/io/path"
+	math_check "github.com/thuongtruong1009/gouse/samples/math/check"
+	math_fomular "github.com/thuongtruong1009/gouse/samples/math/fomular"
+	math_geometry "github.com/thuongtruong1009/gouse/samples/math/geometry"
+	math_operator "github.com/thuongtruong1009/gouse/samples/math/operator"
+	"github.com/thuongtruong1009/gouse/samples/net"
+	"github.com/thuongtruong1009/gouse/samples/number"
+	"github.com/thuongtruong1009/gouse/samples/regex"
+	"github.com/thuongtruong1009/gouse/samples/strings"
+	"github.com/thuongtruong1009/gouse/samples/structs"
+	"github.com/thuongtruong1009/gouse/samples/tools"
+	types_cast "github.com/thuongtruong1009/gouse/samples/types/cast"
+	types_check "github.com/thuongtruong1009/gouse/samples/types/check"
+)
+
 func Run() {
-	arrayExample()
-	cacheExample()
-	chartExample()
-	configExample()
-	consoleExample()
-	cryptoExample()
-	dateExample()
-	functionExample()
-	helperExample()
-	iOExample()
-	mathExample()
-	netExample()
-	numberExample()
-	regexExample()
-	stringExample()
-	structExample()
-	toolsExample()
-	typeExample()
+	apiSample()
+	arraySample()
+	cacheSample()
+	chartSample()
+	configSample()
+	consoleSample()
+	cryptoSample()
+	dateSample()
+	functionSample()
+	helperSample()
+	ioSample()
+	mathSample()
+	netSample()
+	numberSample()
+	regexSample()
+	stringSample()
+	structSample()
+	toolsSample()
+	typeSample()
 }
 
-func arrayExample() {
-	arrEqual()
-	arrIncludes()
-	arrMost()
-	arrSum()
-	arrChunk()
-	arrDiff()
-	arrDrop()
-	arrIndex()
-	arrMerge()
-	arrCompact()
-
-	arrIntersect()
-	arrMin()
-	arrMax()
-
-	arrKeyBy()
-	arrIndexBy()
-	arrFilterBy()
-	arrRejectBy()
-	arrFindBy()
-	arrForBy()
-	arrMapBy()
+func apiSample() {
+	api.SampleApiPortScanner()
+	api.SampleApiPortChecker()
 }
 
-func cacheExample() {
-	cacheLocal()
-	cacheTmp()
+func arraySample() {
+	array.SampleArrayEqual()
+	array.SampleArrayIncludes()
+	array.SampleArrayMost()
+	array.SampleArraySum()
+	array.SampleArrayChunk()
+	array.SampleArrayDiff()
+	array.SampleArrayDrop()
+	array.SampleArrayIndex()
+	array.SampleArrayMerge()
+	array.SampleArrayCompact()
+
+	array.SampleArrayIntersect()
+	array.SampleArrayMin()
+	array.SampleArrayMax()
+
+	array.SampleArrayKeyBy()
+	array.SampleArrayIndexBy()
+	array.SampleArrayFilterBy()
+	array.SampleArrayRejectBy()
+	array.SampleArrayFindBy()
+	array.SampleArrayForBy()
+	array.SampleArrayMapBy()
 }
 
-func chartExample() {
-	chartBar()
-	chartLine()
-	chartPie()
+func cacheSample() {
+	cache.SampleCacheLocal()
+	cache.SampleCacheTmp()
 }
 
-func configExample() {
-	configJson()
-	configYaml()
-	configToml()
+func chartSample() {
+	chart.SampleChartBar()
+	chart.SampleChartLine()
+	chart.SampleChartPie()
 }
 
-func consoleExample() {
-	consoleCmd()
-	consoleClear()
-	consoleWithColor()
-	consoleBanner()
-	consoleSelect()
-	consoleHelp()
-
-	consoleList()
-	consolePaper()
-	consoleProgress()
-	consoleRealtime()
-	consoleChoice()
-	consoleSpinner()
-	consoleSplit()
-	consoleStopwatch()
-	consoleTable()
-	consoleTab()
-	consoleCountdown()
-	consoleSequence()
-	consoleInline()
-	consoleParallel()
-	consoleDir()
-	consoleGlamour()
+func configSample() {
+	config.SampleConfigJson()
+	config.SampleConfigYaml()
+	config.SampleConfigToml()
 }
 
-func cryptoExample() {
-	cryptoEncode()
-	cryptoDecode()
-	cryptoEncryptPassword()
-	cryptoDecryptPassword()
-	cryptoEncryptFile()
-	cryptoDecryptFile()
+func consoleSample() {
+	console.SampleConsoleCmd()
+	console.SampleConsoleClear()
+	console.SampleConsoleWithColor()
+	console.SampleConsoleBanner()
+	console.SampleConsoleSelect()
+	console.SampleConsoleHelp()
+
+	console.SampleConsoleList()
+	console.SampleConsolePaper()
+	console.SampleConsoleProgress()
+	console.SampleConsoleRealtime()
+	console.SampleConsoleChoice()
+	console.SampleConsoleSpinner()
+	console.SampleConsoleSplit()
+	console.SampleConsoleStopwatch()
+	console.SampleConsoleTable()
+	console.SampleConsoleTab()
+	console.SampleConsoleCountdown()
+	console.SampleConsoleSequence()
+	console.SampleConsoleInline()
+	console.SampleConsoleParallel()
+	console.SampleConsoleDir()
+	console.SampleConsoleGlamour()
 }
 
-func dateExample() {
-	dateTime()
-
-	dateISO()
-	dateShort()
-	dateLong()
-	dateUTC()
-
-	dateToSecond()
-	dateToMinute()
-	dateToHour()
-	dateSleepSecond()
-	dateSleepMinute()
-	dateSleepHour()
+func cryptoSample() {
+	crypto.SampleCryptoEncode()
+	crypto.SampleCryptoDecode()
+	crypto.SampleCryptoEncryptPassword()
+	crypto.SampleCryptoDecryptPassword()
+	crypto.SampleCryptoEncryptFile()
+	crypto.SampleCryptoDecryptFile()
 }
 
-func functionExample() {
-	funcDelay()
-	funcRetry()
-	funcTimes()
-	funcInterval()
-	funcLock()
-	funcRunTime()
+func dateSample() {
+	date.SampleDateTime()
+
+	date.SampleDateISO()
+	date.SampleDateShort()
+	date.SampleDateLong()
+	date.SampleDateUTC()
+
+	date.SampleDateToSecond()
+	date.SampleDateToMinute()
+	date.SampleDateToHour()
+	date.SampleDateSleepSecond()
+	date.SampleDateSleepMinute()
+	date.SampleDateSleepHour()
+
+	date.SampleDateClock()
 }
 
-func helperExample() {
-	helperRandomID()
-	helperUUID()
-
-	helperAutoMdDoc()
+func functionSample() {
+	function.SampleFuncDelay()
+	function.SampleFuncRetry()
+	function.SampleFuncTimes()
+	function.SampleFuncInterval()
+	function.SampleFuncLock()
+	function.SampleFuncRunTime()
 }
 
-func iOExample() {
-	ioCheckDir()
-	ioCreateDir()
-	ioRemoveDir()
-	ioLsDir()
-	ioHierarchyDir()
-	ioCurrentDir()
+func helperSample() {
+	helper.SampleHelperRandomID()
+	helper.SampleHelperUUID()
 
-	ioCheckFile()
-	ioCreateFile()
-	ioRemoveFile()
-	ioReadFileByLine()
-	ioFileInfo()
-	ioRenameFile()
-	ioCopyFile()
-	ioTruncateFile()
-	ioCleanFile()
-	ioWriteToFile()
-	ioAppendToFile()
-	ioFileObj()
-
-	ioCreatePath()
-	ioReadPath()
-	ioWritePath()
-
-	ioZip()
-	ioUnzip()
+	helper.SampleHelperAutoMdDoc()
 }
 
-func mathExample() {
-	mathIsPrime()
-	mathIsEven()
-	mathIsOdd()
-	mathIsPerfectSquare()
+func ioSample() {
+	dir.SampleIoCheckDir()
+	dir.SampleIoCreateDir()
+	dir.SampleIoRemoveDir()
+	dir.SampleIoLsDir()
+	dir.SampleIoHierarchyDir()
+	dir.SampleIoCurrentDir()
 
-	mathAbs()
-	mathFloor()
-	mathCeil()
-	mathRound()
-	mathMinMax()
-	mathOperators()
-	mathPower()
-	mathFactorial()
-	mathRoot()
+	file.SampleIoCheckFile()
+	file.SampleIoCreateFile()
+	file.SampleIoRemoveFile()
+	file.SampleIoReadFileByLine()
+	file.SampleIoFileInfo()
+	file.SampleIoRenameFile()
+	file.SampleIoCopyFile()
+	file.SampleIoTruncateFile()
+	file.SampleIoCleanFile()
+	file.SampleIoWriteToFile()
+	file.SampleIoAppendToFile()
+	file.SampleIoFileObj()
 
-	mathLog()
-	mathPytago()
-	mathTrigonometry()
-	mathTransition()
+	path.SampleIoCreatePath()
+	path.SampleIoReadPath()
+	path.SampleIoWritePath()
 
-	mathRect()
-	mathCircle()
-	mathTriangle()
-	mathSquare()
-	mathCube()
-	mathSphere()
-	mathCylinder()
-	mathCone()
-	mathTrapezoid()
-	mathParallelogram()
-	mathRhombus()
-	mathEllipse()
-	mathPolygon()
+	io.SampleIoZip()
+	io.SampleIoUnzip()
 }
 
-func netExample() {
-	netOpen()
-	netEncode()
-	netDecode()
-	netCheck()
-	netCheckWithStatusCode()
-	netHeader()
-	netConnectTime()
+func mathSample() {
+	math_check.SampleMathIsPrime()
+	math_check.SampleMathIsEven()
+	math_check.SampleMathIsOdd()
+	math_check.SampleMathIsPerfectSquare()
+
+	math_operator.SampleMathAbs()
+	math_operator.SampleMathFloor()
+	math_operator.SampleMathCeil()
+	math_operator.SampleMathRound()
+	math_operator.SampleMathMin()
+	math_operator.SampleMathMax()
+	math_operator.SampleMathSum()
+	math_operator.SampleMathMean()
+	math_operator.SampleMathOperators()
+	math_operator.SampleMathPower()
+	math_operator.SampleMathFactorial()
+	math_operator.SampleMathRoot()
+
+	math_fomular.SampleMathLog()
+	math_fomular.SampleMathPytago()
+	math_fomular.SampleMathTrigonometry()
+	math_fomular.SampleMathTransition()
+
+	math_geometry.SampleMathRect()
+	math_geometry.SampleMathCircle()
+	math_geometry.SampleMathTriangle()
+	math_geometry.SampleMathSquare()
+	math_geometry.SampleMathCube()
+	math_geometry.SampleMathSphere()
+	math_geometry.SampleMathCylinder()
+	math_geometry.SampleMathCone()
+	math_geometry.SampleMathTrapezoid()
+	math_geometry.SampleMathParallelogram()
+	math_geometry.SampleMathRhombus()
+	math_geometry.SampleMathEllipse()
+	math_geometry.SampleMathPolygon()
 }
 
-func numberExample() {
-	numRandom()
-	numClamp()
-	numInRange()
+func netSample() {
+	net.SampleNetOpen()
+	net.SampleNetEncode()
+	net.SampleNetDecode()
+	net.SampleNetCheck()
+	net.SampleNetCheckWithStatusCode()
+	net.SampleNetHeader()
+	net.SampleNetConnectTime()
 }
 
-func regexExample() {
-	regexIsMatch()
-	regexMatch()
-	regexMatchIndex()
+func numberSample() {
+	number.SampleNumRandom()
+	number.SampleNumClamp()
+	number.SampleNumInRange()
 }
 
-func stringExample() {
-	strCapitalize()
-	strCamelCase()
-	strSnakeCase()
-	strKebabCase()
-
-	strIsLetter()
-	strIsDigit()
-	strIncludes()
-	strIsLower()
-	strIsUpper()
-
-	strSplit()
-	strWords()
-	strReverse()
-	strLower()
-	strUpper()
-	strRepeat()
-	strTruncate()
-	strReplace()
-	strTrim()
-	strTrimBlank()
-	strTrimPrefix()
-	strTrimSuffix()
-	strJoin()
-	strConcat()
-	strSubStr()
-	strSlice()
-	strSplice()
-	strStartsWith()
-	strEndsWith()
-	strEscape()
-	strUnescape()
-	strPad()
-
-	strCount()
-	strLines()
-	strIndex()
-	strRandom()
-	strAt()
-	strCodePointAt()
-	strCodePoint()
-	strFromCodePointAt()
-	strFromCodePoint()
+func regexSample() {
+	regex.SampleRegexIsMatch()
+	regex.SampleRegexMatch()
+	regex.SampleRegexMatchIndex()
 }
 
-func structExample() {
-	structMerge()
-	structRemove()
-	structAdd()
-	structSet()
-	structGet()
+func stringSample() {
+	strings.SampleStringCapitalize()
+	strings.SampleStringCamelCase()
+	strings.SampleStringSnakeCase()
+	strings.SampleStringKebabCase()
 
-	structClone()
-	structHas()
+	strings.SampleStringIsLetter()
+	strings.SampleStringIsDigit()
+	strings.SampleStringIncludes()
+	strings.SampleStringIsLower()
+	strings.SampleStringIsUpper()
+
+	strings.SampleStringSplit()
+	strings.SampleStringWords()
+	strings.SampleStringReverse()
+	strings.SampleStringLower()
+	strings.SampleStringUpper()
+	strings.SampleStringRepeat()
+	strings.SampleStringTruncate()
+	strings.SampleStringReplace()
+	strings.SampleStringTrim()
+	strings.SampleStringTrimBlank()
+	strings.SampleStringTrimPrefix()
+	strings.SampleStringTrimSuffix()
+	strings.SampleStringJoin()
+	strings.SampleStringConcat()
+	strings.SampleStringSubStr()
+	strings.SampleStringSlice()
+	strings.SampleStringSplice()
+	strings.SampleStringStartsWith()
+	strings.SampleStringEndsWith()
+	strings.SampleStringEscape()
+	strings.SampleStringUnescape()
+	strings.SampleStringPad()
+
+	strings.SampleStringCount()
+	strings.SampleStringLines()
+	strings.SampleStringIndex()
+	strings.SampleStringRandom()
+	strings.SampleStringAt()
+	strings.SampleStringCodePointAt()
+	strings.SampleStringCodePoint()
+	strings.SampleStringFromCodePointAt()
+	strings.SampleStringFromCodePoint()
 }
 
-func toolsExample() {
-	toolDoc()
-	toolProfile()
+func structSample() {
+	structs.SampleStructMerge()
+	structs.SampleStructRemove()
+	structs.SampleStructAdd()
+	structs.SampleStructSet()
+	structs.SampleStructGet()
+
+	structs.SampleStructClone()
+	structs.SampleStructHas()
 }
 
-func typeExample() {
-	typeStructConvert()
-	typeStringConvert()
-	typeCastToString()
+func toolsSample() {
+	tools.SampleToolDoc()
+	tools.SampleToolProfile()
+}
 
-	typeCheck()
-	typeCheckUUID()
-	typeCheckGmail()
-	typeCheckYahoo()
-	typeCheckOutlook()
-	typeCheckEdu()
-	typeCheckEmail()
-	typeCheckUsername()
-	typeCheckPassword()
-	typeCheckPhone()
+func typeSample() {
+	types_cast.SampleTypeStringConvert()
+	types_cast.SampleTypeStructConvert()
+	types_cast.SampleTypeCastToString()
+
+	types_check.SampleTypeCheck()
+	types_check.SampleTypeCheckUUID()
+	types_check.SampleTypeCheckGmail()
+	types_check.SampleTypeCheckYahoo()
+	types_check.SampleTypeCheckOutlook()
+	types_check.SampleTypeCheckEdu()
+	types_check.SampleTypeCheckEmail()
+	types_check.SampleTypeCheckUsername()
+	types_check.SampleTypeCheckPassword()
+	types_check.SampleTypeCheckPhone()
 }

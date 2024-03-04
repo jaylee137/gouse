@@ -1,7 +1,8 @@
-## PR Checklist
+## PR Pre-flight Checklist
 
 Please check if your PR fulfills the following requirements:
 
+- [ ] I have read the Contributing Guidelines on pull requests.
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs have been added / updated (for bug fixes / features)
 
