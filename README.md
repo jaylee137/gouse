@@ -72,18 +72,6 @@
 ✅ Tool <br/>
 ✅ Type <br/>
 
-<!-- - [ ] API
-- [ ] Cron
-- [ ] Error
-- [ ] Json
-- [ ] Lang
-- [ ] Mail
-- [ ] Media
-- [ ] ORM
-- [ ] Queue
-- [ ] Socket
-- [ ] Template -->
-
 ## 📋 Requirements
 
 > Compatibility with Go >= **`1.18`**
@@ -109,19 +97,6 @@ func main() {
 ## 🦄 Usage
 
 - Using package directly in your module as ultra-lightweight utility functions.
-
-```go
-package main
-
-import (
-    "fmt"
-    "github.com/thuongtruong1009/gouse/math"
-)
-
-func main() {
-    fmt.Println(math.Add(1, 2))
-}
-```
 
 - View more examples at [`sample`](sample) folder.
 
