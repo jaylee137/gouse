@@ -97,7 +97,6 @@ func generateMarkdownFiles(file os.DirEntry, functions []helper.Function, path, 
 
 	fileName := strings.Replace(file.Name(), ".go", ".md")
 
-	// replace new name for path (./oldName/*.go -> ./newName/*.go)
 	detectOld := strings.Split(path, "/")[1]
 	renamedPath := strings.Replace(path, detectOld, newName)
 
