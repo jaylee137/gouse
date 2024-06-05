@@ -21,7 +21,6 @@ func Profile(cpuprofile, memprofile string) {
 		defer pprof.StopCPUProfile()
 	}
 
-	// ... rest of the program ...
 
 	if memprofile != "" {
 		f, err := os.Create(memprofile)
