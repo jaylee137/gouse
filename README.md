@@ -155,25 +155,6 @@ $ git clone https://github.com/thuongtruong1009/gouse.git
 
 - For more information on how to use the changelog, please refer to [`Keeping a Changelog`](https://keepachangelog.com/en/1.0.0/).
 
-## 🌸 Sponsor
-
-- If you like this project, you can sponsor me on:
-
-[![Github sponsor](https://img.shields.io/badge/GitHub_Sponsors-000000?style=for-the-badge&logo=github&logoColor=white)](https://sponsor.com/thuongtruong1009)
-[![Paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/thuongtruong1009)
-[![Kofi](https://img.shields.io/badge/ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/thuongtruong1009)
-
-<!-- ![Static Badge](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black) -->
-
-## 📮 Contact
-
-- If you have any questions, please contact me:
-
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thuongtruongofficial@gmail.com)
-[![Github](https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thuongtruong1009)
-[![Linkedin](https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thuongtruong1009)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/thuongtruong1009)
-
 ## 🧬 Dependencies
 
 - Gouse is built on top of the following below and others open-source projects
