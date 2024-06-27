@@ -27,7 +27,7 @@ func Profile(cpuprofile, memprofile string) {
 			log.Fatal("could not create memory profile: ", err)
 		}
 		defer f.Close()
-		runtime.GC()    // get up-to-date statistics
+		runtime.GC()    
 		if err := pprof.WriteHeapProfile(f); err != nil {
 			log.Fatal("could not write memory profile: ", err)
 		}
