@@ -37,3 +37,5 @@ func Delay(f func(), timeout int) DelayedResult[struct{}] {
 		return struct{}{}
 	}, timeout, false)
 }
+
+//func delay
